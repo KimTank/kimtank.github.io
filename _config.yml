@@ -1,22 +1,22 @@
-# Welcome to Jekyll!
+# 지킬에 온 걸 환영해!
 #
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
+# 이 구성 파일은 전체 블로그, 값에 영향을 미치는 설정을 위한 것입니다.
+# 한 번 설정하고 그 이후에는 거의 편집할 수 없습니다. 찾으면
+# 이 파일을 매우 자주 편집하는 본인, 지킬의 데이터 파일을 사용하는 것을 고려하십시오.
+# 자주 업데이트해야 하는 데이터에 대한 기능.
 #
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+# 기술적인 이유로 이 파일은 *NOT*를 사용할 때 자동으로 다시 로드됩니다.
+# 'exec exec jekyl serve'. 이 파일을 변경하면 서버 프로세스를 다시 시작하십시오.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# YAML 구문에 대한 도움말이 필요한 경우 몇 가지 빠른 참조가 있습니다.
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#httpsl
 # https://learnxinyminutes.com/docs/yaml/
 #
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
+# 사이트 설정
+# 새 사이트를 개인 설정하는 데 사용됩니다. HTML 파일을 보면,
+# {{site.filename}}, {{site.email}}} 등을 통해 액세스할 수 있습니다.
+# 원하는 모든 사용자 지정 변수를 만들 수 있으며, 이러한 변수는 액세스할 수 있습니다.
+# {{site.myvariable}}을(를) 통해 템플릿에 표시됩니다.
 
 title: KimTank repository
 email: sycor123k@gmail.com
