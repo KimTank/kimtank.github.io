@@ -1,6 +1,7 @@
 ---
+layout: post
 title: "코어자바9, 1장 기본 프로그래밍 구조"
-last_moified_at: 2019-02-04T00:00:00-00:00
+date: 2019-02-04T00:00:00-00:00
 categories:
 - CoreJava9
 tags:
