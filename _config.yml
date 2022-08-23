@@ -50,8 +50,8 @@ theme: monophase
 #----------- 기존 플러그인에 추가
 plugins:
   - jekyll-feed
-  - jekyll-remote-theme
-remote_theme: zivhub/monophase@main
+#  - jekyll-remote-theme
+#remote_theme: zivhub/monophase@main
 
 # Exclude from processing.
 # The following items will not be processed, by default.
