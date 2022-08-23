@@ -44,4 +44,4 @@ gem "webrick", "~> 1.7"
 
 #추가
 gem "monophase"
-gem "jekyll-remote-theme"
+# gem "jekyll-remote-theme"
