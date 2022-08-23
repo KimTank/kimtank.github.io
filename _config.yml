@@ -22,8 +22,10 @@ title: KimTank repository
 tagline: 으쌰으쌰
 lang: ko_KR
 author.name: KimTank
-author.url: "https://kimtank.github.io/"
+author.url: https://kimtank.github.io/
 
+markdown: kramdown
+repository: kimtank/kimtank.github.io
 # tags_path: A path to the archive-by-tags page, It is used by tags on each post
 # categories_path: A path to the archive-by-categories page; It is used by categories on each post
 
@@ -32,8 +34,8 @@ disqus: unDo
 email: sycor123k@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   at the long time ago..
-baseurl: "kimtank" # the subpath of your site, e.g. /blog
-url: "https://kimtank.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: kimtank # the subpath of your site, e.g. /blog
+url: https://kimtank.github.io/ # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: kimtank86
 github_username:  kimtank
 #추가
