@@ -75,4 +75,4 @@ main>section>h1
 > - [HTML:Spec/LivingStandard](https://html.spec.whatwg.org/)
 > - [W3:HTML5/char reference](https://dev.w3.org/html/html-author/charref)
 > - [W3:HTML/entities](https://www.w3big.com/ko/html/html-entities.html#gsc.tab=0)
-> - ['Emmet:doc/cheat-sheet](https://doc.emmet.io/cheat-sheet)
+> - [Emmet:doc/cheat-sheet](https://doc.emmet.io/cheat-sheet)
