@@ -69,10 +69,10 @@ main>section>h1
 |`<footer class="global-main>`|footer.global-main|
 
 > 
-> ### 참고
-> - [MDN:Sementics](https://developer.mozilla.org/ko/docs/Glossary/Semantics#html_%EC%8B%9C%EB%A7%A8%ED%8B%B1)
-> - [w3school:HTML Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp)
-> - [HTML:Spec/LivingStandard](https://html.spec.whatwg.org/)
-> - [W3:HTML5/char reference](https://dev.w3.org/html/html-author/charref)
-> - [W3:HTML/entities](https://www.w3big.com/ko/html/html-entities.html#gsc.tab=0)
-> - [Emmet:doc/cheat-sheet](https://doc.emmet.io/cheat-sheet)
+> ## 참고
+> [MDN:Sementics](https://developer.mozilla.org/ko/docs/Glossary/Semantics#html_%EC%8B%9C%EB%A7%A8%ED%8B%B1)
+> [w3school:HTML Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp)
+> [HTML:Spec/LivingStandard](https://html.spec.whatwg.org/)
+> [W3:HTML5/char reference](https://dev.w3.org/html/html-author/charref)
+> [W3:HTML/entities](https://www.w3big.com/ko/html/html-entities.html#gsc.tab=0)
+> [Emmet:doc/cheat-sheet](https://doc.emmet.io/cheat-sheet)

@@ -30,5 +30,5 @@ tags:
 - rowspan: 행을 늘리는 속성(attribute)
 - colspan: 열을 늘리는 속성(attribute)
 
-> ### 참고
-> - [MDN:HTML/table](https://developer.mozilla.org/ko/docs/Web/HTML/Element/table)
+> ## 참고
+> [MDN:HTML/table](https://developer.mozilla.org/ko/docs/Web/HTML/Element/table)

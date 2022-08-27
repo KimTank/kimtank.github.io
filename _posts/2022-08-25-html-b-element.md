@@ -59,6 +59,6 @@ tags:
     <!-- 나는 그것도 모르고 개판으로.. -->
     ```
 > 
-> ### 참고
-> - [나무위키:HTML/태그](https://namu.wiki/w/HTML/%ED%83%9C%EA%B7%B8#%EC%8B%9C%EB%A7%A8%ED%8B%B1%20%ED%83%9C%EA%B7%B8)
-> - [MDN:HTML Element Reference](https://developer.mozilla.org/ko/docs/Web/HTML/Element)
+> ## 참고
+> [나무위키:HTML/태그](https://namu.wiki/w/HTML/%ED%83%9C%EA%B7%B8#%EC%8B%9C%EB%A7%A8%ED%8B%B1%20%ED%83%9C%EA%B7%B8)
+> [MDN:HTML Element Reference](https://developer.mozilla.org/ko/docs/Web/HTML/Element)
