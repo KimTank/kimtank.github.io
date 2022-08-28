@@ -13,6 +13,8 @@ tags:
 - radio
 - select
 - button
+- range
+- textarea
 ---
 이전에도 Android만 하지말고 Web Front로 방향을 잡아라는 친한 동생의 이야기에 웃어 넘긴적이 있다. 근래에는 JavaScript와 HTML만 보고있는데도 느끼는건 ~~시간이 많이 부족하다.~~ 볼 양이 많아서 너무 행복하다 ^^*
 
@@ -83,6 +85,33 @@ tags:
       <!-- value를 지정해줘야 선택한 값이 전송된다. 라디오버튼을 묶기 위해서는 name 속성을 동일한 값으로 줘야한다.-->
     </form>
     ```
+  - `<range>`
+    - 범위를 만들어서 그 값을 선택하게한다.
+    - 최소값, 최대값을 제어가능하다.
+      ```javascript
+      <div>
+        <label for="quantity">수량</label>
+        <input type="range" id="quantity" min="0" max="65535" step="100" value="32267" name="quantity">
+      </div>
+      <!-- 
+        수평으로된 범위(andrid progressbar)선택 gui가 출력된다.
+        step: 한눈금단 단위
+        value: 초기값
+        submit 시 정해진 범위로 /주소?key=value
+
+        type="number"일 때도 min, max값을 지정하면 지정한 범위만큼 입력가능하다.
+      -->
+      ```
+
+  - `<textarea>`
+    - 복수의 줄을 입력하는 입력창이 출력된다.
+    - Android:View/TextView/maxLine: 지정과 같은 모양(모양만 같다 동작은 다르다.)
+      ```javascript
+      <div>
+        <label for="review">상품 리뷰</label>
+        <br>
+        <textarea id="review" row="5" cols="50" name="review" placeholder="input your review">
+      ```
 
 - `placeholder`
     ```javascript
@@ -137,6 +166,10 @@ tags:
 ```
 - `<form>`안에 위치할 경우 기본값이 `submit`, <form>`의 `action` attribute와 연동되어 따로 명시하지 않으면 전송한다.
 
+### 그외 elements
+- `<month>`
+- `<datetime-local>`
+- 
 
 > ## 참고
 > [MDN:HTML/element/form](https://developer.mozilla.org/ko/docs/Web/HTML/Element/form)
@@ -145,3 +178,5 @@ tags:
 > [MDN:HTML/element/button](https://developer.mozilla.org/ko/docs/Web/HTML/Element/button)
 > [MDN:HTML/element/input/radio](https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input/radio)
 > [MDN:HTML/element/input/checkbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)
+> > [MDN:HTML/element/input/range](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range)
+> > [MDN:HTML/element/input/textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/textarea)
