@@ -46,12 +46,12 @@ tags:
   - `name`
   - 서버와 통신하는 `key`값으로 서버가 찾으려는 간단한 값이다.
   > https://www.anymous-website-example.com/login_action?user=유저명&pwd=비밀번호&birth=생일...
-  > > 각 input 태그에 저장된 정보가 form의 action 속성인 login_action을 통해 input의 name에 지정된 이름(user, pwd, birth)와 같은 키값으로 입력된 value(유저명, 비밀번호, 생일)를 전송한다.</br>
+  > > 각 input 태그에 저장된 정보가 form의 action 속성인 login_action을 통해 input의 name에 지정된 이름(user, pwd, birth)와 같은 키값으로 입력된 value(유저명, 비밀번호, 생일)를 전송한다.   
   > > 해당 /접속주소?key=value&key2=value2 의 형태로 GUI를 이용하지 않고, google검색이나 해당 동작을 주소창에서 할 수도 있다.
 
   - `checkbox`
     - `checkbox`는 꼭 `<label>`처리 한다.
-```javascript
+```html
 <div>
   <input type="checkbox" id="giant" name="giant" checked>
   <label for="giant">Giant</label>
@@ -71,7 +71,7 @@ tags:
 
   - `radio`
     - `checkbox`와 비슷하지만 중복선택이 가능한 `checkbox`와는 다르게 단일값만 선택 가능하다.
-```javascript
+```html
 <form>
   <p>choose your bike size</p>
   <label for="s">S(47)</label>
@@ -88,7 +88,7 @@ tags:
   - `range`
     - 범위를 만들어서 그 값을 선택하게한다.
     - 최소값, 최대값을 제어가능하다.
-```javascript
+```html
 <div>
   <label for="quantity">수량</label>
   <input type="range" id="quantity" min="0" max="65535" step="100" value="32267" name="quantity">
@@ -103,13 +103,13 @@ tags:
 ```
 
 - `placeholder`
-```javascript
+```html
 <input type="..." placeholder="(ex: username, enter password, etc)" >
 ```
     > 모든 `<input>`에서 적용되지는 않는다.
 
 ### `<select>`
-```javascript
+```html
 <label for="color">choose your bike color</label>
 <select name="color" id="color-selected">
   <option value="choose color">select color</option>
@@ -123,7 +123,7 @@ tags:
 
 ### `<label>`
 - 접근성이 좋고 form을 편하게 해준다.
-```javascript
+```html
 <form>
   <div>
   <!-- 표준 -->
@@ -137,13 +137,13 @@ tags:
       <input type="checkbox" name="trek" id="trek">
     </label>
   </div>
-</from>
+</form>
 ```
   > `<label>`의 `for` attribute와 `<input>`의 `id` attribute로 연결점생김.<br/>
   > `id`는 identify, 유일한 값을 가져야한다.
   
 ### `<button>`
-```javascript
+```html
 <div>
   <button>그냥버튼</button>
   <form>
@@ -158,20 +158,20 @@ tags:
 ### `<textarea>`
 - 복수의 줄을 입력하는 입력창이 출력된다.
 - Android:View/TextView/maxLine: 지정과 같은 모양(모양만 같다 동작은 다르다.)
-```javascript
+```html
 <div>
   <label for="review">상품 리뷰</label>
-  <br>
+     
   <textarea id="review" row="5" cols="50" name="review" placeholder="input your review">
 </div>
 ```
 
 > ## 참고
-> [MDN:HTML/Element/form](https://developer.mozilla.org/ko/docs/Web/HTML/Element/form)<br>
-> [MDN:HTML/Element/input](https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input)<br>
-> [MDN:HTML/Element/select](https://developer.mozilla.org/ko/docs/Web/HTML/Element/select)<br>
-> [MDN:HTML/Element/button](https://developer.mozilla.org/ko/docs/Web/HTML/Element/button)<br>
-> [MDN:HTML/Element/Input/radio](https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input/radio)<br>
-> [MDN:HTML/Element/Input/checkbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)<br>
-> [MDN:HTML/Element/Input/range](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range)<br>
+> [MDN:HTML/Element/form](https://developer.mozilla.org/ko/docs/Web/HTML/Element/form)   
+> [MDN:HTML/Element/input](https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input)   
+> [MDN:HTML/Element/select](https://developer.mozilla.org/ko/docs/Web/HTML/Element/select)   
+> [MDN:HTML/Element/button](https://developer.mozilla.org/ko/docs/Web/HTML/Element/button)   
+> [MDN:HTML/Element/Input/radio](https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input/radio)   
+> [MDN:HTML/Element/Input/checkbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)   
+> [MDN:HTML/Element/Input/range](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range)   
 > [MDN:HTML/Element/textarea](https://developer.mozilla.org/docs/Web/HTML/Element/textarea)
