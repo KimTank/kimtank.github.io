@@ -1,16 +1,22 @@
 ---
 layout: post
 title: "HTML form과 내부 태그와 속성 "
-date: 2022-08-27T00:00:00-00:00
+date: 2022-08-28T00:00:00-00:00
 categories:
 - WebFront
 tags:
 - HTML
 - form
+- input
+- type
+- checkbox
+- radio
+- select
+- button
 ---
-주말에도 가즈아아아아앙ㅇㅇ2222222
+이전에도 Android만 하지말고 Web Front로 방향을 잡아라는 친한 동생의 이야기에 웃어 넘긴적이 있다. 근래에는 JavaScript와 HTML만 보고있는데도 느끼는건 ~~시간이 많이 부족하다.~~ 볼 양이 많아서 너무 행복하다 ^^*
 
-# HTML form's contents
+# HTML form과 내부태그와 속성
 
 ## HTML `<form>`
  - user에게는 보이지 않는 container
@@ -21,7 +27,7 @@ tags:
 
 > HTTP method `get` & `set`이 있다.
 
-## in `<form>`'s inner tag
+## `<form>`의 내부 태그들
 
 ### `<input>`
 - `type` attribute로 input태그의 형식을 정한다.
@@ -38,10 +44,10 @@ tags:
   - `number`: `text`와 비슷하나 숫자만 입력되고 방향키 가능
   - `name`
   - 서버와 통신하는 `key`값으로 서버가 찾으려는 간단한 값이다.
-  ```
-  https://www.anymous-website-example.com/login_action?user=유저명&pwd=비밀번호&birth=생일...
-  각 input 태그에 저장된 정보가 form의 action 속성인 login_action을 통해 input의 name에 지정된 이름(user, pwd, birth)와 같은 키값으로 입력된 value(유저명, 비밀번호, 생일)를 전송한다.
-  ```
+  > https://www.anymous-website-example.com/login_action?user=유저명&pwd=비밀번호&birth=생일...
+  > > 각 input 태그에 저장된 정보가 form의 action 속성인 login_action을 통해 input의 name에 지정된 이름(user, pwd, birth)와 같은 키값으로 입력된 value(유저명, 비밀번호, 생일)를 전송한다.</br>
+  > > 해당 /접속주소?key=value&key2=value2 의 형태로 GUI를 이용하지 않고, google검색이나 해당 동작을 주소창에서 할 수도 있다.
+
   - `checkbox`
     - `checkbox`는 꼭 `<label>`처리 한다.
     ```javascript
@@ -61,6 +67,7 @@ tags:
       <!-- 체크 후 전송 시 https://주소.도메인/action?checked=on  체크하지 않았을 시는 아무것도 보내지 않는다.-->
     </form>
     ```
+
   - `radio`
     - `checkbox`와 비슷하지만 중복선택이 가능한 `checkbox`와는 다르게 단일값만 선택 가능하다.
     ```javascript
@@ -76,7 +83,14 @@ tags:
       <!-- value를 지정해줘야 선택한 값이 전송된다. 라디오버튼을 묶기 위해서는 name 속성을 동일한 값으로 줘야한다.-->
     </form>
     ```
-- `select`
+
+- `placeholder`
+    ```javascript
+    <input type="..." placeholder="(ex: username, enter password, etc)" >
+    ```
+    > 모든 `<input>`에서 적용되지는 않는다.
+
+### `<select>`
   ```javascript
   <label for="color">choose your bike color</label>
   <select name="color" id="color-selected">
@@ -88,12 +102,6 @@ tags:
   </select>
   <!-- value값이 키값인 color로 전송된다. 단순 문자열은 UI일뿐 -->
   ```
-
-- `placeholder`
-  ```javascript
-  <input type="..." placeholder="(ex: username, enter password, etc)" >
-  ```
-  > 모든 `<input>`에서 적용되지는 않는다.
 
 ### `<label>`
 - 접근성이 좋고 form을 편하게 해준다.
@@ -115,7 +123,7 @@ tags:
   ```
   > `<label>`의 `for` attribute와 `<input>`의 `id` attribute로 연결점생김.<br/>
   > `id`는 identify, 유일한 값을 가져야한다.
-
+  
 ### `<button>`
 ```javascript
 <div>
@@ -131,4 +139,9 @@ tags:
 
 
 > ## 참고
-> [MDN:HTML/table](https://developer.mozilla.org/ko/docs/Web/HTML/Element/table)
+> [MDN:HTML/element/form](https://developer.mozilla.org/ko/docs/Web/HTML/Element/form)
+> [MDN:HTML/element/input](https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input)
+> [MDN:HTML/element/select](https://developer.mozilla.org/ko/docs/Web/HTML/Element/select)
+> [MDN:HTML/element/button](https://developer.mozilla.org/ko/docs/Web/HTML/Element/button)
+> [MDN:HTML/element/input/radio](https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input/radio)
+> [MDN:HTML/element/input/checkbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)
