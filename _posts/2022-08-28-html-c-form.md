@@ -103,16 +103,6 @@ tags:
       -->
       ```
 
-  - `<textarea>`
-    - 복수의 줄을 입력하는 입력창이 출력된다.
-    - Android:View/TextView/maxLine: 지정과 같은 모양(모양만 같다 동작은 다르다.)
-      ```javascript
-      <div>
-        <label for="review">상품 리뷰</label>
-        <br>
-        <textarea id="review" row="5" cols="50" name="review" placeholder="input your review">
-      ```
-
 - `placeholder`
     ```javascript
     <input type="..." placeholder="(ex: username, enter password, etc)" >
@@ -166,17 +156,28 @@ tags:
 ```
 - `<form>`안에 위치할 경우 기본값이 `submit`, <form>`의 `action` attribute와 연동되어 따로 명시하지 않으면 전송한다.
 
+### `<textarea>`
+  - 복수의 줄을 입력하는 입력창이 출력된다.
+  - Android:View/TextView/maxLine: 지정과 같은 모양(모양만 같다 동작은 다르다.)
+    ```javascript
+    <div>
+      <label for="review">상품 리뷰</label>
+      <br>
+      <textarea id="review" row="5" cols="50" name="review" placeholder="input your review">
+    </div>
+    ```
+
 ### 그외 elements
 - `<month>`
 - `<datetime-local>`
 - 
 
 > ## 참고
-> [MDN:HTML/element/form](https://developer.mozilla.org/ko/docs/Web/HTML/Element/form)
-> [MDN:HTML/element/input](https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input)
-> [MDN:HTML/element/select](https://developer.mozilla.org/ko/docs/Web/HTML/Element/select)
-> [MDN:HTML/element/button](https://developer.mozilla.org/ko/docs/Web/HTML/Element/button)
-> [MDN:HTML/element/input/radio](https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input/radio)
-> [MDN:HTML/element/input/checkbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)
-> > [MDN:HTML/element/input/range](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range)
-> > [MDN:HTML/element/input/textarea](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/textarea)
+> [MDN:HTML/Element/form](https://developer.mozilla.org/ko/docs/Web/HTML/Element/form)<br>
+> [MDN:HTML/Element/input](https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input)<br>
+> [MDN:HTML/Element/select](https://developer.mozilla.org/ko/docs/Web/HTML/Element/select)<br>
+> [MDN:HTML/Element/button](https://developer.mozilla.org/ko/docs/Web/HTML/Element/button)<br>
+> [MDN:HTML/Element/Input/radio](https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input/radio)<br>
+> [MDN:HTML/Element/Input/checkbox](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox)<br>
+> [MDN:HTML/Element/Input/range](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range)<br>
+> [MDN:HTML/Element/textarea](https://developer.mozilla.org/docs/Web/HTML/Element/textarea)

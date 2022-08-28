@@ -94,8 +94,8 @@ const mulTablePrinter = (...args) => {
 ^^ 이제는 시킨거라도 잘해야지
 
 > ## 참고
-> [MDN:JavaScript/for...of](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/for...of)
-> [MDN:JavaScript/forEach](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-> [MDN:JavaScript/rest parametes](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters)
-> [MDN:JavaScript/instanceof](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/instanceof)
+> [MDN:JavaScript/for...of](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/for...of)<br>
+> [MDN:JavaScript/forEach](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)<br>
+> [MDN:JavaScript/rest parametes](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters)<br>
+> [MDN:JavaScript/instanceof](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/instanceof)<br>
 > [MDN:JavaScript/addition assignment](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Addition_assignment)
