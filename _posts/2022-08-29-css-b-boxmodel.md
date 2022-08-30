@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CSS Box Model"
-date: 2022-08-29T00:00:00-00:00
+date: 2022-08-29
 categories:
 - WebFront
 tags:

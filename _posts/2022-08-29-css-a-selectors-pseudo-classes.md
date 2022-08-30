@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "CSS Selectors와 Specificity"
-date: 2022-08-29T08:20:00
+date: 2022-08-29
 categories:
 - WebFront
 tags:
