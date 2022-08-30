@@ -4,7 +4,7 @@ title: "CSS Flexbox"
 date: 2022-08-30
 categories:
 - WebFront
-tags:s
+tags:
 - CSS
 - flexbox
 - flex-model
