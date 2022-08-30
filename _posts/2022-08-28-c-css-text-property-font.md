@@ -82,6 +82,7 @@ inital
 unset
 */
 ```
+---
 | Relative | Absolute | 
 |---|---|
 | EM | PX |
@@ -89,7 +90,8 @@ unset
 | VH | CM |
 | VW | IN |
 | % | MM |
-| AND MORE! |  |
+| AND MORE! ||
+---
 > 일반적으로 EM, REM, %로 제어하며, 나머지는 잘 안쓰인다.   
 > 반응형웹의 경우 절대값을 안쓴다.
 
@@ -128,5 +130,5 @@ font-family: unset;
 > [MDN:CSS/Reference](https://developer.mozilla.org/ko/docs/Web/CSS/Reference)  
 > [MDN:CSS/Font-size](https://developer.mozilla.org/ko/docs/Web/CSS/font-size)   
 > [MDN:CSS/Font-family](https://developer.mozilla.org/ko/docs/Web/CSS/font-family)   
-> [HTMLcolorCodes/color-names](https://htmlcolorcodes.com/color-names/)
+> [HTMLcolorCodes/color-names](https://htmlcolorcodes.com/color-names/)   
 > [CSSfontStack](https://cssfontstack.com)

@@ -164,6 +164,7 @@ type::selection{
 ## The Cascade
 스타일의 최상단부터 출발한 폭포(cascade)가 아래로 쭉 흘러서 스타일시트 최하단이나 다음 스타일 시트로 넘어간다.
 - .css파일 내 동작
+
 ```css
 type-a {
     property-a: value-a;
@@ -173,6 +174,7 @@ type-a {
 }
 /* 적용 시 type-a 태그는 하단의 value-A가 적용된다. */
 ```
+
 - head에 명시 동작
 ```javascript
 <head>
