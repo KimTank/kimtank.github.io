@@ -22,7 +22,7 @@ tags:
 - 스타일을 변경하고 매개변수에 따라 새로운 스타일도 넣을 수 있다.
 - 화면 넓이나 기기 종류, 기기가 움직이는 방향에 맞추어 스타일을 조정한다.
 
-
+---
 ```css
 /* 
 width: 800px 정확하게 800px으로 설정은 잘안한다. 800px로 정확하게 맞출일이 있을까
@@ -96,9 +96,8 @@ h1 {
     }
 }
 ```
-
-
 > [예제코드 동작확인](https://github.com/KimTank/turbo-garbanzo/tree/main/udemy/web-developer-bootcamp-2022/sample-code/Flexbox_And_Responsive/MediaQueries%20Starter)
+---
 
 > ## 참고
 > [MDN:CSS/Media](https://developer.mozilla.org/ko/docs/Web/CSS/@media)   
