@@ -176,6 +176,7 @@ type-a {
 ```
 
 - head에 명시 동작
+
 ```javascript
 <head>
     <meta charset="UTF-8">
@@ -184,7 +185,7 @@ type-a {
 
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="general-styles.css">
-    //위 링크를 적용한 후 다음 링크로 넘어가 겹치는 부분이 있을 시 아래 general-styles.css의 명세가 적용된다.
+    // 위 링크를 적용한 후 다음 링크로 넘어가 겹치는 부분이 있을 시 아래 general-styles.css의 명세가 적용된다.
 <head>
 ```
 
