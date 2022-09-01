@@ -40,7 +40,7 @@ tags:
 - mkdir(make directories)
 
 ```bash
-mkdir helloWord
+$mkdir helloWord
 ```
 - ls(list): 특정 폴더에 포함된 파일이나 하위 폴더 리스트 출력
   - -l: 파일포멧 전부 표현
@@ -54,21 +54,21 @@ mkdir helloWord
 - touch: 파일 생성
 
 ```bash
-touch any-file-name.extention_word #exe, text etc
+$touch any-file-name.extention_word #exe, text etc
 ```
 
 - cat: 파일내용 터미널에 출력
 
 ```bash
-cat any-file-name.extention_word
+$cat any-file-name.extention_word
 ```
 
 - rm: 휴지통을 거치치 않고 삭제한다.
 
 ```bash
 # 확장자를 점점 줄이고싶어 ex-wd 이후 e-d
-rm file-dont-want.extnt-wrd
-rm -rf folder-dont-want.ex-wd
+$rm file-dont-want.extnt-wrd
+$rm -rf folder-dont-want.ex-wd
 ```
   - -rf: 폴더를 지울때 옵션. 안넣으면 동작안하며 경고날림
   - -r(recursive): 폴더 지울때 사용
@@ -80,19 +80,19 @@ rm -rf folder-dont-want.ex-wd
 
 ```bash
 # cp 원본파일 복사할파일
-cp original.e-d copied.e-d
+$cp original.e-d copied.e-d
 
 # 폴더의 경우 -rf옵션 추가
-cp -rf original copied
+$cp -rf original copied
 
 # 상위로 복사
-cp original.e-d ../
-cp -rf original ~/UpperDirectory/
+$cp original.e-d ../
+$cp -rf original ~/UpperDirectory/
 ```
 
 - whoami: 현재 사용자가 누군지 확인할 수 있다.
 ```bash
-whoami
+$whoami
 # 결과
 # [username]
 ```
