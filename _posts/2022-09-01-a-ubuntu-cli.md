@@ -90,7 +90,29 @@ cp original.e-d ../
 cp -rf original ~/UpperDirectory/
 ```
 
+- whoami: 현재 사용자가 누군지 확인할 수 있다.
+```bash
+whoami
+# 결과
+# [username]
+```
+
+- sudo: rootAuth를 획득하는 명령어
+- apt: 패키지 매니저
+  - apt update: 패키지 목록 갱신(rootAuth)
+    - 패키지를 다운로드 할 수 있는 지정된 저장소의 최신 정보를 업데이트함. 새로운 저장소를 추가하거나, 패키지를 설치하기전 최신정보를 갱신함.(설치 후 저장소(mirror server)를 변경하면 빨라진다.)
+  - apt list --upgradable: 업그레이드 가능한 패키지 목록을 출력
+  - apt upgrade: 전체 패키지 업그레이드 - (rootAuth)
+  - apt --only-upgrade install packageName: 특정패키지 업그레이드(rootAuth)
+  - apt install packageName : (rootAuth)
+  - apt list --installed: 설치된 패키지 보기
+  - apt search searchKeyword: 패키지 검색
+  - apt show packageName: 패키지 정보 확인
+  - apt remove packageName: 패키지 이름(권한)
+
 ---
 우분투는 dos와는 다르다. 윈도우의 파워쉘역시 사용법이 특이하다고 생각했었는데, 익숙해 진다면 여느 매체에서 보던 전문가처럼 "다라라ㅏ라라다라랄라다ㅏ랃 (컴퓨터 연산소리 지이이지이이이) 다라닫라라라라다라라다"하는 것처럼 키보드만으로 멋있는 척(남이하면 우와아아 전문가다, 내가하면 나 좀 쩌는듯)할 수있는 뭔가 있어보이는 그런 무언가 생길거 같다.
-<!-- > ## 참고
-> []() -->
+> ## 참고
+> [W3Schools:CLI](https://www.w3schools.com/whatis/whatis_cli.asp)   
+> [Ubuntu:Command Line for Beginner](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)   
+> [CSCS&Info:Doc/Linux shell commands](https://docs.cs.cf.ac.uk/notes/linux-shell-commands/)
