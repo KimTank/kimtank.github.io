@@ -8,7 +8,6 @@ tags:
 - Linux
 - Ubuntu
 - CLI
-- 
 - Vmware
 ---
 
