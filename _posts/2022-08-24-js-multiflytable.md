@@ -3,7 +3,7 @@ layout: post
 title: "JavaScript multiflyTable"
 date: 2022-08-24T00:00:00-00:00
 categories:
-- WebFront
+- javascript
 tags:
 - JavaScript
 - multifly table

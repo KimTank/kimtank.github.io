@@ -4,7 +4,6 @@ title: "VMWARE로 UBUNTU 30분만에 설치하기"
 date: 2022-08-31
 categories:
 - Ubuntu
-- Vmware
 tags:
 - Vmware
 - Ubuntu

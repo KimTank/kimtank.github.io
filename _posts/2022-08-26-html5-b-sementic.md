@@ -3,7 +3,7 @@ layout: post
 title: "HTML sementic"
 date: 2022-08-26T00:00:00-00:00
 categories:
-- WebFront
+- html
 tags:
 - HTML
 - HTML5

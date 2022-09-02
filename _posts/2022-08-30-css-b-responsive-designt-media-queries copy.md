@@ -3,7 +3,7 @@ layout: post
 title: "CSS Responsive Design & Media Queries"
 date: 2022-08-30
 categories:
-- WebFront
+- css
 tags:
 - CSS
 - Media

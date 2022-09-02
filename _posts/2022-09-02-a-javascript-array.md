@@ -1,0 +1,98 @@
+---
+layout: post
+title: "JavaScript Array"
+date: 2022-09-02
+categories:
+- javaScript
+tags:
+- Javascript
+---
+핸드폰 연락처에 초등학교 동창, 중학교 동창, 고등학교 동창, 대학교 동기, 선후배 등을 이름 뒤에 붙여서 관리한다면 이름에 연관되는 관계를 모두 기억하고 있어야 하거나, 따로 이름과 같이 관리할 수 있는 김개똥(초등학교),이말똥(중학교), 박새똥(대학교) 등 이름마다 타자를 쳐줘야하니 곤혹스럽지 않은 일이 될 수 밖에 없다. 하지만 친절히도 피쳐폰시절부터 현재의 스마트폰까지 그룹을 지정해서 관리할 수 있도록 기본으로 그룹화를 제공한다. 이것 역시 배열이라고 볼 수 있다. 배열은 [자료구조](https://namu.wiki/w/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0)이다. 연관된 데이터를 하나의 변수에 묶어서 관리하기 위한 방법이다. 자료구조는 심오한 학문이니, 기회가 난다면 꼭 깊게 파고드는것도 재밋을 것이다.
+
+# JavaScript Array
+
+## Array(객체를 말하는 것이 아닌 배열을 말하는것)
+- Array는 Element를 가진 순서가 있는 값이다. 시작값은 0부터 시작한다.
+```javascript
+let args = [1, 2, 3, 4, 5];
+
+console.log(args[0]); //배열을 0번째 인덱스인 1에 접근
+
+args[0] = 10;
+
+console.log(args[0]); //변경된 10으로 출력
+//-------------------
+//n차 배열
+let nArgs = [['소', '맛잇다'], ['돼지', '맛잇다'], ['고양이', '먹는거아니야']];
+
+console.log(`${nArgs[1][0]}, ${nArgs[0][0]}은(는) ${nArgs[2][1]}`);
+//돼지, 소은(는) 먹는거아니야 출력
+/* *********표 nArgs***********
+ * nArgs     0    |       1     |
+ *   0    |   소  |    맛잇다    |
+ *   1    |  돼지 |    맛잇다    |
+ *   2    |고양이 |먹는거아니야  |
+ * ********************/
+
+console.log(nArgs.length);//배열의 길이 3 출력
+//.을 이용하여 속성(property)과 내장함수(method) 접근할 수 있음.
+
+let numbers = [];
+for(let i = 0; i < 10; i++){
+    number.push(i);
+}
+console.log(numbers); // 0~9까지 배열이 할당됨
+
+for(let i = 0; i < numbers.length; i++){
+    console.log(number[i]); 
+} //0~9까지 로그 출력
+
+//------------init 안했을 시 문제
+let sum = 0;
+for(let i = 0; i < numbers.length; i++>){
+    sum += number[i];
+    if(numbers.length === (i + 1))
+        console.log(sum);//배열이 다 더해지고 마지막에 더한값 45 출력
+}//배열의 모든값을 더함. 
+// 이때 sum을 let sum;으로 0으로 init을 하지 않을 경우
+// undefined + 1 = NaN이므로 정상값 출력안된다.
+
+//Array의 type
+console.log(typeof numbers);//object를 출력한다.
+// object를 출력하기 때문에 배열인지 아닌지를 알 수 가 없다.
+
+console.log(Array.isArray(numbers));//true를 반환
+//---------------------
+let myBestBrands = ['Specialized', 'Fuji', 'Masi', 'Derosa'];
+
+myBestBrands.push('Trek');// 배열 뒤 또렉을 추가
+console.table(myBestBrands);//표로 확인
+
+myBestBrands.pop();// 당연하게도 또렉을 꼭 삭제^^
+console.table(myBestBrands);//표로 확인
+
+myBestBrands.shift();// 슬프게도 스페이셜라이즈드를 앞에서 추가
+console.table(myBestBrands);//표로 확인
+
+myBestBrands.unshift('Gios');// Gios라도 앞에 추가
+console.table(myBestBrands);//표로 확인
+
+console.log(myBestBrands.indexOf('Fuji'));//후지가 있는 인덱스반환 1
+console.log(myBestBrands.indexOf('fuji'));//Fuji는 있는데 fuji는 없으면 -1을 반환
+//-1을 가지고 검증문을 만들 수 있다.
+const hasElement = (args, value) => args.indexOf(value) !== -1;//있으면 true 없으면 false
+
+console.log(myBestBrands.include('Masi'));//있으면 true, 없으면 false
+
+```
+> - .(dot, 온점) chain기법은 java 재귀함수 팩토리얼 구조로도 많이 봐왔던 모양
+> - console.table(anyArray): 표(시각화)로 이쁘게 출력해준다 와우~!
+> - push(value), pop() 등 배열이 가진 매서드는 많다. 문서를 확인해보자~!
+> - indexOf는 인덱스를 반환해주고, include는 단순히 존재 여부만 확인해준다. include의 경우 explorer와 nodejs버전에 따라 호환이 안되는 경우도 있다.
+
+
+> ## 참고
+> [Git:초기 설정](https://git-scm.com/book/ko/v2/%EC%8B%9C%EC%9E%91%ED%95%98%EA%B8%B0-Git-%EC%B5%9C%EC%B4%88-%EC%84%A4%EC%A0%95)   
+> [Git](https://git-scm.com/)   
+> [Github](https://github.com)   
+> [Github/sycork 내꺼](https://github.com/sycork)

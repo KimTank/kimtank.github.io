@@ -3,7 +3,7 @@ layout: post
 title: "CSS Box Model"
 date: 2022-08-29
 categories:
-- WebFront
+- css
 tags:
 - CSS
 - box-model

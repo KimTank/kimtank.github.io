@@ -3,7 +3,7 @@ layout: post
 title: "HTML table"
 date: 2022-08-27T00:00:00-00:00
 categories:
-- WebFront
+- html
 tags:
 - HTML
 - table

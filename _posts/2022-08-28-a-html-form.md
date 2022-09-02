@@ -3,7 +3,7 @@ layout: post
 title: "HTML form과 내부 태그와 속성 "
 date: 2022-08-28T00:00:00-00:00
 categories:
-- WebFront
+- html
 tags:
 - HTML
 - form
