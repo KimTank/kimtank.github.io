@@ -106,7 +106,7 @@ const noANum = Number.NaN;
 
 ### Number의 정수 범위
 
-Number객체가 표혀날 수 있는 정수의 최소값과 최대값을 보여준다.
+Number객체가 표현할 수 있는 정수의 최소값과 최대값을 보여준다.
 
 ```javascript
 const biggestInt = Number.MAX_SAFE_INTEGER; //  (2**53 - 1) =>  9007199254740991
@@ -115,7 +115,7 @@ const smallestInt = Number.MIN_SAFE_INTEGER; // -(2**53 - 1) => -900719925474099
 
 > [ECMAScript 표준, 6.1.6 The Number Type](https://tc39.github.io/ecma262/#sec-ecmascript-language-types-number-type)
 
-JSON으로 직렬하ㅗ한 데이터를 읽을 때, 위 범위를 벗어나는 수는 JSON분석기의 Number 형변환 시 손상될 수 있다. 이 때 [String](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String)을 대신 사용하는 것도 대안이다.   
+JSON으로 직렬화한 데이터를 읽을 때, 위 범위를 벗어나는 수는 JSON분석기의 Number 형변환 시 손상될 수 있다. 이 때 [String](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String)을 대신 사용하는 것도 대안이다.   
 더 큰 수는 [BigInt](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/BigInt)타입으로 표현할 수 있다.
 
 ### Number를 사용해 Date객체 숫자로 변환
