@@ -16,6 +16,7 @@ tags:
 - range
 - textarea
 ---
+
 이전에도 Android만 하지말고 Web Front로 방향을 잡아라는 친한 동생의 이야기에 웃어 넘긴적이 있다. 근래에는 JavaScript와 HTML만 보고있는데도 느끼는건 ~~시간이 많이 부족하다.~~ 볼 양이 많아서 너무 행복하다 ^^*
 
 # HTML form과 내부태그와 속성
@@ -35,6 +36,7 @@ tags:
 - closing tag 없다.
 
 #### `<input>`'s attribute
+
 - `type`
   ```javascript
   <input type="type's value">
@@ -51,6 +53,8 @@ tags:
 
   - `checkbox`
     - `checkbox`는 꼭 `<label>`처리 한다.
+
+
 ```html
 <div>
   <input type="checkbox" id="giant" name="giant" checked>
@@ -71,6 +75,8 @@ tags:
 
   - `radio`
     - `checkbox`와 비슷하지만 중복선택이 가능한 `checkbox`와는 다르게 단일값만 선택 가능하다.
+
+
 ```html
 <form>
   <p>choose your bike size</p>
@@ -88,6 +94,8 @@ tags:
   - `range`
     - 범위를 만들어서 그 값을 선택하게한다.
     - 최소값, 최대값을 제어가능하다.
+
+
 ```html
 <div>
   <label for="quantity">수량</label>
@@ -103,12 +111,17 @@ tags:
 ```
 
 - `placeholder`
+
+
 ```html
 <input type="..." placeholder="(ex: username, enter password, etc)" >
 ```
-    > 모든 `<input>`에서 적용되지는 않는다.
+
+> 모든 `<input>`에서 적용되지는 않는다.
+
 
 ### `<select>`
+
 ```html
 <label for="color">choose your bike color</label>
 <select name="color" id="color-selected">
@@ -122,7 +135,10 @@ tags:
 ```
 
 ### `<label>`
+
 - 접근성이 좋고 form을 편하게 해준다.
+
+
 ```html
 <form>
   <div>
@@ -139,10 +155,13 @@ tags:
   </div>
 </form>
 ```
+
   > `<label>`의 `for` attribute와 `<input>`의 `id` attribute로 연결점생김.<br/>
   > `id`는 identify, 유일한 값을 가져야한다.
+
   
 ### `<button>`
+
 ```html
 <div>
   <button>그냥버튼</button>
@@ -153,11 +172,16 @@ tags:
   </form>
 </div>
 ```
+
 - `<form>`안에 위치할 경우 기본값이 `submit`, `<form>`의 `action` attribute와 연동되어 따로 명시하지 않으면 전송한다.
 
+
 ### `<textarea>`
+
 - 복수의 줄을 입력하는 입력창이 출력된다.
 - Android:View/TextView/maxLine: 지정과 같은 모양(모양만 같다 동작은 다르다.)
+
+
 ```html
 <div>
   <label for="review">상품 리뷰</label>
@@ -165,6 +189,7 @@ tags:
   <textarea id="review" row="5" cols="50" name="review" placeholder="input your review">
 </div>
 ```
+
 
 > ## 참고
 > [MDN:HTML/Element/form](https://developer.mozilla.org/ko/docs/Web/HTML/Element/form)   
