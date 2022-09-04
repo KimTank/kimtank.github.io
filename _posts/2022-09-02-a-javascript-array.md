@@ -6,6 +6,16 @@ categories:
 - javaScript
 tags:
 - Javascript
+- Array
+- isArray
+- object
+- push
+- pop
+- shift
+- unshift
+- indexOf
+- table
+- include
 ---
 핸드폰 연락처에 초등학교 동창, 중학교 동창, 고등학교 동창, 대학교 동기, 선후배 등을 이름 뒤에 붙여서 관리한다면 이름에 연관되는 관계를 모두 기억하고 있어야 하거나, 따로 이름과 같이 관리할 수 있는 김개똥(초등학교),이말똥(중학교), 박새똥(대학교) 등 이름마다 타자를 쳐줘야하니 곤혹스럽지 않은 일이 될 수 밖에 없다. 하지만 친절히도 피쳐폰시절부터 현재의 스마트폰까지 그룹을 지정해서 관리할 수 있도록 기본으로 그룹화를 제공한다. 이것 역시 배열이라고 볼 수 있다. 배열은 [자료구조](https://namu.wiki/w/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0)이다. 연관된 데이터를 하나의 변수에 묶어서 관리하기 위한 방법이다. 자료구조는 심오한 학문이니, 기회가 난다면 꼭 깊게 파고드는것도 재밋을 것이다.
 
@@ -13,6 +23,8 @@ tags:
 
 ## Array(객체를 말하는 것이 아닌 배열을 말하는것)
 - Array는 Element를 가진 순서가 있는 값이다. 시작값은 0부터 시작한다.
+
+
 ```javascript
 let args = [1, 2, 3, 4, 5];
 
@@ -83,8 +95,8 @@ console.log(myBestBrands.indexOf('fuji'));//Fuji는 있는데 fuji는 없으면 
 const hasElement = (args, value) => args.indexOf(value) !== -1;//있으면 true 없으면 false
 
 console.log(myBestBrands.include('Masi'));//있으면 true, 없으면 false
-
 ```
+
 > - .(dot, 온점) chain기법은 java 재귀함수 팩토리얼 구조로도 많이 봐왔던 모양
 > - console.table(anyArray): 표(시각화)로 이쁘게 출력해준다 와우~!
 > - push(value), pop() 등 배열이 가진 매서드는 많다. 문서를 확인해보자~!
