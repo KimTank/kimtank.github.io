@@ -235,11 +235,11 @@ type:pseudo element{
 > ### 구체적 기준의 우선도
 
 
-|ID|`>`|CLASS|`>`|ELEMENT|
-|---|---|---|---|---|
-|ID Selectors|`>`|Class, Attribute, Pseudo-Class Selectors|`>`|Element, Pseudo-Element Selectors|
+|ID|CLASS|ELEMENT|
+|---|---|---|
+|ID Selectors|Class, Attribute, Pseudo-Class Selectors|Element, Pseudo-Element Selectors|
 
-
+> 좌측으로 갈수록 우선도가 높고, 우측으로 갈수록 우선도는 떨어진다.
 > 태그 내 inline 선택자의 경우 ID선택자보다 더 명시적이므로 우선한다.
 
 > ### !important
