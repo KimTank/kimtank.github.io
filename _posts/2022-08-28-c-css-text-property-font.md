@@ -21,6 +21,7 @@ tags:
 
 ### text-align
 정렬 => left, right, center, justify
+
 ```css
 h1 {
   text-align: center;
@@ -33,6 +34,7 @@ h1 {
 굵기 => normal, bold, lighter, bolder, 100, 900(400 normal, 700 bold)
 
 ### text-decoration: 선
+
 ```css
 tag {
   text-decoration:underline;
@@ -56,7 +58,9 @@ tag {
 자간 => normal, .2rem, 1px, -1px
 
 ## font size
-1.2em, x-small, smaller, 12px, 80%\
+
+1.2em, x-small, smaller, 12px, 80%
+
 ```css
 /* absolute-size */
 tag {
@@ -82,7 +86,7 @@ inital
 unset
 */
 ```
----
+
 | Relative | Absolute | 
 |---|---|
 | EM | PX |
@@ -90,10 +94,11 @@ unset
 | VH | CM |
 | VW | IN |
 | % | MM |
-| AND MORE! ||
----
+| AND MORE! |---|
+
 > 일반적으로 EM, REM, %로 제어하며, 나머지는 잘 안쓰인다.   
 > 반응형웹의 경우 절대값을 안쓴다.
+
 
 ## Font-Family
 
@@ -123,6 +128,7 @@ font-family: inherit;
 font-family: initial;
 font-family: unset;
 ```
+
 > font-family stack은 앞에서부터 기기에 있는 font-family를 찾아 순차적으로 명시   
 > font-family: a, b, c, d, e, f, g;
 
