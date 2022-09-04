@@ -149,6 +149,8 @@ Number('-Infinity'); // -Infinity
 [ECMAScript Language Specification # sec-number-objects](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#%EC%98%88%EC%A0%9C)
 
 > ## 주의
+> 
 > 본 포스팅은 MDN:JavaScript/Number 문서를 내가 알아 보기 쉽도록 정리한 것으로 Last Modified는 2022/08/05이다. 본 포스팅은 따로 업데이트 하지 않는 이상 시간이 지나면 legacy할 수 있다. 가능하다면 항상 최신화가 이루어지는 MDN:DOC을 이용해야한다.
+> 
 > ## 참고
 > [MDN:JavaScript/Number](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#%EC%98%88%EC%A0%9C)
