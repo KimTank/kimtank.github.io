@@ -6,7 +6,7 @@ categories:
 - javaScript
 - Chrome
 tags:
-- Javascript
+- Javacript
 - Chrome
 - CodeBlock
 - Translate
