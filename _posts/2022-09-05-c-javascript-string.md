@@ -1,0 +1,108 @@
+---
+layout: post
+title: "JavaScript String"
+date: 2022-09-05
+categories:
+- javaScript
+tags:
+- JavaScript
+- String
+---
+
+문자열은 사람이 읽을 수 있는 언어를 나타내주는 중요한 정보이다. 실제로는 character, 문자의 모음으로 실질적으로는 메모리에는 결국 0과 1로 저장되겠지만, 유저가 읽고 받아들이려면 문자열이 없어서는 곤란하다.
+
+# JavaScript String
+
+문자의 모음, Strings of characters
+
+## Syntax
+
+```javascript
+//(쌍)따옴표로 쌓여져있는 글자
+let name = 'ty';
+let nickName = "tank";
+//let love = "cat is most lovely animal'; 해당구문은 error
+```
+
+## Indices & Length
+
+- Indices: 지수, Numerical index
+- Length: 길이
+
+```javascript
+let a = 'hello dumdum';
+a[3];   // l
+a[a.length] // index = length - 1 => a[a.length] overflow => undefined
+
+a.length // 12 index => 0~11 ================> caption.1
+
+//=================================> caption.2
+let name = 'TaeYoon';
+name = 'TAEYOON';
+//=================================> caption.2 end
+
+let number = 10;
+let stringValue = 'ten';
+
+let additionResult = number + stringValue; // 10ten
+typeof additionResult;  // 'string
+// number와 string을 JavaScript는 따로 처리하지 못하니, string으로 변환한다.
+```
+
+> ## caption
+> 1. [C언어 배열의 범위를 넘어설때](https://blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=tipsware&logNo=221054714926&categoryNo=50&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=search)   
+> 2. 상위 TaeYoon, TAEYOON은 전혀 다른 문자열이다. 메모리주소가 다르다. 한번에 한문자만 수동으로 업데이트할 수 없다. TAEYOON은 새 메모리를 가지는 새 문자열로 name변수에 덮어쓴다.
+
+## String Methods
+
+thing.method(...args);
+
+string객체 내 내장된 instance는 length밖에 없지만, 구현되어있는 method()는 종류가 많으니, 가능하다면 MDN문서에서 확인하자.
+
+- .toUpperCase(): 대문자로 변환
+- .toLowerCase(): 소문자로 변환
+- .trim(): 앞과 뒤의 공백을 날려준다. 어떻게 들어올지 모르는 유저의 입력값을 정제할때 사용.
+- .indexOf(arg): 문자열에 주어진 인수가 나타내는 문자열 index와 그 자릿수를 반환
+- .slice(0...): 문자열의 인수 부분을 잘라내서 **새로운 문자열**로 반환해 준다.
+
+```javascript
+let value = 'badboy is gone';
+value.slice(6);     // ' is gone' => 6번째 부터
+value.slice(0, 6);  // 'badboy' => 0~6전까지
+value.slice(-4);    // 'gone' => 음수일 경우 뒤에서 1부터 4까지
+```
+
+> ### 중요
+> .slice(0...)는 원래 문자열에 영향을 끼치지 않는다. mutable, immutable
+
+- .replace(arg1, arg2): **정규표현식을 사용하여 제어할 수 있다.**, arg1은 기존 변경전 문자열또는 문자, arg2는 변경할 문자열또는 문자. 처음으로 매칭되는 값만 변경된다.(반복문을 사용하면 다 변경할수 있을거같다. .replaceAll(arg1, arg2)가 있긴하지만 브라우저별로 호환여부가 다르다. chrome 호환 안됨)
+- .repeat('number type'): 반복하여 붙인다. 'abc'.repeat(3); => 'abcabcabc'. 새로운 문자열이 만들어지고 원본은 변하지 않는다.
+
+## Template Literals
+
+### Syntax
+
+```javascript
+let number = 10;
+let unit = 'km';
+
+console.log(`${number}${unit} left`); // 10km left
+//동적으로 변경할 수 있다.
+// ` back tick character
+// ${3 * 4} 산술연산 가능
+```
+
+## Null & Undefined
+
+
+
+> ## 참고
+> []()   
+> []()   
+> []()   
+> []()   
+> []()   
+> []()   
+> []()   
+> []()   
+> []()   
