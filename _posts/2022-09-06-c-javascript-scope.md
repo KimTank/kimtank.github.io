@@ -7,6 +7,14 @@ categories:
 tags:
 - JavaScript
 - Scope
+- Global
+- Local
+- var
+- let
+- const
+- variable
+- WebAPI
+- Window
 ---
 
 실제로 코드를 만들다 수정을 하게 될 시 스코프를 잘못 지우거나, 추가했을 시 제대로 잡아주지 않으면 계속 에러가 발생한다. 당연히 컴퓨터 입장에서는 내가 이 코드를 어느 범위까지 끝낸 줄 알 수 없으니, 실질적으로는 약속을 위반한 것이다. 우리는 스코프의 사용을 정확하게 하여야 한다. 스코프를 잘못 삽입 및 삭제했다가 코드 자동정렬이라도 했을 때는 생각만해도 끔찍하다.
@@ -16,9 +24,12 @@ tags:
 ## 스코프의 의미와 적용 범위
 
 ```javascript
+//전역
 let globalVariable = 10;
 
+
 {
+    //지역
     let localVariable = 20;
     let globalVariable = 30;
     localVariable;  //20
@@ -29,11 +40,28 @@ localVariable;  //Error
 globalVariable; //10(아마 에러가나서 멈추지 싶지만)
 ```
 
-## 변수 별 스코프의 주요 규칙
+## block scope와 function scope의 차이
 
-## 전역 스코프와 지역 스코프의 차이
+```javascript
+//1. block scope 내 지역
+{
 
-## block scope와 fuction scope의 차이
+}
+
+//2. function scope
+//지역 스코프의 범위를 파라메타인 value까지 포함한다.
+const function isString(value) = {
+    return typeof value === 'string';
+}
+
+//arrow syntax역시 동일(Java의 ramda???)
+const isBoolean = (value) => {
+    return typeof value === 'boolean';
+}
+
+//위 구문에서 아래 구문으로 생략가능(파라메타 1개, 한줄, 바로 return 시)
+const isNumber = value => typeof value === 'number';
+```
 
 ## 변수 선언 키워드(let, sonst, var)와 스코프와의 관계
 
@@ -78,6 +106,17 @@ myName = 'ty';  //Error 재할당도 안됨.
 
 ## 전역 객체란?
 
+- 브라우저는 window에 전역영역을 담고 있다.
+- var로 전역변수를 만들면, window객체에서도 동일한 값을 찾을 수 있다.
+- 전역변수는 어디서든 접근 가능한 편리한 변수이나, 함수나 로직에 의해 의도치 않게 변조가 될 수 있다. side effect 발생할 수 있다.
+- var는 블록 스코프를 무시하며, 재선언을 해도 에러를 내지 않아, 버그를 유발한다.
+- 전역 변수로 var를 선언하는 경우 window 기능을 덮어씌워 내장 기능을 사용할 수 없는 문제를 발생할 수 있다.
+- 변수를 선언할때는 var, let const 없이 변수를 할당하지 마라. var로 선언된 전역 변수처럼 작동한다.
+- js파일 상단에 `'use strict';`을 사용하면 Strict Mode를 적용해 문법적 실수를 에러로 판단한다.
 
 > ## 참조
-> [MDN:JS/Type & Data Structure](https://developer.mozilla.org/ko/docs/Web/JavaScript/Data_structures)   
+> [MDN:Glossary/Scope](https://developer.mozilla.org/ko/docs/Glossary/Scope)   
+> [MDN:JS/var](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/var)   
+> [MDN:JS/let](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/let)   
+> [MDN:JS/const](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/const)   
+> [MDN:WebAPI/Window](https://developer.mozilla.org/ko/docs/Web/API/Window)
