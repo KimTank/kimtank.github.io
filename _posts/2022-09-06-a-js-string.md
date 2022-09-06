@@ -12,7 +12,6 @@ tags:
 - Length
 - Method
 - Template-Literals
-- `Null`
 - Undefined
 - Math
 - random
@@ -140,12 +139,8 @@ const getRandom = () => Math.floor(Math.random() * 10) + 1;
 ```
 
 > ## 참고
-> []()   
-> []()   
-> []()   
-> []()   
-> []()   
-> []()   
-> []()   
-> []()   
-> []()   
+> [MDN:JS/String](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String)   
+> [MDN:JS/Template Literals](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Template_literals)   
+> [MDN:JS/null](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/null)   
+> [MDN:JS/undefined](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/undefined)   
+> [MDN:JS/Math](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Math)
