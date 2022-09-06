@@ -102,9 +102,12 @@ header1MK('오늘도 열공'); //<h1>오늘도 열공</h1>
 //Java에서 public class Human안의 private 변수들을 접근한 수 있는 getter, setter 형식과 비슷하게 구현 가능
 //즉 캡슐화와 은닉이 가능하다.
 const humanDTO = () => {
-    let name = '';
-    let age = -1;
-    //super.name이 먹는지 테스트를 안해봐서 파라메터이름을 변경
+    //if(personDTO.getName() === undefined) 사용을위해 undefined로 init
+    //올바른 사용인지는 의문..
+    let name = undefined;
+    let age = undefined;
+    //super.name 누군지 모름.
+    //this.name 누군지 모름.
     return {
         setName: (pshName) => {
             name = pshName;
@@ -113,16 +116,20 @@ const humanDTO = () => {
             age = pshAge;
         },
         //본구문에서 스코프 생략가능한지 모름.
-        getName: () => name;
+        getName: () => name
         ,
-        getAge: () => age;
+        getAge: () => age
     }
 }
 
 const personDTO = humanDTO();
 
-personDTO.setName('ty');
-personDTO.setAge('99');
+if(personDTO.getName !== undefined)
+    personDTO.setName('ty');
+
+if(personDTO.getAge !== undefined)
+    personDTO.setAge('99');
+
 personDTO.getName();    // ty
 personDTO.getAge(); // 99
 //ty(99세)옹인 personDTO만들었음.
