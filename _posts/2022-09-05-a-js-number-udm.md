@@ -6,9 +6,6 @@ categories:
 - JavaScript
 tags:
 - JavaScript
-- Chrome
-- Console
-- Inspect
 - Number
 - Math-Operation
 ---
@@ -18,14 +15,6 @@ Udemy강의로 Class까지 달릴예정이었으나, 뭔가 이론말고 이전�
 # JavaScript Number
 
 JavaScript와 HTML, CSS를 굳이 비교하자면 HTML은 명사, CSS는 형용사, JavaScript는 동사이다.(이거때문에 포스팅을 하기로했다. 너무 마음에드는 비유이다. :D)
-
-## Running Code in The Console
-
-- Chrome 브라우저의 검사 기능의 콘솔을 이용하여 가장 간단하게 코드를 작동시킬 수 있다.
-- 각 os마다 지정된 단축키가 존재하니 확인하고 이용하면 편하다.
-- 계속 상주하며 돌아가며 실행되니 단편적이지 않고, 간단한 코드 테스트시 유용하다.
-- 창을 분리시켜 사용할 수 있다.
-- 콘솔 내용 지우기 clear();, 단축키 ctrl + L(윈도우), cmd + k(mac)
 
 ## Number
 
@@ -69,5 +58,4 @@ typeof NaN // 'number'
 > JavaScript에서 NaN은 숫자지만 실제로는 숫자가 아니다.
 
 > ## 참조
-> [MDN:JavaScript/Number](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#%EC%98%88%EC%A0%9C)   
-> [Chrome:Developer/Devtools/Console](https://developer.chrome.com/docs/devtools/console/)
+> [MDN:JavaScript/Number](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#%EC%98%88%EC%A0%9C)
