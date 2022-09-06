@@ -30,7 +30,7 @@ const pushMemoryHeap = ['call somewhere', 1, {birthday: '1900-09-01', name: 'mem
 ```
 
 ## JavaScript Memory 시각화
-![출처 : MDN](./../assets/img/the_javascript_runtime_environment_example.svg)
+![출처 : MDN](./../assets/img/js-memory.png)
 
 ## Primitive Data Types
 
@@ -90,9 +90,8 @@ let as = [10, 20, 30]; // 참조 자료형은 메모리힙(memory heap)에 저�
 
 
 > ## 참조
-> [MDN:JS/Type & Data Structure](https://developer.mozilla.org/ko/docs/Web/JavaScript/Data_structures)
+> [MDN:JS/Type & Data Structure](https://developer.mozilla.org/ko/docs/Web/JavaScript/Data_structures)   
 > [MDN:JS/Primitive Value](https://developer.mozilla.org/ko/docs/Glossary/Primitive)   
-> []()   
 > [MDN:JavaScript/Call Stack](https://developer.mozilla.org/ko/docs/Glossary/Call_stack)   
 > [MDN:JavaScript/Memory Management](https://developer.mozilla.org/ko/docs/Web/JavaScript/Memory_Management)   
 > [MDN:JavaScript/EventLoop](https://developer.mozilla.org/ko/docs/Web/JavaScript/EventLoop)   
