@@ -7,6 +7,15 @@ categories:
 tags:
 - JavaScript
 - String
+- Syntax
+- Indices
+- Length
+- Method
+- Template-Literals
+- `Null`
+- Undefined
+- Math
+- random
 ---
 
 문자열은 사람이 읽을 수 있는 언어를 나타내주는 중요한 정보이다. 실제로는 character, 문자의 모음으로 실질적으로는 메모리에는 결국 0과 1로 저장되겠지만, 유저가 읽고 받아들이려면 문자열이 없어서는 곤란하다.
