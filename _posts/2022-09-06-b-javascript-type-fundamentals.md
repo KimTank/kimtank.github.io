@@ -26,7 +26,17 @@ Udemy강의와 Codestates강의를 병행하다보니, 중간중간 정리가 �
 //원시자료형의 call stack에 바로 저장 call stack & memory heap 참조
 let pushCallStack = 10; // call stack에 올라감
 
-const pushMemoryHeap = ['call somewhere', 1, {birthday: '1900-09-01', name: 'memoryHeap', [1, 3, 5, 7]}]; // memory heap에 올라가고, 각 값에 담긴 정보의 call stack의 주소값을 참조한다.
+const pushMemoryHeap = ['call somewhere'
+    , 1
+    , {birthday: '1900-09-01'
+        , name: 'memoryHeap'
+        , [1
+            , 3
+            , 5
+            , 7
+        ]
+    }
+]; // memory heap에 올라가고, 각 값에 담긴 정보의 call stack의 주소값을 참조한다.
 ```
 
 ## JavaScript Memory 시각화
