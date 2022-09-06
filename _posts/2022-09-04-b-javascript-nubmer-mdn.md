@@ -3,7 +3,7 @@ layout: post
 title: "JavaScript Number MDN"
 date: 2022-09-04
 categories:
-- javaScript
+- JavaScript
 tags:
 - Javascript
 - Number

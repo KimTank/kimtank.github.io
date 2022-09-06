@@ -3,7 +3,7 @@ layout: post
 title: "CSS Flexbox"
 date: 2022-08-30
 categories:
-- css
+- CSS
 tags:
 - CSS
 - flexbox

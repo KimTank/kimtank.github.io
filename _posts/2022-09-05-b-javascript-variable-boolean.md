@@ -3,14 +3,14 @@ layout: post
 title: "JavaScript Variable & Boolean"
 date: 2022-09-05
 categories:
-- javaScript
+- JavaScript
 tags:
 - JavaScript
 - Variable
 - let
 - const
 - Syntax
-- Var
+- var
 - Boolean
 ---
 

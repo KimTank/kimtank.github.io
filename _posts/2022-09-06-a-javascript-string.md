@@ -3,7 +3,7 @@ layout: post
 title: "보류보류보루JavaScript String"
 date: 2022-09-06
 categories:
-- javaScript
+- JavaScript
 tags:
 - JavaScript
 - String

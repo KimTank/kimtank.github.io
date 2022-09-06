@@ -3,7 +3,7 @@ layout: post
 title: "CSS 구문과 color"
 date: 2022-08-28T00:00:00-00:00
 categories:
-  - css
+  - CSS
 tags:
   - CSS
   - syntax

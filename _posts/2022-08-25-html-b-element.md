@@ -3,7 +3,7 @@ layout: post
 title: "HTML element"
 date: 2022-08-25T00:00:00-00:00
 categories:
-- html
+- HTML
 tags:
 - HTML
 - HTML element

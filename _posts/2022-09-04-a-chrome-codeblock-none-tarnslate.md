@@ -3,10 +3,10 @@ layout: post
 title: "Chrome CodeBlock None Translate"
 date: 2022-09-04
 categories:
-- javaScript
+- JavaScript
 - Chrome
 tags:
-- Javacript
+- JavaScript
 - Chrome
 - CodeBlock
 - Translate

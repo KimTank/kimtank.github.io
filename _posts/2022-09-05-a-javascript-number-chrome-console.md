@@ -3,9 +3,9 @@ layout: post
 title: "JavaScript Number & Chrome Console"
 date: 2022-09-06
 categories:
-- javaScript
+- JavaScript
 tags:
-- javascript
+- JavaScript
 - Chrome
 - Console
 - Inspect

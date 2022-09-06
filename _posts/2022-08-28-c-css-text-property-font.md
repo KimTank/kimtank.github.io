@@ -3,7 +3,7 @@ layout: post
 title: "CSS text property와 font"
 date: 2022-08-28T00:00:00-00:00
 categories:
-- css
+- CSS
 tags:
 - CSS
 - text-align

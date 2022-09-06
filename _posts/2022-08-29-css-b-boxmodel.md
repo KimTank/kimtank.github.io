@@ -3,7 +3,7 @@ layout: post
 title: "CSS Box Model"
 date: 2022-08-29
 categories:
-- css
+- CSS
 tags:
 - CSS
 - box-model

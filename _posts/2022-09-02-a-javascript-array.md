@@ -3,7 +3,7 @@ layout: post
 title: "JavaScript Array"
 date: 2022-09-02
 categories:
-- javaScript
+- JavaScript
 tags:
 - Javascript
 - Array

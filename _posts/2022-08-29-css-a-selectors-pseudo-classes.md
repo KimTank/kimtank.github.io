@@ -3,7 +3,7 @@ layout: post
 title: "CSS Selectors와 Specificity"
 date: 2022-08-29
 categories:
-- css
+- CSS
 tags:
 - CSS
 - Selector
