@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "보류보류보루JavaScript String"
+title: "JavaScript String"
 date: 2022-09-06
 categories:
 - JavaScript
@@ -34,12 +34,12 @@ let a = 'hello dumdum';
 a[3];   // l
 a[a.length] // index = length - 1 => a[a.length] overflow => undefined
 
-a.length // 12 index => 0~11 ================> caption.1
+a.length // 12 index => 0~11 ================> caution.1
 
-//=================================> caption.2
+//=================================> caution.2
 let name = 'TaeYoon';
 name = 'TAEYOON';
-//=================================> caption.2 end
+//=================================> caution.2 end
 
 let number = 10;
 let stringValue = 'ten';
@@ -49,7 +49,7 @@ typeof additionResult;  // 'string
 // number와 string을 JavaScript는 따로 처리하지 못하니, string으로 변환한다.
 ```
 
-> ## caption
+> ## caution
 > 1. [C언어 배열의 범위를 넘어설때](https://blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=tipsware&logNo=221054714926&categoryNo=50&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=search)   
 > 2. 상위 TaeYoon, TAEYOON은 전혀 다른 문자열이다. 메모리주소가 다르다. 한번에 한문자만 수동으로 업데이트할 수 없다. TAEYOON은 새 메모리를 가지는 새 문자열로 name변수에 덮어쓴다.
 
@@ -94,7 +94,41 @@ console.log(`${number}${unit} left`); // 10km left
 
 ## Null & Undefined
 
+둘다 단일한 값으로 비슷하지만 같은건 아니다.
 
+### null
+
+실제 JavaScript의 값이다. 일부러 값을 지정하지 않는 것. 아무것도 없는 상태. 다른 언어와는 다르게 JavaScript에서는 자주보는 값이 아니다. 직접 변수에 지정하는 값으로 쓰인다.
+
+### undefined
+
+정의된 값이 없는 값이다. "뭔값인지 모르겠어요^^". null이랑은 다르다. 아무것도 없는 상태(null) 자체가 아님. 가장 많이 쓰인다. 자연적으로 많이 쓰이게된다(일반 다른언어의 null처럼)
+
+## Math Object
+
+수학연산 모음을 모아놓은 객체이다.
+
+- .PI: 원주율 3.141592653589793...
+- .round(4.6): 반올림 결과값 5
+- .abs(-465): 절대값 결과값 465
+- .pow(2,3): 2의 3승 지수 결과값 8
+- .floor(1.99999...): 내림 결과값 1
+- .ceil(2.1): 올림 결과값 3
+- .random(): 0~0.99999999999...  사이의 무언가
+```javascript
+//JavaScript의 Math.random();은 자연수를 반환하지 않는다.
+//JS만의 자연수 반환 과정
+const step1 = Math.random();
+const step2 = step * 10;
+const step3 = Math.floor(step2);
+
+const step4 = step3 + 1;
+
+const finalStep = Math.floor(Math.random() * 10) + 1;
+
+//만들어 놓으면 쓰기 좋겠네(전역에 모듈화해서 심어놓고 슉슉)
+const getRandom = () => Math.floor(Math.random() * 10) + 1;
+```
 
 > ## 참고
 > []()   
