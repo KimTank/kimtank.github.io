@@ -69,7 +69,7 @@ main>section>h1
 |`<footer class="global-main>`|footer.global-main|
 
 > 
-> ## 참고
+> ## 참조
 > [MDN:Sementics](https://developer.mozilla.org/ko/docs/Glossary/Semantics#html_%EC%8B%9C%EB%A7%A8%ED%8B%B1)   
 > [w3school:HTML Semantic Elements](https://www.w3schools.com/html/html5_semantic_elements.asp)   
 > [HTML:Spec/LivingStandard](https://html.spec.whatwg.org/)   

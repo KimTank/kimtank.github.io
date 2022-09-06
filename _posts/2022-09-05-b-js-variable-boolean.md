@@ -108,7 +108,7 @@ if(y){
 let a = Boolean(expression);    //추천
 let b = new Boolean(expression);    //비추천
 
-//값이 false인 Boolean 객체를 포함한 어떤 객체를 Boolean객체의 초기값으로 넘겨주더라도 새로운 Boolean 객체는 true를 가진다.(말이 좀 어려우니 코드 참고)
+//값이 false인 Boolean 객체를 포함한 어떤 객체를 Boolean객체의 초기값으로 넘겨주더라도 새로운 Boolean 객체는 true를 가진다.(말이 좀 어려우니 코드 참조)
 let booleanObj = new Boolean(false);    //초기값 거짓
 let c = Boolean(booleanObj);    //초기값 참
 let stringObj = new String('Anything'); //문자열 객체
@@ -145,7 +145,7 @@ let bArrayProto = new Boolean([]);
 let bObjProto = new Boolean({});
 ```
 
-> ## 참고
+> ## 참조
 > [MDN:JavaScript/Grammar&Types/Declarations](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)   
 > [MDN:let](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/let)   
 > [MDN:const](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/const)   

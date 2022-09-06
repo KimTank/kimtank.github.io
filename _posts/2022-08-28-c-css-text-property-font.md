@@ -132,7 +132,7 @@ font-family: unset;
 > font-family stack은 앞에서부터 기기에 있는 font-family를 찾아 순차적으로 명시   
 > font-family: a, b, c, d, e, f, g;
 
-> ## 참고
+> ## 참조
 > [MDN:CSS/Reference](https://developer.mozilla.org/ko/docs/Web/CSS/Reference)  
 > [MDN:CSS/Font-size](https://developer.mozilla.org/ko/docs/Web/CSS/font-size)   
 > [MDN:CSS/Font-family](https://developer.mozilla.org/ko/docs/Web/CSS/font-family)   

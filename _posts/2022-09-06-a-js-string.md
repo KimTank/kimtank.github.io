@@ -138,7 +138,7 @@ const finalStep = Math.floor(Math.random() * 10) + 1;
 const getRandom = () => Math.floor(Math.random() * 10) + 1;
 ```
 
-> ## 참고
+> ## 참조
 > [MDN:JS/String](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String)   
 > [MDN:JS/Template Literals](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Template_literals)   
 > [MDN:JS/null](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/null)   

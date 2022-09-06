@@ -191,7 +191,7 @@ tags:
 ```
 
 
-> ## 참고
+> ## 참조
 > [MDN:HTML/Element/form](https://developer.mozilla.org/ko/docs/Web/HTML/Element/form)   
 > [MDN:HTML/Element/input](https://developer.mozilla.org/ko/docs/Web/HTML/Element/Input)   
 > [MDN:HTML/Element/select](https://developer.mozilla.org/ko/docs/Web/HTML/Element/select)   

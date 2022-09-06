@@ -16,7 +16,7 @@ tags:
 
 
 > 
-> ### 참고_Mozilla.org_
+> ### 참조_Mozilla.org_
 > - [`for...of`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/for...of)
 > - [`forEach`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
 > - [`rest parametes`](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters)

@@ -106,7 +106,7 @@ type {
 
 
 
-> ## 참고
+> ## 참조
 > [MDN:HTML/table](https://developer.mozilla.org/ko/docs/Web/HTML/Element/table)   
 > [MDN:CSS/Transition Timing Function](https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function)   
 > [Easings](http://easings.net)

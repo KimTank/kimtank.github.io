@@ -177,6 +177,6 @@ ul {
 }
 ```
 그리하여 나온것이 root html 태그의 font size를 기준으로하는 rem이 나왔다. rem을 사용시 위와같은 중첩문제가 발생하지 않는다. 
-> ## 참고
+> ## 참조
 > [MDN:CSS/Box Model](https://developer.mozilla.org/ko/docs/Learn/CSS/Building_blocks/The_box_model)   
 > [MDN:CSS/Value & Unit](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Values_and_Units)

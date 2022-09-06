@@ -257,7 +257,7 @@ type:pseudo element{
 
 >가장 우선순위로 사용됨.
 
-> ## 참고
+> ## 참조
 > [MDN:CSS/Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)   
 > [MDN:CSS/Cascade&Inheritance](https://developer.mozilla.org/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#%EA%B3%84%EB%8B%A8%EC%8B%9D_cascade)   
 > [CoolColorSelect](https://coolors.co)   

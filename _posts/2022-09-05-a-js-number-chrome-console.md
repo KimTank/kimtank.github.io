@@ -68,6 +68,6 @@ typeof NaN // 'number'
 
 > JavaScript에서 NaN은 숫자지만 실제로는 숫자가 아니다.
 
-> ## 참고
+> ## 참조
 > [MDN:JavaScript/Number](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#%EC%98%88%EC%A0%9C)   
 > [Chrome:Developer/Devtools/Console](https://developer.chrome.com/docs/devtools/console/)

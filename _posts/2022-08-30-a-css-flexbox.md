@@ -133,7 +133,7 @@ flex: inherit;
 flex: initial;
 flex: unset;
 ```
-> ## 참고
+> ## 참조
 > [MDN:CSS/Flexbox](https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Flexbox)   
 > [MDN:CSS/Value & Unit](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Values_and_Units)   
 > [MDN:CSS/FlexibleBox](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)   

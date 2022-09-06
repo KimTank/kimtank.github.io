@@ -148,7 +148,7 @@ LocalDate date = null; //이제 date는 어떤 객체도 참조하지 않음.
 
 *위 방법은 `date`가 참조할 객체가 아직 없거나 특별한 상황(알 수 없는 날짜같은)을 나타내고 싶을 때 유용*
 
-> Caution = 널`(null)`을 예상하지 못한 상황에서는 `null`값이 위험을 초래할 수 있음. `null`로 메서드를 호출하면 `NullPointException`이 일어남 -> 실제로는 `NullReferenceException`이 맞는 표현이라고함. -> 이런 이유로 옵션값에 `null` 사용하는것 권장하지 않음. `null` 대신 `Optional` 타입(8장 스트림 참고) 사용.
+> Caution = 널`(null)`을 예상하지 못한 상황에서는 `null`값이 위험을 초래할 수 있음. `null`로 메서드를 호출하면 `NullPointException`이 일어남 -> 실제로는 `NullReferenceException`이 맞는 표현이라고함. -> 이런 이유로 옵션값에 `null` 사용하는것 권장하지 않음. `null` 대신 `Optional` 타입(8장 스트림 참조) 사용.
 
 할당 살펴보자
 
@@ -314,7 +314,7 @@ public void setSalary(double salary) {
 > }
 > ```
 >
-> 그러나 이 문법은 아주 드물게 사용 -> 메서드의 수신자에 애너테이션을 붙이는 용도로만 사용함. 11장 애너테이션 참고
+> 그러나 이 문법은 아주 드물게 사용 -> 메서드의 수신자에 애너테이션을 붙이는 용도로만 사용함. 11장 애너테이션 참조
 
 ????
 
@@ -623,7 +623,7 @@ public class System{
 
 > Caution = `out`이 `System`클래스 안에 `final`로 선언되어 있는데도 `System.out`을 다른 스트림으로 설정하는 `setOut`메서드가 있음. `setOut`은 자바로 구현하지 않는 '네이티브'메서드[^1]로 자바 언어의 접근 제어 메커니즘을 우회할 수 있음. -> 자바 초창기부터 이어온 아주 특이한 상황으로 다른곳에서는 거의 접하지 않음.
 >
-> [^1]: JNI(Java Native Interface)를 사용해서 만든 메서드임. JNI는 자바 가상 머신을 구동하는 '네이티브'운영체제(윈도, 리눅스, macOS 등)에서 제공하는 API에 접근하는 메커니즘임. ....(생략)..... JNI를 사용하면 자바의 이식성이 떨어질 수 있고, 잘못 작성하면 오히려 순수 자바로 작성한 프로그램보다 느릴 수 있으므로 필요할 때만 활용하는 것이 좋음. [자세한 내용](http://en.wikipedia.org/wiki/Java_Native_Interface)를 참고.
+> [^1]: JNI(Java Native Interface)를 사용해서 만든 메서드임. JNI는 자바 가상 머신을 구동하는 '네이티브'운영체제(윈도, 리눅스, macOS 등)에서 제공하는 API에 접근하는 메커니즘임. ....(생략)..... JNI를 사용하면 자바의 이식성이 떨어질 수 있고, 잘못 작성하면 오히려 순수 자바로 작성한 프로그램보다 느릴 수 있으므로 필요할 때만 활용하는 것이 좋음. [자세한 내용](http://en.wikipedia.org/wiki/Java_Native_Interface)를 참조.
 
 ### 2.4.3 정적 초기화 블록
 
@@ -1256,7 +1256,7 @@ public static final int DAYS_PER_YEAR = 365;
 
 `@see`와 `@link`태그로 자바독 문서의 관련 부분이나 외부 문서에 하이퍼링크를 추가할 수 있음.
 
-`@see reference` 태그는 참고(`see also`) 섹션에 하이퍼링크를 추가함. `@see`태그는 클래스와 메서드에 모두 사용할 수 있음. 참고(`reference`)내용으로는 다음 중 하나 올 수 있음.
+`@see reference` 태그는 참조(`see also`) 섹션에 하이퍼링크를 추가함. `@see`태그는 클래스와 메서드에 모두 사용할 수 있음. 참조(`reference`)내용으로는 다음 중 하나 올 수 있음.
 
 - `pakage.Class#feature label`
 - `<a href="...">label</a>`
@@ -1276,7 +1276,7 @@ public static final int DAYS_PER_YEAR = 365;
 
 레이블을 생략하면 사용자는 링크 대상의 코드 이름이나 `URL`을 앵커로 보냄
 
-`@see` 태그 뒤에 `"`문자가 오면 다음과 같이 큰따옴표 안에 있는 텍스트가 '참고'섹션에 표시됨.
+`@see` 태그 뒤에 `"`문자가 오면 다음과 같이 큰따옴표 안에 있는 텍스트가 '참조'섹션에 표시됨.
 
 `@see "참조가 나온단다"`
 

@@ -111,7 +111,7 @@ $whoami
 
 ---
 우분투는 dos와는 다르다. 윈도우의 파워쉘역시 사용법이 특이하다고 생각했었는데, 익숙해 진다면 여느 매체에서 보던 전문가처럼 "다라라ㅏ라라다라랄라다ㅏ랃 (컴퓨터 연산소리 지이이지이이이) 다라닫라라라라다라라다"하는 것처럼 키보드만으로 멋있는 척(남이하면 우와아아 전문가다, 내가하면 나 좀 쩌는듯)할 수있는 뭔가 있어보이는 그런 무언가 생길거 같다.
-> ## 참고
+> ## 참조
 > [W3Schools:CLI](https://www.w3schools.com/whatis/whatis_cli.asp)   
 > [Ubuntu:Command Line for Beginner](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)   
 > [CSCS&Info:Doc/Linux shell commands](https://docs.cs.cf.ac.uk/notes/linux-shell-commands/)

@@ -93,7 +93,7 @@ const mulTablePrinter = (...args) => {
 
 ^^ 이제는 시킨거라도 잘해야지
 
-> ## 참고
+> ## 참조
 > [MDN:JavaScript/for...of](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/for...of)   
 > [MDN:JavaScript/forEach](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)   
 > [MDN:JavaScript/rest parametes](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters)   

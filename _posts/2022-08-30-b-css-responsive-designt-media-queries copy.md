@@ -99,6 +99,6 @@ h1 {
 > [예제코드 동작확인](https://github.com/KimTank/turbo-garbanzo/tree/main/udemy/web-developer-bootcamp-2022/sample-code/Flexbox_And_Responsive/MediaQueries%20Starter)
 ---
 
-> ## 참고
+> ## 참조
 > [MDN:CSS/Media](https://developer.mozilla.org/ko/docs/Web/CSS/@media)   
 > [MDN:CSS/Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)   
