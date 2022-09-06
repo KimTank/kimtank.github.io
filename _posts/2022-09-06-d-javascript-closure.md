@@ -32,7 +32,8 @@ let add = addition(1, 10);    // 11;
 //상기와 같은 결과값 도출
 //invocation(함수호출) 2회
 const additionClosure = num1 => num2 => num1 - num2;
-let addCls = additionClosure(1)(10); // -9;
+let addCls = additionClosure(1); // function
+addCls(10); // -9
 
 //축약전 모형
 const additionBefore = (num) => {
@@ -61,7 +62,8 @@ typeof addCls;  // 'function'
 
 ```javascript
 //사용문법이 재밋다.
-const add = addr(1)(2); // 3
+const add = addr(1)(2); // 3 number type
+const fAdd = addr(1);   // function type
 ```
 
 내부함수는 외부함수에 선언된 변수에 접근 가능하다.
@@ -81,16 +83,14 @@ const human = function (name) {
     }
 }
 
-const guy = human('fireBoy')('male');
+const firePerson = human('불꽃');  //function type
 //함수가 끝나도 fireBoy라는 값을 가진 name 사용가능
-guy('female');  //불꽃소년이 여자가 되버림 -o-?
-//한글을 잘못이해하여 fireBoy라는 값이 변하는 값이라고 생각함. ^^
-
-//************* chrome console에서는 function이 아니라고 TypeError를 던진다. 아고라스테이츠에 문의중
+firePerson('여자'); // 외부함수 '불꽃의 기존값과 대입한 여자를 가지고 '불꽃여자'
+firePerson('남자'); //불꽃(남자)
 
 //tagMaker를 만들어 쓸 수 있음 :D
 const tagMK = tag => content => `<${tag}>${content}</${tag}>`;
-const header1MK = tagMK(h1)(''); //h1태그 메이커
+const header1MK = tagMK(h1); //h1태그 메이커
 header1MK('오늘도 열공'); //<h1>오늘도 열공</h1>
 ```
 
