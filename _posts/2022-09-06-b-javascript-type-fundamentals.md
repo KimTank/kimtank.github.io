@@ -30,7 +30,7 @@ const pushMemoryHeap = ['call somewhere', 1, {birthday: '1900-09-01', name: 'mem
 ```
 
 ## JavaScript Memory 시각화
-![출처 : MDN](./../assets/img/js-memory.png)
+![출처 : MDN](/assets/img/js-memory.png)
 
 ## Primitive Data Types
 
