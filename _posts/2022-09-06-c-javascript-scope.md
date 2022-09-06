@@ -69,7 +69,7 @@ const isNumber = value => typeof value === 'number';
 
 ```javascript
 //var 사용의 위험성
-const function() = {
+const function printArr() = {
     const arr = [1, 2, 3, 4, 5];
     for (var i  = 0; i < arr.length; i++){
         console.log(`index: ${i}`); //0~5까지 출력
