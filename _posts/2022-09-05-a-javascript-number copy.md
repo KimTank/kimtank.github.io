@@ -1,12 +1,11 @@
 ---
 layout: post
-title: "JavaScript Number"
-date: 2022-09-05
+title: "JavaScript Number & Chrome Console"
+date: 2022-09-06
 categories:
 - javaScript
 tags:
 - javascript
-- Primitive-Types
 - Chrome
 - Console
 - Inspect
@@ -16,7 +15,7 @@ tags:
 
 Udemy강의로 Class까지 달릴예정이었으나, 뭔가 이론말고 이전에 풀었던 codestates의 문제를 한번 풀어보자 싶어서 시작한게 계획과는 달리 JavaScript의 Number객체까지 보게되었다. 하지만 언어에대한 이론적 이해도 중요하니 남는 시간에라도 공부하자아앙
 
-# JavaScript
+# JavaScript Number
 
 JavaScript와 HTML, CSS를 굳이 비교하자면 HTML은 명사, CSS는 형용사, JavaScript는 동사이다.(이거때문에 포스팅을 하기로했다. 너무 마음에드는 비유이다. :D)
 
@@ -27,17 +26,6 @@ JavaScript와 HTML, CSS를 굳이 비교하자면 HTML은 명사, CSS는 형용�
 - 계속 상주하며 돌아가며 실행되니 단편적이지 않고, 간단한 코드 테스트시 유용하다.
 - 창을 분리시켜 사용할 수 있다.
 - 콘솔 내용 지우기 clear();, 단축키 ctrl + L(윈도우), cmd + k(mac)
-
-## Primitive Types
-
-어떤 프로그래밍언어라도 일반적인 타입을 약속으로 정한다.
-
-- Number
-- String
-- Boolean
-- Null
-- Undefined
-- Symbol & BigInt
 
 ## Number
 
