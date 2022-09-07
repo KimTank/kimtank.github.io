@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JavaScript multiflyTable"
+title: "JavaScript multiplyTable"
 date: 2022-08-24T00:00:00-00:00
 categories:
 - JavaScript
@@ -13,7 +13,7 @@ tags:
 # 구구단만들기!!
 ## 원래 원하던 결과물
 ```javascript
-let mutiflyTable = number => {
+let mutiplyTable = number => {
   console.log(number * 1);
   //... 2~8중략
   console.log(number * 9);
@@ -21,7 +21,7 @@ let mutiflyTable = number => {
 ```
 ## 템플릿 리터럴로 표현하고 싶어
 ```javascript
-let mutiflyTable = number => {
+let mutiplyTable = number => {
   console.log(`${number} * 1 = ${number * 1}`);
   //... 2~8중략
   console.log(`${number} * 9 = ${number * 9}`);
@@ -29,7 +29,7 @@ let mutiflyTable = number => {
 ```
 ## 역시 반복문을 써야 편할거야
 ```javascript
-let mutiflyTable = number => {
+let mutiplyTable = number => {
   for(let i = 0; i < 10; i++)
   console.log(`${number} * ${i+1} = ${number * (i+1)}`);
 };
@@ -96,6 +96,6 @@ const mulTablePrinter = (...args) => {
 > ## 참조
 > [MDN:JavaScript/for...of](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/for...of)   
 > [MDN:JavaScript/forEach](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)   
-> [MDN:JavaScript/rest parametes](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters)   
+> [MDN:JavaScript/rest parameters](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/rest_parameters)   
 > [MDN:JavaScript/instanceof](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/instanceof)   
 > [MDN:JavaScript/addition assignment](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Addition_assignment)
