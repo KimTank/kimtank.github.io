@@ -78,4 +78,4 @@ console.log('this letter started by France..');
 > [Chrome:Developer/Devtools/Console](https://developer.chrome.com/docs/devtools/console/)   
 > [MDN:WebAPI/console](https://developer.mozilla.org/ko/docs/Web/API/console)   
 > [MDN:WebAPI/Window/alert](https://developer.mozilla.org/ko/docs/Web/API/Window/alert)   
-> [MDN:WebAPI/Window/alert](https://developer.mozilla.org/ko/docs/Web/API/Window/prompt)
+> [MDN:WebAPI/Window/prompt](https://developer.mozilla.org/ko/docs/Web/API/Window/prompt)
