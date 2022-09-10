@@ -99,7 +99,6 @@ let a = 10; // 원시 자료형은 메모리 콜스택(call stack)에 바로 올
 let as = [10, 20, 30]; // 참조 자료형은 메모리힙(memory heap)에 저장된 객체나 배열이 각 변수의 콜스택에 주소를 참조한다.
 ```
 
-
 > ## 참조
 > [MDN:JS/Type & Data Structure](https://developer.mozilla.org/ko/docs/Web/JavaScript/Data_structures)   
 > [MDN:JS/Primitive Value](https://developer.mozilla.org/ko/docs/Glossary/Primitive)   

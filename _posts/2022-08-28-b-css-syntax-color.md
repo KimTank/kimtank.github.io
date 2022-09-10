@@ -84,7 +84,6 @@ Red, Green, Blue로 0없다. 255최대
 CSS에서는 ;은 필수이다. 빠질경우 정상작동안하니 주의(Error 출력안함.)
 
 > ## 참조
->
 > [MDN:CSS/Syntax](https://developer.mozilla.org/ko/docs/Web/CSS/Syntax)  
 > [MDN:CSS/Color](https://developer.mozilla.org/ko/docs/Web/CSS/color)  
 > [MDN:CSS/Background-color](https://developer.mozilla.org/ko/docs/Web/CSS/background-color)  

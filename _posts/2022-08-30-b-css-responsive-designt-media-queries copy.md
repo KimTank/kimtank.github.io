@@ -9,6 +9,7 @@ tags:
 - Media
 - Media-Queries
 ---
+
 컴퓨터가 처음나왔을 때는 display라는게 없었고, 출력과 입력만 가능했다. 그러다 display가 출시되고, 컴퓨터는 화면을 가지게 되었고, 그 화면은 dos부터 윈도우3.1의 탄생으로 시작하여 macos등 발전했다. 화면은 대부분 정해져 있었고, 스마트폰이 대중화되기 전에는 여러가지 화면을 고려하지 않아도 가능했다. 하지만 생각해보라, 우리가 주변에서 차고다니는 스마트워치조차 화면을 고려해야되는 아주 고도화된 시대에 들어오게 된것이다. ~~아아아아아아악~~
 
 # CSS Responsive Design & Media Queries
@@ -23,6 +24,7 @@ tags:
 - 화면 넓이나 기기 종류, 기기가 움직이는 방향에 맞추어 스타일을 조정한다.
 
 ---
+
 ```css
 /* 
 width: 800px 정확하게 800px으로 설정은 잘안한다. 800px로 정확하게 맞출일이 있을까
@@ -97,6 +99,7 @@ h1 {
 }
 ```
 > [예제코드 동작확인](https://github.com/KimTank/turbo-garbanzo/tree/main/udemy/web-developer-bootcamp-2022/sample-code/Flexbox_And_Responsive/MediaQueries%20Starter)
+
 ---
 
 > ## 참조

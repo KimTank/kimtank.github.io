@@ -8,6 +8,7 @@ tags:
 - HTML
 - HTML element
 ---
+
 뭔가 한동안 약속이 몰아치더니 조용해졌다. 대신 이전보다 바쁘다. ~~잠을 평소에 2배로 줄였는데도 대체왜???~~ 뭐 일단 어른들 말씀대로라면 바쁜건 한가한거보다 좋은거니 시간배분을 잘해서 더 잘 잘 수 있도록 노력해야겠다. 포스팅 역시 한번에 내용이 몰아치니 보기도 힘들고 나도 힘든거 같아 적절하게 배분하려한다.
 
 # 자주쓰는 HTML element
@@ -58,7 +59,7 @@ tags:
 
     <!-- 나는 그것도 모르고 개판으로.. -->
     ```
-> 
+
 > ## 참조
 > [나무위키:HTML/태그](https://namu.wiki/w/HTML/%ED%83%9C%EA%B7%B8#%EC%8B%9C%EB%A7%A8%ED%8B%B1%20%ED%83%9C%EA%B7%B8)   
 > [MDN:HTML Element Reference](https://developer.mozilla.org/ko/docs/Web/HTML/Element)

@@ -16,6 +16,7 @@ tags:
 - em
 - rem
 ---
+
 오늘은 아마 재빨리 끝나면 새벽이지 싶다. CSS는 역시 양이 ~~너무많아서 행볶는다.~~
 
 # CSS Box Model
@@ -52,6 +53,7 @@ border: medium dashed red;
 
 ---
 ## Padding
+
 ```css
 /* 속기법 */
 /* all */

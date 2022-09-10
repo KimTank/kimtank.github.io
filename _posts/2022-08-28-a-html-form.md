@@ -31,11 +31,11 @@ tags:
 
 ## `<form>`의 내부 태그들
 
-### `<input>`
+## `<input>`
 - `type` attribute로 input태그의 형식을 정한다.
 - closing tag 없다.
 
-#### `<input>`'s attribute
+## `<input>`'s attribute
 
 - `type`
   ```javascript
@@ -47,13 +47,13 @@ tags:
   - `number`: `text`와 비슷하나 숫자만 입력되고 방향키 가능
   - `name`
   - 서버와 통신하는 `key`값으로 서버가 찾으려는 간단한 값이다.
+
   > https://www.anymous-website-example.com/login_action?user=유저명&pwd=비밀번호&birth=생일...
   > > 각 input 태그에 저장된 정보가 form의 action 속성인 login_action을 통해 input의 name에 지정된 이름(user, pwd, birth)와 같은 키값으로 입력된 value(유저명, 비밀번호, 생일)를 전송한다.   
   > > 해당 /접속주소?key=value&key2=value2 의 형태로 GUI를 이용하지 않고, google검색이나 해당 동작을 주소창에서 할 수도 있다.
 
   - `checkbox`
     - `checkbox`는 꼭 `<label>`처리 한다.
-
 
 ```html
 <div>
@@ -76,7 +76,6 @@ tags:
   - `radio`
     - `checkbox`와 비슷하지만 중복선택이 가능한 `checkbox`와는 다르게 단일값만 선택 가능하다.
 
-
 ```html
 <form>
   <p>choose your bike size</p>
@@ -95,7 +94,6 @@ tags:
     - 범위를 만들어서 그 값을 선택하게한다.
     - 최소값, 최대값을 제어가능하다.
 
-
 ```html
 <div>
   <label for="quantity">수량</label>
@@ -112,15 +110,13 @@ tags:
 
 - `placeholder`
 
-
 ```html
 <input type="..." placeholder="(ex: username, enter password, etc)" >
 ```
 
 > 모든 `<input>`에서 적용되지는 않는다.
 
-
-### `<select>`
+## `<select>`
 
 ```html
 <label for="color">choose your bike color</label>
@@ -134,10 +130,9 @@ tags:
 <!-- value값이 키값인 color로 전송된다. 단순 문자열은 UI일뿐 -->
 ```
 
-### `<label>`
+## `<label>`
 
 - 접근성이 좋고 form을 편하게 해준다.
-
 
 ```html
 <form>
@@ -158,9 +153,8 @@ tags:
 
   > `<label>`의 `for` attribute와 `<input>`의 `id` attribute로 연결점생김.<br/>
   > `id`는 identify, 유일한 값을 가져야한다.
-
   
-### `<button>`
+## `<button>`
 
 ```html
 <div>
@@ -176,11 +170,10 @@ tags:
 - `<form>`안에 위치할 경우 기본값이 `submit`, `<form>`의 `action` attribute와 연동되어 따로 명시하지 않으면 전송한다.
 
 
-### `<textarea>`
+## `<textarea>`
 
 - 복수의 줄을 입력하는 입력창이 출력된다.
 - Android:View/TextView/maxLine: 지정과 같은 모양(모양만 같다 동작은 다르다.)
-
 
 ```html
 <div>
@@ -189,7 +182,6 @@ tags:
   <textarea id="review" row="5" cols="50" name="review" placeholder="input your review">
 </div>
 ```
-
 
 > ## 참조
 > [MDN:HTML/Element/form](https://developer.mozilla.org/ko/docs/Web/HTML/Element/form)   

@@ -108,7 +108,6 @@ VMWARE는 비상업용 무료이므로 상업용으로 이용하시다가 발생
 ---
 
 > ## 참조
->
 > [사진저장소](https://blog.naver.com/sycork/222863680094)  
 > [amd-v 에러시](https://jhnyang.tistory.com/236)  
 > [UBUNTU](https://ubuntu.com/)  
