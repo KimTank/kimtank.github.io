@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JavaScript Destructuring in ES6"
-date: 2022-09-06
+date: 2022-09-07
 categories:
 - JavaScript
 tags:
