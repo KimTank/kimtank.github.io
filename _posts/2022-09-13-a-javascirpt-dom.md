@@ -1,0 +1,187 @@
+---
+layout: post
+title: "JavaScript DOM"
+date: 2022-09-13
+categories:
+- JavaScript
+tags:
+- JavaScript
+- script-position
+- console.dir
+- CRUD
+- querySelector
+- querySelectorAll
+- CREATE
+- UPDATE
+- READ
+- DELETE
+- legacy-version-syntax
+- reference
+---
+
+DOM을 이전 비트컴퓨터 교육 때 배웠을 때는 이해도 안되고 어려웠던 걸, 차분히 개념부터 사용법까지 읽어보니 그당시 같이 공부하던 친구들이 별거없다고 한게 기억난다. 이글은 DOM에 대해 아무것도 모를때 뭘써야될지 몰라서 비워놨다 내용르 본 후 적는거라 개념이 잡혔다. 이전에는 3개월안에 Java, JavaScript, JQUERY, Oracle, SQL 등 너무 병행하다보니, SQL의 CRUD와 DOM의 CRUD가 헷갈렸었는데 완전히 다른거란걸 알고 쓰니 마음이 편하다. 헷갈리는 당신 한번 보시고 DOM은 꽤나 봐야될게 많은 듯 reference역시 만만치 않다. 궁금할때 검색창에 치는것도 좋지만, 글에 남겨진 ref만 참고하더라도 왠만한건 해결가능하다.
+
+# JavaScript DOM
+
+## DOM
+
+Document Object Model의 약자로 HTML 요소를 Object(JS의 객체)처럼 조작(Manipulation)할 수 있는 model이다. JS를 통해 DOM을 통해 HTML을 객체로 조작할 수 있다.
+
+---
+
+## `<script>`의 이해
+
+HTML parsing 중 `<script>` 태그를 만나면 HTML parsing paused되면서 Script fetch, Script execution을 거친다.
+
+### 적용법
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    ...
+    <!-- 방법1 head에 추가 -->
+    <script scr="addHead.js"></script>
+</head>
+<body>
+    <div id="msg">Hello World</div>
+    <!-- 방법2 body맨 끝줄에 추가 -->
+    <script scr="addBody.js"></script>
+</body>
+</html>
+```
+
+### 차이
+
+```javascript
+// add(Head or Body).js 파일
+console.log('this is first line in js file');
+
+const msgTag = document.querySelector('#msg');
+console.log(msgTag);
+```
+
+> 상기 방식으로 head와 body를 추가하였을 때 body맨 끝줄에 추가된 script 태그는 정상적으로 div태그를 불러오지만, head에 추가된 script 태그는 div 태그를 불러오지 못한다. android의 lifeCycle처럼 HTML parsing이 끝난 후 script 태그가 생성되야 제대로 동작한다.
+
+---
+
+## console.dir(CONTENTS);
+
+```javascript
+//단순 출력
+console.log('just print');
+
+//()내 지정된 계층구조 출력
+console.dir(document.body.children);
+
+//해당구문으로는 객체를 불러오지 부모객체 접근하지 못함.
+console.dir(document.getElementById.???)
+
+//최신브라우저에서 querySelector사용
+console.dir(document.querySelector('div#id').parentElement);
+```
+
+> console.dir에 내장된 기능에 따라 콘솔창을 이용하여 계층구조를 파악할 수 있다.
+
+---
+
+## DOM CRUD
+
+document객체에는 많은 속성과 메서드가 존재한다. 하지만 가장 우선적인건 CRUD이다. CRUD한 다음 HTML에 적용할 시 **APPEND**하는 것 주의.
+
+### querySelector
+
+Query는 ~를 조회한다. 쿼리를 날리다 같은 jargon(특정 영역 사용 단어)의 뜻을 가진다.
+
+- querySelector(content): content인 HTML element 중 첫번째 element 조회
+- querySelectorAll(content): content인 HTML element의 모든 요소를 **배열같은 객체(for구문 사용가능)**로 가져온다. => 유사배열으로 배열이 아니다. [Array like Object](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Indexed_collections)
+- 브라우저에 따라서 호환성을 고려해야한다. `DOM CRUD 내 코드박스 확인`
+
+### CREATE READ UPDATE DELETE
+```javascript
+//======CREATE
+const newDiv = document.createElement('div');
+//------아직 append하지않음.
+
+document.body.append(newDiv);
+//------chrome inspect element 탭에서 확인가능
+
+//======READ
+/*  원시형은 직접조회,
+    참조 자료형 중 배열은 index, 객체는 key,
+    DOM은 HTML Element 정보 조회시 querySelector 1번째 인자로 Selector 전달 
+    HTML: "tag"
+    id: "#id"
+    class: .class
+*/
+
+//------querySelector 호환성
+//------브라우저가 이전버전이라 호환성을 고려해야한다면 이전 syntax사용
+(document.getElementById('target') 
+=== document.querySelector('#target'));  //true
+
+//------READ 후 CREATE
+const target = document.querySelector('#target');
+const newDiv = document.createElement('div');
+target.append(newDiv);
+
+//======UPDATE
+const updateDiv = document.createElement('div');
+updateDiv.textContent = 'some update content';  //문자열 입력
+updateDiv.classList.add('update');  //class 추가
+target.append(updateDiv);
+
+//======DELETE
+const target = document.querySelector('#target');
+
+updateDiv.remove(); //append요소 삭제
+
+document.querySelector('target').innerHTML = '';
+//------target내 자식요소 모두 삭제
+//------보안 문제점있음 참조 내 MDN:WebAPI/innerHTML 확인
+
+//------removeChild이용
+while(target.fistChild){    //부모 내 첫번째 자식이 있을때
+                            //없으면 false로 반복문 빠져나옴.
+    target.removeChild(container.firstChild);
+}
+
+//------선택적 삭제
+
+//------비교하여 넘기거나, 다 삭제 후 추가 원하는대로 구현가능
+
+//------한개 남을때까지 뒤에서부터 지워주세요
+while(target.children.length > 1) {
+    target.removeChild(container.lastChild);
+}
+
+//------class 사용 선택 삭제
+const classChilds = document.querySelectorAll('.child');
+classChilds.forEach(function(child){
+    child.remove();
+})
+
+for(let child of classChilds){
+    child.remove();
+}
+```
+
+> ## 참조
+> [StackOverflow:Q/JSgetParentElementBySelector](https://stackoverflow.com/questions/14234560/javascript-how-to-get-parent-element-by-selector)   
+> [MDN:WebAPI/DOM](https://developer.mozilla.org/ko/docs/Web/API/Document_Object_Model/Introduction)   
+> [MDN:WebAPI/Node](https://developer.mozilla.org/ko/docs/Web/API/Node)   
+> [MDN:WebAPI/Element](https://developer.mozilla.org/ko/docs/Web/API/Element)   
+> [MDN:WebAPI/Node/parentElement](https://developer.mozilla.org/en-US/docs/Web/API/Node/parentElement)   
+> [MDN:WebAPI/Element/innerHTML](https://developer.mozilla.org/ko/docs/Web/API/Element/innerHTML)   
+> [MDN:WebAPI/Element/innerText](https://developer.mozilla.org/ko/docs/Web/API/HTMLElement/innerText)    
+> [MDN:WebAPI/Node/textContent](https://developer.mozilla.org/ko/docs/Web/API/Node/textContent)   
+> [MDN:WebAPI/Element/setAttribute](https://developer.mozilla.org/en-US/docs/Web/API/Element/setAttribute)   
+> [MDN:WebAPI/createDocumentFragment](https://developer.mozilla.org/ko/docs/Web/API/Document/createDocumentFragment)   
+> [MDN:HTML/template](https://developer.mozilla.org/ko/docs/Web/HTML/Element/template)   
+> [꿀벌개발일지:엘리멘터와 노드의 차이](https://ohgyun.com/333)   
+> [KO.JS.Info/DOM 컬렉션](https://ko.javascript.info/dom-navigation#ref-822)   
+> [MDN:WebAPI/Node/removeChild](https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild)   
+> [MDN:WebAPI/Element/remove](https://developer.mozilla.org/en-US/docs/Web/API/Element/remove)   
+> [Indepth.dev:appendChildMovesADomNodeBetweenParents](https://indepth.dev/posts/1161/here-is-why-appendchild-moves-a-dom-node-between-parents)   
+> [MDN:WebAPI/Element/offsetTop](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetTop)   
+> [MDN:WebAPI/Element/offsetWidth](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetWidth)
