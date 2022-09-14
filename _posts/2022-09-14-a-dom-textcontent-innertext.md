@@ -1,11 +1,10 @@
 ---
 layout: post
-title: "JavaScript textContent & innerText, innerHTML 차이"
+title: "DOM textContent & innerText, innerHTML 차이"
 date: 2022-09-14
 categories:
-  - JavaScript
+  - DOM
 tags:
-  - JavaScript
   - DOM
   - Node
   - textContent
@@ -17,7 +16,7 @@ tags:
 
 DOM은 생각보다는 분량이 방대하다. 굉장히 유용하게 쓰일 수 있는 정보들이 많기에 과제가 생각보다 빨리 끝나게되어 다른 중요할거 같은 개념을 추가로 본다.
 
-# JavaScript textContent & innerText, innerHTML 차이
+# DOM textContent & innerText, innerHTML 차이
 
 ## Node.textContent
 
