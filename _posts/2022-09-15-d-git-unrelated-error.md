@@ -35,7 +35,7 @@ $ git pull origin main --allow-unrelated-histories
 ```
 
 ## For Real
-```Bash
+```bash
 ty@DTHOME:~/Workspace/cs/git-parctice$ git branch -M main
 ty@DTHOME:~/Workspace/cs/git-parctice$ git status
 On branch main
