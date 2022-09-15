@@ -12,7 +12,7 @@ tags:
 
 # VSCode Shortcut for Linux
 
-![VSCode:Shortcut-Linux](/assets/img/2022-09-09-vs-shortcut.png)
+![VSCode:Shortcut-Linux](/assets/img/220909-vs-shortcut.png)
 
 > ## 참조
 > [VSCode:shortcuts/Linux](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf)   

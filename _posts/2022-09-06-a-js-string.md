@@ -123,6 +123,7 @@ console.log(`${number}${unit} left`); // 10km left
 - .floor(1.99999...): 내림 결과값 1
 - .ceil(2.1): 올림 결과값 3
 - .random(): 0~0.99999999999...  사이의 무언가
+
 ```javascript
 //JavaScript의 Math.random();은 자연수를 반환하지 않는다.
 //JS만의 자연수 반환 과정

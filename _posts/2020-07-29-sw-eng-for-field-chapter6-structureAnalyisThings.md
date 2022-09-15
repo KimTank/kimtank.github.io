@@ -65,9 +65,7 @@ tags:
 
 ## 6.3 DFD 작성을 위한 기호
 
-![img](https://t1.daumcdn.net/cfile/tistory/135FE1334CC5719BC8)
-
-​				출처 <https://yimma.tistory.com/137>
+해당블로그 터졌어요 :D
 
 1. ### 프로세스(process)
 

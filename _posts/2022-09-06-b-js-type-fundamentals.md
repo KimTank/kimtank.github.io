@@ -41,7 +41,7 @@ const pushMemoryHeap = ['call somewhere'
 
 ## JavaScript Memory 시각화
 
-![출처 : MDN](/assets/img/js-memory.png)
+![출처 : MDN](/assets/img/220906-js-memory.png)
 
 ## Primitive Data Types
 

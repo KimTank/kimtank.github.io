@@ -148,7 +148,7 @@ age;    //30
 ({name, age}) = {name: 'ty', age: 30};
 ```
 
-> ![MDN](/assets/img/2022-09-09-destructuring-object-caution.png)
+> ![MDN](/assets/img/220909-destructuring-object-caution.png)
 
 ### 3. 새로운 변수 이름으로 할당
 
