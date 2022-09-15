@@ -28,7 +28,7 @@ tags:
 
 ## Solution
 
-해당 오류는 allow-unrelated-histories 스위치를 토글하면 해결된다. git pull||git merge 태그를 추가하면 된다.
+해당 오류는 allow-unrelated-histories 스위치를 토글하면 해결된다. `git pull||git merge` 태그를 추가하면 된다.
 
 ```bash
 $ git pull origin main --allow-unrelated-histories

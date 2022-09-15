@@ -32,7 +32,7 @@ HTMLElement interface의 property로 element와 element의 children의 렌더링
 
 ## textContent vs innerText 차이
 
-- textContent와 innerText는 text의 렌더링 중이 아니라면 값(string||null)이 똑같지만, text의 렌더링이 끝나기 전에는 innerText는 인식할 수 없다.
+- textContent와 innerText는 text의 렌더링 중이 아니라면 값(`string||null`)이 똑같지만, text의 렌더링이 끝나기 전에는 innerText는 인식할 수 없다.
 - textContent는 `<script>`, `<style>`요소를 포함한 모든 요소의 콘텐츠 가져오지만, innerText는 '사람이 읽을 수 있는 요소'만 처리한다.
 - textContent는 노드의 모든 요소를 반환하지만, innerText는 스타일링을 고려하여 '숨겨진 요소'의 텍스트는 반환하지 않는다.
   - innerText는 CSS 스타일링을 고려하여 대화형 사이트에서 업데이트 한 후와 같이 browser가 웹 페이지의 일부 또는 전부를 다시 처리하고 그려야할 때 리플로우가 발생 => 리플로우의 계산은 비싸기떄문에 가능하면 피하세요.
