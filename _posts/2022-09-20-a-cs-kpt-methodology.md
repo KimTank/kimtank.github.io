@@ -54,7 +54,7 @@ tags:
 
 ### 화이트보드에 포스트잇을 붙이는거처럼
 
-|---|---|---|---|---|
+|:---|---|:---:|---|
 |KEEP||TRY||
 |!(memo)[https://cdn-icons-png.flaticon.com/512/1355/1355764.png] x ...||empty||
 |PROBLEM||try empty||
