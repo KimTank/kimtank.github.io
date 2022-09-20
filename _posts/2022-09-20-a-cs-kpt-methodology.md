@@ -6,7 +6,6 @@ categories:
 - Codestates
 tags:
 - Codestates
-- 우아한형제들 기술블로그
 ---
 
 회고라는게 뭔가했다. 사회복지의 프로그램 1쿨이 돌고 평가받는건가? 라고했더니 자신이 평가하는거더라. 우형에서 이미 본 기법이라는게 놀라웠다. 뭔가 우형블로그는 일반 개발분서나 블로그와는 다르게 소소한내용들도 포함되어있어서 늘 읽는 재미가 있었던 기억이난다(물론 알아보지못해서 과연 뭘찾아봤는지는 기억나지 않지만). 현업에서도 많이 사용을하고 있는 평가법이라고하니 습관화시키는것도 도움이 될거야.
@@ -54,11 +53,11 @@ tags:
 
 ### 화이트보드에 포스트잇을 붙이는거처럼
 
-|:---|---|:---:|---|
+<!-- |:---|---|:---:|---|
 |KEEP||TRY||
 |!(memo)[https://cdn-icons-png.flaticon.com/512/1355/1355764.png] x ...||empty||
 |PROBLEM||try empty||
-|!(memo)[https://cdn-icons-png.flaticon.com/512/1355/1355764.png] x ...||empty||
+|!(memo)[https://cdn-icons-png.flaticon.com/512/1355/1355764.png] x ...||empty|| -->
 
 ## 3. Write Try
 
@@ -69,11 +68,11 @@ Try DO Action Item, KEEP와 PROBLEM을 기반으로 실천할게 뭐냐 구체�
 
 ### 하나씩 채워나가자
 
-|:---|---|:---:|---|
+<!-- |:---|---|:---:|---|
 |KEEP||TRY||
 |!(memo)[https://cdn-icons-png.flaticon.com/512/1355/1355764.png] x ...||!(memo)[https://cdn-icons-png.flaticon.com/512/1355/1355764.png]||
 |PROBLEM||x||
-|!(memo)[https://cdn-icons-png.flaticon.com/512/1355/1355764.png] x ...||.....||
+|!(memo)[https://cdn-icons-png.flaticon.com/512/1355/1355764.png] x ...||.....|| -->
 
 ## 4. 우선순위 정하기
 
