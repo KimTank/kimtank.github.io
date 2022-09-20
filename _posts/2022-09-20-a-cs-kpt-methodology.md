@@ -55,9 +55,9 @@ tags:
 
 |:---|---|:---:|---|
 |KEEP||TRY||
-|!(memo)[https://cdn-icons-png.flaticon.com/512/1355/1355764.png] x ...||empty||
-|PROBLEM||try empty||
-|!(memo)[https://cdn-icons-png.flaticon.com/512/1355/1355764.png] x ...||empty||
+|memo1 memo2 memo3 ... memo.n||nop||
+|PROBLEM||not yet||
+|memo1 memo2 memo3 ... memo.n||try is innerWear||
 
 ## 3. Write Try
 
@@ -70,9 +70,9 @@ Try DO Action Item, KEEP와 PROBLEM을 기반으로 실천할게 뭐냐 구체�
 
 |:---|---|:---:|---|
 |KEEP||TRY||
-|!(memo)[https://cdn-icons-png.flaticon.com/512/1355/1355764.png] x ...||!(memo)[https://cdn-icons-png.flaticon.com/512/1355/1355764.png]||
-|PROBLEM||x||
-|!(memo)[https://cdn-icons-png.flaticon.com/512/1355/1355764.png] x ...||.....||
+|memo1 memo2 memo3 ... memo.n||try memo1 memo2 momo3 ... momo.n||
+|PROBLEM||try to action item||
+|memo1 memo2 memo3 ... memo.n||try on? whatever||
 
 ## 4. 우선순위 정하기
 
