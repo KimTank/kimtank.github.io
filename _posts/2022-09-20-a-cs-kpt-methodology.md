@@ -53,11 +53,11 @@ tags:
 
 ### 화이트보드에 포스트잇을 붙이는거처럼
 
-<!-- |:---|---|:---:|---|
+|:---|---|:---:|---|
 |KEEP||TRY||
 |!(memo)[https://cdn-icons-png.flaticon.com/512/1355/1355764.png] x ...||empty||
 |PROBLEM||try empty||
-|!(memo)[https://cdn-icons-png.flaticon.com/512/1355/1355764.png] x ...||empty|| -->
+|!(memo)[https://cdn-icons-png.flaticon.com/512/1355/1355764.png] x ...||empty||
 
 ## 3. Write Try
 
@@ -68,11 +68,11 @@ Try DO Action Item, KEEP와 PROBLEM을 기반으로 실천할게 뭐냐 구체�
 
 ### 하나씩 채워나가자
 
-<!-- |:---|---|:---:|---|
+|:---|---|:---:|---|
 |KEEP||TRY||
 |!(memo)[https://cdn-icons-png.flaticon.com/512/1355/1355764.png] x ...||!(memo)[https://cdn-icons-png.flaticon.com/512/1355/1355764.png]||
 |PROBLEM||x||
-|!(memo)[https://cdn-icons-png.flaticon.com/512/1355/1355764.png] x ...||.....|| -->
+|!(memo)[https://cdn-icons-png.flaticon.com/512/1355/1355764.png] x ...||.....||
 
 ## 4. 우선순위 정하기
 
