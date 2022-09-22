@@ -11,10 +11,10 @@ tags:
 - Prototype Object
 - Prototype Chain
 - `__proto__`
-- Object.getPrototypeOf(obj) 
+- `Object.getPrototypeOf(obj)`
 - constructor
 - instanceof
-- ECMAScript 2015
+- `ECMAScript 2015`
 - Class
 - extends
 - super
@@ -173,21 +173,27 @@ Teacher.prototype.someAction = function(){
 
 - 임의의 클래스와 인스턴스, 프로토타입의 관계
 
-|---|---|---|---|
+|---|:---:|---|---|
 |-|AnyClass||-|
 |.constructor|↑|↓|.prototype|
-|-|AnyClass.prototype<br>.method()||-|
-|`.__proto__`|↑|↓|new AnyClass();<br>instantiation|
-|-|anyClassChild<br>.method()||-|
+|-|AnyClass.prototype||-|
+|-|.method()||-|
+|`.__proto__`|↑|↓|new AnyClass();|
+|-|↑|↓|instantiation|
+|-|anyClassChild||-|
+|-|.method()||-|
 
 - Arr(배열) 클래스와 인스턴스, 그리고 프로토타입의 관계
 
-|---|---|---|---|
+|---|:---:|---|---|
 |-|Array||-|
 |.constructor|↑|↓|.prototype|
-|-|Array.prototype<br>.push() .slice .map .each...||-|
-|`.__proto__`|↑|↓|new Array();<br>instantiation|
-|-|anyClassChild<br>.push() .slice .map .each...||-|
+|-|Array.prototype||-|
+|-|.push() .slice .map .each...||-|
+|`.__proto__`|↑|↓|new Array();|
+|-|↑|↓|instantiation|
+|-|anyClassChild||-|
+|-|.push() .slice .map .each...||-|
 
 > Array 역시 typeof를 했을 시 'object'타입으로 나오고, 비교 시 Array.isArray()로 배열지 확인해야되는 이유는 prototype을 이용한 prototype object를 가진 Object이기 때문이다. 그렇게 설계된거다. 그냥 그렇게 받아들이면된다.
 
