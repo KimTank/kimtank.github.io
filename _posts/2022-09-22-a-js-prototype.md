@@ -277,5 +277,4 @@ myCar._price; //100;
 
 > ## 참조  
 > [MDN:Object/Prototype](https://developer.mozilla.org/ko/docs/Learn/JavaScript/Objects/Object_prototypes)   
-> []()
-> 
+> [MDN:JS/Classes](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes)
