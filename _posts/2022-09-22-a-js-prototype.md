@@ -1,12 +1,26 @@
 ---
 layout: post
 title: "JavaScript Prototype"
-date: 2022-09-21
+date: 2022-09-22
 categories:
 - JavaScript
 tags:
 - JavaScript
 - Prototype
+- Object
+- Prototype Object
+- Prototype Chain
+- `__proto__`
+- Object.getPrototypeOf(obj) 
+- constructor
+- instanceof
+- ECMAScript 2015
+- Class
+- extends
+- super
+- get
+- set
+- _member
 ---
 
 나는 왜 짧게 요약하지 못하는가.. 왜 다 중요하게 느껴지는가   
@@ -16,7 +30,7 @@ tags:
 
 JS는 **Prototype(원형 객체)기반 언어(prototype-based language)**이다.~~(처음알았다 ㄷㄷ 함수형이라고만 알았는데 이게뭐야)~~
 
-## MDN Object prototypes
+## MDN:Object prototypes
 
 객체를 상속하기 위해 프로토타입을 사용한다. 모든 객체들이 method와 property를 상속받기위한 template이다.(Prototype object를 가짐) 상위의 객체의 method와 property를 가질 수 있는걸 **Prototype Chain**이라고 한다.
 
@@ -102,6 +116,59 @@ Test.prototype.a = function() {...};
 Test.prototype.b = function() {...};
 ```
 
+## [MDN:Prototype Inherit](https://developer.mozilla.org/ko/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85_%EC%83%81%EC%86%8D)
+
+ECMAScript 2015 Class는 최신브라우저에서는 잘 작동하지만 IE에서는 작동하지 않으니 하는방법을 알아야한다.
+
+```javascript
+//Person(first, last, age, gender, interests) 부모를 상속하여 새로운 속성 만드는법
+function Teacher(first, last, age, gender, interests, subject) {
+    //call(this <- Teacher자신, ...실제 함수 실행에 필요한 인자들을 전달) 
+    // java super();랑 비슷(부모의 값을 쓰기위해)
+    Person.call(this, first, last, age, gender, interests);
+
+    //부모가 가지지 않은 subject라는 항목을 사용하기 위해 정의
+    this.subject = subject;
+}
+
+//매개변수가 없는 생성자 상속
+function Brick(){
+  //부모속성 안쓸거야 call()쓸필요없음.
+  this.width = 10;
+  this.height = 20;
+  ...
+}
+
+//부모속성 받음
+function ChildBrick(){
+  //Brick.width, Brick.height 상속
+  //Brick에 초기화하는 매개변수가 없어서 call()에 넘길필요가 없음.
+  Brick.call(this);
+
+  this.opacity = 0.5;
+  this.color = 'blue';
+}
+
+//최상위 Teacher는 Person의 생성자의 프로토타입 속성이 없다.
+//확인법 
+//Object.getOwnPropertyNames(Teacher.prototype);
+//Object.getOwnPropertyNames(Person.prototype);
+//Teacher는 Person의 메서드를 상속받지 못하였음. -> Property Object의 create()를 사용
+Teacher.prototype = Object.create(Person.prototype);
+//상기코드만 넣으면 constructor속성이 Person으로 나옴
+//확인 브라우저 재실행 후 Teacher.prototype.constructor return값 확인 Person()나옴
+Teacher.prototype.constructor = Teacher;
+//Teacher.prototype.constructor -> Teacher() return 의도한대로 동작
+//Teacher는 정상적으로 Person도 상속했고, Teacher()
+
+//prototype 정의
+Teacher.prototype.someAction = function(){
+  ......동작구현
+};
+
+//[MDN 예제](https://github.com/mdn/learning-area/blob/main/javascript/oojs/advanced/oojs-class-inheritance-finished.html)
+```
+
 ## Prototype & Class
 
 - 임의의 클래스와 인스턴스, 프로토타입의 관계
@@ -126,10 +193,89 @@ Test.prototype.b = function() {...};
 
 ## Prototype Chain
 
+상속은 prototype chain을 사용한다.
+
+```javascript
+let inheritArr = new Array([1,23,4,5,123,...]);
+
+inheritArr.length;
+inheritArr.slice();
+```
+
+## MDN:Class in JavaScript
+
+### 예제
+
+```javascript
+class Car {
+  //생성자
+  constructor(category, engine, transMission, wheel) {
+    this.category = {
+      fuel,
+      body,
+      usage
+    };
+    this.engine = engine;
+    ...
+  };
+
+  //멤버 메서드
+  break(){
+    console.log('stop');
+  };
+  ...
+}
+```
+
+> class는 내부적으로 프로토타입 상속으로 변환된다. [syntactic sugar](https://en.wikipedia.org/wiki/Syntactic_sugar)의 일종임
+
+```javascript
+class Jenesis extends Car{
+  constructor(category, engine, transMission, grade, wheel, price, color....){
+      //오우오우
+      super(category, engine, transMission, wheel);
+
+      this.grade = grade;
+      ......
+  }
+}
+```
+
+> [Github:MDN/es2015-class-inheritance 예제](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-class-inheritance.html)
+
+### Getter & Setter
+
+```javascript
+class Jenesis extends Car{
+  constructor(category, engine, transMission, grade, wheel, price, color....){
+      //오우오우
+      super(category, engine, transMission, wheel);
+
+      this.grade = grade;
+      ......
+  }
+
+  get price(){
+    return this._price;
+  }
+
+  set price(newPrice){
+    this._price = newPrice;
+  }
+}
+
+//사용측
+const myCar = new Jenesis('sedan', 'v6', 'zf', '380', '20inch', 0, 'grey'....);
+
+myCar._wheel; //20inch
+myCar._price = 100;
+myCar._price; //100;
+```
+
+> [Github:MDN/es2015-getters-setters 예제](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-getters-setters.html)
+
+
 > ## 참조  
 > [MDN:Object/Prototype](https://developer.mozilla.org/ko/docs/Learn/JavaScript/Objects/Object_prototypes)   
-> []()   
-> []()   
-> []()   
-> []()   
-> []()   
+> []()
+> 
