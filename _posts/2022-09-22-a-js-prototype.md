@@ -10,17 +10,15 @@ tags:
 - Object
 - Prototype Object
 - Prototype Chain
-- `__proto__`
-- `Object.getPrototypeOf(obj)`
+- Object.getPrototypeOf(obj)
 - constructor
 - instanceof
-- `ECMAScript 2015`
+- ECMAScript 2015
 - Class
 - extends
 - super
 - get
 - set
-- `_member`
 ---
 
 나는 왜 짧게 요약하지 못하는가.. 왜 다 중요하게 느껴지는가   
