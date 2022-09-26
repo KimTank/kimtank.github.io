@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JavaScript Callback Function"
-date: 2022-09-23
+date: 2022-09-27
 categories:
 - JavaScript
 tags:
