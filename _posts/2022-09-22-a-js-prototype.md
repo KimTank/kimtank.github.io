@@ -278,7 +278,6 @@ myCar._price; //100;
 
 > [Github:MDN/es2015-getters-setters 예제](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-getters-setters.html)
 
-
 > ## 참조  
 > [MDN:Object/Prototype](https://developer.mozilla.org/ko/docs/Learn/JavaScript/Objects/Object_prototypes)   
 > [MDN:JS/Classes](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes)
