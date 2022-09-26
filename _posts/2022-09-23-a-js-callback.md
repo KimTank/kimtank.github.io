@@ -8,9 +8,18 @@ tags:
 - JavaScript
 - Higher order function
 - callback function
+- Ansynchronous
+- Asyncronous call
+- Promise
+- `then()`
 ---
 
 괴물을 만났다. api를 어렵겠는데요 하더니 30초만에 짜버린다. 따라갈수 없으니 기초부터 잡고 코드리뷰를 해야겠다. 기초를 일단 보자.
+
+생일을 핑계로 팽팽거리다 현우님한테 실례를 저질렀다. 새벽4시
+벌받고있다
+
+전화를 정지시킬까
 
 # JavaScript Callback Function
 
@@ -248,4 +257,3 @@ const respectForTheEminem = async () => {
 > ## 참조  
 > [MDN:Event Loop](https://developer.mozilla.org/ko/docs/Web/JavaScript/EventLoop)   
 > [Philip Roberts:Help, I'm stuck in an event-loop](https://vimeo.com/96425312)   
-> []()   
