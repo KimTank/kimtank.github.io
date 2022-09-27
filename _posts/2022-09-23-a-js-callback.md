@@ -56,6 +56,7 @@ tags:
     - AJAX(XHR) -> [Ajax Getting Started](https://developer.mozilla.org/ko/docs/Web/Guide/AJAX/Getting_Started)
 
 - 예제
+
 ```javascript
 const printStirng = str => {
     setTimeout(
