@@ -70,7 +70,7 @@ SPA(Single-Page Application)
 
 ### Wireframe
 
-선과 윤곽선(frame)으,로 웹페이지의 레이아웃과 UI요소등에대한 뼈대를 잡는것을 말한다.
+선과 윤곽선(frame)으로 웹페이지의 레이아웃과 UI요소등에대한 뼈대를 잡는것을 말한다.
 
 ### Mockup
 
@@ -98,6 +98,7 @@ $npm install react-router-dom@^x.x.x
 ### import
 
 ```javascript
+//비구조화 할당(destructuring assignment)과 비슷하게 이용할 수 있다.
 import { BrowerRouter, Routes, Route, Link} from "react-router-dom";
 ```
 
@@ -131,12 +132,81 @@ import { BrowerRouter, Routes, Route, Link} from "react-router-dom";
 
 ### BrowerRouter
 
-### Routes
+HTML5 [History API](https://developer.mozilla.org/ko/docs/Web/API/History_API)를 사용해 페이지를 새로고침하지 않고 주소를 변경할 수 있게 한다.
 
-### Route
+상위에 작성되어 있어야 React Router 컴포넌트들을 사용할 수 있다.
+
+### Routes & Route
+
+경로를 매칭해주는 역할을 한다.
+
+- Routes: Route를 감싸 경로가 일치하는 단 하나의 라우터만 렌더링한다. Routes를 사용하지 않으면, 매칭되는 모든 요소 렌더링함.
+- Route: path attribute 지정하여 mapping한다. Link가 정해주는 URL과 일치해야 작동한다.
+
+```javascript
+<Routes>
+    <Route path="/" element={<main />} />
+    <Route path="/signin" element={<signin />} />
+    <Route path="/signup" element={<signup />} />
+    <Route path="*" element={<unkownrequest />} />
+</Routes>
+
+// /*의 경우 지정되지 않은 주소로 접근할 시 보여주는 페이지로 이동한다.
+/**
+ * 각 주소를 입력했을 시 예시
+ * https://www.example.net/ -> main
+ * ...net/signin -> signin
+ * ...net/signup -> signup
+ * ...net/* -> unkownrequest
+ */
+```
 
 ### Link
 
+경로를 연결해주는 역할을 하는 컴포넌트로 페이지 전환을 통해 페이지를 새로 불러오지 않고, Application을 그대로 유지, HTML5 History API를 이용해 페이지의 주소만 변경해준다.
+
+ReactDOM render 시 a태그로 변경됨(a태그는 페이지 전환하는 것이 있음. 그것을 wrapper나 ex)
+
+Link의 to attribute를 사용해 Route에서 path로 설정해둔 주소를 연결한다.
+
+```javascript
+const App = () => {
+    return (
+        ...
+        <ul>
+            <li>
+                <Link to="/">Main</Link>
+            </li>
+            ...
+        </ul>
+        ...
+    )
+}
+```
+
+### useNavigate
+
+> IMPORTANT
+> 일반적으로 'redirect'가  loders and hook action에 더 좋음.
+
+```javascript
+import { useNavigate } from "react-router-dom";
+
+function useLogoutTimer() {
+  const userIsInactive = useFakeInactiveUser();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (userIsInactive) {
+      fake.logout();
+      navigate("/session-timed-out");
+    }
+  }, [userIsInactive]);
+}
+```
+
+1. 선택적 두 번쨰 인수를 사용, 'to'값을 전달 하거나 Link to, {replace, state}
+2. 히스토리 스택에 가고자하는 델타를 전달(ex: navigate(-1) back버턴 동일)
 
 > ## 참조  
 > [solwalk:UI, UX기획을 손쉽게, 와이어프레임](https://slowalk.com/2140)   
@@ -145,5 +215,4 @@ import { BrowerRouter, Routes, Route, Link} from "react-router-dom";
 > [위키백과:Routing](https://www.google.com/search?q=routing+%EC%9C%84%ED%82%A4&sxsrf=ALiCzsZmVMU9gSgCeT5BSiHm4mS3xGRJGA%3A1664413535880&ei=X-80Y-agNc-12roPzqysWA&ved=0ahUKEwimzMLM57j6AhXPmlYBHU4WCwsQ4dUDCA4&uact=5&oq=routing+%EC%9C%84%ED%82%A4&gs_lp=Egdnd3Mtd2l6uAED-AEBMgUQIRigATIFECEYoAHCAgoQABhHGNYEGLADwgIEECMYJ8ICBBAAGBPCAgUQABiABMICChAAGIAEGIcCGBSQBgpIkSRQ6wtYzCJwBXgAyAEAkAEAmAHFAaABgQmqAQMxLjniAwQgQRgA4gMEIEYYAIgGAQ&sclient=gws-wiz)   
 > [나무위키:Router](https://namu.wiki/w/%EB%9D%BC%EC%9A%B0%ED%84%B0)   
 > [React Router:main](https://reactrouter.com/en/main)   
-> []()   
-> []()   
+> [React Router:useNagative](https://reactrouter.com/en/main/hooks/use-navigate)
