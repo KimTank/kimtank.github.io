@@ -56,11 +56,11 @@ Client와 Server사이의 데이터가 교환되는 방식이다.
 
 ### Requests
 
-![Requests](./../assets/img/221005-request-structure.png)
+![Requests](/assets/img/221005-request-structure.png)
 
 ### Responses
 
-![Responses](./../assets/img/221005-response-structure.png)
+![Responses](/assets/img/221005-response-structure.png)
 
 ## Stateless
 
