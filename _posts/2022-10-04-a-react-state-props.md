@@ -10,7 +10,8 @@ tags:
 - JSX
 - State
 - Props
-- 
+- Controlled Component
+- One-way Data Flow
 ---
 
 미루고 미루던 state, prop에 대해 이제사 적는다. 시간은 한정적이다. 잠좀 그만잡시다 T^T
@@ -181,13 +182,20 @@ const App = () => {
 };
 
 export default App;
-
 ```
+
+## Controlled Component
+
+React에서는 Data로 state를 따로 관리하고 싶어한다. **"React가 State를 Control할 수 있는 Component를 Controlled Component"**라고 한다. -> 추가적으로 React에 대해서는 학습이 필요하다.
+
+## React Data Flow
+
+React로 앱을 설계할 시 Component 기준으로 Bottom-up으로 구현하면 테스트가 쉽고, 확장성이 좋다. 하여 설계 시 기획자, PM, UX 디자이너는 Component Hierarchy(계층구조)로 나눈다.
+
+허나 Data의 경우는 다르다. Parent Component로 부터 시작하여 Child Component로 props를 통하여 Top-down방식으로 구현한다.
+
+Data 전달의 원칙인 One-way Data Flow는 React가 갖는 중요한 원칙이다. Component는 props를 통해 전달받은 Data가 어디서(Where data from)온것인지 모른다.
+
 > ## 참조  
-> []()   
-> []()   
-> []()   
-> []()   
-> []()   
-> []()   
-> []()   
+> [React with Hooks:forms](https://reactwithhooks.netlify.app/docs/forms.html)   
+> [React:Main](https://ko.reactjs.org/)
