@@ -145,25 +145,25 @@ Responses에 들어가는 HTTP headers의 Requests header와 동일한 Structure
 - Response headers: 위치 또는 서버 자체에 대한 정보와 같이 응답에 대한 부가적인 정보를 갖는 헤더이다. Vary, Accept-Ranges와 같이 상태 줄에 넣기에 공간이 부족한 추가 정보를 제공한다.
 - Representation headers: 이전에는 Entity headers, body에 담긴 리소스의 정보를 포함하는 헤더이다.
 
-```
+```json
 R#: Response headers
 E#: Entity headers
 G#: General headers
 
 HTTP/1.1 200OK
-R# Access-Control-Allow-Origin:  *
-G# Connection: Keep-Alive         
-E# Content-Encoding: gzip         
-E# Content-Type: text/html; charset=utf-8
-G# Date: XXXXXXXXXXXXXXXXXXXXXXXX
-R# Etag: "XXXXXXXXXXXXXXXXXXXXXXX"
-G# Keep-Alive: timeout=5, max=999
-E# Last-Modified: XXXXXXXXXXXXXXXXX
-R# Server: Apache
-R# Set-Cookie: xxxxxxxxxx
-G# Transfer-Encoding: chunked
-R# Vary: Cookie, Accept-Encoding
-R# X-Frame-Options: DENY
+Access-Control-Allow-Origin:  *          R#
+Connection: Keep-Alive                   G#
+Content-Encoding: gzip                   E#
+Content-Type: text/html; charset=utf-8   E#
+Date: XXXXXXXXXXXXXXXXXXXXXXXX           G#
+Etag: "XXXXXXXXXXXXXXXXXXXXXXX"          R#
+Keep-Alive: timeout=5, max=999           G#
+Last-Modified: XXXXXXXXXXXXXXXXX         E#
+Server: Apache                           R#
+Set-Cookie: xxxxxxxxxx                   R#
+Transfer-Encoding: chunked               G#
+Vary: Cookie, Accept-Encoding            R#
+X-Frame-Options: DENY                    R#
 
 (body)
 ```
