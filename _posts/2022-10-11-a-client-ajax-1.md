@@ -12,6 +12,12 @@ tags:
 - Effect Hook
 - Data flow
 - state
+- Bottom up
+- Top down
+- Tree structure
+- One way data flow
+- props
+- Lifting state up
 ---
 
 월요병이 심하지만 오늘은 화요일이다. 4일뒤면 파주 통일전망대 자전거타고 룰루라랄할수있다. 룰루라랄!!!!!
@@ -83,6 +89,9 @@ function ChildComponent({handleButtonClick}) {
 }
 ```
 
+---
+
 > ## 참조
+>
 > [React:JS Hello World](https://ko.reactjs.org/docs/hello-world.html)   
 > [React:JS lifting-state-up](https://ko.reactjs.org/docs/lifting-state-up.html)
