@@ -180,10 +180,12 @@ $npx nodemon servr/serverScriptFile.js
 $npx serve -l portNumber client/
 ```
 
+---
+
 > ## 참조
 >
 > [velog:soshin0112/Node.js CORS, SOP](https://velog.io/@soshin0112/Node.js-CORS-SOP-%EA%B0%9C%EB%85%90)   
 > [NodeJS:HTTP](https://nodejs.org/dist/latest-v16.x/docs/api/http.html)   
 > [NodeJS:HTTP transaction anatomic](https://nodejs.org/ko/docs/guides/anatomy-of-an-http-transaction/)   
 > [Github:Nodemon](https://github.com/remy/nodemon)   
-> [Github:Serve](https://github.com/vercel/serve)   
+> [Github:Serve](https://github.com/vercel/serve)

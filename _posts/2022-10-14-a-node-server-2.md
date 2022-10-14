@@ -1,189 +1,235 @@
 ---
 layout: post
-title: "Node Cross Origin Resource Sharing"
-date: 2022-10-13
+title: "Node Express"
+date: 2022-10-14
 categories:
 - Node
 tags:
 - Node
 - JavaScript
-- Cross Origin Resource Sharing
-- CORS
-- PreFlight Request
-- nodemon
-- serve
-- middleware
+- Express
+- Framework
+- Mddleware
+- Router
+- npm
 ---
 
-눈뜨니 침대 뭔가싶다. 껄껄
+서버 안보여서 더 어렵게 느껴지는것.
 
 ---
 
-# Cross Origin Resource Sharing(CORS)
+# Express
 
-교차 출처 리소스 공유
+MERN stack(MongoDB, Express, React, Node.js)
 
-## MDN 개념
+Node.js환경에서 웹서버, 또는 API서버를 제작하기 위해 사용되는 framework
 
-교차 출처 리소스 공유는 추가 HTTP헤더를 사용, 한 Origin에서 실행 중인 Web Application이 다른 Origin이 선택한 자원에 접근할 수 있는 권한을 부여하도록 Client(브라우저)에 알려주는 체제이다.
+## Express install
 
-Clinet(브라우저)는 SOP에 의해 다른 출처의 리소스 공유를 막는다. 그러나, CORS를 사용하면 접근권한을 얻을 수 있다.
-
-```
-X Access to fetch at 'protocol path ...' from origin 'null' has been blocked by ....html:1 CORS policy: Response to preflight reque4st doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaue response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
-
-<!-- 
-  다른 출처의 리소스 갖고오기엔 SOP로 접근 불가.
-  CORS 설정으로 서버 응답 헤더에 'Access-Control-Allow-Origin'을 작성, 접근권한 얻을 수 있어.
- -->
+```bash
+$npm install express
 ```
 
-상기 에러 CORS가 아닌 SOP -> CORS를 통해 해결 가능.
-
-## How act
-
-### 1. PreFlight Request
-
-#### 개념
-
-실 요청 보내기 전 OPTIONS 메서드로 사전 요청으로 보내, 해당 출처 리소스에 접근 권한 있는지 확인하는 것.
-
-#### Structure
-
-|---|---|---|---|---|---|
-|클라이언트||브라우저||서버||
-|ㅣ|-실요청→|ㅣ|-Preflight Request(Origin: path)→|ㅣ||
-|ㅣ||ㅣ|←Response(A-C-A-O: path)-|ㅣ||
-|ㅣ||ㅣ|-실요청→|ㅣ||
-|ㅣ|←Response-|ㅣ|←Response-|ㅣ|ㅡ요청 수행|
-
-> A-C-A-O: Access-Control-Allow-Origin
-
-#### Server Side has no Response Header
-
-|---|---|---|---|---|---|
-|클라이언트||브라우저||서버||
-|ㅣ|-실요청→|ㅣ|-Preflight Request(Origin: path)→|ㅣ|
-|ㅣ|←CORS-|ㅣ|←Response(A-C-A-O: 응답헤더 없엉)-|ㅣ|
-
-> 요청을 보낸 Origin에 접근 권한이 없으면, 브라우저에서 Cors error thorw, 실 요청 전달 안됨.
-
-#### why PreFlight Request require
-
-- 리소스 측면에서 효율적: 실 요청 전 권한 확인 가능
-- CORS 대비안된서버 보호: CORS이전 SOP만 고려, 다른 Origin 대응 안해놓음.
-
-|---|---|---|---|---|---|
-|클라이언트||브라우저||서버||
-|ㅣ|-실요청(Origin: path)→|ㅣ|-실제 요청(Origin: path)→|ㅣ|요청-|
-|ㅣ|←CORS 에러-|ㅣ|←Response(A-C-A-O: 응답헤더 없엉)-|ㅣ|수행|
-
-> 서버 요청을 받은 후 CORS를 확인하여 응답 헤더가 없을 시 error throw, -> 비효율적 하여 PreFlight는 CORS 기본 사양
-
-### 2. Simple Request(단순 요청)
-
-특정 조건이 만족되면, 프리플라이트 요청 생략 후 요청 보냄.
-
-|---|---|---|---|
-|클라이언트||서버||
-|ㅣ|-실제 요청(Origin: path)→|ㅣ|요청|
-|ㅣ|←Response(A-C-A-O: *)-|ㅣ|수행|
-
-- GET, HEAD, POST method 중 하나이다.
-- 자동으로 설정되는 헤더
-  - Accept
-  - Accept-Language
-  - Content-Language
-- 수동으로 설정
-  - Content-Type
-    - application/x-www-form-unlencoded
-    - multipart/form-data
-    - text/plain
-
-### 3. Credentialed Request(인증정보를 포함한 요청)
-
-요청 헤더에 인증 정보 담은 요청, Origin다른 경우 별도 설정없이 쿠키 보낼 수 없다. 민감한 정보이므로 Client, Server 모두 CORS 설정이 필요하다.
-
-- Client측 요청 헤더
-  - withCredentials: true
-- Server측 요청 헤더
-  - Access-Control-Allow-Credentials: true
-- Access-Control-Allow-Origin: * -> error throw -> 인증정보의 경우 출처 정확하게 설정해야 한다.
-
-## setting
-
-### 1. Node.js Server
+## Simple started
 
 ```javascript
-const http = require('http');
+const express = require('express');
+const app = express();
+const port = 8080;
+const ip = '192.168.0.1';
 
-const server = http.createServer((req, res) => {
-  // 모든 도메인
-  res.setHeader("Access-Control-Allow-Origin", "*");
+app.get('/', (req, res) => {
+    res.send('server open');
+});
 
-  // 특정 도메인
-  res.setHeader("Access-Control-Allow-Origin", `${host}${path}`);
-
-  // 인증 정보를 포함한 요청을 받을 경우
-  res.setHeader("Access-Control-Allow-Credentials", "true");
+app.listen(port, ip, () => {
+    console.log(`terminal log: ${ip}/:${port}`);
 });
 ```
+method와 url(/endpoint)로 분기를 만드는것을 Routing이라고 한다.
+
+Client는 특정한 HTTP Request Method(GET, POST, PUT, PATCH, OPTION, DELETE 등)와 함꼐 특정 URI, path로 HTTP Request 보낸다.
+
+Routing은 Client의 Request에 맞는 Endpoint에 따라 Server Response 방법을 결정한다.
 
 ```javascript
-const cors = require("cors");
-const app = express();
-
-//모든 도메인
-app.use(cors());
-
-//특정 도메인
-const options = {
-  origin: "https://codestates.com", // 접근 권한을 부여하는 도메인
-  credentials: true, // 응답 헤더에 Access-Control-Allow-Credentials 추가
-  optionsSuccessStatus: 200, // 응답 상태 200으로 설정
+//Node.js 방식
+const requestHandler = (req, res) => {
+  if(req.url === '/endpoint') {
+    if (req.method === 'GET') {
+      res.end(data)
+    } else if (req.method === 'POST') {
+      req.on('data', (req, res) => {
+        // do something ...
+      })
+    }
+  }
 };
 
-app.use(cors(options));
+//Express framework 내에서 Router 제공
+const router = express.Router();
 
-//특정 요청
-app.get("/endpoint/:parameter", cors(), function (req, res, next) {
-  res.json({ msg: "this is message" });
+router.get('/endpoint', (req, res) => {
+    res.send(data);
 });
 
+router.post('/endpoint', (req, res) => {
+    // do something...
+});
 ```
 
-### 2. Express Server
+|---|---|---|
+|Incoming Request|||
+|↓||ㅣ|
+|Middleware|ㅡ|ㄱ|
+|↓next()|ㄱ||
+|MiddleWare|ㅣ|ㅣres.send()|
+|↓next()|ㅣres.send()|ㅣ|
+|MiddleWare|ㅣ|ㅣ|
+|↓next()|↓|↓|
+|Res-|pon-|se|
 
-Express framework로 Server 만들 시, cors 미들웨어로 간단하게 CORS설정 가능하다.
+Middleware는 중간에 문제가 있는 요청을 검증하거나 기능을 추가한다던가의 중간자의 역할을 가능하게한다.
 
-## Node.js Server Library
+## frequency usage middleware
 
-서버 코드 변경 시 리빌드해줄 필요 없이 자동으로 리빌드해준다.
+1. POST request 등 포함된 body(payload)를 구조화(쉽게 얻고 싶음)
+2. * request/response에 CORS header 추가 시
+3. * request -> url이나 method를 확인 시
+4. requst에 사용자 인증 정보(certification)가 있는지 확인
 
-```json
-./package.json
+### 1. POST request 등에 포함된 body(payload)를 구조화할 때
+
+```javascript
+// # 1. nodeJS, chunk: 조각
+let body = [];
+request.on('data', (chunk) => {
+  body.push(chunk);
+}).on('end', () => {
+  body = Buffer.concat(body).toString();
+  // body 변수에는 문자열 형태로 payload가 담겨져 있습니다.
+});
+
+/**
+ * body-parser middleware를 사용하여 효율적으로 바꿀 수 있음.
+ * ```bash
+ * $npm install body-parser
+ * ```
+ */
+// # 2. body-parser middleware usage
+const bodyParser = require('body-parser');
+const jsonParser = bodyParser.json();
+
 ...
-dependencies {
-  ...,
-  "start": "nodemon server/basic-server.js"
-}
+
+app.post('/endpoint', jsonParser, (req, res) => {
+    //action
+})
+
+// # 3. Express v4.16.0 ~ body-parser
+const jsonParser = express.json(/* TODO 확인 -> {strict: false} */);
+
+...
+
+app.post('/resource/endpoint', jsonParser, (req, res) => {
+    //action
+});
 ```
 
-```bash
-# terminal
-$npx nodemon servr/serverScriptFile.js
+### 2. * Req/Res CORS header added
+
+```javascript
+// # 1. NodeJS
+const defaultCorsHeader = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Accept',
+  'Access-Control-Max-Age': 10
+};
+
+...
+
+if (req.method === 'OPTIONS') {
+  res.writeHead(responseCode, defaultCorsHeader);
+  res.end();
+} else if {
+  res.writeHead(...);
+  ...
+} else if ... //계속 반복
+
+/**
+ * $npm install cors
+ */
+// # 2. cors middleware usage
+const cors = require('cors');
+
+...
+
+//모든 요청 OK
+app.use(cors());
+
+//특정 요청만 CORS 허용
+app.get('endpoint/:parameter', cors(), (req, res, next) => {
+    res.json({msg: 'this is CORS-enabled for a Specific Single Route'});
+});
 ```
 
-### 특정 포트로 실행
+### 3. * req about url or method verify
 
-```bash
-$npx serve -l portNumber client/
+```javascript
+/**
+ * get: middleware function(이하 m-w f) HTTP method
+ * '/': m-w f, path, route
+ * function parameter: m-w f
+ * req: m-w f, HTTP request parameter
+ * res: m-w f, HTTP response parameter
+ * next: m-w f, callback parameter
+ */
+app.get('/', (req, res, next) {
+    next();
+});
+
+// # usage
+const express = require('express');
+const app = express();
+
+const loggerBot = (req, res, next) => {
+    console.log(`${req.method}, ${req.url}`);
+    next();
+};
+
+app.use(loggerBot);
+
+app.get('/', (req, res) => {
+    res.send('server open');
+});
+
+app.listen(8080);
 ```
+
+### 4. req header in user certification verify
+
+```javascript
+app.use((req, res, next) => {
+    if(req.header.token){
+        req.isLoggedIn = true;
+        next();
+    } else {
+        res.status(/* responseCode user certification Denied */).send('no authority');
+    }
+})
+```
+
+---
 
 > ## 참조
 >
 > [velog:soshin0112/Node.js CORS, SOP](https://velog.io/@soshin0112/Node.js-CORS-SOP-%EA%B0%9C%EB%85%90)   
-> [NodeJS:HTTP](https://nodejs.org/dist/latest-v16.x/docs/api/http.html)   
-> [NodeJS:HTTP transaction anatomic](https://nodejs.org/ko/docs/guides/anatomy-of-an-http-transaction/)   
-> [Github:Nodemon](https://github.com/remy/nodemon)   
-> [Github:Serve](https://github.com/vercel/serve)
+> [Express.js:Routing](https://expressjs.com/ko/guide/routing.html)   
+> [Express.js:main](https://expressjs.com/ko/)   
+> [Express.js:getting started](https://expressjs.com/ko/starter/installing.html)   
+> [Express.js:Hello, World!](https://expressjs.com/ko/starter/hello-world.html)   
+> [Express.js:Basic routing](https://expressjs.com/ko/starter/basic-routing.html)   
+> [Express.js:middleware/body-parser](http://expressjs.com/en/resources/middleware/body-parser.html)   
+> [Express.js:express.json](https://expressjs.com/ko/4x/api.html#express.json)   
+> [Express.js:cors](http://expressjs.com/en/resources/middleware/cors.html)   

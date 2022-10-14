@@ -44,6 +44,8 @@ origin.this = `${origin.protocol}${origin.host}/${origin.endpoint}`;
  * /
 ```
 
+---
+
 ## what?
 
 SOP는 SOP에 잠재적 위험을 분리, 공격받는 경로 줄인다.
