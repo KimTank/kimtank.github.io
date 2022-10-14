@@ -103,8 +103,34 @@ tags:
 
 #### 서비스 기획의 범위
 
-- Product Owner(PO): 총괄 책임자(PM)
+- Product Manager(PM)
+- Product Owner(PO)
 
+#### 인하우스와 에이전시 기획자
+
+- Request For Proposal(RFP): 제안요청서
+- 워터폴 개발 방법론: 개발 전 전체 서비스 기획을 완료 후 결정권자의 최종 컨펌 후 개발을 진행하는 방법론.
+- Product of Concept(PoC): 실제 예상되는 서비스의 형태를 시각화 함.
+- Information Architecture(IA): 실제 서비스를 개발하기 위한 상세 기능 명세 작성, 서비스의 구조 잡음.
+- Role and Responsibilities(R&R)
+- Work Breakdown Structure(WBS)
+- Minimum Viable Product(MVP)
+
+#### 이유와 기준이 있는 기획
+
+#### 시각화를 통한 최종 점검
+
+- prototype: 실제 개발하기 이전에 시각화된 형태
+
+### 2. 협업을 위한 사전 준비
+
+#### 전체를 한눈에 파악하는 IA
+
+##### 서비스 구조를 쉽게 이해하는 방법
+
+- Site Map
+- Mutually Exclusive Collectively ExHaustive
 
 > ## 참조
+> 
 > [밀리의서재]()   
