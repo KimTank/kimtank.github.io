@@ -16,11 +16,7 @@ tags:
 
 ---
 
-# Same Origin Policy(SOP)
-
 ## 개념
-
-"같은 출처의 리소스만 공유가 가능하다."
 
 ## like code
 

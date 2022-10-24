@@ -19,8 +19,6 @@ tags:
 
 ---
 
-# Cross Origin Resource Sharing(CORS)
-
 교차 출처 리소스 공유
 
 ## MDN 개념

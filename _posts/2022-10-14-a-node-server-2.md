@@ -18,8 +18,6 @@ tags:
 
 ---
 
-# Express
-
 MERN stack(MongoDB, Express, React, Node.js)
 
 Node.js환경에서 웹서버, 또는 API서버를 제작하기 위해 사용되는 framework

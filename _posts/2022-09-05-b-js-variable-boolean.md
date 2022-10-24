@@ -16,7 +16,7 @@ tags:
 
 JavaScript 역시 정해진 문법이 있는 언어이고, 약속과 규칙이 있다. 정해진 문법을 사용해야 원하는 결과를 얻을 수 있다. 그 문법의 기초가 되는 변수를 알아보자
 
-# JavaScript Variable
+---
 
 ## Basic Syntax
 

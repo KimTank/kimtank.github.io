@@ -24,7 +24,7 @@ tags:
 나는 왜 짧게 요약하지 못하는가.. 왜 다 중요하게 느껴지는가   
 그것이 문제로다.
 
-# JavaScript Prototype
+---
 
 JS는 **Prototype(원형 객체)기반 언어(prototype-based language)**이다.~~(처음알았다 ㄷㄷ 함수형이라고만 알았는데 이게뭐야)~~
 

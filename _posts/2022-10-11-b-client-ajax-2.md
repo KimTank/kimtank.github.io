@@ -18,7 +18,7 @@ tags:
 
 React문서를 봐야되는데 엉덩이만 무거웠지 나는 왜이리 집중하지 못하는가
 
-# Client side Ajax 2
+---
 
 ## Side Effect
 

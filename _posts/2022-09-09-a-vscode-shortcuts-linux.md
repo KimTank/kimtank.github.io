@@ -10,7 +10,7 @@ tags:
 
 알면 편하고 모르면 계속 찾는 단축키, 직접 세팅해도되지만 OS별로 써보고 편한거 찾을래
 
-# VSCode Shortcut for Linux
+---
 
 ![VSCode:Shortcut-Linux](/assets/img/220909-vs-shortcut.png)
 

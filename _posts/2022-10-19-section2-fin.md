@@ -13,8 +13,6 @@ tags:
 
 ---
 
-# 코드스테이츠 섹션2 회고
-
 [이전 회고](https://kimtank.github.io/codestates/2022/09/19/a-cs-section1.html)는 쓸데없는 자기소개랑 반성과 성찰의 시간이었다면 이번엔 짧고 굵게가자.
 
 ## 목표

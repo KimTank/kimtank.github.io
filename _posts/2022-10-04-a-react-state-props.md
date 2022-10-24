@@ -16,7 +16,7 @@ tags:
 
 미루고 미루던 state, prop에 대해 이제사 적는다. 시간은 한정적이다. 잠좀 그만잡시다 T^T
 
-# React State & Props
+---
 
 ## State
 

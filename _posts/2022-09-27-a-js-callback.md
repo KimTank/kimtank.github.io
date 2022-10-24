@@ -20,7 +20,7 @@ tags:
 
 전화를 정지시킬까
 
-# JavaScript Callback Function
+---
 
 1. 고차 함수는 전달인자(argument)로 함수를 넘겨줄 수 있다.(callback)
 2. 고차 함수는 다른 함수를 리턴할 수 있다.(커링함수)
