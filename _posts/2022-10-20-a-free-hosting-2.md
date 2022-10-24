@@ -113,6 +113,7 @@ tags:
 
 상위 케이스는 해봐야 미련이 없을거같아, 무식하면 용감하고, 무지하면 손발이 고생한다고 했다. 해보자 물론 그건 다다아으으응으ㅡㅁ에 ㅜㅜ
 
+[이전으로](https://kimtank.github.io/personal/2022/10/18/afree-hosting-1.html)
 //아직 진행중
 
 //Termux를 이용한 Ubuntu 설치

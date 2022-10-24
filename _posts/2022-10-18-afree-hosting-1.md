@@ -77,7 +77,7 @@ createAt 22-10-18
 
 이 과정은 18일부터 24일까지 거의 밤샘비슷하게 하면서 진행된 작업으로, 끝끝내 실패로 그쳤다. 하지만 실제로 간단한 서버는 구현해서 server open이라는 문구를 확인했고, 위 과정을 거치면서 원격설정하며 살짝 맛본, 포트포워딩과 ddns설정 등 재밋는 지식을 또 쌓을 수 있었다.
 
-[다음으로](https://kimtank.github.io/personal/2022/10/18/afree-hosting-1.html)
+[다음으로](https://kimtank.github.io/personal/2022/10/20/a-free-hosting-2.html)
 
 ---
 
