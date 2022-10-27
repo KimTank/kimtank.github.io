@@ -6,6 +6,15 @@ categories:
 - React
 - CDD
 - Component Driven Development
+- CSS Preprocessor
+- SCSS
+- BEM
+- Block
+- Element
+- Modifier
+- CSS-in-JS
+- Styled-Component
+- 
 tags:
 - 
 ---
@@ -243,6 +252,4 @@ cosnt Button = styled.button`
 > [styled-component: document](https://styled-components.com/docs)   
 > [진우형픽 검색엔진: hello](https://beta.sayhello.so/)   
 > [진우형픽 검색엔진2: brave](https://search.brave.com/)   
-> [storybook](https://storybook.js.org/)   
-> []()   
-> []()   
+> [storybook](https://storybook.js.org/)
