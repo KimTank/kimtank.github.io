@@ -22,7 +22,6 @@ tags:
 - Responses head
 - payload
 - Stateless
-- 
 ---
 
 양이 방대하지만 평소같았으면 찾아보진않고 넘어갈 좋은 내용들이 많다 가자!!
