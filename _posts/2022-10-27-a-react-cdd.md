@@ -13,7 +13,7 @@ tags:
 - Block
 - Element
 - Modifier
-- CSS-in-JS
+- CSS in JS
 - Styled-Component
 ---
 
