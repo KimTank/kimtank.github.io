@@ -4,6 +4,7 @@ title: "React Component Driven Development"
 date: 2022-10-27
 categories:
 - React
+tags:
 - CDD
 - Component Driven Development
 - CSS Preprocessor
@@ -14,8 +15,6 @@ categories:
 - Modifier
 - CSS-in-JS
 - Styled-Component
-tags:
-- 
 ---
 
 폰노이만이 처음 인체와 같은 생물의 구조로 컴퓨터의 구조를 설계하고, 완성하지 못하고 무지개다리를 건너신 후 컴퓨터는 폰노이만의 설계대로 완성되었고, 그가 연구하다 죽음으로 멈춘 메모리계층구조 역시 현대에서는 쓰이고 있다.
