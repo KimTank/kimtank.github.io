@@ -190,7 +190,7 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 code .
 ```
 
-![https://docs.microsoft.com/ko-kr/windows/wsl/tutorials/wsl-vscode](https://docs.microsoft.com/ko-kr/windows/wsl/tutorials/wsl-vscode)
+![https://docs.microsoft.com/ko-kr/windows/wsl/media/wsl-open-vs-code.gif](https://docs.microsoft.com/ko-kr/windows/wsl/media/wsl-open-vs-code.gif)
 
 
 - VScode Gui 좌측하단 >< 탭 클릭 후 `새 WSL 창`
