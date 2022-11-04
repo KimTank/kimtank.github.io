@@ -19,8 +19,6 @@ tags:
 
 오늘은 아마 재빨리 끝나면 새벽이지 싶다. CSS는 역시 양이 ~~너무많아서 행볶는다.~~
 
-# CSS Box Model
-
 ## The Box Model
 - Content Box: 기준이되는 Box
 - Padding: Content Box와 Border와의 거리

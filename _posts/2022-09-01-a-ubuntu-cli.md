@@ -3,7 +3,7 @@ layout: post
 title: "Linux!!!!!"
 date: 2022-08-31
 categories:
-- Ubuntu
+- Linux
 tags:
 - Linux
 - Ubuntu

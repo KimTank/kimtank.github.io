@@ -12,8 +12,6 @@ tags:
 
 고마운 사람들 결혼식 갔다가 뒷풀이로 주말에도 공부해야지 하는 마음으로 결혼식장에 장비 다챙겨갔다가 고이 가져간 그대로 사용도 안하고 숙취로 집에 들어온 후 눈을 뜨니 일요일 오후였다. ^^ 좋은 뒷풀이였지만 쉬는 날이 가장 공부하기 좋은 기회란걸 무엇보다 잘 알고 있으니, 공부하자!!
 
-# JavaScript Number
-
 ## Number
 - 37이나 -9.25와 같은 숫자를 표현하고 다룰때 사용하는 [원시 래퍼 객체](https://developer.mozilla.org/ko/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript)
 - 숫자를 다루기위해 상수와 메서드를 내장하고 있다.

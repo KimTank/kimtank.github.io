@@ -3,7 +3,7 @@ layout: post
 title: "JavaScript React State & Props"
 date: 2022-10-04
 categories:
-- JavaScript
+- React
 tags:
 - JavaScript
 - React

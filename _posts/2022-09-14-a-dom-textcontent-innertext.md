@@ -3,7 +3,7 @@ layout: post
 title: "DOM textContent & innerText, innerHTML 차이"
 date: 2022-09-14
 categories:
-  - DOM
+  - Javascript
 tags:
   - DOM
   - Node

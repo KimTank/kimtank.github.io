@@ -3,7 +3,7 @@ layout: post
 title: "Node Cross Origin Resource Sharing"
 date: 2022-10-13
 categories:
-- Node
+- NodeJS
 tags:
 - Node
 - JavaScript

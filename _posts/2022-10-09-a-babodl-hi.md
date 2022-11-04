@@ -3,7 +3,7 @@ layout: post
 title: "태어나서 처음해보는 결혼식 사회"
 date: 2022-10-09
 categories:
-- 대외활동
+- Personal
 tags:
 - 결혼식
 - 사회

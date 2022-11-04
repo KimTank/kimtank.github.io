@@ -3,7 +3,7 @@ layout: post
 title: "Codestates Agora Toy Project"
 date: 2022-09-15
 categories:
-- Project
+- Codestates
 tags:
 - Web
 - Project

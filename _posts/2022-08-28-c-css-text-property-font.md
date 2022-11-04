@@ -15,7 +15,6 @@ tags:
 - font-family
 ---
 주말간 CSS를 반응형까지 보려고했었건만 잠드는바람에 늦어졌다. 내일까지 얼마남지않았지만 ~~오늘의 내가 게을러지면 내일의 나는 또 밀릴거니까~~ 얼른하자!!
-# CSS text property & font
 
 ## properties
 

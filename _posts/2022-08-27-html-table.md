@@ -11,8 +11,6 @@ tags:
 
 주말에도 가즈아아아아앙ㅇㅇ
 
-# HTML table
-
 ## `HTML` `table`???
  - `strctured sets of data`
  - 행(row)과 열(columns)으로 이루어져 있다.

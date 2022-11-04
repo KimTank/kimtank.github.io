@@ -3,7 +3,7 @@ layout: post
 title: "React Client Ajax 1"
 date: 2022-10-11
 categories:
-- JavaScript
+- React
 tags:
 - JavaScript
 - React

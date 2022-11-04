@@ -3,20 +3,18 @@ layout: post
 title: "CSS 구문과 color"
 date: 2022-08-28T00:00:00-00:00
 categories:
-  - CSS
+- CSS
 tags:
-  - CSS
-  - syntax
-  - link
-  - color
-  - rgb
-  - hex
-  - ;
+- CSS
+- syntax
+- link
+- color
+- rgb
+- hex
+- ;
 ---
 
 Andoid는 xml명세로 이루어진 GUI로 대부분의 뷰를 제어한다. 그래서 CSS와 비슷하면서도 다르지만 더 작은그룹의 정적인 부분이 있어, 대부분 `customView`라든지 `style.xml`을 따로 정의해 구조화하는데 그 방법은 천차만별이다. ~~사실 web frontend에서 가장 무서운 부분은 CSS였다.~~ 그 CSS를 지금 보려한다.
-
-# CSS 구문과 color
 
 ## 구문
 

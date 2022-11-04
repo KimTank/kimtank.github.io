@@ -19,8 +19,6 @@ tags:
 
 이전에도 Android만 하지말고 Web Front로 방향을 잡아라는 친한 동생의 이야기에 웃어 넘긴적이 있다. 근래에는 JavaScript와 HTML만 보고있는데도 느끼는건 ~~시간이 많이 부족하다.~~ 볼 양이 많아서 너무 행복하다 ^^*
 
-# HTML form과 내부태그와 속성
-
 ## HTML `<form>`
 - user에게는 보이지 않는 container
 - inputs, checkboxes, buttons, etc로 구성

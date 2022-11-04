@@ -3,7 +3,7 @@ layout: post
 title: "VSCode Shortcut for Linux"
 date: 2022-09-09
 categories:
-- VSCode
+- Personal
 tags:
 - VSCode
 ---

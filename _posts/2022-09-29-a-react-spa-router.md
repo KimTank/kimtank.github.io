@@ -3,7 +3,7 @@ layout: post
 title: "JavaScript React SPA & Router"
 date: 2022-09-29
 categories:
-- JavaScript
+- React
 tags:
 - JavaScript
 - React

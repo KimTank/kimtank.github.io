@@ -26,8 +26,6 @@ tags:
 예습을 하고싶었건만 시간은 야속하게 흐르고, ~~내 집중력은 산으로 가고있고~~ :clap:
 눈뜨니 ~~아침이고 껄껄꺾크흑ㄱㄱ~~ :clap: 정신차리니 밤이더라 껄껄껄
 
-# CSS Selector와 Specificity
-
 ## Selectors
 
 ### Universal Selector

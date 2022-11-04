@@ -4,7 +4,6 @@ title: "Chrome CodeBlock None Translate"
 date: 2022-09-04
 categories:
 - JavaScript
-- Chrome
 tags:
 - JavaScript
 - Chrome
@@ -13,6 +12,7 @@ tags:
 ---
 
 크롬에서 번역기능을 사용하면 코드블럭 내 소스들까지 번역되버려 보기 힘든 경우가 종종 있어 생활코딩 egoing님이였나? 김포프님이였나 누군가 가르쳐준 방법(명령어를 북마크로 저장)을 가지고 있었으나, 영어공부한다고 생각하고 읽자고 했지만 당연히도 시간은 한정적이고 ^^ 내게는 아직 영어공부보다는 기본 문법과 언어 사용법이 우선이기에 다시 찾아보았다. 코드블럭 번역 안하는법 ㅋㅋㅋㅋ
+
 ```javascript
 //한글 번역 적용시 코드블럭 내 코드가 번역되버린다 ㅜㅜ
 함수 추가DoesOverflow(a, b){
@@ -26,8 +26,6 @@ function additionDoesOverflow(a, b){
     return a !== c-b || b !== c-a;
 }
 ```
-
-# Chrome CodeBlock None Translate
 
 ## notranslate class 추가
 개발자 도구를 열고 콜솔창에 notranslate class를 추가하면 된다.

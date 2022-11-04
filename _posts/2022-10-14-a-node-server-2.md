@@ -3,7 +3,7 @@ layout: post
 title: "Node Express"
 date: 2022-10-14
 categories:
-- Node
+- NodeJS
 tags:
 - Node
 - JavaScript
