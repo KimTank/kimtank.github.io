@@ -25,7 +25,7 @@ tags:
 내가 니네때문에 성공해야되
 
 [웹표준 & 웹접근성 vol.1](https://kimtank.github.io/web/2022/11/07/a-web-standard1.html)   
-[웹표준 & 웹접근성 vol.3](https://kimtank.github.io/web/2022/11/07/b-web-standard3.html)
+[웹표준 & 웹접근성 vol.3](https://kimtank.github.io/web/2022/11/07/c-web-standard3.html)
 
 ---
 
