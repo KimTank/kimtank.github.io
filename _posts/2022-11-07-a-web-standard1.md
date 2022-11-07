@@ -23,6 +23,9 @@ tags:
 
 봄인가? 이상하게 배고프고 졸린다. 춘곤증이라더니 가을이면 배부르고 갬성에 안졸려야되는거 아니냐ㅜㅜ 1시간같은 10분을 자고싶은데 요샌 거의 10분같은 1시간을 자버린다 ㅡㅡ... 우루사가 필요하다.
 
+[웹표준 & 웹접근성 vol.2](https://kimtank.github.io/web/2022/11/07/b-web-standard2.html)   
+[웹표준 & 웹접근성 vol.3](https://kimtank.github.io/web/2022/11/07/b-web-standard3.html)
+
 ---
 
 ## 1. 웹표준

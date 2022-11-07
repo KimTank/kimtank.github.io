@@ -24,6 +24,9 @@ tags:
 
 현대사회는 공평성보다는 형평성이 중요한 사회이다. semantic 요소를 사용하여 문서의 헤더를 명시하는 것 처럼, 모두에게는 형평성에 맞게 정보를 접근할 수 있는 기회는 주어져야한다.
 
+[웹표준 & 웹접근성 vol.1](https://kimtank.github.io/web/2022/11/07/a-web-standard1.html)   
+[웹표준 & 웹접근성 vol.2](https://kimtank.github.io/web/2022/11/07/b-web-standard2.html)
+
 ---
 
 ## 5. 웹접근성
