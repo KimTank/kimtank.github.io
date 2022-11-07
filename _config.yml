@@ -18,9 +18,9 @@
 # 원하는 모든 사용자 지정 변수를 만들 수 있으며, 이러한 변수는 액세스할 수 있습니다.
 # {{site.myvariable}}을(를) 통해 템플릿에 표시됩니다.
 
-title: KimTank repository
-subtitle: help me plz
-tagline: 으쌰으쌰
+title: KTY repository
+subtitle: anymous
+tagline: 
 lang: ko_KR
 author.name: KimTank
 author.url: https://kimtank.github.io/
