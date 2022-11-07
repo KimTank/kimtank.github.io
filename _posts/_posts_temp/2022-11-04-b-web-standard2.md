@@ -7,6 +7,10 @@ categories:
 tags:
 - Web standard
 - accessibility
+- SEO
+- Search Engine Optimization
+- title
+- meta
 - 
 ---
 
@@ -56,10 +60,9 @@ vol.1에서도 말했듯이 semantic을 잘지킨 페이지는 검색엔진에 �
 |keywords|웹 페이지의 관련 키워드들을 나열할 때 사용한다.|
 |author|콘텐츠의 제작자를 표시한다.|
 
-
-
 ---
 
 ## 참조
 
-> []()
+> [kakaodev: clear cache](https://developers.kakao.com/tool/clear/og)   
+> [codesandbox: exam](https://codesandbox.io/s/og-silseub-91lz69?from-embed)
