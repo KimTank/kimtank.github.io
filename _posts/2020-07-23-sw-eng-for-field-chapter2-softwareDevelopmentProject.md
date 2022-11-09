@@ -3,7 +3,7 @@ layout: post
 title: "소프트웨어 개발 프로젝트"
 date: 2020-07-23T00:00:00-00:00
 categories:
- - 소프트웨어 공학
+ - Personal
 tags:
  - 소프트웨어 개발 프로젝트
  - SI방식 소프트웨어 개발 프로젝트

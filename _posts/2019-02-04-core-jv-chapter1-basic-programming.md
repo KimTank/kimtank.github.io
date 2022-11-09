@@ -3,7 +3,7 @@ layout: post
 title: "기본 프로그래밍 구조"
 date: 2019-02-04T00:00:00-00:00
 categories:
-- Java
+- Personal
 tags:
 - Java
 - corejava

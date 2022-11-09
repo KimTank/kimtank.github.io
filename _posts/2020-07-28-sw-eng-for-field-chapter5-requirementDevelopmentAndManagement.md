@@ -3,7 +3,7 @@ layout: post
 title: "요구사항의 개발과 관리"
 date: 2020-07-28T00:00:00-00:00
 categories:
- - 소프트웨어 공학
+ - Personal
 tags:
  - 요구사항
  - 요구사항 중요성

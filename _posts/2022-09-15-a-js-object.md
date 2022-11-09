@@ -3,7 +3,7 @@ layout: post
 title: "JavaScript Object"
 date: 2022-09-15
 categories:
-  - JavaScript
+- JavaScript
 tags:
 - JavaScript
 - Object

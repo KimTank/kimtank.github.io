@@ -3,7 +3,7 @@ layout: post
 title: "프로젝트 관리"
 date: 2020-07-24T00:00:00-00:00
 categories:
- - 소프트웨어 공학
+ - Personal
 tags:
  - 프로젝트 관리
  - 프로젝트 관리 단계

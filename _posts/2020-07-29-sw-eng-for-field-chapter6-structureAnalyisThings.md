@@ -3,7 +3,7 @@ layout: post
 title: "구조적 분석기법"
 date: 2020-07-29T00:00:00-00:00
 categories:
-- 소프트웨어 공학
+- Personal
 tags:
 - 구조적 분석
 - 구조적 분석 역사
