@@ -66,12 +66,14 @@ Web Accessibility를 통해 장애인, 고령자 등이 웹에서 제공하는 �
    - 자막을 포함한 동영상 사용
    - 자막을 지원하는 멀티미디어 플랫폼 사용
    - 비디오 요소 안 track요소를 사용하여 자막 불러오기
+
     ```html
     <video ..>
         <track src="@subAddr" kind="captions">
     </video>
     <!-- Web Video Text Tracks, .vtt파일 또는 Timed Text Markup Language(TTML)형식 -->
     ```
+
 3. 색에 무관한 콘텐츠 인식: 콘텐츠는 색에 관계 없이 인식될 수 있어야 한다.
    - 색약 색맹 등의 색을 인지하는데 어려움이 있는 사용자의 경우 색으로 구분되는 콘텐츠 파악이 불가하다.
      - 콘텐츠 테두리 설정
@@ -130,6 +132,7 @@ Web Accessibility를 통해 장애인, 고령자 등이 웹에서 제공하는 �
      - `<a href="@addr" target="_blank">어떤링크</a>`
 3. 콘텐츠 선형 구조: 콘텐츠는 논리적인 순서로 제공한다.
    - 제목, 내용으로 논리적구성한다.
+
     ```html
     <!-- XXXXXXX 1 -> 2 -> 1내용 -> 2내용 -->
     <div>1</div>
@@ -143,6 +146,7 @@ Web Accessibility를 통해 장애인, 고령자 등이 웹에서 제공하는 �
     <div>4</div>
     <div>4content</div>
     ```
+
 4. 표의 구성: 표는 이해하기 쉽게 구성한다.
    - 비장애인이 표를 봤을 때 구조를 인식할 수 있지만, 장애인은 구조를 파악할 수 없다. 듣거나, 다른 전달 수단을 통해 구조 내용을 이해하기 쉽게 구성해야 한다.
      - caption 사용하여 표에 제목 제공
@@ -197,9 +201,11 @@ HTML 태그 내부에 속성을 추가함으로써 의미를 부여한다.
 - 속성(property): 특징
 
 1. 역할(Role): HTML 종류와 역할이 맞지 않을 때, 어떤 역할을 하는 요소인지 명시한다.
+
    ```html
    <div role="button">semantic과 다를 때 역할을 정의</div>
    ```
+
 2. 상태(State)
    - aria-selected
    - aria-expanded
