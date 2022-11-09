@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Network deep"
+title: "Network deep vol.1"
 date: 2022-11-09
 categories:
 - Network
