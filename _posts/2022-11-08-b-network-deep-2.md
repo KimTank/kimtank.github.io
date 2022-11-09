@@ -39,6 +39,9 @@ tags:
 ㅑㅑㅑㅑㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐ
 고양이가 말했습니다
 
+[Network deep vol.1](https://kimtank.github.io/network/2022/11/09/a-network-deep-1.html)
+[Network deep vol.3](https://kimtank.github.io/network/2022/11/09/c-network-deep-3.html)
+
 ---
 
 ## 1. HTTP 특징
@@ -166,10 +169,12 @@ Content-Length:3423
   - A-L use: Ct(ko) -> Get /event -> A-L:ko -> Serv(다중 언어 지원, en, ko) -> Content-Language:ko -> Ct(안녕)
   - A-L complex: Ct(ko) -> Get /event -> A-L:ko -> Serv(다중 언어 중 한글없음, fr, en) -> Content-Language:fr => Ct(Bonjour)
     - Quality Values(q)
+
       ```json
       GET /event
       Accept-Language:ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7
       ```
+
       - 0~1, 클수록 순위 높음
       - 생략 시 1
   - A-L Q-V use -> Get /event -> Accept-Language;ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 -> Serv(다중 언어 중 한글 없음, fr, en) -> Content-Language: en -> Ct(Hi)

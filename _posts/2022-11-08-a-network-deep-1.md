@@ -22,6 +22,9 @@ tags:
 
 블로그 정리의 시기가 다가왔다. ruby도 알아야하는 상황 미루면 크게 오는구나
 
+[Network deep vol.2](https://kimtank.github.io/network/2022/11/09/b-network-deep-2.html)
+[Network deep vol.3](https://kimtank.github.io/network/2022/11/09/c-network-deep-3.html)
+
 ---
 
 ## 1. 역사
@@ -66,7 +69,7 @@ Http msg create -> Socket(TCP(msg)) Transport -> TCP info create(include msg dat
       |from|->ACK->|to|ACK 전송(현재 최적화로 이단계에서 ACK+DATA|
       |to|<-ESTABLISHED<-|from| 이후 연결 성립 후 데이터 전송|
 
-      > SYN: Synchroizie
+      > SYN: Synchroizie   
       > ACK: Acknowledgment
 
    - 데이터 전달 보증

@@ -21,6 +21,9 @@ tags:
 
 눈을 뜨니 zoom에서 목이 꺽여 기절했다고 했다 ㄷㄷ
 
+[Network deep vol.1](https://kimtank.github.io/network/2022/11/09/a-network-deep-1.html)
+[Network deep vol.2](https://kimtank.github.io/network/2022/11/09/b-network-deep-2.html)
+
 ---
 
 ## 1. HTTPS
@@ -178,7 +181,7 @@ https
 ```
 
 ```bash
-$node https.js
+$node express.js
 ```
 
 https://localhost:3001 접속 후 확인
