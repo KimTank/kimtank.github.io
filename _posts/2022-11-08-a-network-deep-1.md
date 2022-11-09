@@ -97,6 +97,7 @@ Http msg create -> Socket(TCP(msg)) Transport -> TCP info create(include msg dat
 ![https://shlee0882.tistory.com/110](/assets/img/221109-osi7.jpg)
 
 1. OSI 7 layers
+
    |---|---|
    |Layer(계층)|ex|
    |Application(응용)|HTTP, DNS, SSL, SMTP, FTP|
@@ -106,7 +107,9 @@ Http msg create -> Socket(TCP(msg)) Transport -> TCP info create(include msg dat
    |Network(네트워크)|IP, ICMP|
    |Data Link(데이터 링크)|FDDI, Ethernet, PPP|
    |Physical(물리)|CDMA, GSM, NICs, CSMA/CD, Fiber|
+
 2. TCP/IP 4 layers
+
    |---|---|
    |Layer(계층)|osi layer concern|
    |Application|Application, Presentation, Session|
