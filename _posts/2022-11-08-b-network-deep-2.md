@@ -6,7 +6,34 @@ categories:
 - Network
 tags:
 - Network
-- 
+- Client
+- Server
+- Stateless
+- Connectionless
+- Representation Headers
+- Content Type
+- Content Encoding
+- Content Language
+- Content Length
+- Transfer Encoding
+- Request Headers
+- From
+- Referer
+- User Agent
+- Host
+- Origin
+- Authorization
+- Response Headers
+- Server
+- Date
+- Location
+- Allow
+- Content Negotiation Headers
+- Accept
+- Accept Charset
+- Accept Encoding
+- Accept Language
+- Quality Values
 ---
 
 ㅑㅑㅑㅑㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐ
@@ -83,7 +110,7 @@ Content-Length:3423
 - Representation Headers(요청, 응답 둘다 사용)
   - Content-Type: 표현 데이터의 형식
     - mediaType;encoding
-  - Content-Enchoding: 표현 데이터의 압축 방식
+  - Content-Enhoding: 표현 데이터의 압축 방식
     - 표현 데이터 압축위해 사용
     - 데이터를 전달하는 곳에서 압축 후 인코딩 헤더 추가
     - 데이터를 읽는 쪽에서 인코딩 헤더의 정보로 압축 해제
@@ -116,7 +143,7 @@ Content-Length:3423
 6. Authorization: 인증 토큰을 서버로 보낼 때 사용하는 헤더
    - 토큰의 종류 + 실제 토큰 문자를 전송
 
-#### 1-3-3. Rsponse Headers
+#### 1-3-3. Response Headers
 
 1. Server: 요청을 처리하는 ORIGIN 서버의 소프트웨어 정보
 2. Date: 메세지가 발생한 날자와 시간
@@ -126,7 +153,7 @@ Content-Length:3423
 4. Allow: 허용 가능한 HTTP메서드
    - 405(Method Not Allowed)에서 응답에 포함
 
-#### 1-3-4. [Content negoiaion Headers](https://developer.mozilla.org/ko/docs/Web/HTTP/Content_negotiation)
+#### 1-3-4. [Content negotiation Headers](https://developer.mozilla.org/ko/docs/Web/HTTP/Content_negotiation)
 
 클라이언트가 선호하는 표현 요청(콘텐츠 협상)
 협상헤더는 요청시에만 사용
@@ -155,4 +182,4 @@ Content-Length:3423
 > [mdn: http/header/content-language](https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Content-Language)   
 > [mdn: http/header/content-length](https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Content-Length)   
 > [mdn: http/header/transfer-encoding](https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Transfer-Encoding)   
-> [mdn: http/content negoiation](https://developer.mozilla.org/ko/docs/Web/HTTP/Content_negotiation)
+> [mdn: http/content negotiation](https://developer.mozilla.org/ko/docs/Web/HTTP/Content_negotiation)
