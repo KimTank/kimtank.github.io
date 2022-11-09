@@ -58,14 +58,17 @@ Http msg create -> Socket(TCP(msg)) Transport -> TCP info create(include msg dat
 
 1. Transmission Control Protocol(TCP): 전송제어프로토콜 세그먼트는 IP패킷의 출발지 IP와 목적지IP정보를 보완할 수있는 출발지PORT, 목적지PORT, 전송제어, 순서, 검증 정보등을 포함하여
    - 연결지향: TCP 3way handshake(가상 연결)
-      |---|---|---|
+
+      |---|---|---|---|
       |클라이언트|방향|서버|비고|
       |from|->SYN->|to|접속 요청 SYN packet 전송|
       |to|<-SYN+ACK<-|from|SYN요청 받아 요청수락 ACK+SYN 설정 packet 전송 후 litsen ACK응답|
       |from|->ACK->|to|ACK 전송(현재 최적화로 이단계에서 ACK+DATA|
       |to|<-ESTABLISHED<-|from| 이후 연결 성립 후 데이터 전송|
+
       > SYN: Synchroizie
       > ACK: Acknowledgment
+
    - 데이터 전달 보증
       -> f(clinet) request for data transport -> t(server)f response for data transport -> t(client)
       비연결성을 보완한다.
@@ -80,6 +83,7 @@ Http msg create -> Socket(TCP(msg)) Transport -> TCP info create(include msg dat
    - 순서 보장못함
    - 신뢰성 낮지만 속도가 빠름 -> 실시간 스트리밍
 3. 차이
+
    |---|---|
    |TCP|UDP|
    |연결지향|X|
