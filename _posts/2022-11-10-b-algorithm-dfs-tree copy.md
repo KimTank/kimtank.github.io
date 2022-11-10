@@ -295,7 +295,7 @@ Node.prototype.addChild = function (child) {
 ```
 
 - output: 1 2 3 4 5
-- bigO: O(N<sup>2</sup>), N은 치우친 트리의 노드 수, printLevelOrder()의 시간복잡도는 `O(n) + O(n-1) + ... + O(1)`이고, O(N<sup>2<sup>)이다.
+- bigO: O(N<sup>2</sup>), N은 치우친 트리의 노드 수, printLevelOrder()의 시간복잡도는 `O(n) + O(n-1) + ... + O(1)`이고, O(N<sup>2</sup>)이다.
 - 보조공간: 최악의 경우 O(N). 비뚤어진 트리의 경우 printGivenLevel()은 호출 스택에 O(n) 공간을 사용한다. 균형 트리의 경우 호출 스택은 O(log n) 공간, 즉 균형 트리의 높이를 사용한다.
 
 ### 9-2. 큐를 사용한 BFS
