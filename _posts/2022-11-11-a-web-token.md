@@ -65,7 +65,7 @@ DBA역시 유저의 복호화를 하는 key(salt)를 알 수 없으면 단순하
 ## 2. Token
 
 출처: [보배드림 유머게시판](https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bobaedream.co.kr%2Fview%3Fcode%3Dstrange%26No%3D1594166&psig=AOvVaw0YO2FIGwKRIsNZGl4Yh5_h&ust=1668693576817000&source=images&cd=vfe&ved=0CBAQjhxqFwoTCKi3q5DusvsCFQAAAAAdAAAAABAE)
-[https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bobaedream.co.kr%2Fview%3Fcode%3Dstrange%26No%3D1594166&psig=AOvVaw0YO2FIGwKRIsNZGl4Yh5_h&ust=1668693576817000&source=images&cd=vfe&ved=0CBAQjhxqFwoTCKi3q5DusvsCFQAAAAAdAAAAABAE](https://file1.bobaedream.co.kr/strange/2016/10/17/18/1476695093467.png)
+![https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.bobaedream.co.kr%2Fview%3Fcode%3Dstrange%26No%3D1594166&psig=AOvVaw0YO2FIGwKRIsNZGl4Yh5_h&ust=1668693576817000&source=images&cd=vfe&ved=0CBAQjhxqFwoTCKi3q5DusvsCFQAAAAAdAAAAABAE](https://file1.bobaedream.co.kr/strange/2016/10/17/18/1476695093467.png)
 
 나는 돈을 지불했고, `야삐`를 위한 버튼을 누를 자격이 있어.(50개가 걸리면 50배를 먹는 국허유마 국딩 도박기계)
 
