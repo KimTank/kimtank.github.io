@@ -10,7 +10,56 @@ tags:
   - data structure
   - tree
   - graph
-  -
+  - root
+  - sibling
+  - parent node
+  - child node
+  - leaf node
+  - edge
+  - connedcted graph
+  - depth
+  - level
+  - height
+  - sub tree
+  - 자가 균형 이진 탐색 트리
+  - AVL 트리
+  - 레드-블랙 트리
+  - 스플레이 트리
+  - 시장 트리
+  - 최소 비용 신장 트리
+  - B-트리
+  - 2-3 트리
+  - B+ 트리
+  - B\*-트리
+  - DSW 알고리즘
+  - R-트리
+  - 기수 트리
+  - 스팁 리스트
+  - Binary tree
+  - Full binary tree
+  - Complete binary tree
+  - Perfect binary tree
+  - Binary search tree
+  - tree traversal
+  - preorder traverse
+  - inorder traverse
+  - postorder traverse
+  - levelorder traverse
+  - graph
+  - vertex
+  - adjacent vertex
+  - weighted graph
+  - unweighted graph
+  - undirected graph
+  - directed graph
+  - in-dgree/ou-degree
+  - adjacency
+  - self leaf
+  - cycle
+  - 인접행렬
+  - 인접리스트
+  - Breadth first search
+  - Depth first search
 ---
 
 언제나 그렇지만 수도코드를 짜는것이 힘든 이유는 한글을 해독하지 못하는것이 크다.
@@ -90,7 +139,7 @@ tags:
 
 - 유명한 트리 자료 구조
   - [자가 균형 이진 탐색 트리](https://ko.wikipedia.org/wiki/%EC%9E%90%EA%B0%80_%EA%B7%A0%ED%98%95_%EC%9D%B4%EC%A7%84_%ED%83%90%EC%83%89_%ED%8A%B8%EB%A6%AC)
-  - [AVL 튜리](https://ko.wikipedia.org/wiki/AVL_%ED%8A%B8%EB%A6%AC)
+  - [AVL 트리](https://ko.wikipedia.org/wiki/AVL_%ED%8A%B8%EB%A6%AC)
   - [레드-블랙 트리](https://ko.wikipedia.org/wiki/%EB%A0%88%EB%93%9C-%EB%B8%94%EB%9E%99_%ED%8A%B8%EB%A6%AC)
   - [스플레이 트리](https://box0830.tistory.com/147)
 - 기타
@@ -291,7 +340,7 @@ const levelorder = (root) => {
 - 2개의 양방향 간선
 ```
 
-#### 2-1. 용어
+#### 2-2-1. 용어
 
 - vertex: 정점, node, 데이터가 저장되는 기본 원소
 - edge: 간선, 정점간의 관계
@@ -305,7 +354,7 @@ const levelorder = (root) => {
 - self loop: 자기 루프, 정점에서 진출하는 간선 곧바로 자기 자신에게 진입하는 경우, 다른정점은 거치지 않는다.
 - cycle: 한 정점에서 출발하여 다시 돌아온다면 사이클이 있다. 
 
-#### 2-2. 인접행렬
+#### 2-2-2. 인접행렬
 
 정점 두개가 바로 이어져있으면 인접하다 이야기한다. 서로 다른 정점들이 인접한 상태인지를 표시한 행렬로 2차원 배열의 형태로 나타낸다. true(1) 이어졌다, false(0) 이어져있지 않다. 
 
@@ -325,7 +374,7 @@ const levelorder = (root) => {
   - 2 -> 0: [2, 0]
   - 2 -> 1: [2, 1]
 
-##### 2-2-1. usage
+##### 2-2-2-1. usage
 
 - 한개의 큰표와 같은 모습을한 인접행렬은 두 정점 사이에 관계가 있는지, 없는지 확인하기에 용이하다.
 - 가장 빠른 경로(shortest path)를 찾고자 할때 주로 이용한다.
@@ -336,11 +385,27 @@ const levelorder = (root) => {
 - 0 2 1 null
 - 2 1 null
 
-#### 2-3. 인접 리스트
+#### 2-2-3. 인접 리스트
 
 각 정점이 어떤 정점과 인접하는지를 리스트의 형태로 표현한다. 각 정점마다 하나의 리스트를 가지고 있으며, 이 리스트는 자신과 인접한 다른 정점을 담고 있다.
 
 ## 3. BFS & DFS
+
+하나의 정점을 시작하여 모든 정점들을 한번씩 탐색하는 것을 목적으로 한다. 그래프의 데이터는 배열처럼 정렬되어 있지 않아, 원하는 자료를 찾기 위해서는 모두 방문해야 한다.
+
+### 3-1. Breadth-First-Search
+
+너비를 우선적으로 탐색하는 방법이다., 너비우선탐색이라고 하고, 주로 두 정점사이의 최단 경로를 찾을 때 사용한다. 경로를 하나씩 전부 방문한다면, 최악의 경우에는 모든 경로를 다 살펴봐야한다.
+
+- [Tree BFS](https://kimtank.github.io/algorithm/2022/11/10/a-algorithm-bfs-tree.html)
+
+### 3-2. Depth-First Search
+
+하나의 경로를 끝까지 탐색한 후, 다음경로로 넘어가 탐색한다. 하나의 노선을 끝까지 들어가 확인하고 다음으로 넘어가기 때문에 경로를 빨리 찾을 수 있다. 원하는 목적지가 아닌 것을 미리 체크(조건)할 수 있다면, 바로 그 순간 다음 탐색으로 넘어갈 수 있다.
+
+깊이우선탐색은 한 정점에서 시작해 다음 경로로 넘어가기 전 해당 경로를 완벽하게 탐색할 때 사용한다. BFS보다 탐색 시간은 조금 걸릴지라도 모든 노드를 완전히 탐색할 수 있다.
+
+- [Tree DFS](https://kimtank.github.io/algorithm/2022/11/03/b-algorithm-dfs-tree.html)
 
 ---
 
@@ -352,7 +417,4 @@ const levelorder = (root) => {
 > [wiki: graph theory](https://ko.wikipedia.org/wiki/%EA%B7%B8%EB%9E%98%ED%94%84_%EC%9D%B4%EB%A1%A0)  
 > [이야기박스: splay tree](https://box0830.tistory.com/147)  
 > [fomagran: b-tree](https://fomaios.tistory.com/entry/Data-Structure-B-Tree%EB%9E%80)  
-> [김로그: bynary tree traveral](https://gnujoow.github.io/ds/2016/09/01/DS4-TreeTraversal/)  
-> []()  
-> []()  
-> []()
+> [김로그: bynary tree traveral](https://gnujoow.github.io/ds/2016/09/01/DS4-TreeTraversal/)
