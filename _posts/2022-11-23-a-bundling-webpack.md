@@ -8,7 +8,17 @@ tags:
   - Javascript
   - Web
   - Bundling
-  - 
+  - Bundle
+  - Webpack
+  - Module Bundler
+  - target
+  - entry
+  - output
+  - loaders
+  - plugins
+  - optimization
+  - mode
+  - browser compatibility
 ---
 
 실제로 구현할때 마음대로 되지않는 것이 문제다. 덕분에 시간을 녹여버리고, 문서를 뒤지는 시간보다 구글링이 빠르다고 판단해서 그렇게했더니, 언제나 그렇듯이 문서가 최고다. 결과적으로는 문서를 참조하는것이 더 빠른경우가 많은거같다.
