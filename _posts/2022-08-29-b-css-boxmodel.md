@@ -20,15 +20,18 @@ tags:
 오늘은 아마 재빨리 끝나면 새벽이지 싶다. CSS는 역시 양이 ~~너무많아서 행볶는다.~~
 
 ## The Box Model
+
 - Content Box: 기준이되는 Box
 - Padding: Content Box와 Border와의 거리
 - Border: Content Box에서 Padding을 띄운 거리
 - Margin: Border와 다른 Content Box의 Border와의 거리
 - Width: Content Box의 넓이
 - Height: Content Box의 높이
+
 > width와 height의 단위: px, em, %, auto
 
 ## Border
+
 - Border Width: border의 굵기 제어
 - Border Color: border의 색상 제어
 - Border Style: border의 모양 제어
@@ -43,13 +46,16 @@ tags:
   - inset
   - outset
 - Border Radius: 모서리의 곡률(px, %)
+
 ```css
 /* width style color */
 border: medium dashed red;
 ```
+
 원하는 모서리만 골라서 곡률을 제어가능하다.
 
 ---
+
 ## Padding
 
 ```css
@@ -66,23 +72,28 @@ padding: 1px 2px 3px
 /* top right bottom left */
 padding: 10px 2px 1px 6px
 ```
+
 px말고도 여러 단위 사용가능
 
 ---
 
 ## Margin
+
 속기법은 Padding과 동일
 
 ---
 
 ## Display Property
+
 MDN문서에 많은 속성이 있으나, 브라우저마다 동작하지 않는 것도 많다.
+
 ```html
 <!-- 구조대로 출력된다. -->
 <h1>나는 블록요소1</h1>
 <h1>나는 블록요소2</h1>
 <span>나는 인라인요소1</span><span>나는 인라인요소2</span>
 ```
+
 ```css
 h1 {
   ...
@@ -119,6 +130,7 @@ wanthide{
 ## Relative Unit
 
 ### percentages: 항상 상대적인 값
+
 ```css
 /* parnet width, height의 50% 절반 차지 */
 parent {
@@ -141,7 +153,9 @@ any-selector {
 ```
 
 ### em
+
 글꼴의 크기로 box를 제어한다. 대분자 M의 높이, 너비 그리고 타이포그래피와 연관이 있다.
+
 ```css
 parent {
   font-size: 100px;
@@ -153,7 +167,9 @@ child {
 ```
 
 ### rem
+
 em의 단점을 보완해서 나온것이다.
+
 ```html
 <div>
 <ul>
@@ -167,6 +183,7 @@ em의 단점을 보완해서 나온것이다.
 </ul>
 </div>
 ```
+
 ```css
 div {
   font-size: 10px
@@ -176,7 +193,10 @@ ul {
   font-size: 1.5em;
 }
 ```
-그리하여 나온것이 root html 태그의 font size를 기준으로하는 rem이 나왔다. rem을 사용시 위와같은 중첩문제가 발생하지 않는다. 
-> ## 참조
+
+그리하여 나온것이 root html 태그의 font size를 기준으로하는 rem이 나왔다. rem을 사용시 위와같은 중첩문제가 발생하지 않는다.
+
+## 참조
+
 > [MDN:CSS/Box Model](https://developer.mozilla.org/ko/docs/Learn/CSS/Building_blocks/The_box_model)   
 > [MDN:CSS/Value & Unit](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Values_and_Units)

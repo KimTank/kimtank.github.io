@@ -42,5 +42,6 @@ body {
 
 > 블로깅을 해놓은줄 알았는데 안해놓은건지? 해놨는데 못찾는건지 Jekyll 검색기능 빨리 넣어야겠다 ㄷㄷ
 
-> ## 참조  
+## 참조
+
 > [MDN/DesignGuide/CSS](https://developer.mozilla.org/ko/docs/MDN/Writing_guidelines/Writing_style_guide/Code_style_guide/CSS)

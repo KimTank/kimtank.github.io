@@ -122,7 +122,7 @@ your-app/
 
 ## 7. 지원 브라우저 및 기능
 
-### 7-1. 언어
+### 7.1. 언어
 
 IE 9, 10, 11 [폴리필](https://github.com/facebook/create-react-app/blob/main/packages/react-app-polyfill/README.md)이 필요하다.
 
@@ -135,7 +135,7 @@ IE 9, 10, 11 [폴리필](https://github.com/facebook/create-react-app/blob/main/
 
 [제안 단계](https://tc39.github.io/process-document/)
 
-### 7-2. 지원 브라우저
+### 7.2. 지원 브라우저
 
 [`browerslist`](https://github.com/browserslist/browserslist)구성이 파일에 포함된다. async/awit같은 언어 기능을 사용할 때 좋은 개발 환경을 제공하나 프로덕션 환경의 많은 브라우저와 호환성이 좋다. `package.json > 0.2%`
 

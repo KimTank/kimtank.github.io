@@ -31,10 +31,11 @@ tags:
 해당 오류는 allow-unrelated-histories 스위치를 토글하면 해결된다. `git pull||git merge` 태그를 추가하면 된다.
 
 ```bash
-$ git pull origin main --allow-unrelated-histories
+$git pull origin main --allow-unrelated-histories
 ```
 
 ## For Real
+
 ```bash
 ty@DTHOME:~/Workspace/cs/git-parctice$ git branch -M main
 ty@DTHOME:~/Workspace/cs/git-parctice$ git status
@@ -167,7 +168,8 @@ nothing to commit, working tree clean
 ty@DTHOME:~/Workspace/cs/git-parctice$ clear
 ```
 
-> 변태라고해도 좋다. 재밋다 꺄륵
+변태라고해도 좋다. 재밋다 꺄륵
 
-> ## 참조  
+## 참조
+
 > [Educative:Git fatal error refusing to merge unrelated histories](educative.io/answers/the-fatal-refusing-to-merge-unrelated-histories-git-error)

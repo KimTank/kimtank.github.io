@@ -19,6 +19,7 @@ tags:
 ## properties
 
 ### text-align
+
 정렬 => left, right, center, justify
 
 ```css
@@ -30,6 +31,7 @@ h1 {
 ```
 
 ### font-weight
+
 굵기 => normal, bold, lighter, bolder, 100, 900(400 normal, 700 bold)
 
 ### text-decoration: 선
@@ -51,9 +53,11 @@ tag {
 ```
 
 ### line-height
+
 줄간격을 지정 => normal, 2.5, 3em, 150%, 43px
 
 ### letter-spacing
+
 자간 => normal, .2rem, 1px, -1px
 
 ## font size
@@ -101,6 +105,7 @@ unset
 ## Font-Family
 
 ## 구문
+
 ```css
 /* font family name % a generic family name  */
 font-family: "Goudy Bookletter 1991", sans-serif;
@@ -130,7 +135,8 @@ font-family: unset;
 > font-family stack은 앞에서부터 기기에 있는 font-family를 찾아 순차적으로 명시   
 > font-family: a, b, c, d, e, f, g;
 
-> ## 참조
+## 참조
+
 > [MDN:CSS/Reference](https://developer.mozilla.org/ko/docs/Web/CSS/Reference)  
 > [MDN:CSS/Font-size](https://developer.mozilla.org/ko/docs/Web/CSS/font-size)   
 > [MDN:CSS/Font-family](https://developer.mozilla.org/ko/docs/Web/CSS/font-family)   

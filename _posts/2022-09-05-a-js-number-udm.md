@@ -29,6 +29,7 @@ JavaScript와 HTML, CSS를 굳이 비교하자면 HTML은 명사, CSS는 형용�
 1.999999999999999   // 그대로 출력
 1.9999999999999999  // 2로 출력
 ```
+
 > Number는 메모리에서 특정한 양의 공간을 갖게된다. => 무제한의 공간을 차지 할 수 없다.
 
 ### Math Operations(산술 연산자)
@@ -57,5 +58,6 @@ typeof NaN // 'number'
 
 > JavaScript에서 NaN은 숫자지만 실제로는 숫자가 아니다.
 
-> ## 참조
+## 참조
+
 > [MDN:JavaScript/Number](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#%EC%98%88%EC%A0%9C)

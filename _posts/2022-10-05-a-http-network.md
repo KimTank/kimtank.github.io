@@ -237,7 +237,7 @@ DNS는 호스틩 도메인 이름을 IP address로 변환하거나, 반대의 �
 
 ## Chrome Brower Error Code
 
-### Aw, Sanp!
+### Aw, Sanp
 
 앗, 이런! 이라고뜬다는데 본적이 ㅇ..ㅄ..
 
@@ -258,7 +258,8 @@ DNS는 호스틩 도메인 이름을 IP address로 변환하거나, 반대의 �
 
 다른 에러들은 본적이 있는거 같다. 특히 Ubuntu깔면서 WIFI모듈 충돌로인한 ERR_INTERNET_DISCONNECTED, 크롬이 자체적으로 던져주는건지는 처음알았다. 껄껄
 
-> ## 참조  
+## 참조
+
 > [KoreanJSON](https://koreanjson.com)   
 > [MDN:HTTP 요청 메서드](https://developer.mozilla.org/ko/docs/Web/HTTP/Methods)   
 > [Wikipedia:IPv6](https://en.wikipedia.org/wiki/IPv6)   

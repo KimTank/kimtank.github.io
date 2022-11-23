@@ -57,7 +57,8 @@ typeof additionResult;  // 'string
 // number와 string을 JavaScript는 따로 처리하지 못하니, string으로 변환한다.
 ```
 
-> ## caution
+## caution
+
 > 1. [C언어 배열의 범위를 넘어설때](https://blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=tipsware&logNo=221054714926&categoryNo=50&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=search)   
 > 2. 상위 TaeYoon, TAEYOON은 전혀 다른 문자열이다. 메모리주소가 다르다. 한번에 한문자만 수동으로 업데이트할 수 없다. TAEYOON은 새 메모리를 가지는 새 문자열로 name변수에 덮어쓴다.
 
@@ -80,7 +81,8 @@ value.slice(0, 6);  // 'badboy' => 0~6전까지
 value.slice(-4);    // 'gone' => 음수일 경우 뒤에서 1부터 4까지
 ```
 
-> ### 중요
+### 중요
+
 > .slice(0...)는 원래 문자열에 영향을 끼치지 않는다. mutable, immutable
 
 - .replace(arg1, arg2): **정규표현식을 사용하여 제어할 수 있다.**, arg1은 기존 변경전 문자열또는 문자, arg2는 변경할 문자열또는 문자. 처음으로 매칭되는 값만 변경된다.(반복문을 사용하면 다 변경할수 있을거같다. .replaceAll(arg1, arg2)가 있긴하지만 브라우저별로 호환여부가 다르다. chrome 호환 안됨)
@@ -139,7 +141,8 @@ const finalStep = Math.floor(Math.random() * 10) + 1;
 const getRandom = () => Math.floor(Math.random() * 10) + 1;
 ```
 
-> ## 참조
+## 참조
+
 > [MDN:JS/String](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String)   
 > [MDN:JS/Template Literals](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Template_literals)   
 > [MDN:JS/null](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/null)   

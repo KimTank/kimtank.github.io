@@ -39,6 +39,7 @@ name; // bull
 age; // 30
 rest; // {univ: 'cs', job: 'mechanic'}
 ```
+
 > 구조분해할당은 Perl, Python 등 다른 언어 기능
 
 ---
@@ -301,5 +302,6 @@ console.log(fizzBuzz); // "true"
 
 > 유용한 것도 많았지만, 너무 복잡하고 지킬것이 많다. 사실 이전 프로젝트에서 람다와 안드로이드 최신기법이었던 jetpack을 적용하지 않았던 이유는 필요성이었다. 이런방식으로 코딩되어있는 코드를 해독하고 연구해야된다면 맞다. 무조건 알아야되고, 익숙해져야하는것이 필수다. 하지만 이런 문법들을 무조건 써야한다면 잘모르겠다. 회사라는건 나혼자 일하는 곳이라면 몰라도 여러사람이 일하는 곳인데, 이런 규약들을 다 적용해서 어디까지 쓰겠다는 약속을 하지 않으면, 누군가는 남들이 읽지 못하는 코드를 짜고 있을 것이다. 이전에 일을 가르쳐주던 팀장이 하던 말들이 이해되기 시작한다. 최신기술에 민감해야되는건 맞지만, 상용화되어 안정적으로 돌아가야될 서비스에 무턱대고 적용하고 쓰기에는 조금 위험한게 아닐까?
 
-> ## 참조
+## 참조
+
 > [MDN:JS/Destructuring](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#%EA%B0%9D%EC%B2%B4_%EA%B5%AC%EC%A1%B0_%EB%B6%84%ED%95%B4)

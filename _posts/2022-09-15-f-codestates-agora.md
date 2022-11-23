@@ -79,10 +79,8 @@ HTML Structure의 구조를 시각화 해주는 고마운 [사이트](https://so
 
 ![출처: SW.Hixie.ch](/assets/img/220915-util-livedomviewer.png)
 
+## 참조
 
-
-
-> ## 참조  
 > [Github:KimTank/깃연습저장소](https://github.com/KimTank/git-practice-fuzzy-potato)   
 > [Github:KimTank/내아고라스테이츠만들기 포크떠왔어요](https://github.com/KimTank/fe-sprint-my-agora-states)
 > [SW.Hixie:JS/Live DOM Viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/)

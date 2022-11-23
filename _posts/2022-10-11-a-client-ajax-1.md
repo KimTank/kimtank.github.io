@@ -91,7 +91,7 @@ function ChildComponent({handleButtonClick}) {
 
 ---
 
-> ## 참조
->
+## 참조
+
 > [React:JS Hello World](https://ko.reactjs.org/docs/hello-world.html)   
 > [React:JS lifting-state-up](https://ko.reactjs.org/docs/lifting-state-up.html)

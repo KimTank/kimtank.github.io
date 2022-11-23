@@ -23,24 +23,28 @@ tags:
 
 가보자.
 
-# Linux!!!!!
 아직은 쪼렙이기 때문에 Ubuntu를 사용하여 GUI환경으로 접한다.
 
 ## 터미널 사용
+
 - `ctrl` + `alt` + `t`를 이용하여 터미널을 실행시킬 수 있다. 
 - GUI를 통해 실행시킬 수 도 있는데, `cmd`(윈도우키) + `a`를 이용하여 현재 시스템에 연결되어있는 패키지를 아이콘으로 보고 클릭하여 실행할 수 있다.
+
 > 단축키는 몰라도 우분투 환경에서는 사용하는데 무리는 없지만, 알고있으면 마우스를 휴대할 필요가없다.
 
 ## Prompt
+
 윈도우에서는 윈도우10 이후로 나도모르는 문제가 발생했을 때 능력자들이 해결할 수 있는 커맨드를 올려놔서 사용해본 파워쉘이나, 윈도우 자체 내 Dos라고 생각했던 영화에서 해킹할때 나오던 그 검은화면 CLI(Command-Line Interface).
 
 ### 명령어
+
 - pwd(print working directory): 현재 위치 확인하기(폴더 구조내 나의 위치)
 - mkdir(make directories)
 
 ```bash
 $mkdir helloWord
 ```
+
 - ls(list): 특정 폴더에 포함된 파일이나 하위 폴더 리스트 출력
   - -l: 파일포멧 전부 표현
   - -a: all
@@ -69,9 +73,10 @@ $cat any-file-name.extention_word
 $rm file-dont-want.extnt-wrd
 $rm -rf folder-dont-want.ex-wd
 ```
-  - -rf: 폴더를 지울때 옵션. 안넣으면 동작안하며 경고날림
-  - -r(recursive): 폴더 지울때 사용
-  - -f: 질문을 받지 않을 때 사용
+
+- -rf: 폴더를 지울때 옵션. 안넣으면 동작안하며 경고날림
+- -r(recursive): 폴더 지울때 사용
+- -f: 질문을 받지 않을 때 사용
 
 - mv(move): 폴더나 파일의 이름을 변경 또는 이동
   - GUI 드래그앤 드롭으로 이용, cli는 mv를 이용
@@ -90,6 +95,7 @@ $cp -rf original ~/UpperDirectory/
 ```
 
 - whoami: 현재 사용자가 누군지 확인할 수 있다.
+
 ```bash
 $whoami
 # 결과
@@ -113,7 +119,8 @@ $whoami
 
 우분투는 dos와는 다르다. 윈도우의 파워쉘역시 사용법이 특이하다고 생각했었는데, 익숙해 진다면 여느 매체에서 보던 전문가처럼 "다라라ㅏ라라다라랄라다ㅏ랃 (컴퓨터 연산소리 지이이지이이이) 다라닫라라라라다라라다"하는 것처럼 키보드만으로 멋있는 척(남이하면 우와아아 전문가다, 내가하면 나 좀 쩌는듯)할 수있는 뭔가 있어보이는 그런 무언가 생길거 같다.
 
-> ## 참조
+## 참조
+
 > [W3Schools:CLI](https://www.w3schools.com/whatis/whatis_cli.asp)   
 > [Ubuntu:Command Line for Beginner](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)   
 > [CSCS&Info:Doc/Linux shell commands](https://docs.cs.cf.ac.uk/notes/linux-shell-commands/)

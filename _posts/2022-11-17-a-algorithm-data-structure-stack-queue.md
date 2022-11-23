@@ -50,7 +50,7 @@ tags:
 
 ## 2. Stack & Que
 
-### 2-1. Stack
+### 2.1. Stack
 
 선입후출 Last In First Out 으로 외웠던 순서대로 쌓이고, 쌓인 가장 마지막 스택이 먼저 나가는 구조. FILO
 
@@ -59,7 +59,7 @@ tags:
 
 조회가 필요없고 저장 검색의 과정이 매우 빠르다. 최상위 공간에 데이터를 저장하고 검색하면 된다.
 
-#### 2-1-1. 특징
+#### 2.1.1. 특징
 
 1. 데이터는 하나만: 여러개는 안된다.
 2. 입출력방향: one way, 여러개면 안된다.
@@ -69,7 +69,7 @@ tags:
    - function frame
 3. 스택크기 제한: heap에 비해서는 스택의 크기가 제한되어있다. stack overflow조심
 
-### 2-2. Queue
+### 2.2. Queue
 
 선입선출 First In First Out, 먼저 들어간것이 먼저 나간다. 줄을 서서 기다리는 대기행렬이다. LILO. 입출력의 방향이 고정되어있다. 두곳에서 접근 가능하다.
 
@@ -84,12 +84,12 @@ tags:
 - cpu는 장치에 비해서 빠르다(항상그렇지않을 수 있음)
 - cpu는 data를 만들어 queue에 저장하고 다른 작업 수행, 장치는 queue에서 data받아서 동작
 
-#### 2-2-1. 특징
+#### 2.2.1. 특징
 
 1. 하나씩 가능: 여러개 안된다.
 2. 입출력방향 두개: 입출력 방향은 다르다. 하지만 만약에 입출력방향이 같으면 Queue가 아니다.
 
-#### 2-2-2. 추가 확장 Circular Queue data structure
+#### 2.2.2. 추가 확장 Circular Queue data structure
 
 - [Circular Queue Data Structure](https://www.programiz.com/dsa/circular-queue)
 - [Circular Queue](https://jetalog.net/119)

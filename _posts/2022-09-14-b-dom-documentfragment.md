@@ -78,7 +78,8 @@ brands.forEach((brand) => {
 list.appendChild(fragment);
 ```
 
-> ## 참조
+## 참조
+
 > [MDN:WebAPI/HTMLCollection](https://developer.mozilla.org/ko/docs/Web/API/HTMLCollection)   
 > [MDN:WebAPI/Node](https://developer.mozilla.org/ko/docs/Web/API/Node)   
 > [MDN:WebAPI/NodeList](https://developer.mozilla.org/ko/docs/Web/API/NodeList)   

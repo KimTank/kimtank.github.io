@@ -38,6 +38,7 @@ false && 'anything';    //false
 0 && 'anything';    //0
 ```
 
-> ## 참조
+## 참조
+
 > [MDN:Falsy](https://developer.mozilla.org/ko/docs/Glossary/Falsy)   
 > [MDN:Truthy](https://developer.mozilla.org/ko/docs/Glossary/Truthy)   

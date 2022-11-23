@@ -158,7 +158,8 @@ divMaker(imgMaker('사진주소3'));
 divMaker(tagMaker(h1)(false)('제목입니다.'));
 ```
 
-> ## 참조
+## 참조
+
 > [WIKI:클로저(컴퓨터 프로그래밍)](https://ko.wikipedia.org/wiki/%ED%81%B4%EB%A1%9C%EC%A0%80_(%EC%BB%B4%ED%93%A8%ED%84%B0_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D))   
 > [MDN:JS/Closures](https://developer.mozilla.org/ko/docs/Web/JavaScript/Closures)   
 > [MDN:JS/Inheritance & prototype chain](https://developer.mozilla.org/ko/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain)   

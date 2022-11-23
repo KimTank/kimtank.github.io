@@ -14,7 +14,8 @@ tags:
 
 ![VSCode:Shortcut-Linux](/assets/img/220909-vs-shortcut.png)
 
-> ## 참조
+## 참조
+
 > [VSCode:shortcuts/Linux](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-linux.pdf)   
 > [VSCode:shortcuts/Macos](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf)   
 > [VSCode:shortcuts/Windows](https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf)

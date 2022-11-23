@@ -74,7 +74,8 @@ console.log('this letter started by France..');
 //내가 당신이 받을 행운의 편지를 에러를 던져 막아주었다 :D
 ```
 
-> ## 참조
+## 참조
+
 > [Chrome:Developer/Devtools/Console](https://developer.chrome.com/docs/devtools/console/)   
 > [MDN:WebAPI/console](https://developer.mozilla.org/ko/docs/Web/API/console)   
 > [MDN:WebAPI/Window/alert](https://developer.mozilla.org/ko/docs/Web/API/Window/alert)   

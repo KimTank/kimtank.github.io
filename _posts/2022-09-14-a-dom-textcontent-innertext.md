@@ -125,7 +125,8 @@ HTMLElement interface의 property로 element와 element의 children의 렌더링
 
 Element.innerHTML은 HTML을 반환한다. 그래서 성능적으로는 textContent가 낫다. 그리고 textContent는 XSS공격(cross site scripting)의 위험이 없다.
 
-> ## 참조
+## 참조
+
 > [MDN:WebAPI/Node/textContent](https://developer.mozilla.org/ko/docs/Web/API/Node/textContent)  
 > [MDN:WebAPI/HTMLElement/innerText](https://developer.mozilla.org/ko/docs/Web/API/HTMLElement/innerText)  
 > [MDN:WebAPI/Element/innerHTML](https://developer.mozilla.org/ko/docs/Web/API/Element/innerHTML)  

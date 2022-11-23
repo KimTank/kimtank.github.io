@@ -95,7 +95,7 @@ tags:
 
 ## 2. Tree & Graph
 
-### 2-1. Tree
+### 2.1. Tree
 
 나무를 뒤집었을때 다단계 피라미드처름 생긴 모형을 이룬다.
 
@@ -150,7 +150,7 @@ tags:
   - [기수 트리](https://en.wikipedia.org/wiki/Radix_tree)
   - [스킵 리스트](https://en.wikipedia.org/wiki/Skip_list)
 
-#### 2-1-1. Binary Tree
+#### 2.1.1. Binary Tree
 
 이진트리는 자식 노드가 최대 두개인 노드들로 구성된 트리이다. 자료의 삽입, 삭제 방법에 따라 Full binary tree, Complete binary tree, Perfect binary tree로 나뉜다.
 
@@ -183,7 +183,7 @@ tags:
     4  56
 ```
 
-##### 2-1-1-1. Binary Search Tree
+##### 2.1.1.1. Binary Search Tree
 
 이진탐색의 효율적인 탐색능력을 유지하면서 빈번한 자료입력과 삭제를 가능하게 만들어진, 이진탐색과 연결리스트가 결합된 이진트리이다.
 
@@ -223,7 +223,7 @@ D(lv 3) < G(lv2) < I(lv3)
 트리안에 찾고자 하는 값이 없어도 최대 h번의 연산 탐색이 진행
 ```
 
-#### 2-1-2. Tree Traversal
+#### 2.1.2. Tree Traversal
 
 특정 목적을 위해 트리의 모든 노드 한번씩 방문하는것을 트리순회라고 한다.
 
@@ -240,7 +240,7 @@ D(lv 3) < G(lv2) < I(lv3)
 
 ```
 
-##### 2-1-2-1. preorder traverse
+##### 2.1.2.1. preorder traverse
 
 출처: [김로그.github.io](https://gnujoow.github.io/ds/2016/09/01/DS4-TreeTraversal/)
 ![https://gnujoow.github.io/ds/2016/09/01/DS4-TreeTraversal/](/assets/img/221118-preorder-traversal.png)
@@ -253,7 +253,7 @@ D(lv 3) < G(lv2) < I(lv3)
 
 루트에서 시작, 왼쪽 노드들 순차적 순회 후 왼쪽 노드 탐색이 끝나면 오른쪽 탐색한다. 부모노드 먼저 순회하고, 부모 노드가 먼저 생성되야하는 트리를 복사할때 사용한다.
 
-##### 2-1-2-2. inorder traverse
+##### 2.1.2.2. inorder traverse
 
 출처: [김로그.github.io](https://gnujoow.github.io/ds/2016/09/01/DS4-TreeTraversal/)
 ![https://gnujoow.github.io/ds/2016/09/01/DS4-TreeTraversal/](/assets/img/221118-inorder-traversal.png)
@@ -266,7 +266,7 @@ D(lv 3) < G(lv2) < I(lv3)
 
 전위순회가 root가 시작점이라면 중위는 어휘그대로 시작점이 제일 왼쪽 끝에 있는 노드부터 순회한다. root를 기준으로 왼쪽에 있는 노드의 순회가 끝나면, root를 거쳐 오른쪽에 있는 노드로 이도아여 탐색한다. 부모가 서브 트리의 방문 중 방문하는 순회로 이진탐색트리의 오름차순 값을 가져올때 사용한다.
 
-##### 2-1-2-3. postorder traverse
+##### 2.1.2.3. postorder traverse
 
 출처: [김로그.github.io](https://gnujoow.github.io/ds/2016/09/01/DS4-TreeTraversal/)
 ![https://gnujoow.github.io/ds/2016/09/01/DS4-TreeTraversal/](/assets/img/221118-postorder-traversal.png)
@@ -293,7 +293,7 @@ const traversal = (node) => {
 
 루트를 가장 마지막에 순회한다. 제일 왼쪽 끝 노드부터 시작으로 루트를 거치지 않고 오른쪽으로 이동해 순회하고, 제일 마지막에 루트를 방문한다. 후위 순회는 트리삭제 시 사용한다. 자식이 먼저 삭제되어야 상위노드를 삭제할 수 있다.
 
-##### 2-1-2-4. levelorder traverse
+##### 2.1.2.4. levelorder traverse
 
 출처: [김로그.github.io](https://gnujoow.github.io/ds/2016/09/01/DS4-TreeTraversal/)
 ![https://gnujoow.github.io/ds/2016/09/01/DS4-TreeTraversal/](/assets/img/221118-levelorder-traversal.png)
@@ -354,7 +354,7 @@ const levelorder = (root) => {
 - self loop: 자기 루프, 정점에서 진출하는 간선 곧바로 자기 자신에게 진입하는 경우, 다른정점은 거치지 않는다.
 - cycle: 한 정점에서 출발하여 다시 돌아온다면 사이클이 있다. 
 
-#### 2-2-2. 인접행렬
+#### 2.2.2. 인접행렬
 
 정점 두개가 바로 이어져있으면 인접하다 이야기한다. 서로 다른 정점들이 인접한 상태인지를 표시한 행렬로 2차원 배열의 형태로 나타낸다. true(1) 이어졌다, false(0) 이어져있지 않다. 
 
@@ -374,7 +374,7 @@ const levelorder = (root) => {
   - 2 -> 0: [2, 0]
   - 2 -> 1: [2, 1]
 
-##### 2-2-2-1. usage
+##### 2.2.2.1. usage
 
 - 한개의 큰표와 같은 모습을한 인접행렬은 두 정점 사이에 관계가 있는지, 없는지 확인하기에 용이하다.
 - 가장 빠른 경로(shortest path)를 찾고자 할때 주로 이용한다.
@@ -385,7 +385,7 @@ const levelorder = (root) => {
 - 0 2 1 null
 - 2 1 null
 
-#### 2-2-3. 인접 리스트
+#### 2.2.3. 인접 리스트
 
 각 정점이 어떤 정점과 인접하는지를 리스트의 형태로 표현한다. 각 정점마다 하나의 리스트를 가지고 있으며, 이 리스트는 자신과 인접한 다른 정점을 담고 있다.
 
@@ -393,13 +393,13 @@ const levelorder = (root) => {
 
 하나의 정점을 시작하여 모든 정점들을 한번씩 탐색하는 것을 목적으로 한다. 그래프의 데이터는 배열처럼 정렬되어 있지 않아, 원하는 자료를 찾기 위해서는 모두 방문해야 한다.
 
-### 3-1. Breadth-First-Search
+### 3.1. Breadth-First-Search
 
 너비를 우선적으로 탐색하는 방법이다., 너비우선탐색이라고 하고, 주로 두 정점사이의 최단 경로를 찾을 때 사용한다. 경로를 하나씩 전부 방문한다면, 최악의 경우에는 모든 경로를 다 살펴봐야한다.
 
 - [Tree BFS](https://kimtank.github.io/algorithm/2022/11/10/a-algorithm-bfs-tree.html)
 
-### 3-2. Depth-First Search
+### 3.2. Depth-First Search
 
 하나의 경로를 끝까지 탐색한 후, 다음경로로 넘어가 탐색한다. 하나의 노선을 끝까지 들어가 확인하고 다음으로 넘어가기 때문에 경로를 빨리 찾을 수 있다. 원하는 목적지가 아닌 것을 미리 체크(조건)할 수 있다면, 바로 그 순간 다음 탐색으로 넘어갈 수 있다.
 

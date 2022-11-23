@@ -46,6 +46,6 @@ origin.this = `${origin.protocol}${origin.host}/${origin.endpoint}`;
 
 SOP는 SOP에 잠재적 위험을 분리, 공격받는 경로 줄인다.
 
-> ## 참조
->
+## 참조
+
 > [velog:soshin0112/Node.js CORS, SOP](https://velog.io/@soshin0112/Node.js-CORS-SOP-%EA%B0%9C%EB%85%90)

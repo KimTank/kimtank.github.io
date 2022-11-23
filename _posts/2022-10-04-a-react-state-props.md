@@ -196,6 +196,7 @@ React로 앱을 설계할 시 Component 기준으로 Bottom-up으로 구현하�
 
 Data 전달의 원칙인 One-way Data Flow는 React가 갖는 중요한 원칙이다. Component는 props를 통해 전달받은 Data가 어디서(Where data from)온것인지 모른다.
 
-> ## 참조  
+## 참조
+
 > [React with Hooks:forms](https://reactwithhooks.netlify.app/docs/forms.html)   
 > [React:Main](https://ko.reactjs.org/)

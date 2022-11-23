@@ -141,6 +141,7 @@ fetch('http://127.0.0.1:3000/information')
   - SEO가 우선순위가 아닌 경우
   - 사이트에 풍부한 상호작용이 있는 경우, CSR은 빠른 라우팅으로 강력한 UX 제공
 
-> ## 참조
+## 참조
+
 > [MDN:SEO](https://developer.mozilla.org/ko/docs/Glossary/SEO)   
 > [MDN:Progressive Web App Structure](https://developer.mozilla.org/ko/docs/Web/Progressive_web_apps/App_structure)

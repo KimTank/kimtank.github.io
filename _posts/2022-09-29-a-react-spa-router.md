@@ -208,7 +208,8 @@ function useLogoutTimer() {
 1. 선택적 두 번쨰 인수를 사용, 'to'값을 전달 하거나 Link to, {replace, state}
 2. 히스토리 스택에 가고자하는 델타를 전달(ex: navigate(-1) back버턴 동일)
 
-> ## 참조  
+## 참조
+
 > [solwalk:UI, UX기획을 손쉽게, 와이어프레임](https://slowalk.com/2140)   
 > [디지털타임스:목업](http://www.dt.co.kr/contents.html?article_no=2007090302012269718002)   
 > [요즘IT:와이프레이밍, 목업, 프로토타이핑 뭐가 다른건가요?](https://yozm.wishket.com/magazine/detail/1306/)   

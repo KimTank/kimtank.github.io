@@ -176,7 +176,8 @@ Responses의 Content는 HTTP Messages Structure의 마지막에 위치한다. �
   - 길이를 모르는 단일 파일로 구성된 단일-리소스 본문은 Transfer-Encoding이 chunked로 설정되어 있으며, 파일은 chunk로 나뉘어 Encoding되어 있다.
 - Multiple-resource bodies(다중-리소스 본문): 서로 다른 정보를 담고 있는 body이다.
 
-> ## 참조
+## 참조
+
 > [Wikipedia:payload](https://ko.wikipedia.org/wiki/%ED%8E%98%EC%9D%B4%EB%A1%9C%EB%93%9C_(%EC%BB%B4%ED%93%A8%ED%8C%85))   
 > [99C0RN:HTTP Request/Response Structure](https://hahahoho5915.tistory.com/62)   
 > [MDN:HTML forms](https://developer.mozilla.org/en-US/docs/Learn/Forms)   

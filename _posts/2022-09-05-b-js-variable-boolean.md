@@ -145,7 +145,8 @@ let bArrayProto = new Boolean([]);
 let bObjProto = new Boolean({});
 ```
 
-> ## 참조
+## 참조
+
 > [MDN:JavaScript/Grammar&Types/Declarations](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)   
 > [MDN:let](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/let)   
 > [MDN:const](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/const)   

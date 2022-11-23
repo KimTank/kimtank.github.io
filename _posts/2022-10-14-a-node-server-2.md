@@ -220,8 +220,8 @@ app.use((req, res, next) => {
 
 ---
 
-> ## 참조
->
+## 참조
+
 > [velog:soshin0112/Node.js CORS, SOP](https://velog.io/@soshin0112/Node.js-CORS-SOP-%EA%B0%9C%EB%85%90)   
 > [Express.js:Routing](https://expressjs.com/ko/guide/routing.html)   
 > [Express.js:main](https://expressjs.com/ko/)   

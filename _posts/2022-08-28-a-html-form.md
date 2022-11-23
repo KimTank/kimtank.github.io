@@ -20,25 +20,30 @@ tags:
 이전에도 Android만 하지말고 Web Front로 방향을 잡아라는 친한 동생의 이야기에 웃어 넘긴적이 있다. 근래에는 JavaScript와 HTML만 보고있는데도 느끼는건 ~~시간이 많이 부족하다.~~ 볼 양이 많아서 너무 행복하다 ^^*
 
 ## HTML `<form>`
+
 - user에게는 보이지 않는 container
 - inputs, checkboxes, buttons, etc로 구성
 - 그룹화된 전송하는 데이터의 모든 입력을 담는 상자
 - `form`을 제출하면 HTTP요청이 전송된다.
 - `action` attribute를 사용하여 제어한다.
+
 > HTTP method `get` & `set`이 있다.
 
 ## `<form>`의 내부 태그들
 
 ## `<input>`
+
 - `type` attribute로 input태그의 형식을 정한다.
 - closing tag 없다.
 
 ## `<input>`'s attribute
 
 - `type`
+  
   ```javascript
   <input type="type's value">
   ```
+
   - `text`
   - `password`
   - `color`: 브라우저에따라 color picker가 다를 수 있다.
@@ -71,8 +76,8 @@ tags:
 </form>
 ```
 
-  - `radio`
-    - `checkbox`와 비슷하지만 중복선택이 가능한 `checkbox`와는 다르게 단일값만 선택 가능하다.
+- `radio`
+  - `checkbox`와 비슷하지만 중복선택이 가능한 `checkbox`와는 다르게 단일값만 선택 가능하다.
 
 ```html
 <form>
@@ -88,9 +93,9 @@ tags:
 </form>
 ```
 
-  - `range`
-    - 범위를 만들어서 그 값을 선택하게한다.
-    - 최소값, 최대값을 제어가능하다.
+- `range`
+  - 범위를 만들어서 그 값을 선택하게한다.
+  - 최소값, 최대값을 제어가능하다.
 
 ```html
 <div>

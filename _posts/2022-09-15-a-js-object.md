@@ -272,7 +272,8 @@ mike.greet();
 mime.greet();
 ```
 
-> ## 참조
+## 참조
+
 > [MDN:JS/Operator/Object_initializer](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer)   
 > [MDN:JS/Functions/arguments](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/arguments)   
 > [MDN:Prototype](https://developer.mozilla.org/en-US/docs/Glossary/Prototype)   

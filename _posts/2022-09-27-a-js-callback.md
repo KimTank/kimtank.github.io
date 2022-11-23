@@ -40,20 +40,20 @@ tags:
 ## 비동기 호출(Asynchronous Call)
 
 - callback
-    - 다른 함수의 전달인자(argument)로  넘겨주는 함수
-    - 파라메타를 넘겨 받는 함수는 callback함수에 따라 sychronously(즉시실행)할수도 있고, anynchronously(나중에 실행)할수도 있다.
-    - 예: iterator, event handler...
-    - 함수 실행을 연결하는 것이 아니다. 함수 자체를 연결하는거다.
+  - 다른 함수의 전달인자(argument)로  넘겨주는 함수
+  - 파라메타를 넘겨 받는 함수는 callback함수에 따라 sychronously(즉시실행)할수도 있고, anynchronousl (나중에 실행)할수도 있다.
+  - 예: iterator, event handler...
+  - 함수 실행을 연결하는 것이 아니다. 함수 자체를 연결하는거다.
 
 - 비동기 주요 사례
-    - DOM Element event handler: click, keyup... -> DOM 강의
-    - 페이지 로딩 DOMContentLoaded... -> DOM 런코 Note
+  - DOM Element event handler: click, keyup... -> DOM 강의
+  - 페이지 로딩 DOMContentLoaded... -> DOM 런코 Note
 - 타이머
-    - 타이머API(setTimeout...) -> Timer API 강의
-    - 애니메이션 API(requestAnimationFrame) -> [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API)
+  - 타이머API(setTimeout...) -> Timer API 강의
+  - 애니메이션 API(requestAnimationFrame) -> [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API)
 - 서버에 자원 요청 및 응답
-    - fetch API -> 서버 요청하기 강의
-    - AJAX(XHR) -> [Ajax Getting Started](https://developer.mozilla.org/ko/docs/Web/Guide/AJAX/Getting_Started)
+  - fetch API -> 서버 요청하기 강의
+  - AJAX(XHR) -> [Ajax Getting Started](https://developer.mozilla.org/ko/docs/Web/Guide/AJAX/Getting_Started)
 
 - 예제
 
@@ -236,24 +236,25 @@ const respectForTheEminem = async () => {
 }
 ```
 
-> ## Timer API
-> 
+## Timer API
+
 > - setTimerout(callback, milisecond): 일정 시간 후 함수 실행(1_000 -> 1초)
 >   - 매개변수(param): 실행할 함수, 대기 시간
 >   - return val: 임의의 타이머 ID
->    
+>
 > - clearTimeout(timerId): setTimeout타이머 종료
 >   - 매개변수(param): 타이머 ID
 >   - return val: none
->    
+>
 > - clearInterval(timerId) setInterval(callback, millisecond): setTimeout타이머 종료
 >   - 매개변수(param): 실행할 함수, 반복 간격밀리초
 >   - return val: 임의 타이머ID
->    
+>
 > - clearInterval(timerId): setInterval 타이머 종료
 >   - param: 타이머ID
 >   - return val: none
 
-> ## 참조  
+## 참조
+
 > [MDN:Event Loop](https://developer.mozilla.org/ko/docs/Web/JavaScript/EventLoop)   
 > [Philip Roberts:Help, I'm stuck in an event-loop](https://vimeo.com/96425312)   
