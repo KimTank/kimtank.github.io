@@ -48,7 +48,7 @@ HTML, CSS, JavaScript, media 등의 resource를 loader를 통해 bundling이 가
 
 ### 2.2 개념
 
-```javascript
+```json
 0 module.exports = {
 1   target: ["web", "es5"],
 2   entry: "./src/script.js",
@@ -93,16 +93,55 @@ HTML, CSS, JavaScript, media 등의 resource를 loader를 통해 bundling이 가
 - Optimization: 최척화에 대표적으로 minimize, minimizer가 있다.
   - minimize: TerserPlugin 또는 optimization.minimize에 명시된 plugins로 bundle파일을 최소로 압축시키는 작업 여부를 결정한다.
   - minmizer: default minimizer를 커스텀된 TerserPlugin instance를 제공해서 재정의 가능하다.
-- Mode
+- Mode: 사용자가 원하는 값을 설정할 수 있다.
   - 매개변수
-    - development: 개발모드
-    - production(default): 배포모드
+
+    ```bash
+    $npx webpack --mode={parameter}
+    ```
+
+    ```json
+    module.exports = {
+      //mode: 'none'
+      //mode: 'production'
+      mode: 'development'
+    }
+    ```
+
+    ```javascript
+    const config = {
+      entry: './app.js',
+      //...
+    };
+
+    module.exports = (env, argv) => {
+      if (argv.mode === 'development') {
+        config.devtool = 'source-map';
+      }
+
+      if (argv.mode === 'production') {
+        //...
+      }
+
+      return config;
+    };
+    ```
+
+    - development: 개발모드, DefinePlugin의 process.env.NODE_ENV를 development로 설정한다. module과 chunk에 유용한 이름을 사용한다.
+    - production(default): 배포모드, DefinePlugin의 process.env.NODE_ENV를 production으로 설정한다. module과 chunk, FlagDependencyUsagePlugin, FlagIncludedChunksPlugin, ModuleConcatenationPlugin, NoEmitOnErrorsPlugin, TerserPlugin 등에 대해 결정적 mangled name을 사용한다.
+
+    > "production"모드는 Webpack module bundling process에서 자체적으로 code를 최적화하여 용량을 줄인다.
+
     - none: 기본 최적화 옵션 설정 해제
+    - 압축률 예시
+      - development: 40kb
+      - none: 35kb
+      - production: 12kb
 - Browser Compatibility
 
 ---
 
-실제로 설정 세팅을 하는 법은 따로 기록해야 기억할거라 예상함.
+실제로 설정 세팅을 하는 법은 따로 기록해야 기억할거라 예상함. 실제 코드스테이츠 강의자료말고도 문서를 봐야될것이다.
 
 ---
 
@@ -115,8 +154,4 @@ HTML, CSS, JavaScript, media 등의 resource를 loader를 통해 bundling이 가
 > [webpack: output-management#cleaning-up-the-dist-folder](https://webpack.kr/guides/output-management/#cleaning-up-the-dist-folder)   
 > [webpack: using-webpack-dev-server](https://webpack.kr/guides/development/#using-webpack-dev-server)   
 > [webpack: target#string](https://webpack.kr/configuration/target/#string-1)   
-> [webpack: concepts#loaders](https://webpack.js.org/concepts#loaders)   
-> []()   
-> []()   
-> []()   
-> []()   
+> [webpack: concepts#loaders](https://webpack.js.org/concepts#loaders)
