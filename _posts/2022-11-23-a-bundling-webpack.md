@@ -102,8 +102,8 @@ HTML, CSS, JavaScript, media 등의 resource를 loader를 통해 bundling이 가
 
     ```json
     module.exports = {
-      //mode: 'none'
-      //mode: 'production'
+      <!-- mode: 'none' -->
+      <!-- mode: 'production' -->
       mode: 'development'
     }
     ```
@@ -138,6 +138,12 @@ HTML, CSS, JavaScript, media 등의 resource를 loader를 통해 bundling이 가
       - none: 35kb
       - production: 12kb
 - Browser Compatibility
+
+## 3. usage
+
+출처: [코드스테이츠](https://codestates.com)
+
+
 
 ---
 
