@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Web Bundling & Webpack"
-date: 2022-11-22
+date: 2022-11-23
 categories:
   - Web
 tags:
@@ -139,11 +139,9 @@ HTML, CSS, JavaScript, media 등의 resource를 loader를 통해 bundling이 가
       - production: 12kb
 - Browser Compatibility
 
-## 3. usage
+<!-- ## 3. usage -->
 
-출처: [코드스테이츠](https://codestates.com)
-
-
+<!-- 출처: [코드스테이츠](https://codestates.com) -->
 
 ---
 
