@@ -49,35 +49,35 @@ HTML, CSS, JavaScript, media 등의 resource를 loader를 통해 bundling이 가
 ### 2.2 개념
 
 ```json
-0 module.exports = {
-1   target: ["web", "es5"],
-2   entry: "./src/script.js",
-3   output: {
-4     path: path.resolve(__dirname, "docs"),
-5     filename: "app.bundle.js",
-6     clean: true
-7   },
-8   module: {
-9     rules: [
-10      {
-11        test: /\.css$/,
-12        use: [MiniCssExtractPlugin.loader, "css-loader"],
-13        exclude: /node_modules/,
-14      },
-15    ],
-16  },
-17  plugins: [
-18    new HtmlWebpackPlugin({
-19      template: path.resolve(__dirname, "src", "index.html"),
-20    }),
-21    new MiniCssExtractPlugin(),
-22  ],
-23  optimization: {
-24    minimizer: [
-25      new CssMinimizerPlugin(),
-26    ]
-27  }
-28};
+module.exports = {
+  target: ["web", "es5"],
+  entry: "./src/script.js",
+  output: {
+    path: path.resolve(__dirname, "docs"),
+    filename: "app.bundle.js",
+    clean: true
+  },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+        exclude: /node_modules/,
+      },
+    ],
+  },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "src", "index.html"),
+    }),
+    new MiniCssExtractPlugin(),
+  ],
+  optimization: {
+    minimizer: [
+      new CssMinimizerPlugin(),
+    ]
+  }
+};
 ```
 
 - target: 기본값(적용안할시)은 web, esX를 넣으면 지정된 ECMAScript버전으로 컴파일 할 수 있다. 브라우저와 동일한 환경에서 사용하기 위해 컴파일하는 버전(ex: ES5, ES6...)을 지정하는 것이다. Browser Compatibility와 연관된 속성이다.
