@@ -139,10 +139,6 @@ module.exports = {
       - production: 12kb
 - Browser Compatibility
 
-<!-- ## 3. usage -->
-
-<!-- 출처: [코드스테이츠](https://codestates.com) -->
-
 ---
 
 실제로 설정 세팅을 하는 법은 따로 기록해야 기억할거라 예상함. 실제 코드스테이츠 강의자료말고도 문서를 봐야될것이다.
