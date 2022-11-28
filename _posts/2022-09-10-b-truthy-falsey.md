@@ -15,7 +15,7 @@ JS를 배우기 전에는 JS는 신기한 언어라고 생각했다. 뭔가 Java
 
 ---
 
-## Falsy values
+## 1. Falsy values
 
 - false
 - 0
@@ -26,11 +26,11 @@ JS를 배우기 전에는 JS는 신기한 언어라고 생각했다. 뭔가 Java
 - NaN (Not a Number)
 - 0n (BigInt)
 
-## Truthy values
+## 2. Truthy values
 
 without falsy
 
-## 예제
+## 3. 예제
 
 ```javascript
 //첫번째 객체 falsy value라면 해당 falsy value 반환

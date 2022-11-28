@@ -28,13 +28,13 @@ tags:
 
 ---
 
-## React SPA
+## 1. React SPA
 
 SPA(Single-Page Application)
 
 이름만봐서는 android fragment와 비슷한 구조일거같다. Activity 하나에서 여러 fragment들을 생성 삭제하면서 activity 이동간에 발생하는 문제들을 보완하려했던? 물론 추후에는 한 Activity에서 모든걸 해결하려다 보니 구조가 복잡해질 수 밖에 없게 되어, 나중에는 필요한곳에서만 사용되도록 설계권장되었던 android의 중요기능 맥락은 다를거같지만 개념은 비섯할거같다.
 
-### SPA histories
+### 1.1. SPA histories
 
 |---|---|---|---|---|
 |Client|-|action|-|Server|
@@ -51,58 +51,58 @@ SPA(Single-Page Application)
 
 1990년 후반 업데이트에 필요한 데이터만 전달받아 동적으로 HTML 생성하는 방식 -> 2000년 중반 그런 웹애플리케이션이 보편화되었고, Single-page Application.의 시대가 왔다.
 
-### SPA 장점
+### 1.2. SPA 장점
 
 메뉴 하나를 눌렀을 때 페이지전체 이동을 하는것이 아니라 해당 메뉴에 해당하는 내용만 바꿔치기(실제로는 덮어지는게 아니라 기존내용을 날리고 새로운걸 띄우겠지만)해버리는, 작은 예로 추천
 
 대표적 서비스로 Youtube, facebook, Gmail, airbnb, netflix 등
 
-### SPA 단점
+### 1.3. SPA 단점
 
 1. 화면을 처음 불러올(로딩) 시 HTML파일을 리딩, `<script>`요소안의 JS파일 다시 받아온다. HTML파일은 가볍고, JS파일은 무거워질 수 밖에 없다(대부분의 기능이 여기있으니), 그러다보니 첫화면을 불러오는 시간(로딩시간)이 길어진다. 
 2. 검색엔진 최적화가 안좋다. 크롤링하기 어렵다는 이야기같다. HTML DOCUMENT이지만 필요기능을 JS로 구현하니 그런거같다. 하지만 천재분들이 그것조차도 긁어오도록 바꿔가는 추세이므로 점점 줄어들고 있다고는 한다.
 
 굉장히 android랑 비슷한데 맥락이 다르다. 처음의 예상과는 틀리구나.
 
-## Wireframe & Mockup
+## 2. Wireframe & Mockup
 
 그래서 SPA는 뭔지 알겠다. 그럼 React에서는 SPA를 어떻게 구현하는지 알아봅시다. 감도안와요 :D
 
-### Wireframe
+### 2.1. Wireframe
 
 선과 윤곽선(frame)으로 웹페이지의 레이아웃과 UI요소등에대한 뼈대를 잡는것을 말한다.
 
-### Mockup
+### 2.2. Mockup
 
 목업으로 전직장에서 뻔질나게 들었던 목업목업목업, desktop이나 smartphone의 frame에 씌워 직관적으로 디자인한것을 말한다.~~(그게 그거아님메?)~~
 
-## React Router
+## 3. React Router
 
 화면별 주소가 다른데 다른 주소에 따라 다른 뷰를 보여주는 과정을 '경로에 따라 변경한다'는 의미로 라우팅이라고 한다.
 
 React에서는 따로 Routing기능을 내장하고 있지 않기에 React Router(1억다운로드??)라는 library를 가장 많이 사용한다.
 
-## React Router Library
+## 4. React Router Library
 
 |---|---|---|
 |router|route matchers|route changers|
 |`<BrowserRouter>`|`<Routes>`|`<Link>`|
 |-|`<Route>`|-|
 
-### 설치
+### 4.1. 설치
 
 ```bash
 $npm install react-router-dom@^x.x.x
 ```
 
-### import
+### 4.2. import
 
 ```javascript
 //비구조화 할당(destructuring assignment)과 비슷하게 이용할 수 있다.
 import { BrowerRouter, Routes, Route, Link} from "react-router-dom";
 ```
 
-### usage enviroment setting
+### 4.3. usage enviroment setting
 
 ```javascript
 <BrowerRouter>
@@ -130,13 +130,13 @@ import { BrowerRouter, Routes, Route, Link} from "react-router-dom";
 </BrowserRouter>
 ```
 
-### BrowerRouter
+### 4.4. BrowerRouter
 
 HTML5 [History API](https://developer.mozilla.org/ko/docs/Web/API/History_API)를 사용해 페이지를 새로고침하지 않고 주소를 변경할 수 있게 한다.
 
 상위에 작성되어 있어야 React Router 컴포넌트들을 사용할 수 있다.
 
-### Routes & Route
+### 4.5. Routes & Route
 
 경로를 매칭해주는 역할을 한다.
 
@@ -161,7 +161,7 @@ HTML5 [History API](https://developer.mozilla.org/ko/docs/Web/API/History_API)�
  */
 ```
 
-### Link
+### 4.6. Link
 
 경로를 연결해주는 역할을 하는 컴포넌트로 페이지 전환을 통해 페이지를 새로 불러오지 않고, Application을 그대로 유지, HTML5 History API를 이용해 페이지의 주소만 변경해준다.
 
@@ -184,7 +184,7 @@ const App = () => {
 }
 ```
 
-### useNavigate
+### 4.7. useNavigate
 
 > IMPORTANT
 > 일반적으로 'redirect'가  loders and hook action에 더 좋음.

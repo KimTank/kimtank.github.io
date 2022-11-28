@@ -21,7 +21,7 @@ tags:
 
 교차 출처 리소스 공유
 
-## MDN 개념
+## 1. MDN 개념
 
 교차 출처 리소스 공유는 추가 HTTP헤더를 사용, 한 Origin에서 실행 중인 Web Application이 다른 Origin이 선택한 자원에 접근할 수 있는 권한을 부여하도록 Client(브라우저)에 알려주는 체제이다.
 
@@ -38,15 +38,15 @@ X Access to fetch at 'protocol path ...' from origin 'null' has been blocked by 
 
 상기 에러 CORS가 아닌 SOP -> CORS를 통해 해결 가능.
 
-## How act
+## 2. How act
 
-### 1. PreFlight Request
+### 2.1. PreFlight Request
 
-#### 개념
+#### 2.1.1. 개념
 
 실 요청 보내기 전 OPTIONS 메서드로 사전 요청으로 보내, 해당 출처 리소스에 접근 권한 있는지 확인하는 것.
 
-#### Structure
+#### 2.1.2. Structure
 
 |---|---|---|---|---|---|
 |클라이언트||브라우저||서버||
@@ -57,7 +57,7 @@ X Access to fetch at 'protocol path ...' from origin 'null' has been blocked by 
 
 > A-C-A-O: Access-Control-Allow-Origin
 
-#### Server Side has no Response Header
+#### 2.1.3. Server Side has no Response Header
 
 |---|---|---|---|---|---|
 |클라이언트||브라우저||서버||
@@ -66,7 +66,7 @@ X Access to fetch at 'protocol path ...' from origin 'null' has been blocked by 
 
 > 요청을 보낸 Origin에 접근 권한이 없으면, 브라우저에서 Cors error thorw, 실 요청 전달 안됨.
 
-#### why PreFlight Request require
+#### 2.1.4. why PreFlight Request require
 
 - 리소스 측면에서 효율적: 실 요청 전 권한 확인 가능
 - CORS 대비안된서버 보호: CORS이전 SOP만 고려, 다른 Origin 대응 안해놓음.
@@ -78,7 +78,7 @@ X Access to fetch at 'protocol path ...' from origin 'null' has been blocked by 
 
 > 서버 요청을 받은 후 CORS를 확인하여 응답 헤더가 없을 시 error throw, -> 비효율적 하여 PreFlight는 CORS 기본 사양
 
-### 2. Simple Request(단순 요청)
+### 2.2. Simple Request(단순 요청)
 
 특정 조건이 만족되면, 프리플라이트 요청 생략 후 요청 보냄.
 
@@ -98,7 +98,7 @@ X Access to fetch at 'protocol path ...' from origin 'null' has been blocked by 
     - multipart/form-data
     - text/plain
 
-### 3. Credentialed Request(인증정보를 포함한 요청)
+### 2.3. Credentialed Request(인증정보를 포함한 요청)
 
 요청 헤더에 인증 정보 담은 요청, Origin다른 경우 별도 설정없이 쿠키 보낼 수 없다. 민감한 정보이므로 Client, Server 모두 CORS 설정이 필요하다.
 
@@ -108,9 +108,9 @@ X Access to fetch at 'protocol path ...' from origin 'null' has been blocked by 
   - Access-Control-Allow-Credentials: true
 - Access-Control-Allow-Origin: * -> error throw -> 인증정보의 경우 출처 정확하게 설정해야 한다.
 
-## setting
+## 3. setting
 
-### 1. Node.js Server
+### 3.1. Node.js Server
 
 ```javascript
 const http = require('http');
@@ -150,11 +150,11 @@ app.get("/endpoint/:parameter", cors(), function (req, res, next) {
 
 ```
 
-### 2. Express Server
+### 3.2. Express Server
 
 Express framework로 Server 만들 시, cors 미들웨어로 간단하게 CORS설정 가능하다.
 
-## Node.js Server Library
+## 4. Node.js Server Library
 
 서버 코드 변경 시 리빌드해줄 필요 없이 자동으로 리빌드해준다.
 
@@ -172,7 +172,7 @@ dependencies {
 $npx nodemon servr/serverScriptFile.js
 ```
 
-### 특정 포트로 실행
+### 4.1. 특정 포트로 실행
 
 ```bash
 $npx serve -l portNumber client/

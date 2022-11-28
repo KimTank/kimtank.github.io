@@ -12,7 +12,7 @@ tags:
 
 고마운 사람들 결혼식 갔다가 뒷풀이로 주말에도 공부해야지 하는 마음으로 결혼식장에 장비 다챙겨갔다가 고이 가져간 그대로 사용도 안하고 숙취로 집에 들어온 후 눈을 뜨니 일요일 오후였다. ^^ 좋은 뒷풀이였지만 쉬는 날이 가장 공부하기 좋은 기회란걸 무엇보다 잘 알고 있으니, 공부하자!!
 
-## Number
+## 1. Number
 
 - 37이나 -9.25와 같은 숫자를 표현하고 다룰때 사용하는 [원시 래퍼 객체](https://developer.mozilla.org/ko/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript)
 - 숫자를 다루기위해 상수와 메서드를 내장하고 있다.
@@ -29,11 +29,11 @@ tags:
 
 Number는 0b101, 0o13, 0x0A와 같은 리터럴 형식으로 표현될 수 도 있다. [더알아보기](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Lexical_grammar#numeric_literals)
 
-## Description
+## 2. Description
 
 Number()함수를 사용하면 문자열이나 다른 값을 Number타입으로 변환한다. 만약 인수를 숫자로 변환할 수 없으면 [NaN](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/NaN)으로 리턴한다.
 
-### 리터럴 구문
+### 2.1. 리터럴 구문
 
 ```javascript
 123;
@@ -41,7 +41,7 @@ Number()함수를 사용하면 문자열이나 다른 값을 Number타입으로 
 123 === 123.0; // true
 ```
 
-### 함수 구문
+### 2.2. 함수 구문
 
 ```javascript
 Nubmer('123'); //number타입 123 반환
@@ -51,24 +51,24 @@ Number('stringValue'); // NaN
 Number(undefined); //NaN
 ```
 
-## Constructor
+## 3. Constructor
 
 - Number()
 - Number()생성자는 Number객체를 생성한다.
 
 > [Number()생성자 더알아보기](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number/Number)
 
-### Syntax
+### 3.1. Syntax
 
 ```javascript
 const numberObject = new Number(value);
 ```
 
-### 매개변수
+### 3.2. 매개변수
 
 - value: 만들어질 객체의 숫자 값.
 
-### Number 객체 만들기
+### 3.3. Number 객체 만들기
 
 ```javascript
 const numObj = new Number('123'); //numObj === 123 false
@@ -77,7 +77,7 @@ numObj instanceof Number; //true
 numPrimitiveType instanceof Number; // true
 ```
 
-## [Static properties](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#static_properties)
+## 4. [Static properties](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#static_properties)
 
 - .EPSILON: 두개의 표현 가능한 숫자 사이의 최소간격
 - .MAX_SAFE_INTEGER: JS에서 안전한 최대 정수(2^53 -1)
@@ -88,7 +88,7 @@ numPrimitiveType instanceof Number; // true
 - .POSITIVE_INFINITY: 양의 무한대를 나타내는 특수한 값. 오버플로우시 반환된다.
 - [.prototype](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number): Number객체에 속성을 추가하게 상속할 수 있도록 구현되어 있는거 같다.
 
-## [Static Method](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#%EC%A0%95%EC%A0%81_%EB%A9%94%EC%86%8C%EB%93%9C)
+## 5. [Static Method](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#%EC%A0%95%EC%A0%81_%EB%A9%94%EC%86%8C%EB%93%9C)
 
 - .isNaN(): NaN인지 확인
 - .isFinite(): 유한수인지 확인
@@ -97,7 +97,7 @@ numPrimitiveType instanceof Number; // true
 - .parseFloat(string): 전역 객체 parseFloat()과 동일한 값
 - `.parseInt(string, [radix])`: 전역 객체 parseInt()와 동일한 값
 
-## [Instance Method](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4_%EB%A9%94%EC%86%8C%EB%93%9C)
+## 6. [Instance Method](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#%EC%9D%B8%EC%8A%A4%ED%84%B4%EC%8A%A4_%EB%A9%94%EC%86%8C%EB%93%9C)
 
 기본타입 모형: Number.prototype 이후 .메서드()
 
@@ -108,9 +108,9 @@ numPrimitiveType instanceof Number; // true
 - `.toString([radix])`: 지정한 기수("base")에서 지정한 개체를 표현하는 문자열을 반환(Object.prototype.toString() 메서드를 재정의)
 - .valueOf(): 명시된 객체의 원시 값을 반환(Object.prototype.valueOf() 메서드를 재정의)
 
-## Example
+## 7. Example
 
-### Number 객체를 사용해 숫자형 변수에 할당
+### 7.1. Number 객체를 사용해 숫자형 변수에 할당
 
 ```javascript
 const biggestNum = Number.MAX_VALUE;
@@ -120,7 +120,7 @@ const negInfiniteNum = Number.NEGATIVE_INFINITY;
 const noANum = Number.NaN;
 ```
 
-### Number의 정수 범위
+### 7.2. Number의 정수 범위
 
 Number객체가 표현할 수 있는 정수의 최소값과 최대값을 보여준다.
 
@@ -134,7 +134,7 @@ const smallestInt = Number.MIN_SAFE_INTEGER; // -(2**53 - 1) => -900719925474099
 JSON으로 직렬화한 데이터를 읽을 때, 위 범위를 벗어나는 수는 JSON분석기의 Number 형변환 시 손상될 수 있다. 이 때 [String](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String)을 대신 사용하는 것도 대안이다.   
 더 큰 수는 [BigInt](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/BigInt)타입으로 표현할 수 있다.
 
-### Number를 사용해 Date객체 숫자로 변환
+### 7.3. Number를 사용해 Date객체 숫자로 변환
 
 Number를 함수로 사용하여 [Date](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Date) 객체를 숫자 값으로 변환한다.
 
@@ -144,7 +144,7 @@ console.log(Number(d));
 // 819199440000가 기록된다.
 ```
 
-### 숫자형 문자열에서 숫자로 변환
+### 7.4. 숫자형 문자열에서 숫자로 변환
 
 ```javascript
 Number('123'); // 123
@@ -162,11 +162,11 @@ Number('100a'); // NaN
 Number('-Infinity'); // -Infinity
 ```
 
-## Specification
+## 8. Specification
 
 [ECMAScript Language Specification # sec-number-objects](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Number#%EC%98%88%EC%A0%9C)
 
-## 주의
+## 8.1. 주의
 
 > 본 포스팅은 MDN:JavaScript/Number 문서를 내가 알아 보기 쉽도록 정리한 것으로 Last Modified는 2022/08/05이다. 본 포스팅은 따로 업데이트 하지 않는 이상 시간이 지나면 legacy할 수 있다. 가능하다면 항상 최신화가 이루어지는 MDN:DOC을 이용해야한다.
 

@@ -3,7 +3,7 @@ layout: post
 title: "Linux!!!!!"
 date: 2022-08-31
 categories:
-- Linux
+- OS
 tags:
 - Linux
 - Ubuntu
@@ -25,18 +25,18 @@ tags:
 
 아직은 쪼렙이기 때문에 Ubuntu를 사용하여 GUI환경으로 접한다.
 
-## 터미널 사용
+## 1. 터미널 사용
 
 - `ctrl` + `alt` + `t`를 이용하여 터미널을 실행시킬 수 있다. 
 - GUI를 통해 실행시킬 수 도 있는데, `cmd`(윈도우키) + `a`를 이용하여 현재 시스템에 연결되어있는 패키지를 아이콘으로 보고 클릭하여 실행할 수 있다.
 
 > 단축키는 몰라도 우분투 환경에서는 사용하는데 무리는 없지만, 알고있으면 마우스를 휴대할 필요가없다.
 
-## Prompt
+## 2. Prompt
 
 윈도우에서는 윈도우10 이후로 나도모르는 문제가 발생했을 때 능력자들이 해결할 수 있는 커맨드를 올려놔서 사용해본 파워쉘이나, 윈도우 자체 내 Dos라고 생각했던 영화에서 해킹할때 나오던 그 검은화면 CLI(Command-Line Interface).
 
-### 명령어
+### 2.1. 명령어
 
 - pwd(print working directory): 현재 위치 확인하기(폴더 구조내 나의 위치)
 - mkdir(make directories)

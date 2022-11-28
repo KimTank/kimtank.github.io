@@ -19,14 +19,14 @@ tags:
 
 ![출처: https://www.educative.io](/assets/img/220915-git-merge.png)
 
-## Situation
+## 1. Situation
 
 - 프로젝트 복사하였고, .git 디렉토리가 삭제되거나 손상되어 git이 로컬기록을 인식하지 못해 원격 저장소로 푸시하거나 풀할때 발생한다.
 - 새 저장소를 만들고 몇가지 커밋을 추가하였고, 이미 만들어져있는 원격저장소(자체적으로 커밋 이력이 따로 있음)에서 풀하려고 할때 git은 둘사이에 연결고리를 찾지못하여 오류를 던져준다.
 
 > 이외의 상황도 있을 수 있다.
 
-## Solution
+## 2. Solution
 
 해당 오류는 allow-unrelated-histories 스위치를 토글하면 해결된다. `git pull||git merge` 태그를 추가하면 된다.
 
@@ -34,7 +34,7 @@ tags:
 $git pull origin main --allow-unrelated-histories
 ```
 
-## For Real
+## 3. For Real
 
 ```bash
 ty@DTHOME:~/Workspace/cs/git-parctice$ git branch -M main

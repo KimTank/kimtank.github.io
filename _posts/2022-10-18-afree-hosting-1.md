@@ -67,12 +67,12 @@ createAt 22-10-18
    5. [f-droid](https://ko.wikipedia.org/wiki/F-Droid): [공홈](https://f-droid.org/), 소문으로만 듣던, `Android`를 벗어나 자유롭게 `안드로이드 운영체제`를 사용하자는 진영(아닐지도 모름)의 `Free Android`, `FOSS`(`Free Open Source Software`) [저장소](https://gitlab.com/fdroid/)이다. 여담으로 `Github`, `Microsoft`의 그늘을 벗어나기위한 [GitLab](https://namu.wiki/w/GitLab)이 있다.(사람마다 말이 다틀려요, 누구는 그래서이다. 누구는 경쟁사거라서 견제한다. 재미로봐주세요.)
    6. [Andronix](https://docs.andronix.app/): [공홈](https://andronix.app/), `android`에서 `windows`까지 편하게 올리게 만들어놓은 무언가(나는 안편했어요 유료에다 환경세팅하는 법을 내가 해야됬거든요)
 
-## 기기환경
+## 3. 기기환경
 
 1. `클라이언트 서버`: 처음에는 둘다 `npm start`(무식하면 용감함)를 통해 `react`파일 채로 이동시킨 뒤 동작하려고 했다. 하지만 `Github pages`가 생각나게 되어 `Github pages`에서 제공하는 무료 `호스팅`(사실 이걸 호스팅이라고 부르는게 맞을까요)을 사용했다.
 2. `서버`: 옛날옛적 사용하던 인도에서 국민폰이라 불린, [Samsung m20](https://namu.wiki/w/%EA%B0%A4%EB%9F%AD%EC%8B%9C%20M20), `m205n`을 사용하였다. 엔트리급 스마트폰으로 15만원정도로 한국에 정발된가아닌 글로벌판을 파는 한국판매자(네이버 쇼핑)에게 구매한것으로 기억한다.
 
-## 중간 저장
+## 4. 중간 저장
 
 이 과정은 18일부터 24일까지 거의 밤샘비슷하게 하면서 진행된 작업으로, 끝끝내 실패로 그쳤다. 하지만 실제로 간단한 서버는 구현해서 server open이라는 문구를 확인했고, 위 과정을 거치면서 원격설정하며 살짝 맛본, 포트포워딩과 ddns설정 등 재밋는 지식을 또 쌓을 수 있었다.
 

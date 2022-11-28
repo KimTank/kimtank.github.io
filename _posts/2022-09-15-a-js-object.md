@@ -18,7 +18,7 @@ tags:
 
 ---
 
-## Object
+## 1. Object
 
 일정의 구조에 데이터들을 저장할 수 있다. key와 value의 pair로 이루어져있다. 복잡한 entity를 저장하는데 사용한다. JavaScript의 거의 모든 객체는 Object의 인스턴스이다. 일반적 객체는 Object.prototype에서 속성과 메서드를 상속하지만, 이러한 속성들은 재정의 될 수 있다. 하지만 Object는 의도적으로 재정의되지 않게 생성되거나, 변경될 수 있다(Object.create(null), Object.setPrototypeOf, 등)
 
@@ -26,13 +26,13 @@ tags:
 
 Object 생성자는 주어진 값에 대한 객체 래퍼를 생성한다. 값이 null또는 undefined면 빈객체를 생성하여 반환한다. 그렇지 않으면 주어진 값에 해당하는 타입의 객체를 반환한다. 값이 이미 객체인 경우 그 값을 반환한다. 생성자가 아닌 호출이면 Object는 new Object()와 동일하게 동작한다.
 
-## Constructor
+## 2. Constructor
 
-### Object() 생성자
+### 2.1. Object() 생성자
 
 Object(): 새 객체를 만든다. 이때 생성된 객체는 주어진 값에 대한 래퍼이다.
 
-### Object Literal
+### 2.2. Object Literal
 
 ```javascript
 //배열은 순서가 있지만 각 인덱스가 어떤 의미인지는 알 수 없다.
@@ -50,7 +50,7 @@ const myInfo = {
 
 > 배열도 객체처럼 이중배열로 만들수는 있겠만. 객체가 있는 이상은 비효율적이다.
 
-## Static Method
+## 3. Static Method
 
 - .assign(): 하나 이상의 원본 객체들로부터 모든 열거 가능한 속성들을 대상 객체로 복사한다.
 - .create(): 지정한 프로토타입의 객체 및 속성을 갖고 있는 새 객체를 생성한다.
@@ -74,12 +74,12 @@ const myInfo = {
 - .setPrototypeOf(): 객체의 프로토타입(내부`[[Prototype]]`속성)을 설정한다.
 - .values(): 자신의 모든 열거 가능한 문자열 속성에 해당하는 값들로 구성된 배열을 반환한다.
 
-## Instance Property
+## 4. Instance Property
 
 - .prototype.constructor: 프로토타입을 생성하는 함수를 지정한다.
 - `.prototype.__proto__`: 객체가 인스턴스화될때 프로토타입으로 사용된 객체를 가르킨다.
 
-## Instance Message
+## 5. Instance Message
 
 - `.prototype.__defineGetter__()`: 엑세스(get)할 때 실행되어 값을 반환하는 함수와 지정한 속성을 연결한다.
 - `.prototype.__defineSetter__()`: 설정(set)할 떄 실행되어 해당 속성을 수정하는 함수와 지정한 속성을 연결한다.
@@ -92,7 +92,7 @@ const myInfo = {
 - .prototype.toString(): 객체의 문자열 표현을 반환한다.
 - .prototype.valueOf(): 원시값을 반환한다.
 
-## Access Object
+## 6. Access Object
 
 ```javascript
 const someObj = {
@@ -109,7 +109,7 @@ someObj["b"]; //...value
 
 객체에 입력된 모든 key는 문자열로 바뀐다.
 
-## Object modify
+## 7. Object modify
 
 ```javascript
 const anyObj = {
@@ -122,7 +122,8 @@ const anyObj = {
 anyObj.a = ....;
 anyObj['b'] = ....;
 ```
-## Complex
+
+## 8. Complex
 
 ```javascript
 //리스트에 뿌려줄 정보를 배열에 담을 수 있다.
@@ -153,7 +154,7 @@ const clxObj = {
 //다양한 정보를 커스텀하게 담을 수 있다.
 ```
 
-## Object Prototype
+## 9. Object Prototype
 
 Object.prototype 메서드 동작 변경은 기존 내용의 앞이나 뒤에 확장할 내용을 래핑하여 코드를 주입하는걸 고려해야한다. 만들어놓고 돌려보지 않은 코드는 기본 제공코드 또는 다른사람의 확장이 실행되기 전 사전 조건부로 사용자 정의 코드를 실행한다.
 

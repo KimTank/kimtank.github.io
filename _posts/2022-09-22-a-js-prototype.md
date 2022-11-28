@@ -28,13 +28,13 @@ tags:
 
 JS는 **Prototype(원형 객체)기반 언어(prototype-based language)**이다.~~(처음알았다 ㄷㄷ 함수형이라고만 알았는데 이게뭐야)~~
 
-## MDN:Object prototypes
+## 1. MDN:Object prototypes
 
 객체를 상속하기 위해 프로토타입을 사용한다. 모든 객체들이 method와 property를 상속받기위한 template이다.(Prototype object를 가짐) 상위의 객체의 method와 property를 가질 수 있는걸 **Prototype Chain**이라고 한다.
 
 > Ref: 객체의 prototype(Object.getPrototypeOf(obj))함수 또는 ~~deprecated된 `__proto__`~~ 과 생성자의 prototype의 property 차이를 알아야된다. 전자는 개별 객체의 속성, 후자는 생성자의 속성. Object.getPrototypeOf(new Foobar())의 return값은 Foobar.prototype이다.
 
-### Prototype Object 이해
+### 1.1. Prototype Object 이해
 
 일반적으로 생성한 객체의 dot chain은 Object의 정의된 다른 멤버도 볼 수 있다. 
 
@@ -46,7 +46,7 @@ JS는 **Prototype(원형 객체)기반 언어(prototype-based language)**이다.
 > Ref: 객체의 method와 property들이 복사되는것이 아니다. chain을 타고 접근한다.(없으면 생성자 없으면 상위객체 없으면 상위객체 생성자...)   
 > 임의 객체의 prototype object에 바로 접근하는 공식적인 방법은 없다. `[[prototype]]` ECMAScript에서는 링크는 내부속성으로 정의되있지만 대부분의 모던 브라우저들이 `__proto__` property를 통해 임의 객체로 접근하도록 구현하였다. ex) `어떤객체.__proto__.__proto__` -> ECMAScript 2015부터는 Object.getPrototypeOf(obj) method통해 객체의 prototype object에 바로 접근할 수 있다.
 
-### prototype property: inherit members location
+### 1.2. prototype property: inherit members location
 
 왜 일부는 상속되고 일부는 상속되지 않는건가? 그건 sub-namespace인 prototype property에 정의되어 있어서이다. Object.이 아니라 Object.prototype.이 올바른 접근. prototype property도 Object이며, prototype chain을 통해 상속하고자하는 property와 method를 담아두는 bucket(바구니)로 사용되는 Object이다.
 
@@ -56,7 +56,7 @@ Object의 생성자에서만 사용할수 있는 멤버들 prototype의 property
 
 > Warn Important: this가 현재 객체의 prototype object일거라고 오해한다. 하지만 `__proto__` property로 접근 가능한 내장 객체라는걸 기억하자. prototype property는 상속 시키려는 member들이 정의된 Object를 가르킨다.
 
-### Create()
+### 1.3. Create()
 
 Object.create()사용 시 주어진 객체를 prototype object삼아 새로운 object을 생성한다. 
 
@@ -66,7 +66,7 @@ var anyObj = Object.create(someObj);
 anyObj.__proto__;   //someObj출력
 ```
 
-### [constructor](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) property
+### 1.4. [constructor](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) property
 
 모든 생성자 함수는 constructor property를 지닌 object를 prototype object로 가지고 있다. constructor property는 원본 생성자 함수 자신을 가르킨다. anyObj.prototype property 또는 아무 constructor method의 prototype property는 생성된 객체의 constructor의 모든 instance를 사용할 수 있다. 
 
@@ -85,7 +85,7 @@ anyObj.constructor.name //?????
 
 > Ref: constructor.name은 변경이 가능하다(상속, 바인딩, 전처리, 트랜스파일러등에 의해 변조가된대) 복잡한 로직에서는 [instanceof연산자](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/instanceof)가 필요하다.
 
-### Prototype 수정
+### 1.5. Prototype 수정
 
 prototype에 method를 추가하면 해당 생성자로 생성된 모든 객체에 사용이 가능하다.
 
@@ -114,7 +114,7 @@ Test.prototype.a = function() {...};
 Test.prototype.b = function() {...};
 ```
 
-## [MDN:Prototype Inherit](https://developer.mozilla.org/ko/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85_%EC%83%81%EC%86%8D)
+## 2. [MDN:Prototype Inherit](https://developer.mozilla.org/ko/docs/Learn/JavaScript/Objects/Classes_in_JavaScript#%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85_%EC%83%81%EC%86%8D)
 
 ECMAScript 2015 Class는 최신브라우저에서는 잘 작동하지만 IE에서는 작동하지 않으니 하는방법을 알아야한다.
 
@@ -167,7 +167,7 @@ Teacher.prototype.someAction = function(){
 //[MDN 예제](https://github.com/mdn/learning-area/blob/main/javascript/oojs/advanced/oojs-class-inheritance-finished.html)
 ```
 
-## Prototype & Class
+## 3. Prototype & Class
 
 - 임의의 클래스와 인스턴스, 프로토타입의 관계
 
@@ -195,7 +195,7 @@ Teacher.prototype.someAction = function(){
 
 > Array 역시 typeof를 했을 시 'object'타입으로 나오고, 비교 시 Array.isArray()로 배열지 확인해야되는 이유는 prototype을 이용한 prototype object를 가진 Object이기 때문이다. 그렇게 설계된거다. 그냥 그렇게 받아들이면된다.
 
-## Prototype Chain
+## 4. Prototype Chain
 
 상속은 prototype chain을 사용한다.
 
@@ -206,9 +206,9 @@ inheritArr.length;
 inheritArr.slice();
 ```
 
-## MDN:Class in JavaScript
+## 5. MDN:Class in JavaScript
 
-### 예제
+### 5.1. 예제
 
 ```javascript
 class Car {
@@ -247,7 +247,7 @@ class Jenesis extends Car{
 
 > [Github:MDN/es2015-class-inheritance 예제](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/es2015-class-inheritance.html)
 
-### Getter & Setter
+### 5.2. Getter & Setter
 
 ```javascript
 class Jenesis extends Car{

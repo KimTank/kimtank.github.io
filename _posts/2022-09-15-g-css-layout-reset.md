@@ -15,11 +15,11 @@ tags:
 
 ---
 
-## Layout Reset
+## 1. Layout Reset
 
 HTML 브라우저에따라 기본 스타일이 다 상이하게 적용된다. 하여 원하는 디자인을 뽑기위해서는 레이아웃을 초기화시켜줘야한다.
 
-## 필요성
+## 2. 필요성
 
 - 박스의 시작을 0,0 시작하고 싶어
 - width, height 계산에 여백이 포함되어있지 않아
@@ -27,7 +27,7 @@ HTML 브라우저에따라 기본 스타일이 다 상이하게 적용된다. �
 
 [Normalize.css](http://necolas.github.io/normalize.css/)가 존재하지만 쓰지 않아도 된다.
 
-## 예제
+## 3. 예제
 
 ```css
 * {

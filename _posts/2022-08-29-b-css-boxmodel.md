@@ -19,7 +19,7 @@ tags:
 
 오늘은 아마 재빨리 끝나면 새벽이지 싶다. CSS는 역시 양이 ~~너무많아서 행볶는다.~~
 
-## The Box Model
+## 1. The Box Model
 
 - Content Box: 기준이되는 Box
 - Padding: Content Box와 Border와의 거리
@@ -30,7 +30,7 @@ tags:
 
 > width와 height의 단위: px, em, %, auto
 
-## Border
+## 2. Border
 
 - Border Width: border의 굵기 제어
 - Border Color: border의 색상 제어
@@ -56,7 +56,7 @@ border: medium dashed red;
 
 ---
 
-## Padding
+## 3. Padding
 
 ```css
 /* 속기법 */
@@ -77,13 +77,13 @@ px말고도 여러 단위 사용가능
 
 ---
 
-## Margin
+## 4. Margin
 
 속기법은 Padding과 동일
 
 ---
 
-## Display Property
+## 5. Display Property
 
 MDN문서에 많은 속성이 있으나, 브라우저마다 동작하지 않는 것도 많다.
 
@@ -127,9 +127,9 @@ wanthide{
 
 ---
 
-## Relative Unit
+## 6. Relative Unit
 
-### percentages: 항상 상대적인 값
+### 6.1. percentages: 항상 상대적인 값
 
 ```css
 /* parnet width, height의 50% 절반 차지 */
@@ -152,7 +152,7 @@ any-selector {
 }
 ```
 
-### em
+### 6.2. em
 
 글꼴의 크기로 box를 제어한다. 대분자 M의 높이, 너비 그리고 타이포그래피와 연관이 있다.
 
@@ -166,7 +166,7 @@ child {
 }
 ```
 
-### rem
+### 6.3. rem
 
 em의 단점을 보완해서 나온것이다.
 

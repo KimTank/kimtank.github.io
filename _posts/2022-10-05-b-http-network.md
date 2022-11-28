@@ -28,18 +28,18 @@ tags:
 
 ---
 
-## HTTP
+## 1. HTTP
 
 HyperText Transfer Protocol, HTML과 같은 문서를 전송하기위한 규약. Client-Server Architecture에서 Client가 HTTP Messages를 요청하면, Server에서 HTTP Messages를 응답한다.
 
-## HTTP Messages
+## 2. HTTP Messages
 
 Client와 Server사이의 데이터가 교환되는 방식이다.
 
 - Requests(요청)
 - Responses(응답)
 
-## Structure
+## 3. Structure
 
 1. start line: 요청이나 응답의 상태를 나타내며, 항상 첫번째 줄에 위치한다. 응답측에선 status line이라고 한다.
 2. HTTP headers: 요청을 지정하거나, 메세지에 포함된 본문을 설명하는 헤더의 집합이다.
@@ -49,27 +49,27 @@ Client와 Server사이의 데이터가 교환되는 방식이다.
 - Responses head: start line, HTTP header
 - payload: body
 
-## [시각화](https://hahahoho5915.tistory.com/62)
+## 4. [시각화](https://hahahoho5915.tistory.com/62)
 
 출처: [99C0RN](https://hahahoho5915.tistory.com/62)
 
-### Requests
+### 4.1. Requests
 
 ![Requests](/assets/img/221005-request-structure.png)
 
-### Responses
+### 4.2. Responses
 
 ![Responses](/assets/img/221005-response-structure.png)
 
-## Stateless
+## 5. Stateless
 
 상태를 가지지 않는다. HTTP는 Client와 Server간의 통신(Communication) 중 어떤 것도 저장하지 않는다. HTTP는 단순한 Protocol, 통신규약일 뿐이다. 필요에 따른 다른 방법(Cookie-Session, API 등)을 통해 상태를 확인할 수 있다.
 
 Stateless(무상태성)는 HTTP의 큰 특징이다.
 
-## HTTP Requests
+## 6. HTTP Requests
 
-### Start line
+### 6.1. Start line
 
 HTTP header에 포함되는 start line에는 세가지 정보가 있다.
 
@@ -89,7 +89,7 @@ HTTP header에 포함되는 start line에는 세가지 정보가 있다.
      - OPTIONS * HTTP/1.1
 3. HTTP 버전에 따라 HTTP message의 structure가 달라진다.
 
-### Headers
+### 6.2. Headers
 
 Requests의 Headers는 기본 Structure를 따른다. Header name(대소문자 구분이 없는 문자열), (:)값을 입력한다. 값은 헤더에 따라 다르다. 여러 종류의 Header가 있고, Grouping이 가능하다.
 
@@ -119,16 +119,16 @@ Content-Length: 333
 (more data)
 ```
 
-### body
+### 6.3. body
 
 Requests의 Content는 HTTP messages Structure의 마지막에 위치한다. 필수는 아니며, GET, HEAD, DELETE, OPTIONS처럼 서버에 리소스를 요청하는 경우에는 본문이 필요하지 않다. POST나 PUT과 같은 일부 요청은 데이터를 업데이트하기 위해 사용한다.
 
 - Single-resource bodies(단일-리소스 본문): 헤더 두개(Content-Type & Content-Length)로 정의된 단일 파일로 구성된다.
 - Multiple-resource bodies(다중-리소스 본문): 여러 파트로 구성된 본문에서는 각 파트마다 다른 정보를 지닌다. -> HTML form과 관련이 있다.
 
-## HTTP Responses
+## 7. HTTP Responses
 
-### Status line
+### 7.1. Status line
 
 HTTP Responses는 Server가 Client에게 보내는 Message이다. Responses의 첫 줄을 Status line이라고한다.
 
@@ -136,7 +136,7 @@ HTTP Responses는 Server가 Client에게 보내는 Message이다. Responses의 �
 2. Status Code: Requests's result(200, 303, 400...)
 3. Status Text: Status Code Description
 
-### Headers
+### 7.2. Headers
 
 Responses에 들어가는 HTTP headers의 Requests header와 동일한 Structure를 가지고 있다.
 
@@ -167,7 +167,7 @@ X-Frame-Options: DENY                    R#
 (body)
 ```
 
-### body
+### 7.3. body
 
 Responses의 Content는 HTTP Messages Structure의 마지막에 위치한다. 모든 Responses에 body는 필수가 아니다. 201, 204와 같은 Status Code가 있는 Response에는 Content가 필요하지 않다.
 

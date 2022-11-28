@@ -3,7 +3,7 @@ layout: post
 title: "Ubuntu init"
 date: 2022-11-01
 categories:
-- Linux
+- OS
 tags:
 - Unix
 - Linux

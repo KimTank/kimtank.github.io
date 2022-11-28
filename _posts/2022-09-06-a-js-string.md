@@ -23,7 +23,7 @@ tags:
 
 문자의 모음, Strings of characters
 
-## Syntax
+## 1. Syntax
 
 ```javascript
 //(쌍)따옴표로 쌓여져있는 글자
@@ -32,7 +32,7 @@ let nickName = "tank";
 //let love = "cat is most lovely animal'; 해당구문은 error
 ```
 
-## Indices & Length
+## 2. Indices & Length
 
 - Indices: 지수, Numerical index
 - Length: 길이
@@ -57,12 +57,12 @@ typeof additionResult;  // 'string
 // number와 string을 JavaScript는 따로 처리하지 못하니, string으로 변환한다.
 ```
 
-## caution
+## 3. caution
 
 > 1. [C언어 배열의 범위를 넘어설때](https://blog.naver.com/PostView.nhn?isHttpsRedirect=true&blogId=tipsware&logNo=221054714926&categoryNo=50&parentCategoryNo=0&viewDate=&currentPage=1&postListTopCurrentPage=1&from=search)   
 > 2. 상위 TaeYoon, TAEYOON은 전혀 다른 문자열이다. 메모리주소가 다르다. 한번에 한문자만 수동으로 업데이트할 수 없다. TAEYOON은 새 메모리를 가지는 새 문자열로 name변수에 덮어쓴다.
 
-## String Methods
+## 4. String Methods
 
 thing.method(...args);
 
@@ -81,16 +81,16 @@ value.slice(0, 6);  // 'badboy' => 0~6전까지
 value.slice(-4);    // 'gone' => 음수일 경우 뒤에서 1부터 4까지
 ```
 
-### 중요
+### 4.1. 중요
 
 > .slice(0...)는 원래 문자열에 영향을 끼치지 않는다. mutable, immutable
 
 - .replace(arg1, arg2): **정규표현식을 사용하여 제어할 수 있다.**, arg1은 기존 변경전 문자열또는 문자, arg2는 변경할 문자열또는 문자. 처음으로 매칭되는 값만 변경된다.(반복문을 사용하면 다 변경할수 있을거같다. .replaceAll(arg1, arg2)가 있긴하지만 브라우저별로 호환여부가 다르다. chrome 호환 안됨)
 - .repeat('number type'): 반복하여 붙인다. 'abc'.repeat(3); => 'abcabcabc'. 새로운 문자열이 만들어지고 원본은 변하지 않는다.
 
-## Template Literals
+## 5. Template Literals
 
-### Syntax
+### 5.1. Syntax
 
 ```javascript
 let number = 10;
@@ -102,19 +102,19 @@ console.log(`${number}${unit} left`); // 10km left
 // ${3 * 4} 산술연산 가능
 ```
 
-## Null & Undefined
+## 6. Null & Undefined
 
 둘다 단일한 값으로 비슷하지만 같은건 아니다.
 
-### null
+### 6.1. null
 
 실제 JavaScript의 값이다. 일부러 값을 지정하지 않는 것. 아무것도 없는 상태. 다른 언어와는 다르게 JavaScript에서는 자주보는 값이 아니다. 직접 변수에 지정하는 값으로 쓰인다.
 
-### undefined
+### 6.2. undefined
 
 정의된 값이 없는 값이다. "뭔값인지 모르겠어요^^". null이랑은 다르다. 아무것도 없는 상태(null) 자체가 아님. 가장 많이 쓰인다. 자연적으로 많이 쓰이게된다(일반 다른언어의 null처럼)
 
-## Math Object
+## 7. Math Object
 
 수학연산 모음을 모아놓은 객체이다.
 

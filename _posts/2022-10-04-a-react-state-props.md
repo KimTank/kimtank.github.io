@@ -18,12 +18,12 @@ tags:
 
 ---
 
-## State
+## 1. State
 
 - 컴포넌트의 사용 중 컴포넌트 내부에서 변할 수 있는 값
 - 내부에서 변화하는 값
 
-## Props
+## 2. Props
 
 - 외부로부터 전달받은 값
 - 컴포넌트의 속성(property)을 의미
@@ -34,7 +34,7 @@ tags:
 
 > props이 읽기전용이 아니면 직접 수정할 수 있게되고, 직접 수정하게되면 side effect발생. React is all about one-way data flow down the component hierarchy(단방향, 하향식 데이터 흐름 원칙) 위배.
 
-## usage
+## 3. usage
 
 1. 하위 컴포넌트에 전달하고자 하는 data와 property를 정의한다.
 2. props를 이용하여 정의된 value와 property를 전달한다.
@@ -65,7 +65,7 @@ const Child = (props) => {
 };
 ```
 
-## State hook & useState
+## 4. State hook & useState
 
 ```javascript
 //React로부터 useState 불러옴
@@ -91,14 +91,14 @@ const CheckBox = () => {
 export default CheckBox;
 ```
 
-## React Event handling
+## 5. React Event handling
 
 DOM의 이벤트 처리방식과 유사하나, 문법 차이가 있다.
 
 - 소문자대신 camelCase사용
 - JSX를 사용하여 문자열이 아닌 이벤트 handler, 함수를 전달한다.
 
-### onChange
+### 5.1. onChange
 
 input, textarea select와 같은 form element는 유저 입력값을 제어할 때 사용된다. React의 state는 이런 변경할 수 있는 입력값을 관리한다. onChange 이벤트 발생 시 event.target.value를 통해 객체의 input값을 읽어온다.
 
@@ -119,7 +119,7 @@ const Title = () => {
 };
 ```
 
-### onClick
+### 5.2. onClick
 
 a tag와 같이 링크 이동과 같은 클릭에 대한 상호작용 시 사용하는 이벤트이다.
 
@@ -149,7 +149,7 @@ const AlertAction = (props) => {
 };
 ```
 
-### togglePopup
+### 5.3. togglePopup
 
 ```javascript
 import React, { useState } from "react";
@@ -184,11 +184,11 @@ const App = () => {
 export default App;
 ```
 
-## Controlled Component
+## 6. Controlled Component
 
 React에서는 Data로 state를 따로 관리하고 싶어한다. **"React가 State를 Control할 수 있는 Component를 Controlled Component"**라고 한다. -> 추가적으로 React에 대해서는 학습이 필요하다.
 
-## React Data Flow
+## 7. React Data Flow
 
 React로 앱을 설계할 시 Component 기준으로 Bottom-up으로 구현하면 테스트가 쉽고, 확장성이 좋다. 하여 설계 시 기획자, PM, UX 디자이너는 Component Hierarchy(계층구조)로 나눈다.
 

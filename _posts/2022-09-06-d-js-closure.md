@@ -16,7 +16,7 @@ tags:
 
 ---
 
-## MDN의 Closure 정의
+## 1. MDN의 Closure 정의
 
 함수와 **함수가 선언된 어휘적(lexical)환경**의 조합. 이환경은 클로저가 생성된 시점의 유효 점위 내에 있는 모든 지역 변수로 구성된다.
 
@@ -24,9 +24,9 @@ JavaScript는 함수가 호출되는 환경과 별개로 기존에 선언되어 
 
 **"외부 함수의 변수에 접근할 수 있는 내부 함수"** => closure function
 
-## Closure Function 특징
+## 2. Closure Function 특징
 
-### 1. 함수를 리턴한다.
+### 2.1. 함수를 리턴
 
 ```javascript
 const addition = (num1, num2) => num + num2;
@@ -57,7 +57,7 @@ typeof add; // 'number'
 typeof addCls;  // 'function'
 ```
 
-### 2. 외부 함수와 내부 함수의 변수 접근법
+### 2.2. 외부 함수와 내부 함수의 변수 접근법
 
 출처: codestates(문제시 삭제하겠음)
 
@@ -71,9 +71,9 @@ const fAdd = addr(1);   // function type
 
 내부함수는 외부함수에 선언된 변수에 접근 가능하다.
 
-## Closure Function Advanced
+## 3. Closure Function Advanced
 
-### 1. 데이터를 보존하는 함수
+### 3.1. 데이터를 보존하는 함수
 
 일반적으로 다른 언어에서 함수는 지역내 있는 변수들이 실행만되고나면 접근할 수 없다. 관련값을 얻기위해 return한다던가, factorial 형태로 구현하여 .문법으로 재귀적 방법을 사용한다던가의 모형을 가지지 않는이상은 가능하지 않다.
 
@@ -97,7 +97,7 @@ const header1MK = tagMK(h1); //h1태그 메이커
 header1MK('오늘도 열공'); //<h1>오늘도 열공</h1>
 ```
 
-### 2. 정보의 접근 제한(모듈화)
+### 3.2. 정보의 접근 제한(모듈화)
 
 클로저를 이용해 객체에 담아 여러개의 내부 함수를 리턴한다.
 
@@ -140,7 +140,7 @@ personDTO.getAge(); // 99
 //일단 수업중 내용만으로 정리한다.
 ```
 
-## 이거 재밋는데?
+## 4. 이거 재밋는데?
 
 아까 하다보니 img태그를 써보고 싶었고, function이 2번 더 들어간 3개짜리 클로저를 쓰고싶어서 만들어보았다.
 
@@ -158,7 +158,7 @@ divMaker(imgMaker('사진주소3'));
 divMaker(tagMaker(h1)(false)('제목입니다.'));
 ```
 
-## 참조
+##  참조
 
 > [WIKI:클로저(컴퓨터 프로그래밍)](https://ko.wikipedia.org/wiki/%ED%81%B4%EB%A1%9C%EC%A0%80_(%EC%BB%B4%ED%93%A8%ED%84%B0_%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D))   
 > [MDN:JS/Closures](https://developer.mozilla.org/ko/docs/Web/JavaScript/Closures)   

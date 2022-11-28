@@ -14,21 +14,21 @@ tags:
 
 ---
 
-## Component
+## 1. Component
 
 컴포넌트는 정의하기 쉽지 않다. 디자이너나 PM에게는 **'하나의 역할을 하기 위해 모은 디자인 요소'**가 UI컴포넌트이고, Front-End Developer에게는 **'하나의 기능 구현을 위한 여러 종류의 코드 묶음'**이기 떄문이다. 코드스테이츠의 강의를 제작한 제작자는 컴포넌트를 **'하나의 역할을 하기 위해 모인 무언가의 집합'**이라고 정의한다.
 
-## Agorastates
+## 2. Agorastates
 
 아고라스테이츠는 코드스테이츠의 github저장소로 reddit이나 stackoverflow같은 커뮤니티와 비슷하게 질문과 답변을 github를 통해서 이루어지도록(천잰가) 만들어 놓았다.
 
 github의 commit내역 히스토리를 보면 **CRUD**가 일어나고있는 기능이 결국 이번과제의 **핵심 목표**라고 볼 수 있다.
 
-## So What is Component?
+## 3. So What is Component?
 
 그래서 컴포넌트는 github를 둘러쌓고있는 container, 각 태그(div라든가 ul, li 등등)들의 경계를 기점으로 각각의 요소들의 박스를 컨테이너라 한다. 시각적으로 확인하기 위한 도구로는 chrome console elements탭을 이용해 각 태그를 클릭하면 해당하는 컴포넌트가 선택되는걸 확인할 수 있다.
 
-## Dummy Data Structure
+## 4. Dummy Data Structure
 
 ```javascript
  {
@@ -54,7 +54,7 @@ github의 commit내역 히스토리를 보면 **CRUD**가 일어나고있는 기
 
 더미 데이터의 구조는 이렇게 생겼다
 
-## HTML Structure
+## 5. HTML Structure
 
 ```html
 <li class="discussion__conatiner">
@@ -73,7 +73,7 @@ github의 commit내역 히스토리를 보면 **CRUD**가 일어나고있는 기
 
 그대로 가져왔다. 문제시 자삭.
 
-## 데이터 시각화
+## 6. 데이터 시각화
 
 HTML Structure의 구조를 시각화 해주는 고마운 [사이트](https://software.hixie.ch/utilities/js/live-dom-viewer/)
 

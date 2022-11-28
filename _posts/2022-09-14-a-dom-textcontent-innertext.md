@@ -18,19 +18,19 @@ DOM은 생각보다는 분량이 방대하다. 굉장히 유용하게 쓰일 수
 
 ---
 
-## Node.textContent
+## 1. Node.textContent
 
 Node interface의 property로 node와 node의 children에 textContent
 
-## Element.innerHTML
+## 2. Element.innerHTML
 
 Element property로 요소 내 포함된 HTML 또는 XML 마크업을 가져오거나 설정한다.
 
-## HTMLElement.innerText
+## 3. HTMLElement.innerText
 
 HTMLElement interface의 property로 element와 element의 children의 렌더링된 textContent
 
-## textContent vs innerText 차이
+## 4. textContent vs innerText 차이
 
 - textContent와 innerText는 text의 렌더링 중이 아니라면 값(`string||null`)이 똑같지만, text의 렌더링이 끝나기 전에는 innerText는 인식할 수 없다.
 - textContent는 `<script>`, `<style>`요소를 포함한 모든 요소의 콘텐츠 가져오지만, innerText는 '사람이 읽을 수 있는 요소'만 처리한다.
@@ -38,7 +38,7 @@ HTMLElement interface의 property로 element와 element의 children의 렌더링
   - innerText는 CSS 스타일링을 고려하여 대화형 사이트에서 업데이트 한 후와 같이 browser가 웹 페이지의 일부 또는 전부를 다시 처리하고 그려야할 때 리플로우가 발생 => 리플로우의 계산은 비싸기떄문에 가능하면 피하세요.
 - IE기준 innerText를 수정하면 요소의 모든 자식 노드를 제거하고, 모든 자손 텍스트를 영구히 파괴한다. 이후 해당 텍스트 노드를 다른 노드는 물론 같은 노드에 삽입하는 것도 불가능하다. => 예상치못한 에러발생으로 브라우저 호환성에 크리티털 이슈
 
-## 예제
+## 5. 예제
 
 ```html
 <!DOCTYPE html>
@@ -121,7 +121,7 @@ HTMLElement interface의 property로 element와 element의 children의 렌더링
 
 ![출처:MDN](/assets/img/220914-tc-it-diffrence.png)
 
-## textContent vs innerHTML
+## 6. textContent vs innerHTML
 
 Element.innerHTML은 HTML을 반환한다. 그래서 성능적으로는 textContent가 낫다. 그리고 textContent는 XSS공격(cross site scripting)의 위험이 없다.
 

@@ -16,9 +16,9 @@ tags:
 
 ---
 
-## 개념
+## 1. 개념
 
-## like code
+## 2. like code
 
 ```JavaScript
 //하위 코드는 내맘대로 적었어요, 전혀 JS React 동작과 연관 없어요 :D
@@ -42,7 +42,7 @@ origin.this = `${origin.protocol}${origin.host}/${origin.endpoint}`;
 
 ---
 
-## what?
+## 3. what?
 
 SOP는 SOP에 잠재적 위험을 분리, 공격받는 경로 줄인다.
 

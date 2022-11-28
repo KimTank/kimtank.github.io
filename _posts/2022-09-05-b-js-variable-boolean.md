@@ -18,7 +18,7 @@ JavaScript 역시 정해진 문법이 있는 언어이고, 약속과 규칙이 �
 
 ---
 
-## Basic Syntax
+## 1. Basic Syntax
 
 ```javascript
 let year = 1986;
@@ -26,7 +26,7 @@ let year = 1986;
 // ;의 경우 빠질 시 JavaScript가 자동으로 넣어주지만. 명시적으로 넣어주자.
 ```
 
-## 명명규칙
+## 2. 명명규칙
 
 ```javascript
 let isTrue; // 낙타법 camelCase 권장, snake_case비권장
@@ -37,7 +37,7 @@ let _arg; // 밑줄가능하지만 권장하지 않음
 let isLuckyDay = true;//바로 알아볼 수 있어야 한다.
 ```
 
-## Variable Update
+## 3. Variable Update
 
 ```javascript
 let number = 10;
@@ -59,7 +59,7 @@ number = false; // type 'boolean'
 number = 123; // type 'number'
 ```
 
-## Const
+## 4. Const
 
 Constant, 상수의 약자
 
@@ -67,15 +67,15 @@ Constant, 상수의 약자
 - 변하지 않는 값을 사용할때 쓰인다.
 - const를 쓰면 JavaScript가 업데이트를 막는다. Uncaught TypeError: Assignment to constant variable
 
-## Var
+## 5. Var
 
 let, const가 나오기전 변수를 선언하는 유일한 방법이었으나, 지금은 권장하지 않는다.
 
-## Boolean(Primitive Type)
+## 6. Boolean(Primitive Type)
 
 true와 false값을 가진다.
 
-### falsy value
+### 6.1. falsy value
 
 - 값이 없다.
 - 0
@@ -88,7 +88,7 @@ true와 false값을 가진다.
 - "false"(문자열)
 - 외 값은 true
 
-### Boolean 객체와 Primitive Type boolean
+### 6.2. Boolean 객체와 Primitive Type boolean
 
 - (Boolean 객체의 true, false === boolean type의 true, false) => false
 - object type의 value가 undefined, null이 아닌 조건문에서는 true(값이 false인 Boolean 객체 포함)
@@ -117,16 +117,16 @@ let d = Boolean(stringObj); //초기값 참
 //Boolean primitive value에 Boolean object를 이용하면 안된다.
 ```
 
-### Constructor
+### 6.3. Constructor
 
 Boolean(): Boolean 객체를 생성한다.
 
-### Instance Method
+### 6.4. Instance Method
 
 - Boolean.prototype.toString(): 객체의 값에 따라 문자열 'true'또는 'false'를 반환, Object.prototype.toString() 메서드를 재정의한다.
 - Boolean.prototype.valueOf(): Boolean 객체의 원시값(primitive value)을 반환, Object.prototype.valueOf() 메서드 재정의
 
-### Example
+### 6.5. Example
 
 ```javascript
 //false값으로 초기화한 Boolean 객체 만들기

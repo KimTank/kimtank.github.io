@@ -39,11 +39,11 @@ const pushMemoryHeap = ['call somewhere'
 ]; // memory heap에 올라가고, 각 값에 담긴 정보의 call stack의 주소값을 참조한다.
 ```
 
-## JavaScript Memory 시각화
+## 1. JavaScript Memory 시각화
 
 ![출처 : MDN](/assets/img/220906-js-memory.png)
 
-## Primitive Data Types
+## 2. Primitive Data Types
 
 어떤 프로그래밍언어라도 일반적인 타입을 약속으로 정한다.
 
@@ -67,7 +67,7 @@ a === b;    //false
 //원시형은 하나의 값만 가진다. 이에 a와 b는 연관이 없는 다른 메모리에 할당된다.
 ```
 
-## Reference Data Types
+## 3. Reference Data Types
 
 Memory Heap에 올라가며, Call Stack에 올라간 변수의 주소값을 저장한다.
 
@@ -87,7 +87,7 @@ as === bs;  //true
 //Java의 얕은복사와 깊은복사와 같은걸 알아봐야된다.
 ```
 
-## Call Stack & Memory Heap
+## 4. Call Stack & Memory Heap
 
 상당히 중요한 내용으로 알고 있으면 편리하다.
 

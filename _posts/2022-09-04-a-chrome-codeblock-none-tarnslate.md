@@ -27,7 +27,7 @@ function additionDoesOverflow(a, b){
 }
 ```
 
-## notranslate class 추가
+## 1. notranslate class 추가
 
 개발자 도구를 열고 콜솔창에 notranslate class를 추가하면 된다.
 
@@ -36,7 +36,7 @@ function additionDoesOverflow(a, b){
 document.querySelectorAll('pre, code').forEach(function(e){e.classList.add('notranslate');})
 ```
 
-## 북마크로 만들어 버리자
+## 2. 북마크로 만들어 버리자
 
 우리는 개발자다. 개발자는 늘 효율적으로 시간을 줄이는 생산성을 고민하여야 한다.~~(좋게 말해서 그런거지 나는 사실 귀찮아서 고민한다)~~ 코드를 복사 붙여넣기 하는 것 역시 방법이지만, 북마크로 명령어를 지정하면 북마크를 누르고 번역을 누를 시 코드블럭은 번역이 되지 않는다^^
 

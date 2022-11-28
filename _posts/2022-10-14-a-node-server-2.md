@@ -22,13 +22,13 @@ MERN stack(MongoDB, Express, React, Node.js)
 
 Node.js환경에서 웹서버, 또는 API서버를 제작하기 위해 사용되는 framework
 
-## Express install
+## 1. Express install
 
 ```bash
 $npm install express
 ```
 
-## Simple started
+## 2. Simple started
 
 ```javascript
 const express = require('express');
@@ -44,6 +44,7 @@ app.listen(port, ip, () => {
     console.log(`terminal log: ${ip}/:${port}`);
 });
 ```
+
 method와 url(/endpoint)로 분기를 만드는것을 Routing이라고 한다.
 
 Client는 특정한 HTTP Request Method(GET, POST, PUT, PATCH, OPTION, DELETE 등)와 함꼐 특정 URI, path로 HTTP Request 보낸다.
@@ -89,14 +90,14 @@ router.post('/endpoint', (req, res) => {
 
 Middleware는 중간에 문제가 있는 요청을 검증하거나 기능을 추가한다던가의 중간자의 역할을 가능하게한다.
 
-## frequency usage middleware
+## 3. frequency usage middleware
 
 1. POST request 등 포함된 body(payload)를 구조화(쉽게 얻고 싶음)
 2. * request/response에 CORS header 추가 시
 3. * request -> url이나 method를 확인 시
 4. requst에 사용자 인증 정보(certification)가 있는지 확인
 
-### 1. POST request 등에 포함된 body(payload)를 구조화할 때
+### 3.1. POST request 등에 포함된 body(payload)를 구조화할 때
 
 ```javascript
 // # 1. nodeJS, chunk: 조각
@@ -134,7 +135,7 @@ app.post('/resource/endpoint', jsonParser, (req, res) => {
 });
 ```
 
-### 2. * Req/Res CORS header added
+### 3.2. * Req/Res CORS header added
 
 ```javascript
 // # 1. NodeJS
@@ -172,7 +173,7 @@ app.get('endpoint/:parameter', cors(), (req, res, next) => {
 });
 ```
 
-### 3. * req about url or method verify
+### 3.3. * req about url or method verify
 
 ```javascript
 /**
@@ -205,7 +206,7 @@ app.get('/', (req, res) => {
 app.listen(8080);
 ```
 
-### 4. req header in user certification verify
+### 3.4. req header in user certification verify
 
 ```javascript
 app.use((req, res, next) => {

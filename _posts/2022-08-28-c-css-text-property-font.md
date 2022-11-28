@@ -14,11 +14,12 @@ tags:
 - font-size
 - font-family
 ---
+
 주말간 CSS를 반응형까지 보려고했었건만 잠드는바람에 늦어졌다. 내일까지 얼마남지않았지만 ~~오늘의 내가 게을러지면 내일의 나는 또 밀릴거니까~~ 얼른하자!!
 
-## properties
+## 1. properties
 
-### text-align
+### 1.1. text-align
 
 정렬 => left, right, center, justify
 
@@ -30,11 +31,11 @@ h1 {
 /* 적용하더라도 <h1>전체가 align으로 움직이지 않는다. */
 ```
 
-### font-weight
+### 1.2. font-weight
 
 굵기 => normal, bold, lighter, bolder, 100, 900(400 normal, 700 bold)
 
-### text-decoration: 선
+### 1.3. text-decoration: 선
 
 ```css
 tag {
@@ -52,15 +53,15 @@ tag {
 }
 ```
 
-### line-height
+### 1.4. line-height
 
 줄간격을 지정 => normal, 2.5, 3em, 150%, 43px
 
-### letter-spacing
+### 1.5. letter-spacing
 
 자간 => normal, .2rem, 1px, -1px
 
-## font size
+## 2. font size
 
 1.2em, x-small, smaller, 12px, 80%
 
@@ -102,9 +103,9 @@ unset
 > 일반적으로 EM, REM, %로 제어하며, 나머지는 잘 안쓰인다.   
 > 반응형웹의 경우 절대값을 안쓴다.
 
-## Font-Family
+## 3. Font-Family
 
-## 구문
+### 3.1. 구문
 
 ```css
 /* font family name % a generic family name  */

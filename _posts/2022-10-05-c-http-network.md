@@ -23,20 +23,20 @@ tags:
 
 ---
 
-## AJAX
+## 1. AJAX
 
 Asynchronous JavaScript And XMLHttpRequest, JavaScript, DOM, Fetch, XMLHttpRequest, HTML 등의 다양한 기술을 사용하는 웹 개발 기법이다.
 
 웹 페이지에 필요한 부분에 필요한 데이터만 비동기적으로 받아와 화면에 그린다(렌더링한다).
 
-### Core Technology
+### 1.2. Core Technology
 
 1. JavaScript, DOM
 2. Fetch
 
 SPA에서도 이야기했었던 새로운 웹페이지를 요청하고 새로운페이지를 가져오는 방식에서 Fetch를 사용하여 현재 페이지에서 작업을 하는 동안 서버와 통신할 수 있도록, Fetch가 서버에 요청을 보내고, 응답을 받을 때까지 페이지를 멈추지 않고 계속 사용할 수 있도록하는 비동기적인 방식이다.
 
-### XHR & Fetch
+### 1.3. XHR & Fetch
 
 Fetch이전에는 XHR(XMLHttpRequest)을 사용했다. XHR의 단점을 보완하고, XML보다 가볍고 JS와 호환되는 JSON을 사용하는 것이 Fetch이다.
 
@@ -66,7 +66,7 @@ fetch('http://127.0.0.1:3000/information')
   .then((json) => ...);
 ```
 
-### AJAX 장점
+### 1.4. AJAX 장점
 
 - Server에서 HTML을 완성하여 보내주지 않아도 웹페이지를 만들 수 있다.
 
@@ -86,7 +86,7 @@ fetch('http://127.0.0.1:3000/information')
 
 > 대역폭: 네트워크 통신 한 번에 보낼 수 있는 데이터의 크기
 
-### AJAX 단점
+### 1.5. AJAX 단점
 
 - Search Engine Optimization(SEO)에 불리
 
@@ -96,9 +96,9 @@ fetch('http://127.0.0.1:3000/information')
 
   일반적으로 유저가 뒤로가기를 누를 시 이전 상태를 유지할것이라 생각하겠지만(UX적으로 근래에는 이전상태를 유지하는 사이트가 많다), AJAX 자체적으로는 이전상태를 기억하진 못하여 History API를 사용한다.
 
-## SSR & CSR
+## 2. SSR & CSR
 
-### Server Side Rendering(SSR)
+### 2.1. Server Side Rendering(SSR)
 
 |---|---|---|---|
 |HTML|JS|React|onResume|
@@ -113,7 +113,7 @@ fetch('http://127.0.0.1:3000/information')
 
 페이지 이동시 위 동작(서버가 웹페이지를 보낸다)을 반복한다.
 
-### Client Side Rendering(CSR)
+### 2.2. Client Side Rendering(CSR)
 
 |---|---|---|---|
 |HTML|JS|React|onResume|
@@ -128,7 +128,7 @@ fetch('http://127.0.0.1:3000/information')
 
 페이지 이동 시 SSR과 같이 서버가 웹페이지를 다시 보내지 않고, 브라우저는 브라우저가 요청한 경로에 따라 이미 받아온 페이지를 다시 렌더링한다.
 
-### 차이점
+### 2.3. 차이점
 
 페이지가 렌더링되는 위치이다. SSR(Server Side Rendering), CSR(Client Side Rendering) CSR은 동적으로 라우팅을 관리한다.
 

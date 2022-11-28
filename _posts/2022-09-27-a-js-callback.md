@@ -31,13 +31,13 @@ tags:
 
 과거 api가 없을때 [underscore.js](https://underscorejs.org/), [lodash](https://lodash.com/)같은 라이브러리(배열이나 객체를 다루기위한 라이브러리)를 사용했다. 직접 구현해보고 비교하여 효율적인 코드를 배우자.
 
-## 비동기(Asynchronous)
+## 1. 비동기(Asynchronous)
 
 컴퓨터는 큐라던가 스택이라던가 요청처리의 방법이 자료구조에의해 처리되는걸로 배웠었는데, 하나의 작업을 시작하면 다음작업 요청이 대기열에서 기다리고 다음 작업 중 현재 처리되는 작업에는 간섭하지 못하는 **blocking**이 이루어진다고 배운적이 있다.
 
 0번째 작업이 끝나고 다음 1번째 작업이 시작하는 시점이 같은 상황을 **동기적(synchronous)**이라고 한다. 
 
-## 비동기 호출(Asynchronous Call)
+## 2. 비동기 호출(Asynchronous Call)
 
 - callback
   - 다른 함수의 전달인자(argument)로  넘겨주는 함수
@@ -132,7 +132,7 @@ const welcomeToHell = (greetings) => {
 }
 ```
 
-## Promise
+## 3. Promise
 
 콜백지옥(if문지옥과 비슷하자나)을 벗어날 수 있는 callback chain
 
@@ -236,7 +236,7 @@ const respectForTheEminem = async () => {
 }
 ```
 
-## Timer API
+## 4. Timer API
 
 > - setTimerout(callback, milisecond): 일정 시간 후 함수 실행(1_000 -> 1초)
 >   - 매개변수(param): 실행할 함수, 대기 시간

@@ -26,20 +26,21 @@ tags:
 예습을 하고싶었건만 시간은 야속하게 흐르고, ~~내 집중력은 산으로 가고있고~~ :clap:
 눈뜨니 ~~아침이고 껄껄꺾크흑ㄱㄱ~~ :clap: 정신차리니 밤이더라 껄껄껄
 
-## Selectors
+## 1. Selectors
 
-### Universal Selector
+### 1.1. Universal Selector
 
 전체 선택자
+
 ```css
 * {
     property: value;
 }
 ```
 
-### Type Selector
+### 1.2. Type Selector
 
-지정 선택자   
+지정 선택자
 
 ```css
 type {
@@ -47,9 +48,9 @@ type {
 }
 ```
 
-### Selector list
+### 1.3. Selector list
 
-복수 지정 선택자   
+복수 지정 선택자
 
 ```css
 type1, type2 ...{
@@ -57,9 +58,9 @@ type1, type2 ...{
 }
 ```
 
-### #ID Selector
+### 1.4. `#ID` Selector
 
-id 선택자, #id명, id는 페이지내 한번만, id는 최소한사용   
+id 선택자, #id명, id는 페이지내 한번만, id는 최소한사용
 
 ```css
 #id {
@@ -67,9 +68,9 @@ id 선택자, #id명, id는 페이지내 한번만, id는 최소한사용
 }
 ```
 
-### Class Selector
+### 1.5. Class Selector
 
-class 선택자, .class명, 비슷한 스타일끼리 묶어서 구조화할 수 있다.   
+class 선택자, .class명, 비슷한 스타일끼리 묶어서 구조화할 수 있다.
 
 ```css
 .class{
@@ -77,9 +78,9 @@ class 선택자, .class명, 비슷한 스타일끼리 묶어서 구조화할 수
 }
 ```
 
-### Descendant Selector
+### 1.6. Descendant Selector
 
-자손 선택자, parent-tag child-tag(anchor tag), 부모태그 내 자식태그를 선택, class 사용가능   
+자손 선택자, parent-tag child-tag(anchor tag), 부모태그 내 자식태그를 선택, class 사용가능
 
 ```css
 parenttype childtype{
@@ -95,9 +96,9 @@ parenttype #id {
 }
 ```
 
-### Adjacent Selector
+### 1.7. Adjacent Selector
 
-인접 선택자, `+`부호 인접 선택자, 형제의 개념   
+인접 선택자, `+`부호 인접 선택자, 형제의 개념
 
 ```css
 type1 + type2 {
@@ -105,9 +106,9 @@ type1 + type2 {
 }
 ```
 
-### Direct child
+### 1.8. Direct child
 
-직계자손 선택자, type1 > type2, `>` type1 바로 아래 있는 type2를 지칭   
+직계자손 선택자, type1 > type2, `>` type1 바로 아래 있는 type2를 지칭
 
 ```css
 type1 > type2 {
@@ -115,9 +116,9 @@ type1 > type2 {
 }
 ```
 
-### Attribute Selector   
+### 1.9. Attribute Selector
 
-속성 선택자, type[attribute="value"] 등   
+속성 선택자, type[attribute="value"] 등
 
 ```css
 type[attribute="value"] {
@@ -134,9 +135,9 @@ a[href*="include"] {
 }
 ```
 
-## Pseudo Classes   
+## 2. Pseudo Classes
 
-선택자 끝에 붙여 상태를 특정하는 키워드   
+선택자 끝에 붙여 상태를 특정하는 키워드
 
 - :active
 - :checked
@@ -163,7 +164,7 @@ type:nth-of-type(2n){
 }
 ```
 
-## Pseudo Elements
+## 3. Pseudo Elements
 
 - ::after
 - ::before
@@ -182,9 +183,9 @@ type::selection{
 }
 ```
 
-## The Cascade
+## 4. The Cascade
 
-스타일의 최상단부터 출발한 폭포(cascade)가 아래로 쭉 흘러서 스타일시트 최하단이나 다음 스타일 시트로 넘어간다.   
+스타일의 최상단부터 출발한 폭포(cascade)가 아래로 쭉 흘러서 스타일시트 최하단이나 다음 스타일 시트로 넘어간다.
 
 - .css파일 내 동작
 
@@ -212,9 +213,9 @@ type-a {
 <head>
 ```
 
-## SPECIFICITY
+## 5. SPECIFICITY
 
-충돌이 생길 경우 브라우저에서 규칙을 적용한다.   
+충돌이 생길 경우 브라우저에서 규칙을 적용한다.
 하나 이상의 스타일이 도일한 요소에 적용되거나, 적용될 수 있는 경우 출돌이 발생한다.
 
 ```css
@@ -233,8 +234,7 @@ type:pseudo element{
 */
 ```
 
-> ### 구체적 기준의 우선도
-
+### 5.1. 구체적 기준의 우선도
 
 |ID|CLASS|ELEMENT|
 |---|---|---|
@@ -243,7 +243,8 @@ type:pseudo element{
 > 좌측으로 갈수록 우선도가 높고, 우측으로 갈수록 우선도는 떨어진다.
 > 태그 내 inline 선택자의 경우 ID선택자보다 더 명시적이므로 우선한다.
 
-> ### !important
+### 5.2. `!important`
+
 >개별스타일 지정에 사용할 수 있는 선택자
 
 ```html

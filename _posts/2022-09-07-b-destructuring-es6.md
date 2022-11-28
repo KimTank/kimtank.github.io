@@ -17,11 +17,11 @@ ES6에서 나온 문법들 중에 기존 문법들을 함축할 수 있는 문�
 
 ---
 
-## Destructuring
+## 1. Destructuring
 
 구조분해할당은 배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 JavaScript의 Expression이다.
 
-## Syntax
+## 2. Syntax
 
 ```javascript
 let name, age, rest;
@@ -44,9 +44,9 @@ rest; // {univ: 'cs', job: 'mechanic'}
 
 ---
 
-## 배열 구조 분해
+## 3. 배열 구조 분해
 
-### 1. 기본 변수 할당
+### 3.1. 기본 변수 할당
 
 ```javascript
 let height = [170, 186, 194];
@@ -56,7 +56,7 @@ poe;    //186
 bulls;  //194
 ```
 
-### 2. 선언에서 분리한 할당
+### 3.2. 선언에서 분리한 할당
 
 ```javascript
 let dt, nb;
@@ -66,7 +66,7 @@ dt; //win10
 nb; //ubuntu20.04
 ```
 
-### 3. 기본값
+### 3.3. 기본값
 
 ```javascript
 [mtb = 150, road = 240] = [64];
@@ -77,7 +77,7 @@ const [a=1, b=2];   // syntax Error 구조할당 문법똑바로 써라고 해�
 const [a=1, b=2] = ['google'];  //const로 재선언 불가
 ```
 
-### 4. 변수 값 교환(swap)
+### 3.4. 변수 값 교환(swap)
 
 ```javascript
 let good = 'christ';
@@ -92,7 +92,7 @@ evil;   // christ
 > 일반 다른 언어에서 swap을 하고 싶으면 임시 변수를 따로 두어야한다.   
 > [로우레벨 언어 XOR교체 트릭(XOR연산을이용한 처리과정)...Wikipedia](https://en.wikipedia.org/wiki/XOR_swap_algorithm)
 
-### 5. 함수가 반환한 배열 분석
+### 3.5. 함수가 반환한 배열 분석
 
 ```javascript
 const getBike = () => ['mtb', 'road', 'minivelo'];
@@ -103,7 +103,7 @@ yours;  //road
 lovely; //minivelo
 ```
 
-### 6. 일부 반환 값 무시
+### 3.6. 일부 반환 값 무시
 
 ```javascript
 let [mine, , lovely] = getBike();
@@ -117,7 +117,7 @@ mine;   //mtb
 yours;  //[road, minivelo]
 ```
 
-### 7. 변수에 배열의 나머지를 할당
+### 3.7. 변수에 배열의 나머지를 할당
 
 ```javascript
 let [mine, ...others] = ['AbsRing', 'goldenRing', 'silverRing', 'copperRing'];
@@ -127,13 +127,13 @@ others; //['goldenRing', 'silverRing', 'copperRing']
 //[a, b, ...c,] = [1,2,3,4,5]; syntaxError 발생 spread뒤 쉼표 금지
 ```
 
-### [8. 정규 표현식과 일치하는 값 해제](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#%EC%A0%95%EA%B7%9C_%ED%91%9C%ED%98%84%EC%8B%9D%EA%B3%BC_%EC%9D%BC%EC%B9%98%ED%95%98%EB%8A%94_%EA%B0%92_%ED%95%B4%EC%B2%B4%ED%95%98%EA%B8%B0)
+### 3.8. [정규 표현식과 일치하는 값 해제](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#%EC%A0%95%EA%B7%9C_%ED%91%9C%ED%98%84%EC%8B%9D%EA%B3%BC_%EC%9D%BC%EC%B9%98%ED%95%98%EB%8A%94_%EA%B0%92_%ED%95%B4%EC%B2%B4%ED%95%98%EA%B8%B0)
 
 ---
 
-## 객체 구조 분해 
+## 4. 객체 구조 분해
 
-### 1. 기본 할당
+### 4.1. 기본 할당
 
 ```javascript
 let person = {name: 'ty', age: 30};
@@ -143,7 +143,7 @@ name;   //ty
 age;    //30
 ```
 
-### 2. 선언 없는 할당
+### 4.2. 선언 없는 할당
 
 ```javascript
 ({name, age}) = {name: 'ty', age: 30};
@@ -151,7 +151,7 @@ age;    //30
 
 > ![MDN](/assets/img/220909-destructuring-object-caution.png)
 
-### 3. 새로운 변수 이름으로 할당
+### 4.3. 새로운 변수 이름으로 할당
 
 배열과는 달리 속성을 해체하여 객체의 원래 속성명과는 다른 이름의 변수에 할당이 가능하다.
 
@@ -161,7 +161,7 @@ shortName;  //ty
 ageBeforeSevenYear; // 30
 ```
 
-### 4. 기본값
+### 4.4. 기본값
 
 ```javascript
 let {state = 'normal', feel = 'stable'} = {state: 'upset'};
@@ -169,7 +169,7 @@ state;  //upset
 feel;   //stable
 ```
 
-### 5. 기본값 갖는 새로운 이름의 변수에 할당
+### 4.5. 기본값 갖는 새로운 이름의 변수에 할당
 
 ```javascript
 let {me: state = 'normal', you: feel = 'stable'} = {me: 'happy'};
@@ -177,7 +177,7 @@ state;  //happy
 feel;   //stable
 ```
 
-### 6. 함수 매개변수의 기본값 설정
+### 4.6. 함수 매개변수의 기본값 설정
 
 ```javascript
 //MDN 예제 읽어볼것.
@@ -208,7 +208,7 @@ drawChart({
 
 > ES2015의 파라메타의 내를 보면 빈객체를 할당하였는데, 없어도 상관없지만, 객체를 전달하지 않았을때도 사용가능하려면 객체를 할당하여 하는것을 더 유용하다고한다.   만약 객체임을 검증하는 코드를 심어서 오류를 던지거나, 이전에 이미 객체일때 동작하도록 verify 후 인자로 전달한다면 사실 크게 상관은 없을 것 같으나, MDN에서는 이방법을 더 유용하다고 표현하였다.   어디까지 에러로 볼 것인가는 기획과 개발, 유저의 입장에서 다 다를 것이지만. 그정도 구분은 명확하게 설계하여 들어간다면 이와같은 문제가 유용할 수도? 아닐수도 있을거라 생각한다.
 
-### 7. 중첩된 객체 및 배열의 구조분해
+### 4.7. 중첩된 객체 및 배열의 구조분해
 
 ```javascript
 //MDN예제 읽어보면 어디서 분해해왔는지 알 수 있다.
@@ -232,7 +232,7 @@ console.log(englishTitle); // "Scratchpad"
 console.log(localeTitle);  // "JavaScript-Umgebung"
 ```
 
-### 8. for of 반복문과 구조 분해
+### 4.8. for of 반복문과 구조 분해
 
 ```javascript
 //MDN 읽어보세요
@@ -244,7 +244,7 @@ for (var {name: n, family: { father: f } } of people) {
 // "Name: Tom Jones, Father: Richard Jones"
 ```
 
-### 9. 함수 매개변수로 전달된 객체에서 필드 해체
+### 4.9. 함수 매개변수로 전달된 객체에서 필드 해체
 
 ```javascript
 //MDN 예제 읽어서 어떻게 접근했는지 이해해야한다.
@@ -269,7 +269,7 @@ console.log("userId: " + userId(user)); // "userId: 42"
 whois(user); // "jdoe is John"
 ```
 
-### 10. 계산된 속성 이름과 구조 분해
+### 4.10. 계산된 속성 이름과 구조 분해
 
 ```javascript
 let key = 'id';
@@ -278,7 +278,7 @@ let { [key]: gID } = {id: 'suuor'};
 gID;    //suuor
 ```
 
-### 11. 객체 구조분해에서 Rest
+### 4.11. 객체 구조분해에서 Rest
 
 ```javascript
 //MDN 대체 이정도까지의 문법을 무조건 써야하는 이유는 왜 안나와있지
@@ -288,7 +288,7 @@ b; // 20
 rest; // { c: 30, d: 40 }
 ```
 
-### 12. 속성 이름이 유효한 JavaScript 식별자명이 아닌 경우
+### 4.12. 속성 이름이 유효한 JavaScript 식별자명이 아닌 경우
 
 ```javascript
 //쓰지 말라고하는 변수명을 쓸수있단 말을 하고있는거 같은데, 대체할 유효한 식별자명을 제공해라고한다.
