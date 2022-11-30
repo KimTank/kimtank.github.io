@@ -3,7 +3,7 @@ layout: post
 title: "객체 지향 프로그래밍"
 date: 2019-02-04T00:00:00-00:00
 categories:
-- Personal
+- legacy
 tags:
 - OOP
 - Java

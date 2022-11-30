@@ -3,7 +3,7 @@ layout: post
 title: "소프트웨어 공학과 소프트웨어"
 date: 2020-07-23T00:00:00-00:00
 categories:
- - Personal
+ - legacy
 tags:
  - 소프트웨어 공학
  - 소프트웨어 공학 이해

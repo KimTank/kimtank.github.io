@@ -3,7 +3,7 @@ layout: post
 title: "소프트웨어 개발 프로세스"
 date: 2020-07-27T00:00:00-00:00
 categories:
- - 소프트웨어 공학
+ - legacy
 tags:
  - 소프트웨어 개발 프로세스
  - 성공 프로젝트 관점 개발

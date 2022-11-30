@@ -3,7 +3,7 @@ layout: post
 title: "프로젝트 관리"
 date: 2020-07-24T00:00:00-00:00
 categories:
- - Personal
+ - legacy
 tags:
  - 프로젝트 관리
  - 프로젝트 관리 단계
