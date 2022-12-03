@@ -3,11 +3,11 @@ layout: post
 title: "JavaScript Number MDN"
 date: 2022-09-04
 categories:
-- JavaScript
+  - JavaScript
 tags:
-- Javascript
-- Number
-- MDN-Doc
+  - Javascript
+  - Number
+  - MDN-Doc
 ---
 
 고마운 사람들 결혼식 갔다가 뒷풀이로 주말에도 공부해야지 하는 마음으로 결혼식장에 장비 다챙겨갔다가 고이 가져간 그대로 사용도 안하고 숙취로 집에 들어온 후 눈을 뜨니 일요일 오후였다. ^^ 좋은 뒷풀이였지만 쉬는 날이 가장 공부하기 좋은 기회란걸 무엇보다 잘 알고 있으니, 공부하자!!
@@ -19,8 +19,8 @@ tags:
 - Number() 함수를 사용하여 'number'타입으로 파싱이 가능하다.
 - Java와 C#의 double타입처럼 [IEEE 754 64비트 바이너리 배정 밀도](https://en.wikipedia.org/wiki/Floating-point_arithmetic)값이다.
 
-> 분수값을 나타낼 수 있지만 저장할 수 있는 값에는 몇가지 제한이 있다.   
-> 소수점 이하 17자리 정도만 유지하며 산술은 [반올림](https://en.wikipedia.org/wiki/Floating-point_arithmetic#Representable_numbers,_conversion_and_rounding)의 대상이 된다.   
+> 분수값을 나타낼 수 있지만 저장할 수 있는 값에는 몇가지 제한이 있다.  
+> 소수점 이하 17자리 정도만 유지하며 산술은 [반올림](https://en.wikipedia.org/wiki/Floating-point_arithmetic#Representable_numbers,_conversion_and_rounding)의 대상이 된다.  
 > 가장 큰 값은 1.8E308이고, 더 큰 값은 [Infinity](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Infinity)
 
 - JavaScript 코드에서 37과 같은 숫자 리터럴은 정수가 아니라 보동 소수점 값이다. 별도의 정수형은 없다.
@@ -37,17 +37,17 @@ Number()함수를 사용하면 문자열이나 다른 값을 Number타입으로 
 
 ```javascript
 123;
-123.0;//상기와 동일
+123.0; //상기와 동일
 123 === 123.0; // true
 ```
 
 ### 2.2. 함수 구문
 
 ```javascript
-Nubmer('123'); //number타입 123 반환
-Number('123') === 123; // true
+Nubmer("123"); //number타입 123 반환
+Number("123") === 123; // true
 
-Number('stringValue'); // NaN
+Number("stringValue"); // NaN
 Number(undefined); //NaN
 ```
 
@@ -71,8 +71,8 @@ const numberObject = new Number(value);
 ### 3.3. Number 객체 만들기
 
 ```javascript
-const numObj = new Number('123'); //numObj === 123 false
-const numPrimitiveType = Number('123'); //numPrimitiveType === 123 true;
+const numObj = new Number("123"); //numObj === 123 false
+const numPrimitiveType = Number("123"); //numPrimitiveType === 123 true;
 numObj instanceof Number; //true
 numPrimitiveType instanceof Number; // true
 ```
@@ -131,7 +131,7 @@ const smallestInt = Number.MIN_SAFE_INTEGER; // -(2**53 - 1) => -900719925474099
 
 > [ECMAScript 표준, 6.1.6 The Number Type](https://tc39.github.io/ecma262/#sec-ecmascript-language-types-number-type)
 
-JSON으로 직렬화한 데이터를 읽을 때, 위 범위를 벗어나는 수는 JSON분석기의 Number 형변환 시 손상될 수 있다. 이 때 [String](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String)을 대신 사용하는 것도 대안이다.   
+JSON으로 직렬화한 데이터를 읽을 때, 위 범위를 벗어나는 수는 JSON분석기의 Number 형변환 시 손상될 수 있다. 이 때 [String](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/String)을 대신 사용하는 것도 대안이다.  
 더 큰 수는 [BigInt](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/BigInt)타입으로 표현할 수 있다.
 
 ### 7.3. Number를 사용해 Date객체 숫자로 변환
@@ -139,7 +139,7 @@ JSON으로 직렬화한 데이터를 읽을 때, 위 범위를 벗어나는 수�
 Number를 함수로 사용하여 [Date](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Date) 객체를 숫자 값으로 변환한다.
 
 ```javascript
-let d = new Date('December 17, 1995 03:24:00');
+let d = new Date("December 17, 1995 03:24:00");
 console.log(Number(d));
 // 819199440000가 기록된다.
 ```
@@ -147,19 +147,19 @@ console.log(Number(d));
 ### 7.4. 숫자형 문자열에서 숫자로 변환
 
 ```javascript
-Number('123'); // 123
-Number('123') === 123; // true
-Number('12.3'); // 12.3
-Number('12.00'); // 12
-Number('123e-1'); // 12.3
-Number(''); // 0
+Number("123"); // 123
+Number("123") === 123; // true
+Number("12.3"); // 12.3
+Number("12.00"); // 12
+Number("123e-1"); // 12.3
+Number(""); // 0
 Number(null); // 0
-Number('0x11'); // 17
-Number('0b11'); // 3
-Number('0o11'); // 9
-Number('foo'); // NaN
-Number('100a'); // NaN
-Number('-Infinity'); // -Infinity
+Number("0x11"); // 17
+Number("0b11"); // 3
+Number("0o11"); // 9
+Number("foo"); // NaN
+Number("100a"); // NaN
+Number("-Infinity"); // -Infinity
 ```
 
 ## 8. Specification

@@ -3,14 +3,14 @@ layout: post
 title: "JavaScript Callback Function"
 date: 2022-09-27
 categories:
-- JavaScript
+  - JavaScript
 tags:
-- JavaScript
-- Higher order function
-- callback function
-- Ansynchronous
-- Asyncronous call
-- Promise
+  - JavaScript
+  - Higher order function
+  - callback function
+  - Ansynchronous
+  - Asyncronous call
+  - Promise
 ---
 
 괴물을 만났다. api를 어렵겠는데요 하더니 30초만에 짜버린다. 따라갈수 없으니 기초부터 잡고 코드리뷰를 해야겠다. 기초를 일단 보자.
@@ -35,12 +35,13 @@ tags:
 
 컴퓨터는 큐라던가 스택이라던가 요청처리의 방법이 자료구조에의해 처리되는걸로 배웠었는데, 하나의 작업을 시작하면 다음작업 요청이 대기열에서 기다리고 다음 작업 중 현재 처리되는 작업에는 간섭하지 못하는 **blocking**이 이루어진다고 배운적이 있다.
 
-0번째 작업이 끝나고 다음 1번째 작업이 시작하는 시점이 같은 상황을 **동기적(synchronous)**이라고 한다. 
+0번째 작업이 끝나고 다음 1번째 작업이 시작하는 시점이 같은 상황을 **동기적(synchronous)**이라고 한다.
 
 ## 2. 비동기 호출(Asynchronous Call)
 
 - callback
-  - 다른 함수의 전달인자(argument)로  넘겨주는 함수
+
+  - 다른 함수의 전달인자(argument)로 넘겨주는 함수
   - 파라메타를 넘겨 받는 함수는 callback함수에 따라 sychronously(즉시실행)할수도 있고, anynchronousl (나중에 실행)할수도 있다.
   - 예: iterator, event handler...
   - 함수 실행을 연결하는 것이 아니다. 함수 자체를 연결하는거다.
@@ -52,6 +53,7 @@ tags:
   - 타이머API(setTimeout...) -> Timer API 강의
   - 애니메이션 API(requestAnimationFrame) -> [Web Animations API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Animations_API)
 - 서버에 자원 요청 및 응답
+
   - fetch API -> 서버 요청하기 강의
   - AJAX(XHR) -> [Ajax Getting Started](https://developer.mozilla.org/ko/docs/Web/Guide/AJAX/Getting_Started)
 
@@ -101,7 +103,7 @@ const eventAnyThing = (callback) => {
 
     if(isStable)
         callback(null, stable);
-    
+
     if(isUnstable)
         callback(unstable, null);
 }
@@ -216,7 +218,7 @@ goToTheLoveAndWar()
 
 //사람을 만나는것과 같이 잘못사용하면 안하니만 못하다(못하는게 나을지도 주륵..).
 
-//Primise Chanining 
+//Primise Chanining
 //  -> 우리가 랩신인 에미넴선생님을 영접하는 그날같이 존경심을 담아 CleanCode를 작성해야한다.
 //최신기법(node 버전이 높아야한다.)
 const respectForTheEminem = async () => {
@@ -239,14 +241,17 @@ const respectForTheEminem = async () => {
 ## 4. Timer API
 
 > - setTimerout(callback, milisecond): 일정 시간 후 함수 실행(1_000 -> 1초)
+>
 >   - 매개변수(param): 실행할 함수, 대기 시간
 >   - return val: 임의의 타이머 ID
 >
 > - clearTimeout(timerId): setTimeout타이머 종료
+>
 >   - 매개변수(param): 타이머 ID
 >   - return val: none
 >
 > - clearInterval(timerId) setInterval(callback, millisecond): setTimeout타이머 종료
+>
 >   - 매개변수(param): 실행할 함수, 반복 간격밀리초
 >   - return val: 임의 타이머ID
 >
@@ -256,5 +261,5 @@ const respectForTheEminem = async () => {
 
 ## 참조
 
-> [MDN:Event Loop](https://developer.mozilla.org/ko/docs/Web/JavaScript/EventLoop)   
-> [Philip Roberts:Help, I'm stuck in an event-loop](https://vimeo.com/96425312)   
+> [MDN:Event Loop](https://developer.mozilla.org/ko/docs/Web/JavaScript/EventLoop)  
+> [Philip Roberts:Help, I'm stuck in an event-loop](https://vimeo.com/96425312)

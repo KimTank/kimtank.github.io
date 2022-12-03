@@ -3,42 +3,42 @@ layout: post
 title: "포트폴리오용 웹서버, HTTP서버 만들기 vol.2"
 date: 2022-10-20
 categories:
-- Personal
+  - Personal
 tags:
-- 포트폴리오
-- HTTP서버
-- Server
-- CPU명령어
-- Architecture
-- Github pages
-- Dex
-- Termux
-- NodeJS
-- Ubuntu
-- PortFowarding
-- ip
-- DDNS
-- Dynamic Domain Name System
-- Duckdns.org
-- HTTP
-- HTTPS
-- :80
-- :443
-- stack over flow
-- porting
-- VPN
-- Rooting
-- sudo
-- firmware
-- Knox
-- Bootloader unlock
-- Ubuntu Touch
-- UBport
-- UBport instroller
-- TPRM
-- Odin3
-- Debian noroot
-- Anlinux
+  - 포트폴리오
+  - HTTP서버
+  - Server
+  - CPU명령어
+  - Architecture
+  - Github pages
+  - Dex
+  - Termux
+  - NodeJS
+  - Ubuntu
+  - PortFowarding
+  - ip
+  - DDNS
+  - Dynamic Domain Name System
+  - Duckdns.org
+  - HTTP
+  - HTTPS
+  - :80
+  - :443
+  - stack over flow
+  - porting
+  - VPN
+  - Rooting
+  - sudo
+  - firmware
+  - Knox
+  - Bootloader unlock
+  - Ubuntu Touch
+  - UBport
+  - UBport instroller
+  - TPRM
+  - Odin3
+  - Debian noroot
+  - Anlinux
 ---
 
 사실 이 글을 적는 시점은 아직 시도해보지 않은게 2개가 있는 시점이다.

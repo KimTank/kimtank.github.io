@@ -3,24 +3,24 @@ layout: post
 title: "Web token"
 date: 2022-11-11
 categories:
-- Web
+  - Web
 tags:
-- Javascript
-- Web
-- Token
-- Hash
-- Sha1
-- rainbow table
-- salt
-- json web token
-- JWT
-- session
-- access token
-- refresh token
-- header
-- payload
-- signature
-- base64
+  - Javascript
+  - Web
+  - Token
+  - Hash
+  - Sha1
+  - rainbow table
+  - salt
+  - json web token
+  - JWT
+  - session
+  - access token
+  - refresh token
+  - header
+  - payload
+  - signature
+  - base64
 ---
 
 보이지 않는것을 아는 것은 매우 어렵다. 실제로 동작하는걸 확인할 수 없기 때문이다. 다른사람이 만들어놓은 라이브러리를 쓰는것과 같은 느낌이지만, 더 효율적이고 생산적인 방법이 없다면 써야지. 알아야지.
@@ -120,7 +120,7 @@ header.payload.signature
   ```
 
   악의적 공격에 탈취당하더라도 서버의 비밀키를 모른다면 Signiture가 일치하지 않아 인증이 되지 않는다.
-  
+
 ### 2-2. 절차
 
 1. from Ct to Sv access request
@@ -128,7 +128,6 @@ header.payload.signature
 3. from Sv to Ct, Ct save token.(location: [Local Storage](https://developer.mozilla.org/ko/docs/Web/API/Window/localStorage), [Session Storage](https://developer.mozilla.org/ko/docs/Web/API/Window/sessionStorage), [Cookie](https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Cookie))
 4. from Ct to Sv, HTTP header(Authoriztion header) or cookie contain token, Authorization header usage(bearer authentication, [summary](https://learning.postman.com/docs/sending-requests/authorization/#bearer-token)/[detail](https://tools.ietf.org/html/rfc6750))
 5. Sv decoding token who sended by Cv, if match true, send form Sv to Ct success response.
-
 
 Ct -> POST /login(id, pwd) request -> Sv -> id, pwd 확인(DB or store) -> JWT token created -> JWT Token response -> Ct
 
@@ -146,9 +145,9 @@ Ct -> Get /information (Headers: {Authoriztion: "Bearer JWT_TOKEN"}) -> Sv -> JW
 
 ## 참조
 
-> [convertstring: hash/sha1](https://www.convertstring.com/ko/Hash/SHA1)   
-> [mdn: local storage](https://developer.mozilla.org/ko/docs/Web/API/Window/localStorage)   
-> [mdn: session storage](https://developer.mozilla.org/ko/docs/Web/API/Window/sessionStorage)   
-> [mdn: cookie](https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Cookie)   
-> [postman: authorization/bearer token](https://learning.postman.com/docs/sending-requests/authorization/#bearer-token)   
+> [convertstring: hash/sha1](https://www.convertstring.com/ko/Hash/SHA1)  
+> [mdn: local storage](https://developer.mozilla.org/ko/docs/Web/API/Window/localStorage)  
+> [mdn: session storage](https://developer.mozilla.org/ko/docs/Web/API/Window/sessionStorage)  
+> [mdn: cookie](https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Cookie)  
+> [postman: authorization/bearer token](https://learning.postman.com/docs/sending-requests/authorization/#bearer-token)  
 > [tool ietf: rfc6750](https://tools.ietf.org/html/rfc6750)

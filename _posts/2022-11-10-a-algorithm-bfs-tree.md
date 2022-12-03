@@ -3,14 +3,14 @@ layout: post
 title: "Tree BFS 순회"
 date: 2022-11-10
 categories:
-- Algorithm
+  - Algorithm
 tags:
-- Javascript
-- Algorithm
-- codestates
-- Tree
-- BFS
-- Breadth First Search
+  - Javascript
+  - Algorithm
+  - codestates
+  - Tree
+  - BFS
+  - Breadth First Search
 ---
 
 고민 중간에 해결을 위한 논리까지는 접근했으나, 완성하지는 못하였다. 선입견에 갖혀 어버버했던거 같다.
@@ -49,21 +49,21 @@ rootChild2.addChild(new Node(7));
 output = bfs(root);
 console.log(output); // --> [1, 2, 3, 4, 5, 7, 6]
 
-  /**
-   *        1
-   *      2   3
-   *     4 5   6
-   *            7
-   * dfs: 1,2,4,5,3,6,7
-   * bfs: 1,2,3,4,5,6,7
-   */
+/**
+ *        1
+ *      2   3
+ *     4 5   6
+ *            7
+ * dfs: 1,2,4,5,3,6,7
+ * bfs: 1,2,3,4,5,6,7
+ */
 
-  /**
+/**
  *                1
  *          2     3     4
  *        5   6  9 10   13
  *       7   8    11 12
- * 
+ *
  *    1,2,3,4,5,6,9,10,13,7,8,11,12
  */
 ```
@@ -89,74 +89,73 @@ Node.prototype.addChild = function (child) {
 
 ```javascript
 // # 0. 가정
-  // # node를 풀어해쳐서 1차원 배열로 변경
-  // # 모든 배열을 1차원 배열로 만들어서 반환
+// # node를 풀어해쳐서 1차원 배열로 변경
+// # 모든 배열을 1차원 배열로 만들어서 반환
 
-  // ---------------
-  // 시도1(실패). 일반적 접근의 경우 child를 넘기면서 dfs로 검색됨
-  //첫배열
-  if(res === undefined){
-    res = [];
-    res.push(node.value);
+// ---------------
+// 시도1(실패). 일반적 접근의 경우 child를 넘기면서 dfs로 검색됨
+//첫배열
+if (res === undefined) {
+  res = [];
+  res.push(node.value);
+}
+//자식 있을 때
+if (node.children.length !== 0) {
+  for (let i = 0; i < node.children.length; i++) {
+    res.push(node.children[i].value);
   }
-  //자식 있을 때
-  if(node.children.length !== 0){
-    for(let i = 0; i < node.children.length; i++){
-      res.push(node.children[i].value);
+}
+return res;
+// -----------------
+// # 가정2. 0과같은 상상으로 합친다.
+
+//더이상 반환할 값이 없을때 체크하여 배열 반환
+//if(검증구문)
+//  return arr??
+//합치기
+if (node.children.length !== 0) {
+}
+console.log(res);
+for (let i = 0; i < res.length; i++) {
+  const el = res[i];
+  console.log(typeof el);
+  console.table(el);
+  if (typeof el === "object") {
+    console.log(el.value);
+    console.table(el.children);
+    if (el.children.length !== 0) {
+      res = [...res, el.children];
     }
+    res[i] = el.value;
   }
-  return res;
-  // -----------------
-  // # 가정2. 0과같은 상상으로 합친다.
+}
+console.log(res);
+//시도 실패 이유는 3번에서 나옴
+//---------------
+// # 시도 3. 동일
+//처음에만 풀어서
+if (!Array.isArray(node)) {
+  node = [node.value, ...node.children];
+}
 
-  //더이상 반환할 값이 없을때 체크하여 배열 반환
-  //if(검증구문)
-  //  return arr??
-  //합치기
-  if(node.children.length !== 0){
-  }
-  console.log(res);
-  for(let i = 0; i < res.length; i++){
-    const el = res[i];
-    console.log(typeof el);
-    console.table(el);
-    if(typeof el === 'object'){
-      console.log(el.value);
-      console.table(el.children);
-      if(el.children.length !== 0){
-        res = [...res, el.children]
+const temps = [];
+for (let i = 0; i < node.length; i++) {
+  if (typeof node[i] === "object") {
+    console.table("node[i]" + node[i]);
+    console.table("node[i].children" + node[i].children);
+    if (node[i].children.length !== 0) {
+      for (childNode of node[i].children) {
+        temps.push(childNode);
       }
-      res[i] = el.value;
     }
+    node[i] = node[i].value;
   }
-  console.log(res);
-  //시도 실패 이유는 3번에서 나옴
-  //---------------
-  // # 시도 3. 동일
-  //처음에만 풀어서
-  if(!Array.isArray(node)){
-    node = [node.value, ...(node.children)];
-  }
-
-  const temps = [];
-  for(let i = 0; i < node.length; i++){
-    if(typeof node[i] === 'object'){
-      console.table("node[i]" + node[i]);
-      console.table("node[i].children" + node[i].children);
-      if(node[i].children.length !== 0){
-        for(childNode of node[i].children){
-          temps.push(childNode);
-        }
-      }
-      node[i] = node[i].value
-    }
-  }
-  if(temps.length === 0)
-    return node;
-  node = [...node, temps];
-  bfs(node, node);
-  //처음 구조분해할당으로 넣어준 ...(node.children이 문제였음)
-  // [node.value, [Object], [Object]]로 대입됨, 추후 children을 찾지못함.
+}
+if (temps.length === 0) return node;
+node = [...node, temps];
+bfs(node, node);
+//처음 구조분해할당으로 넣어준 ...(node.children이 문제였음)
+// [node.value, [Object], [Object]]로 대입됨, 추후 children을 찾지못함.
 ```
 
 ## 7. reference
@@ -164,25 +163,25 @@ Node.prototype.addChild = function (child) {
 구조분해할당을 잘못이해한거같음. 얼른 블로그 재정리 후 이전 정리본과 문서를 보며 재이해의 시간을 가져야할거같다.
 
 ```javascript
-  //que에 node를 넣음
-  let queue = [node];
+//que에 node를 넣음
+let queue = [node];
 
-  //반환할 value의 모음
-  const values = [];
+//반환할 value의 모음
+const values = [];
 
-  //큐의 길이가 1미만이면 끝
-  while (queue.length > 0) {
-    //헤드
-    const head = queue[0];
-    //큐의 앞빼고
-    queue = queue.slice(1);
-    //헤드의 값을 대입
-    values.push(head.value);
-    //forEach를 사용해서 queue 반복
-    head.children.forEach((child) => queue.push(child));
-  }
-  //큐에서 모든 값이 다 빠져나왔을 때
-  return values;
+//큐의 길이가 1미만이면 끝
+while (queue.length > 0) {
+  //헤드
+  const head = queue[0];
+  //큐의 앞빼고
+  queue = queue.slice(1);
+  //헤드의 값을 대입
+  values.push(head.value);
+  //forEach를 사용해서 queue 반복
+  head.children.forEach((child) => queue.push(child));
+}
+//큐에서 모든 값이 다 빠져나왔을 때
+return values;
 ```
 
 ## 8. ref after
@@ -190,19 +189,19 @@ Node.prototype.addChild = function (child) {
 그대로 갖다쓴거 같은 이유는 내머리속에 있는 뭔가로 외워버리는게 더 효율적인거 같아서요 ㅜㅜ 내코드를 고집할만한 정당한 이유가 없는거 같아요 주륵..
 
 ```javascript
-  // # 시도4. 어버버ㅓ법ㅂ버버버 보고도 못풀면 바보
-  //parameter를 변경하는게 왠지 잘못된거같지만
-  node = [node];
-  const res = [];
-  while(node.length > 0){
-    const head = node[0];
-    node = node.slice(1);
-    res.push(head.value);
-    for(childNode of head.children){
-      node.push(childNode);
-    }
+// # 시도4. 어버버ㅓ법ㅂ버버버 보고도 못풀면 바보
+//parameter를 변경하는게 왠지 잘못된거같지만
+node = [node];
+const res = [];
+while (node.length > 0) {
+  const head = node[0];
+  node = node.slice(1);
+  res.push(head.value);
+  for (childNode of head.children) {
+    node.push(childNode);
   }
-  return res;
+}
+return res;
 ```
 
 ## 9. [쉽답니다 이거 쉬운거래요](https://www.geeksforgeeks.org/level-order-tree-traversal/)
@@ -226,71 +225,65 @@ Node.prototype.addChild = function (child) {
 ```javascript
 // Recursive javascript program for level
 // order traversal of Binary Tree
- 
+
 /* Class containing left and right child of current
    node and key value*/
- class Node {
-        constructor(val) {
-            this.data = val;
-            this.left = null;
-            this.right = null;
-        }
-    }
- 
-    // Root of the Binary Tree
-    var root= null;
-     
-    /* function to print level order traversal of tree */
-    function printLevelOrder() {
-        var h = height(root);
-        var i;
-        for (i = 1; i <= h; i++)
-            printCurrentLevel(root, i);
-    }
- 
-    /*
-     * Compute the "height" of a tree -- the number of nodes along the longest path
-     * from the root node down to the farthest leaf node.
-     */
-    function height(root) {
-        if (root == null)
-            return 0;
-        else {
-            /* compute height of each subtree */
-            var lheight = height(root.left);
-            var rheight = height(root.right);
- 
-            /* use the larger one */
-            if (lheight > rheight)
-                return (lheight + 1);
-            else
-                return (rheight + 1);
-        }
-    }
- 
-    /* Print nodes at the current level */
-    function printCurrentLevel(root , level) {
-        if (root == null)
-            return;
-        if (level == 1)
-            document.write(root.data + " ");
-        else if (level > 1) {
-            printCurrentLevel(root.left, level - 1);
-            printCurrentLevel(root.right, level - 1);
-        }
-    }
- 
-    /* Driver program to test above functions */
-     
-        root = new Node(1);
-        root.left = new Node(2);
-        root.right = new Node(3);
-        root.left.left = new Node(4);
-        root.left.right = new Node(5);
- 
-       document.write("Level order traversal of  binary tree is ");
-       printLevelOrder();
- 
+class Node {
+  constructor(val) {
+    this.data = val;
+    this.left = null;
+    this.right = null;
+  }
+}
+
+// Root of the Binary Tree
+var root = null;
+
+/* function to print level order traversal of tree */
+function printLevelOrder() {
+  var h = height(root);
+  var i;
+  for (i = 1; i <= h; i++) printCurrentLevel(root, i);
+}
+
+/*
+ * Compute the "height" of a tree -- the number of nodes along the longest path
+ * from the root node down to the farthest leaf node.
+ */
+function height(root) {
+  if (root == null) return 0;
+  else {
+    /* compute height of each subtree */
+    var lheight = height(root.left);
+    var rheight = height(root.right);
+
+    /* use the larger one */
+    if (lheight > rheight) return lheight + 1;
+    else return rheight + 1;
+  }
+}
+
+/* Print nodes at the current level */
+function printCurrentLevel(root, level) {
+  if (root == null) return;
+  if (level == 1) document.write(root.data + " ");
+  else if (level > 1) {
+    printCurrentLevel(root.left, level - 1);
+    printCurrentLevel(root.right, level - 1);
+  }
+}
+
+/* Driver program to test above functions */
+
+root = new Node(1);
+root.left = new Node(2);
+root.right = new Node(3);
+root.left.left = new Node(4);
+root.left.right = new Node(5);
+
+document.write("Level order traversal of  binary tree is ");
+printLevelOrder();
+
 // This code is contributed by umadevi9616
 ```
 
@@ -312,53 +305,53 @@ Node.prototype.addChild = function (child) {
 // Iterative Queue based javascript program
 // to do level order traversal
 // of Binary Tree
- 
+
 /* Class to represent Tree node */
 class Node {
-    constructor(val) {
-        this.data = val;
-        this.left = null;
-        this.right = null;
-    }
+  constructor(val) {
+    this.data = val;
+    this.left = null;
+    this.right = null;
+  }
 }
- 
+
 /* Class to print Level Order Traversal */
+/*
+ * Given a binary tree. Print its nodes in level order using array for
+ * implementing queue
+ */
+function printLevelOrder() {
+  var queue = [];
+  queue.push(root);
+  while (queue.length != 0) {
     /*
-     * Given a binary tree. Print its nodes in level order using array for
-     * implementing queue
+     * The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
+     * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
      */
-    function printLevelOrder() {
-        var queue = [];
-        queue.push(root);
-        while (queue.length != 0) {
-            /*
-             * The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array.
-             * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
-             */
-            var tempNode = queue.shift();
-            document.write(tempNode.data + " ");
- 
-            /* Enqueue left child */
-            if (tempNode.left != null) {
-                queue.push(tempNode.left);
-            }
- 
-            /* Enqueue right child */
-            if (tempNode.right != null) {
-                queue.push(tempNode.right);
-            }
-        }
+    var tempNode = queue.shift();
+    document.write(tempNode.data + " ");
+
+    /* Enqueue left child */
+    if (tempNode.left != null) {
+      queue.push(tempNode.left);
     }
- 
-  /* creating a binary tree and entering the nodes */
-        var root = new Node(1);
-        root.left = new Node(2);
-        root.right = new Node(3);
-        root.left.left = new Node(4);
-        root.left.right = new Node(5);
-        document.write("Level order traversal of binary tree is - ");
-        printLevelOrder();
- 
+
+    /* Enqueue right child */
+    if (tempNode.right != null) {
+      queue.push(tempNode.right);
+    }
+  }
+}
+
+/* creating a binary tree and entering the nodes */
+var root = new Node(1);
+root.left = new Node(2);
+root.right = new Node(3);
+root.left.left = new Node(4);
+root.left.right = new Node(5);
+document.write("Level order traversal of binary tree is - ");
+printLevelOrder();
+
 // This code is contributed by umadevi9616
 ```
 
@@ -370,6 +363,6 @@ class Node {
 
 ## 참조
 
-> [geeksforgeeks: level order tree traversal](https://www.geeksforgeeks.org/level-order-tree-traversal/)   
-> [wiki: Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)   
+> [geeksforgeeks: level order tree traversal](https://www.geeksforgeeks.org/level-order-tree-traversal/)  
+> [wiki: Breadth-first search](https://en.wikipedia.org/wiki/Breadth-first_search)  
 > [geeksforgeeks: dfs](https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/)

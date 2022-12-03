@@ -3,17 +3,17 @@ layout: post
 title: "웹표준 & 접근성 vol.2"
 date: 2022-11-07
 categories:
-- Web
+  - Web
 tags:
-- Web standard
-- accessibility
-- Search Engine Optimization
-- SEO
-- title
-- meta
-- Open Graph
-- hgroup
-- content
+  - Web standard
+  - accessibility
+  - Search Engine Optimization
+  - SEO
+  - title
+  - meta
+  - Open Graph
+  - hgroup
+  - content
 ---
 
 여자친구가 생길거같은 마음에 광진구를 벗어나 하남에 터를 잡았지만 뭔가 터를 옮기자마자 모테끼가 사라져, 다잡은 물고기 조차 집보고 도망간 초이동.. 여기도 음기가 쌘가 주변에 또 잘생긴 남자놈들만 잔뜩있는 지금 ㅡㅡ?(사실 늘 내주변엔 검은색이 잔뜩 나도 핑크핑크하고싶다 ㅜㅜ)
@@ -24,7 +24,7 @@ tags:
 
 내가 니네때문에 성공해야되
 
-[웹표준 & 웹접근성 vol.1](https://kimtank.github.io/web/2022/11/07/a-web-standard1.html)   
+[웹표준 & 웹접근성 vol.1](https://kimtank.github.io/web/2022/11/07/a-web-standard1.html)  
 [웹표준 & 웹접근성 vol.3](https://kimtank.github.io/web/2022/11/07/c-web-standard3.html)
 
 ---
@@ -56,7 +56,7 @@ vol.1에서도 말했듯이 semantic을 잘지킨 페이지는 검색엔진에 �
 ##### 4-1-2-1. SEO를 위한 meta
 
 ```html
-<meta name="속성값" content="내용"/>
+<meta name="속성값" content="내용" />
 ```
 
 |---|---|
@@ -100,5 +100,5 @@ hgroup의 경우 콘텐츠의 제목을 표시하는 용도인 만큼 핵심 키
 
 ## 참조
 
-> [google dev: seo guide](https://developers.google.com/search/docs/beginner/seo-starter-guide?hl=ko)   
+> [google dev: seo guide](https://developers.google.com/search/docs/beginner/seo-starter-guide?hl=ko)  
 > [naver: searchadvisor guide](https://searchadvisor.naver.com/guide)

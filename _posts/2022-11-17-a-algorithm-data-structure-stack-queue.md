@@ -3,18 +3,18 @@ layout: post
 title: "Algorithm data structure stack & queue"
 date: 2022-11-17
 categories:
-- Algorithm
+  - Algorithm
 tags:
-- Javascript
-- Algorithm
-- data structure
-- stack
-- queue
-- First In Last Out
-- Last In First Out
-- Fist In Fist Out
-- Last In Last Out
-- Circular Queue
+  - Javascript
+  - Algorithm
+  - data structure
+  - stack
+  - queue
+  - First In Last Out
+  - Last In First Out
+  - Fist In Fist Out
+  - Last In Last Out
+  - Circular Queue
 ---
 
 기피해오던 알고리즘의 이론.
@@ -67,7 +67,7 @@ tags:
    - local variable: value type, primitive, primitive constant
    - pointer
    - function frame
-3. 스택크기 제한: heap에 비해서는 스택의 크기가 제한되어있다. stack overflow조심
+4. 스택크기 제한: heap에 비해서는 스택의 크기가 제한되어있다. stack overflow조심
 
 ### 2.2. Queue
 
@@ -98,7 +98,7 @@ tags:
 
 ## 참조
 
-> [알고리즘 시각화 사이트(cs)](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)   
-> [알고리즘 시각화 사이트(visualgo)](https://visualgo.net/en/list?slide=2-8)   
-> [programiz: circular queue](https://www.programiz.com/dsa/circular-queue)   
+> [알고리즘 시각화 사이트(cs)](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)  
+> [알고리즘 시각화 사이트(visualgo)](https://visualgo.net/en/list?slide=2-8)  
+> [programiz: circular queue](https://www.programiz.com/dsa/circular-queue)  
 > [jetalog: circular queue](https://jetalog.net/119)

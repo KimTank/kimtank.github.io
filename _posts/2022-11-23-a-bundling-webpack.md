@@ -88,12 +88,13 @@ module.exports = {
   - use(필수): 변환을 수행하는데 사용되는 로더를 가르킴
   - exclude: 바벨로 컴파일하지 않을 파일이나 폴더를 지정
   - include: 반드시 컴파일해야될 파일이나 폴더 지정
-  module.rules아래 정의하지 않고, rules아래 정의 시 warning throw
+    module.rules아래 정의하지 않고, rules아래 정의 시 warning throw
 - Plugins: bundle을 최적화하거나 asset을 관리, 환경변수 주입 등의 광범위작업 수행 가능하다. require()을 통해 플러인을 요청, plugins 배열에 사용하고자 하는 plugin 추가한다. 대부분 플러그인은 사용자가 옵션을 통해 지정할 수 있다. 다른 목적으로 플러그인을 여러번 사용할 수 있기에 new 연산자를 사용해 호출하여 plugin의 instance를 생성해야한다.
 - Optimization: 최척화에 대표적으로 minimize, minimizer가 있다.
   - minimize: TerserPlugin 또는 optimization.minimize에 명시된 plugins로 bundle파일을 최소로 압축시키는 작업 여부를 결정한다.
   - minmizer: default minimizer를 커스텀된 TerserPlugin instance를 제공해서 재정의 가능하다.
 - Mode: 사용자가 원하는 값을 설정할 수 있다.
+
   - 매개변수
 
     ```bash
@@ -110,16 +111,16 @@ module.exports = {
 
     ```javascript
     const config = {
-      entry: './app.js',
+      entry: "./app.js",
       //...
     };
 
     module.exports = (env, argv) => {
-      if (argv.mode === 'development') {
-        config.devtool = 'source-map';
+      if (argv.mode === "development") {
+        config.devtool = "source-map";
       }
 
-      if (argv.mode === 'production') {
+      if (argv.mode === "production") {
         //...
       }
 
@@ -137,6 +138,7 @@ module.exports = {
       - development: 40kb
       - none: 35kb
       - production: 12kb
+
 - Browser Compatibility
 
 ---
@@ -147,11 +149,11 @@ module.exports = {
 
 ## 참조
 
-> [webpack: 왜 웹팩이야?](https://webpack.kr/concepts/why-webpack/)   
-> [webpack: main](https://webpack.kr/)   
-> [github: mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin)   
-> [github: css-minimizer-webpack-plugin](https://github.com/webpack-contrib/css-minimizer-webpack-plugin)   
-> [webpack: output-management#cleaning-up-the-dist-folder](https://webpack.kr/guides/output-management/#cleaning-up-the-dist-folder)   
-> [webpack: using-webpack-dev-server](https://webpack.kr/guides/development/#using-webpack-dev-server)   
-> [webpack: target#string](https://webpack.kr/configuration/target/#string-1)   
+> [webpack: 왜 웹팩이야?](https://webpack.kr/concepts/why-webpack/)  
+> [webpack: main](https://webpack.kr/)  
+> [github: mini-css-extract-plugin](https://github.com/webpack-contrib/mini-css-extract-plugin)  
+> [github: css-minimizer-webpack-plugin](https://github.com/webpack-contrib/css-minimizer-webpack-plugin)  
+> [webpack: output-management#cleaning-up-the-dist-folder](https://webpack.kr/guides/output-management/#cleaning-up-the-dist-folder)  
+> [webpack: using-webpack-dev-server](https://webpack.kr/guides/development/#using-webpack-dev-server)  
+> [webpack: target#string](https://webpack.kr/configuration/target/#string-1)  
 > [webpack: concepts#loaders](https://webpack.js.org/concepts#loaders)

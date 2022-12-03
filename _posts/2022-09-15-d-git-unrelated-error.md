@@ -3,12 +3,12 @@ layout: post
 title: "Git error? fatal:refusing to merge unrelated histories"
 date: 2022-09-15
 categories:
-- Git
+  - Git
 tags:
-- Git
-- fatal-error
-- refusing to merge unrelated histories
-- educative.io
+  - Git
+  - fatal-error
+  - refusing to merge unrelated histories
+  - educative.io
 ---
 
 시킨대로안하면 에러가 발생한다 ^^ 늘 그렇지만 해결하면 즐겁다.~~(해결못하면 두통이..아앙ㅇ대)~~
@@ -41,7 +41,7 @@ ty@DTHOME:~/Workspace/cs/git-parctice$ git branch -M main
 ty@DTHOME:~/Workspace/cs/git-parctice$ git status
 On branch main
 nothing to commit, working tree clean
-ty@DTHOME:~/Workspace/cs/git-parctice$ git remote add origin git@github.com:KimTank/git-practice-fuzzy-potato.git 
+ty@DTHOME:~/Workspace/cs/git-parctice$ git remote add origin git@github.com:KimTank/git-practice-fuzzy-potato.git
 ty@DTHOME:~/Workspace/cs/git-parctice$ git push -u origin main
 # 이때부터 진땀..
 To github.com:KimTank/git-practice-fuzzy-potato.git
@@ -128,7 +128,7 @@ hint: Updates were rejected because the tip of your current branch is behind
 hint: its remote counterpart. Integrate the remote changes (e.g.
 hint: 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
-# 검색해서 원인과 해결책을 찾음 :D 
+# 검색해서 원인과 해결책을 찾음 :D
 # 하지만 master는 노예제도를 연상시킨다고 deprecate feat.운도샘
 ty@DTHOME:~/Workspace/cs/git-parctice$ git pull origin master --allow-unrelated-histories
 fatal: could not find remote ref master

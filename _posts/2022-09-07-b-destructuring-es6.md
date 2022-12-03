@@ -3,14 +3,14 @@ layout: post
 title: "JavaScript Destructuring in ES6"
 date: 2022-09-07
 categories:
-- JavaScript
+  - JavaScript
 tags:
-- JavaScript
-- ES6
-- ECMAScript6(2015)
-- spread
-- rest
-- destructuring
+  - JavaScript
+  - ES6
+  - ECMAScript6(2015)
+  - spread
+  - rest
+  - destructuring
 ---
 
 ES6에서 나온 문법들 중에 기존 문법들을 함축할 수 있는 문법들을 보면서 늘 든 생각이지만. 효율적이고 좋다. 알아보면 그렇고 모르면 아니다. 누구에게는 클린코드이고 누구에게는 아니다. 내가 더 알면 알 수 록 좋은것이 지식이다. 공부하자 :D
@@ -25,16 +25,19 @@ ES6에서 나온 문법들 중에 기존 문법들을 함축할 수 있는 문�
 
 ```javascript
 let name, age, rest;
-[name, age, ...rest] = ['ty',
-    30,
-    'sw', 'wd', 'dr', 'mm', 'bm'];
+[name, age, ...rest] = ["ty", 30, "sw", "wd", "dr", "mm", "bm"];
 
-name;   //'ty'
-age;    //30
-rest;   //['sw', 'wd', 'dr', 'mm', 'bm']
+name; //'ty'
+age; //30
+rest; //['sw', 'wd', 'dr', 'mm', 'bm']
 
 //  ( {...} = {...} )  괄호를 빼면 syntax error ()필수 => 하단 객체에서 이미지 첨부
-({name, age, ...rest} = {name: 'bulls', age: 30, univ: 'cs', job: 'mechanic'});
+({ name, age, ...rest } = {
+  name: "bulls",
+  age: 30,
+  univ: "cs",
+  job: "mechanic",
+});
 name; // bull
 age; // 30
 rest; // {univ: 'cs', job: 'mechanic'}
@@ -60,7 +63,7 @@ bulls;  //194
 
 ```javascript
 let dt, nb;
-[dt, nb] = ['win10', 'ubuntu20.04'];
+[dt, nb] = ["win10", "ubuntu20.04"];
 
 dt; //win10
 nb; //ubuntu20.04
@@ -80,26 +83,24 @@ const [a=1, b=2] = ['google'];  //const로 재선언 불가
 ### 3.4. 변수 값 교환(swap)
 
 ```javascript
-let good = 'christ';
-let evil = 'antichrist'
-
-[good, evil] = [evil, good];
-good;   // antichrist
-evil;   // christ
+let good = "christ";
+let evil = ("antichrist"[(good, evil)] = [evil, good]);
+good; // antichrist
+evil; // christ
 //히익
 ```
 
-> 일반 다른 언어에서 swap을 하고 싶으면 임시 변수를 따로 두어야한다.   
+> 일반 다른 언어에서 swap을 하고 싶으면 임시 변수를 따로 두어야한다.  
 > [로우레벨 언어 XOR교체 트릭(XOR연산을이용한 처리과정)...Wikipedia](https://en.wikipedia.org/wiki/XOR_swap_algorithm)
 
 ### 3.5. 함수가 반환한 배열 분석
 
 ```javascript
-const getBike = () => ['mtb', 'road', 'minivelo'];
+const getBike = () => ["mtb", "road", "minivelo"];
 
 let [mine, yours, lovely] = getBike();
-mine;   //mtb
-yours;  //road
+mine; //mtb
+yours; //road
 lovely; //minivelo
 ```
 
@@ -107,21 +108,21 @@ lovely; //minivelo
 
 ```javascript
 let [mine, , lovely] = getBike();
-mine;   //mtb
+mine; //mtb
 lovely; //minivelo
 
-let [,,] = getBike();   //모두무시
+let [, ,] = getBike(); //모두무시
 
 let [mine, ...yours] = getBike();
-mine;   //mtb
-yours;  //[road, minivelo]
+mine; //mtb
+yours; //[road, minivelo]
 ```
 
 ### 3.7. 변수에 배열의 나머지를 할당
 
 ```javascript
-let [mine, ...others] = ['AbsRing', 'goldenRing', 'silverRing', 'copperRing'];
-mine;   //AbsRing
+let [mine, ...others] = ["AbsRing", "goldenRing", "silverRing", "copperRing"];
+mine; //AbsRing
 others; //['goldenRing', 'silverRing', 'copperRing']
 
 //[a, b, ...c,] = [1,2,3,4,5]; syntaxError 발생 spread뒤 쉼표 금지
@@ -136,11 +137,11 @@ others; //['goldenRing', 'silverRing', 'copperRing']
 ### 4.1. 기본 할당
 
 ```javascript
-let person = {name: 'ty', age: 30};
-const {name, age} = person;
+let person = { name: "ty", age: 30 };
+const { name, age } = person;
 
-name;   //ty
-age;    //30
+name; //ty
+age; //30
 ```
 
 ### 4.2. 선언 없는 할당
@@ -156,25 +157,25 @@ age;    //30
 배열과는 달리 속성을 해체하여 객체의 원래 속성명과는 다른 이름의 변수에 할당이 가능하다.
 
 ```javascript
-let {name: shortName, age: ageBeforeSevenYear} = person;
-shortName;  //ty
+let { name: shortName, age: ageBeforeSevenYear } = person;
+shortName; //ty
 ageBeforeSevenYear; // 30
 ```
 
 ### 4.4. 기본값
 
 ```javascript
-let {state = 'normal', feel = 'stable'} = {state: 'upset'};
-state;  //upset
-feel;   //stable
+let { state = "normal", feel = "stable" } = { state: "upset" };
+state; //upset
+feel; //stable
 ```
 
 ### 4.5. 기본값 갖는 새로운 이름의 변수에 할당
 
 ```javascript
-let {me: state = 'normal', you: feel = 'stable'} = {me: 'happy'};
-state;  //happy
-feel;   //stable
+let { me: state = "normal", you: feel = "stable" } = { me: "happy" };
+state; //happy
+feel; //stable
 ```
 
 ### 4.6. 함수 매개변수의 기본값 설정
@@ -185,7 +186,7 @@ feel;   //stable
 //ES5
 function drawChart(options) {
   options = options === undefined ? {} : options;
-  var size = options.size === undefined ? 'big' : options.size;
+  var size = options.size === undefined ? "big" : options.size;
   var cords = options.cords === undefined ? { x: 0, y: 0 } : options.cords;
   var radius = options.radius === undefined ? 25 : options.radius;
   console.log(size, cords, radius);
@@ -193,7 +194,7 @@ function drawChart(options) {
 }
 
 //ES2015 MDN
-function drawChart({size = 'big', cords = { x: 0, y: 0 }, radius = 25} = {}) {
+function drawChart({ size = "big", cords = { x: 0, y: 0 }, radius = 25 } = {}) {
   console.log(size, cords, radius);
   // 차트 그리기 수행
 }
@@ -201,42 +202,48 @@ function drawChart({size = 'big', cords = { x: 0, y: 0 }, radius = 25} = {}) {
 //사용은 동일
 drawChart({
   cords: { x: 18, y: 30 },
-  radius: 30
+  radius: 30,
 });
 //매우 축약하였다. 물론 알면 보이고 안보이면 모르는건 현실
 ```
 
-> ES2015의 파라메타의 내를 보면 빈객체를 할당하였는데, 없어도 상관없지만, 객체를 전달하지 않았을때도 사용가능하려면 객체를 할당하여 하는것을 더 유용하다고한다.   만약 객체임을 검증하는 코드를 심어서 오류를 던지거나, 이전에 이미 객체일때 동작하도록 verify 후 인자로 전달한다면 사실 크게 상관은 없을 것 같으나, MDN에서는 이방법을 더 유용하다고 표현하였다.   어디까지 에러로 볼 것인가는 기획과 개발, 유저의 입장에서 다 다를 것이지만. 그정도 구분은 명확하게 설계하여 들어간다면 이와같은 문제가 유용할 수도? 아닐수도 있을거라 생각한다.
+> ES2015의 파라메타의 내를 보면 빈객체를 할당하였는데, 없어도 상관없지만, 객체를 전달하지 않았을때도 사용가능하려면 객체를 할당하여 하는것을 더 유용하다고한다. 만약 객체임을 검증하는 코드를 심어서 오류를 던지거나, 이전에 이미 객체일때 동작하도록 verify 후 인자로 전달한다면 사실 크게 상관은 없을 것 같으나, MDN에서는 이방법을 더 유용하다고 표현하였다. 어디까지 에러로 볼 것인가는 기획과 개발, 유저의 입장에서 다 다를 것이지만. 그정도 구분은 명확하게 설계하여 들어간다면 이와같은 문제가 유용할 수도? 아닐수도 있을거라 생각한다.
 
 ### 4.7. 중첩된 객체 및 배열의 구조분해
 
 ```javascript
 //MDN예제 읽어보면 어디서 분해해왔는지 알 수 있다.
 var metadata = {
-    title: "Scratchpad",
-    translations: [
-       {
-        locale: "de",
-        localization_tags: [ ],
-        last_edit: "2014-04-14T08:43:37",
-        url: "/de/docs/Tools/Scratchpad",
-        title: "JavaScript-Umgebung"
-       }
-    ],
-    url: "/en-US/docs/Tools/Scratchpad"
+  title: "Scratchpad",
+  translations: [
+    {
+      locale: "de",
+      localization_tags: [],
+      last_edit: "2014-04-14T08:43:37",
+      url: "/de/docs/Tools/Scratchpad",
+      title: "JavaScript-Umgebung",
+    },
+  ],
+  url: "/en-US/docs/Tools/Scratchpad",
 };
 
-var { title: englishTitle, translations: [{ title: localeTitle }] } = metadata;
+var {
+  title: englishTitle,
+  translations: [{ title: localeTitle }],
+} = metadata;
 
 console.log(englishTitle); // "Scratchpad"
-console.log(localeTitle);  // "JavaScript-Umgebung"
+console.log(localeTitle); // "JavaScript-Umgebung"
 ```
 
 ### 4.8. for of 반복문과 구조 분해
 
 ```javascript
 //MDN 읽어보세요
-for (var {name: n, family: { father: f } } of people) {
+for (var {
+  name: n,
+  family: { father: f },
+} of people) {
   console.log("Name: " + n + ", Father: " + f);
 }
 
@@ -248,11 +255,11 @@ for (var {name: n, family: { father: f } } of people) {
 
 ```javascript
 //MDN 예제 읽어서 어떻게 접근했는지 이해해야한다.
-function userId({id}) {
+function userId({ id }) {
   return id;
 }
 
-function whois({displayName: displayName, fullName: {firstName: name}}){
+function whois({ displayName: displayName, fullName: { firstName: name } }) {
   console.log(displayName + " is " + name);
 }
 
@@ -260,9 +267,9 @@ var user = {
   id: 42,
   displayName: "jdoe",
   fullName: {
-      firstName: "John",
-      lastName: "Doe"
-  }
+    firstName: "John",
+    lastName: "Doe",
+  },
 };
 
 console.log("userId: " + userId(user)); // "userId: 42"
@@ -272,17 +279,17 @@ whois(user); // "jdoe is John"
 ### 4.10. 계산된 속성 이름과 구조 분해
 
 ```javascript
-let key = 'id';
-let { [key]: gID } = {id: 'suuor'};
+let key = "id";
+let { [key]: gID } = { id: "suuor" };
 
-gID;    //suuor
+gID; //suuor
 ```
 
 ### 4.11. 객체 구조분해에서 Rest
 
 ```javascript
 //MDN 대체 이정도까지의 문법을 무조건 써야하는 이유는 왜 안나와있지
-let {a, b, ...rest} = {a: 10, b: 20, c: 30, d: 40}
+let { a, b, ...rest } = { a: 10, b: 20, c: 30, d: 40 };
 a; // 10
 b; // 20
 rest; // { c: 30, d: 40 }
@@ -292,8 +299,8 @@ rest; // { c: 30, d: 40 }
 
 ```javascript
 //쓰지 말라고하는 변수명을 쓸수있단 말을 하고있는거 같은데, 대체할 유효한 식별자명을 제공해라고한다.
-const foo = { 'fizz-buzz': true };
-const { 'fizz-buzz': fizzBuzz } = foo;
+const foo = { "fizz-buzz": true };
+const { "fizz-buzz": fizzBuzz } = foo;
 
 console.log(fizzBuzz); // "true"
 ```

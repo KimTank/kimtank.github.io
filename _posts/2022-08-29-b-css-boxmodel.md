@@ -3,18 +3,18 @@ layout: post
 title: "CSS Box Model"
 date: 2022-08-29
 categories:
-- CSS
+  - CSS
 tags:
-- CSS
-- box-model
-- border
-- padding
-- margin
-- display
-- relative-unit
-- percentage
-- em
-- rem
+  - CSS
+  - box-model
+  - border
+  - padding
+  - margin
+  - display
+  - relative-unit
+  - percentage
+  - em
+  - rem
 ---
 
 오늘은 아마 재빨리 끝나면 새벽이지 싶다. CSS는 역시 양이 ~~너무많아서 행볶는다.~~
@@ -172,21 +172,21 @@ em의 단점을 보완해서 나온것이다.
 
 ```html
 <div>
-<ul>
-  <li>
-  A: 나는 부모의 1.5em, 1.5배 커진다.
-    <ul>
-      <li>나는 부모(A: 1.5em, 1.5배 커짐)보다 또 1.5배 커진다.</li>
-    </ul>
-  </li>
-  <li>A: 나는 부모의 1.5em, 1.5배 커진다.</li>
-</ul>
+  <ul>
+    <li>
+      A: 나는 부모의 1.5em, 1.5배 커진다.
+      <ul>
+        <li>나는 부모(A: 1.5em, 1.5배 커짐)보다 또 1.5배 커진다.</li>
+      </ul>
+    </li>
+    <li>A: 나는 부모의 1.5em, 1.5배 커진다.</li>
+  </ul>
 </div>
 ```
 
 ```css
 div {
-  font-size: 10px
+  font-size: 10px;
 }
 ul {
   /* ul의 중첩되어 1.5배 2번 커졌다. 소수점으로가면 0.5 * 0.5배 작아짐 */
@@ -198,5 +198,5 @@ ul {
 
 ## 참조
 
-> [MDN:CSS/Box Model](https://developer.mozilla.org/ko/docs/Learn/CSS/Building_blocks/The_box_model)   
+> [MDN:CSS/Box Model](https://developer.mozilla.org/ko/docs/Learn/CSS/Building_blocks/The_box_model)  
 > [MDN:CSS/Value & Unit](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Values_and_Units)

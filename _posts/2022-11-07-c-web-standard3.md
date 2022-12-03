@@ -3,28 +3,28 @@ layout: post
 title: "웹표준 & 접근성 vol.3"
 date: 2022-11-07
 categories:
-- Web
+  - Web
 tags:
-- Web standard
-- accessibility
-- Web Content Accessibility Giudlines 2.0
-- WCAG
-- 한국형 웹 콘텐츠 접근성 지침
-- Perceivable
-- Operable
-- Understadable
-- Robust
-- WAI-ARIA
-- role
-- state
-- property
+  - Web standard
+  - accessibility
+  - Web Content Accessibility Giudlines 2.0
+  - WCAG
+  - 한국형 웹 콘텐츠 접근성 지침
+  - Perceivable
+  - Operable
+  - Understadable
+  - Robust
+  - WAI-ARIA
+  - role
+  - state
+  - property
 ---
 
 나는 냄새를 맡지 못하는 후각 장애다. 타인이 맡는 냄새를 맡지 못한다는 것은 불편한일이다. 케잌의 달콤한 냄새나 떡볶이의 매콤한향, 꽃밭의 향긋한 꽃내음조차도 내게는 무미건조한 그냥 시각적인 정보일 뿐이다. 이처럼 6감 중 하나인 후각도 살아가면서 잃는게 많은데, 국가에서 인정하는 장애를 가진 유저들은 WWW을 통해 얻을 수 있는 정보의 사각지대에 놓일 수 있다.
 
 현대사회는 공평성보다는 형평성이 중요한 사회이다. semantic 요소를 사용하여 문서의 헤더를 명시하는 것 처럼, 모두에게는 형평성에 맞게 정보를 접근할 수 있는 기회는 주어져야한다.
 
-[웹표준 & 웹접근성 vol.1](https://kimtank.github.io/web/2022/11/07/a-web-standard1.html)   
+[웹표준 & 웹접근성 vol.1](https://kimtank.github.io/web/2022/11/07/a-web-standard1.html)  
 [웹표준 & 웹접근성 vol.2](https://kimtank.github.io/web/2022/11/07/b-web-standard2.html)
 
 ---
@@ -63,16 +63,17 @@ Web Accessibility를 통해 장애인, 고령자 등이 웹에서 제공하는 �
    - 배경 이미지와 같이 정보를 인식할 필요가 없는 경우 alt값을 `""`로 두어 스크린 리더가 인식하지 못하게 한다.
    - 인접요소의 내용에서 이미지의 정보를 인지할 수 있는 경우에는 작성하지 않는다.(정보 중복)
 2. 자막: 멀티미디어 콘텐츠 자막, 원고 또는 수화 제공
+
    - 자막을 포함한 동영상 사용
    - 자막을 지원하는 멀티미디어 플랫폼 사용
    - 비디오 요소 안 track요소를 사용하여 자막 불러오기
 
-    ```html
-    <video ..>
-        <track src="@subAddr" kind="captions">
-    </video>
-    <!-- Web Video Text Tracks, .vtt파일 또는 Timed Text Markup Language(TTML)형식 -->
-    ```
+   ```html
+   <video ..>
+     <track src="@subAddr" kind="captions" />
+   </video>
+   <!-- Web Video Text Tracks, .vtt파일 또는 Timed Text Markup Language(TTML)형식 -->
+   ```
 
 3. 색에 무관한 콘텐츠 인식: 콘텐츠는 색에 관계 없이 인식될 수 있어야 한다.
    - 색약 색맹 등의 색을 인지하는데 어려움이 있는 사용자의 경우 색으로 구분되는 콘텐츠 파악이 불가하다.
@@ -123,7 +124,7 @@ Web Accessibility를 통해 장애인, 고령자 등이 웹에서 제공하는 �
 이해의 용이성: 콘텐츠는 이해할 수 있어야 한다.
 
 1. 기본 언어 표시: 주로 사용하는 언어를 명시한다.
-    - html요소에 lang속성을 사용하여 제공한다. 추가 언어가 있을 경우 해당 요소에 lang 속성을 표기한다.
+   - html요소에 lang속성을 사용하여 제공한다. 추가 언어가 있을 경우 해당 요소에 lang 속성을 표기한다.
 2. 사용자 요구에 따른 실행: 사용자가 의도하지 않은 기능(새창, 초점에 의한 맥락 변화 등)은 실행되지 않아야 한다.
    - 페이지 진입 시 팝업이 뜨지 않게 해야하며, 화면을 가리는 레이어(모달)가 있는 경우, 가장 상단에 제공, 가장 먼저 제어할 수 있게한다.
    - 스크린 리더 사용자는 새창이 떳을 시 인지하지 못하고, 기존 페이지를 보고 있다고 생각할 수 있으니, 새창임을 알려야한다.
@@ -131,21 +132,22 @@ Web Accessibility를 통해 장애인, 고령자 등이 웹에서 제공하는 �
      - `<a href="@addr" title="새 창">어떤링크</a>`
      - `<a href="@addr" target="_blank">어떤링크</a>`
 3. 콘텐츠 선형 구조: 콘텐츠는 논리적인 순서로 제공한다.
+
    - 제목, 내용으로 논리적구성한다.
 
-    ```html
-    <!-- XXXXXXX 1 -> 2 -> 1내용 -> 2내용 -->
-    <div>1</div>
-    <div>2</div>
-    <div>1content</div>
-    <div>2content</div>
+   ```html
+   <!-- XXXXXXX 1 -> 2 -> 1내용 -> 2내용 -->
+   <div>1</div>
+   <div>2</div>
+   <div>1content</div>
+   <div>2content</div>
 
-    <!-- OOOOOOOO 순차적으로 -->
-    <div>3</div>
-    <div>3content</div>
-    <div>4</div>
-    <div>4content</div>
-    ```
+   <!-- OOOOOOOO 순차적으로 -->
+   <div>3</div>
+   <div>3content</div>
+   <div>4</div>
+   <div>4content</div>
+   ```
 
 4. 표의 구성: 표는 이해하기 쉽게 구성한다.
    - 비장애인이 표를 봤을 때 구조를 인식할 수 있지만, 장애인은 구조를 파악할 수 없다. 듣거나, 다른 전달 수단을 통해 구조 내용을 이해하기 쉽게 구성해야 한다.
@@ -156,10 +158,10 @@ Web Accessibility를 통해 장애인, 고령자 등이 웹에서 제공하는 �
    - 사용자가 정보를 입력하는 상황에, 어떤 정보를 입력해야 하는지 정확하게 알 수 없으면 입력이 불가능하다.
      - X -> `<input type="text" placeholder='id'>`
      - O -> `<label for="id">아이디</label>`
-            `<input id="id" type="text" placeholder="아이디" />`
+       `<input id="id" type="text" placeholder="아이디" />`
      - O -> `<input type="text" title="아이디" placeholder="아이디" />`
      - O -> WAI-ARIA `<input type="text" aria-label="아이디" placeholder="아이디" />`
-            우선순위 HTML속성 > WAI-ARIA
+       우선순위 HTML속성 > WAI-ARIA
 6. 오류정정: 입력 오류를 정정할 수 있는 방법을 제공한다.
    - 작성 중, 제출 시 오류가 발생 시 입력했던 내용이 사라지지않고 유지되야한다.
    - 사용자에게 오류발생원인을 알려줘야한다.
@@ -210,7 +212,7 @@ HTML 태그 내부에 속성을 추가함으로써 의미를 부여한다.
    - aria-selected
    - aria-expanded
    - aria-hidden
-위와 같이 상태를 나타낸다.
+     위와 같이 상태를 나타낸다.
 3. 속성(Property)
    - aria-label: 요소에 라벨을 붙여주는 기능을 한다.
    - aria-live: 요소가 실시간으로 내용을 갱신하는 영역인지 표시한다. ex) alert, modal, dialog, AJAX 동기화
@@ -228,11 +230,11 @@ HTML 태그 내부에 속성을 추가함으로써 의미를 부여한다.
 
 ## 참조
 
-> [wiki: WWW](https://ko.wikipedia.org/wiki/%EC%9B%94%EB%93%9C_%EC%99%80%EC%9D%B4%EB%93%9C_%EC%9B%B9)   
-> [WCAG(Web Content Accessibility Guidelines) 2.0](https://www.w3.org/WAI/standards-guidelines/wcag/)   
-> [한국형 웹 콘텐츠 접근성 지침 2.1](http://www.wa.or.kr/board/view.asp?sn=161&page=1&search=&SearchString=&BoardID=0004&cate=)   
-> [머니투데이: 나라별 중산층 기준.. 왜 한국만 그냥 돈이야?](https://news.mt.co.kr/mtview.php?no=2013081310151367727)   
-> [Mozilla: WebVTT API](https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API)   
-> [w3c blog ttml2: main](https://w3c.github.io/ttml2/index.html)   
-> [MDN: Using ARIA, Roles, states, properties](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)   
+> [wiki: WWW](https://ko.wikipedia.org/wiki/%EC%9B%94%EB%93%9C_%EC%99%80%EC%9D%B4%EB%93%9C_%EC%9B%B9)  
+> [WCAG(Web Content Accessibility Guidelines) 2.0](https://www.w3.org/WAI/standards-guidelines/wcag/)  
+> [한국형 웹 콘텐츠 접근성 지침 2.1](http://www.wa.or.kr/board/view.asp?sn=161&page=1&search=&SearchString=&BoardID=0004&cate=)  
+> [머니투데이: 나라별 중산층 기준.. 왜 한국만 그냥 돈이야?](https://news.mt.co.kr/mtview.php?no=2013081310151367727)  
+> [Mozilla: WebVTT API](https://developer.mozilla.org/en-US/docs/Web/API/WebVTT_API)  
+> [w3c blog ttml2: main](https://w3c.github.io/ttml2/index.html)  
+> [MDN: Using ARIA, Roles, states, properties](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)  
 > [W3C: ARIA in HTML](https://www.w3.org/TR/html-aria/)

@@ -3,27 +3,27 @@ layout: post
 title: "웹표준 & 접근성 vol.1"
 date: 2022-11-07
 categories:
-- Web
+  - Web
 tags:
-- Web standard
-- accessibility
-- W3C
-- Semantic HTML
-- header
-- nav
-- aside
-- main
-- article
-- section
-- hgroup
-- footer
-- markup
-- coss browsing
+  - Web standard
+  - accessibility
+  - W3C
+  - Semantic HTML
+  - header
+  - nav
+  - aside
+  - main
+  - article
+  - section
+  - hgroup
+  - footer
+  - markup
+  - coss browsing
 ---
 
 봄인가? 이상하게 배고프고 졸린다. 춘곤증이라더니 가을이면 배부르고 갬성에 안졸려야되는거 아니냐ㅜㅜ 1시간같은 10분을 자고싶은데 요샌 거의 10분같은 1시간을 자버린다 ㅡㅡ... 우루사가 필요하다.
 
-[웹표준 & 웹접근성 vol.2](https://kimtank.github.io/web/2022/11/07/b-web-standard2.html)   
+[웹표준 & 웹접근성 vol.2](https://kimtank.github.io/web/2022/11/07/b-web-standard2.html)  
 [웹표준 & 웹접근성 vol.3](https://kimtank.github.io/web/2022/11/07/c-web-standard3.html)
 
 ---
@@ -120,9 +120,9 @@ HTML이 중요
 
 ## 참조
 
-> [w3: main](https://www.w3.org/)   
-> [codestates: main](https://www.codestates.com/?gclid=CjwKCAjwzY2bBhB6EiwAPpUpZnTaBjb9ALdrERHndByCw80PWH8-6gWz-uXRV2zSfS2OHPzPc56snBoCQzUQAvD_BwE)   
-> [mdn: semantics](https://developer.mozilla.org/ko/docs/Glossary/Semantics)   
-> [mdn: main](https://developer.mozilla.org/ko/)   
-> [can i use: main](https://caniuse.com/)   
+> [w3: main](https://www.w3.org/)  
+> [codestates: main](https://www.codestates.com/?gclid=CjwKCAjwzY2bBhB6EiwAPpUpZnTaBjb9ALdrERHndByCw80PWH8-6gWz-uXRV2zSfS2OHPzPc56snBoCQzUQAvD_BwE)  
+> [mdn: semantics](https://developer.mozilla.org/ko/docs/Glossary/Semantics)  
+> [mdn: main](https://developer.mozilla.org/ko/)  
+> [can i use: main](https://caniuse.com/)  
 > [red hat: migration](https://www.redhat.com/ko/topics/automation/what-is-it-migration)

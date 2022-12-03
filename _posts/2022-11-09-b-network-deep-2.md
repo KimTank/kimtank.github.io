@@ -3,37 +3,37 @@ layout: post
 title: "Network deep vol.2"
 date: 2022-11-09
 categories:
-- Network
+  - Network
 tags:
-- Network
-- Client
-- Server
-- Stateless
-- Connectionless
-- Representation Headers
-- Content Type
-- Content Encoding
-- Content Language
-- Content Length
-- Transfer Encoding
-- Request Headers
-- From
-- Referer
-- User Agent
-- Host
-- Origin
-- Authorization
-- Response Headers
-- Server
-- Date
-- Location
-- Allow
-- Content Negotiation Headers
-- Accept
-- Accept Charset
-- Accept Encoding
-- Accept Language
-- Quality Values
+  - Network
+  - Client
+  - Server
+  - Stateless
+  - Connectionless
+  - Representation Headers
+  - Content Type
+  - Content Encoding
+  - Content Language
+  - Content Length
+  - Transfer Encoding
+  - Request Headers
+  - From
+  - Referer
+  - User Agent
+  - Host
+  - Origin
+  - Authorization
+  - Response Headers
+  - Server
+  - Date
+  - Location
+  - Allow
+  - Content Negotiation Headers
+  - Accept
+  - Accept Charset
+  - Accept Encoding
+  - Accept Language
+  - Quality Values
 ---
 
 ㅑㅑㅑㅑㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐㅐ
@@ -54,8 +54,8 @@ tags:
 |||HTTP header X||
 |1996|HTTP/1.0|method, header added|tcp|
 |1997|HTTP/1.1 RFC2068|현재 사용버전|tcp|
-|1999|         RFC2616||tcp|
-|2014|         RFC7230~7235||tcp|
+|1999| RFC2616||tcp|
+|2014| RFC7230~7235||tcp|
 |2015|HTTP/2|성능 개선|tcp|
 |현재|HTTP/3 개발중|UDP사용 성능개선|udp|
 
@@ -165,9 +165,11 @@ Content-Length:3423
 - Accept-Charset: 클라이언트가 선호하는 문자 인코딩
 - Accept-Encoding: 클라이언트가 선호하는 압축 인코딩
 - Accept-Language: 클아이언트가 선호하는 자연 언어
+
   - A-L except: Ct(ko브라우저) -> Get /event -> Serv(다중 언어 지원, en, ko) -> Content-Language:en -> Ct(Hi)
   - A-L use: Ct(ko) -> Get /event -> A-L:ko -> Serv(다중 언어 지원, en, ko) -> Content-Language:ko -> Ct(안녕)
   - A-L complex: Ct(ko) -> Get /event -> A-L:ko -> Serv(다중 언어 중 한글없음, fr, en) -> Content-Language:fr => Ct(Bonjour)
+
     - Quality Values(q)
 
       ```json
@@ -177,14 +179,15 @@ Content-Length:3423
 
       - 0~1, 클수록 순위 높음
       - 생략 시 1
+
   - A-L Q-V use -> Get /event -> Accept-Language;ko-KR,ko;q=0.9,en-US;q=0.8,en;q=0.7 -> Serv(다중 언어 중 한글 없음, fr, en) -> Content-Language: en -> Ct(Hi)
 
 ---
 
 ## 참조
 
-> [wiki: List of HTTP header fields](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)   
-> [mdn: http/header/content-language](https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Content-Language)   
-> [mdn: http/header/content-length](https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Content-Length)   
-> [mdn: http/header/transfer-encoding](https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Transfer-Encoding)   
+> [wiki: List of HTTP header fields](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields)  
+> [mdn: http/header/content-language](https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Content-Language)  
+> [mdn: http/header/content-length](https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Content-Length)  
+> [mdn: http/header/transfer-encoding](https://developer.mozilla.org/ko/docs/Web/HTTP/Headers/Transfer-Encoding)  
 > [mdn: http/content negotiation](https://developer.mozilla.org/ko/docs/Web/HTTP/Content_negotiation)

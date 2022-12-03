@@ -3,16 +3,16 @@ layout: post
 title: "Node Cross Origin Resource Sharing"
 date: 2022-10-13
 categories:
-- NodeJS
+  - NodeJS
 tags:
-- Node
-- JavaScript
-- Cross Origin Resource Sharing
-- CORS
-- PreFlight Request
-- nodemon
-- serve
-- middleware
+  - Node
+  - JavaScript
+  - Cross Origin Resource Sharing
+  - CORS
+  - PreFlight Request
+  - nodemon
+  - serve
+  - middleware
 ---
 
 눈뜨니 침대 뭔가싶다. 껄껄
@@ -30,7 +30,7 @@ Clinet(브라우저)는 SOP에 의해 다른 출처의 리소스 공유를 막�
 ```
 X Access to fetch at 'protocol path ...' from origin 'null' has been blocked by ....html:1 CORS policy: Response to preflight reque4st doesn't pass access control check: No 'Access-Control-Allow-Origin' header is present on the requested resource. If an opaue response serves your needs, set the request's mode to 'no-cors' to fetch the resource with CORS disabled.
 
-<!-- 
+<!--
   다른 출처의 리소스 갖고오기엔 SOP로 접근 불가.
   CORS 설정으로 서버 응답 헤더에 'Access-Control-Allow-Origin'을 작성, 접근권한 얻을 수 있어.
  -->
@@ -85,7 +85,7 @@ X Access to fetch at 'protocol path ...' from origin 'null' has been blocked by 
 |---|---|---|---|
 |클라이언트||서버||
 |ㅣ|-실제 요청(Origin: path)→|ㅣ|요청|
-|ㅣ|←Response(A-C-A-O: *)-|ㅣ|수행|
+|ㅣ|←Response(A-C-A-O: \*)-|ㅣ|수행|
 
 - GET, HEAD, POST method 중 하나이다.
 - 자동으로 설정되는 헤더
@@ -106,14 +106,14 @@ X Access to fetch at 'protocol path ...' from origin 'null' has been blocked by 
   - withCredentials: true
 - Server측 요청 헤더
   - Access-Control-Allow-Credentials: true
-- Access-Control-Allow-Origin: * -> error throw -> 인증정보의 경우 출처 정확하게 설정해야 한다.
+- Access-Control-Allow-Origin: \* -> error throw -> 인증정보의 경우 출처 정확하게 설정해야 한다.
 
 ## 3. setting
 
 ### 3.1. Node.js Server
 
 ```javascript
-const http = require('http');
+const http = require("http");
 
 const server = http.createServer((req, res) => {
   // 모든 도메인
@@ -147,7 +147,6 @@ app.use(cors(options));
 app.get("/endpoint/:parameter", cors(), function (req, res, next) {
   res.json({ msg: "this is message" });
 });
-
 ```
 
 ### 3.2. Express Server
@@ -182,8 +181,8 @@ $npx serve -l portNumber client/
 
 ## 참조
 
-> [velog:soshin0112/Node.js CORS, SOP](https://velog.io/@soshin0112/Node.js-CORS-SOP-%EA%B0%9C%EB%85%90)   
-> [NodeJS:HTTP](https://nodejs.org/dist/latest-v16.x/docs/api/http.html)   
-> [NodeJS:HTTP transaction anatomic](https://nodejs.org/ko/docs/guides/anatomy-of-an-http-transaction/)   
-> [Github:Nodemon](https://github.com/remy/nodemon)   
+> [velog:soshin0112/Node.js CORS, SOP](https://velog.io/@soshin0112/Node.js-CORS-SOP-%EA%B0%9C%EB%85%90)  
+> [NodeJS:HTTP](https://nodejs.org/dist/latest-v16.x/docs/api/http.html)  
+> [NodeJS:HTTP transaction anatomic](https://nodejs.org/ko/docs/guides/anatomy-of-an-http-transaction/)  
+> [Github:Nodemon](https://github.com/remy/nodemon)  
 > [Github:Serve](https://github.com/vercel/serve)

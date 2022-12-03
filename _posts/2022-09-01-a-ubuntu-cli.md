@@ -3,15 +3,15 @@ layout: post
 title: "Linux!!!!!"
 date: 2022-08-31
 categories:
-- OS
+  - OS
 tags:
-- Linux
-- Ubuntu
-- CLI
-- Vmware
+  - Linux
+  - Ubuntu
+  - CLI
+  - Vmware
 ---
 
-처음 사용해본 OS는 Dos였다. 황금도끼라는 게임을 하기 위해 Dos에서 cd.. cd game과 같은 명령어로 golden-axe.bat?이였던가? 같은 실행구문을 치고 게임을 즐겼던 기억이 난다. 이후로는 Windows3.1, Windows95, Windows98, Windows2000?, WindowsXP를 거칠때 즈음 컴퓨터를 판매할때 가격에 OS가격도 녹아난단 것을 알고, 그때까진 컴퓨터를 사용하기 쉽게 만들어 주었고, 처음 프로그램이란걸 접하게 해주었던 마소 창업자인 빌게이츠(이후 빌형)를 신처럼 생각하다 이후로는 "와우 장사잘하는구나" 라고 생각을 바꾸었다. 
+처음 사용해본 OS는 Dos였다. 황금도끼라는 게임을 하기 위해 Dos에서 cd.. cd game과 같은 명령어로 golden-axe.bat?이였던가? 같은 실행구문을 치고 게임을 즐겼던 기억이 난다. 이후로는 Windows3.1, Windows95, Windows98, Windows2000?, WindowsXP를 거칠때 즈음 컴퓨터를 판매할때 가격에 OS가격도 녹아난단 것을 알고, 그때까진 컴퓨터를 사용하기 쉽게 만들어 주었고, 처음 프로그램이란걸 접하게 해주었던 마소 창업자인 빌게이츠(이후 빌형)를 신처럼 생각하다 이후로는 "와우 장사잘하는구나" 라고 생각을 바꾸었다.
 
 그러던 도중 인터넷 세상에서 이것저것 뒤져보던 중 리눅스를 알게되었고, 당시는 우분투같은 GUI시스템이 발전하기 전 DOS와 같은 무언가가 있구나 라는걸 알게되었었다. 그때 처음 다가온 리눅스 토발즈(이후 토형)님은 새로운 컴퓨터 세상의 신으로 다가왓었다. 그도 그럴 것이 자본주의 시장의 악랄한 장사꾼들의 OS(빌형 미안해요)를 완성되지도 않은걸 판매하고 부자가되는 것을 부정한다는 느낌의 소개글을 봐서 뭔가 독립투사같은 오픈소스진영의 철학이 마음에 불을 지핀것일지도 모른다. 당시 학생이던 나는 선조들의 독립운동이나, 학생운동, 민주화운동에대한 묘한 동경을 하고 있었기에 더욱 그랬다.
 
@@ -27,7 +27,7 @@ tags:
 
 ## 1. 터미널 사용
 
-- `ctrl` + `alt` + `t`를 이용하여 터미널을 실행시킬 수 있다. 
+- `ctrl` + `alt` + `t`를 이용하여 터미널을 실행시킬 수 있다.
 - GUI를 통해 실행시킬 수 도 있는데, `cmd`(윈도우키) + `a`를 이용하여 현재 시스템에 연결되어있는 패키지를 아이콘으로 보고 클릭하여 실행할 수 있다.
 
 > 단축키는 몰라도 우분투 환경에서는 사용하는데 무리는 없지만, 알고있으면 마우스를 휴대할 필요가없다.
@@ -121,6 +121,6 @@ $whoami
 
 ## 참조
 
-> [W3Schools:CLI](https://www.w3schools.com/whatis/whatis_cli.asp)   
-> [Ubuntu:Command Line for Beginner](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)   
+> [W3Schools:CLI](https://www.w3schools.com/whatis/whatis_cli.asp)  
+> [Ubuntu:Command Line for Beginner](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview)  
 > [CSCS&Info:Doc/Linux shell commands](https://docs.cs.cf.ac.uk/notes/linux-shell-commands/)

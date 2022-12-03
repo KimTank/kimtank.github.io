@@ -3,20 +3,20 @@ layout: post
 title: "HTTP & NETWORK 3"
 date: 2022-10-05
 categories:
-- Network
+  - Network
 tags:
-- HTTP
-- Network
-- AJAX
-- JavaScript
-- DOM
-- Fetch
-- XHR
-- XMLHttpRequest
-- SSR
-- Server Side Rendering
-- CSR
-- Client Side Rendering
+  - HTTP
+  - Network
+  - AJAX
+  - JavaScript
+  - DOM
+  - Fetch
+  - XHR
+  - XMLHttpRequest
+  - SSR
+  - Server Side Rendering
+  - CSR
+  - Client Side Rendering
 ---
 
 어마어마하군. 실제로는 방대한 양이지만 최소한으로 알 지식만 압축해놓은거같다.
@@ -133,6 +133,7 @@ fetch('http://127.0.0.1:3000/information')
 페이지가 렌더링되는 위치이다. SSR(Server Side Rendering), CSR(Client Side Rendering) CSR은 동적으로 라우팅을 관리한다.
 
 - SSR usage
+
   - SEO(Search Engine Optimization)가 우선순위인 경우
   - 웹 페이지 첫 화면 렌더링이 빠르게 필요할 경우 -> 단일 파일의 용량이 작아 유리
   - 웹 페이지가 사용자와 상호작용이 적은 경우, SSR 활용가능.
@@ -143,5 +144,5 @@ fetch('http://127.0.0.1:3000/information')
 
 ## 참조
 
-> [MDN:SEO](https://developer.mozilla.org/ko/docs/Glossary/SEO)   
+> [MDN:SEO](https://developer.mozilla.org/ko/docs/Glossary/SEO)  
 > [MDN:Progressive Web App Structure](https://developer.mozilla.org/ko/docs/Web/Progressive_web_apps/App_structure)

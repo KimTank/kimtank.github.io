@@ -3,12 +3,12 @@ layout: post
 title: "Web session"
 date: 2022-11-10
 categories:
-- Web
+  - Web
 tags:
-- Javascript
-- Web
-- session
-- sessionId
+  - Javascript
+  - Web
+  - session
+  - sessionId
 ---
 
 헐 과제 헐
@@ -44,29 +44,29 @@ Ct -> 로그인 -> Sv -> DB 저장 -> session store(sessionId, user info) -> ses
   - session: 인증에 성공한 상태(in-memory(js object) or [redis](https://redis.io/)(트랜잭션이 빠른 DB))
   - sessionId: 세션을 구분할 수 있는 id, 세션 성공을 증명할 수단이다.
 
-> 로그아웃 시   
-> 
-> - Sv: 세션 정보 삭제   
+> 로그아웃 시
+>
+> - Sv: 세션 정보 삭제
 > - Ct: 쿠키 갱신 -> Ct의 cookie임의 삭제 불가능하여, set-cookie로 Ct에게 cookie전송 시 sessionId keyVal 무효화로 갱신.
 
 ## 2. nodejs express-session 모듈(middle-ware)
 
 ```javascript
-const express = require('express');
-const session = require('express-session');
+const express = require("express");
+const session = require("express-session");
 
 const app = express();
 
 app.use(
   session({
-    secret: '@host',
+    secret: "@host",
     resave: false,
     saveUninitialized: true,
     cookie: {
-      domain: 'localhost',
-      path: '/',
+      domain: "localhost",
+      path: "/",
       maxAge: 24 * 6 * 60 * 10000,
-      sameSite: 'none',
+      sameSite: "none",
       httpOnly: false,
       secure: true,
     },
@@ -78,5 +78,5 @@ app.use(
 
 ## 참조
 
-> [github: expressjs/session](https://github.com/expressjs/session#reqsession)   
+> [github: expressjs/session](https://github.com/expressjs/session#reqsession)  
 > [redis: main](https://redis.io/)

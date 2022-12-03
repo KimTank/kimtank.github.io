@@ -3,21 +3,21 @@ layout: post
 title: "React Client Ajax 1"
 date: 2022-10-11
 categories:
-- React
+  - React
 tags:
-- JavaScript
-- React
-- Client
-- Ajax
-- Effect Hook
-- Data flow
-- state
-- Bottom up
-- Top down
-- Tree structure
-- One way data flow
-- props
-- Lifting state up
+  - JavaScript
+  - React
+  - Client
+  - Ajax
+  - Effect Hook
+  - Data flow
+  - state
+  - Bottom up
+  - Top down
+  - Tree structure
+  - One way data flow
+  - props
+  - Lifting state up
 ---
 
 월요병이 심하지만 오늘은 화요일이다. 4일뒤면 파주 통일전망대 자전거타고 룰루라랄할수있다. 룰루라랄!!!!!
@@ -66,19 +66,17 @@ export default function ParentComponent() {
   };
 
   // 1. 하위 컴포넌트가 버튼 클릭 이벤트에따라 상태를 변경함.
-  const handleButtonClick = () => {
-
-  };
+  const handleButtonClick = () => {};
 
   return (
     <div>
       <div>값은 {value} 입니다</div>
-      <ChildComponent handleButtonClick={handleButtonClick}/>
+      <ChildComponent handleButtonClick={handleButtonClick} />
     </div>
   );
 }
 
-function ChildComponent({handleButtonClick}) {
+function ChildComponent({ handleButtonClick }) {
   const handleClick = () => {
     // 이 버튼을 눌러서 부모의 상태를 바꿀 순 없을까?
     // 2. ParentComponent에서 handleButtonClick 전달
@@ -93,5 +91,5 @@ function ChildComponent({handleButtonClick}) {
 
 ## 참조
 
-> [React:JS Hello World](https://ko.reactjs.org/docs/hello-world.html)   
+> [React:JS Hello World](https://ko.reactjs.org/docs/hello-world.html)  
 > [React:JS lifting-state-up](https://ko.reactjs.org/docs/lifting-state-up.html)

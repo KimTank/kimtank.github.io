@@ -3,33 +3,33 @@ layout: post
 title: "React create-react-app"
 date: 2022-11-15
 categories:
-- React
+  - React
 tags:
-- Javascript
-- React
-- npx
-- npm
-- template
-- cra-template
-- test
-- build
-- package.json
-- src
-- script
-- eject
-- polyfill
-- es6
-- exponentiation-operator
-- rest
-- spread
-- proposal-dynamic-import
-- proposal-class-public-fields
-- jsx
-- flow
-- typescript
-- browerslist
-- babel-loader
-- bundle
+  - Javascript
+  - React
+  - npx
+  - npm
+  - template
+  - cra-template
+  - test
+  - build
+  - package.json
+  - src
+  - script
+  - eject
+  - polyfill
+  - es6
+  - exponentiation-operator
+  - rest
+  - spread
+  - proposal-dynamic-import
+  - proposal-class-public-fields
+  - jsx
+  - flow
+  - typescript
+  - browerslist
+  - babel-loader
+  - bundle
 ---
 
 동생이 잘갔다. 온 친지들은 내가 동생인줄안다 히힛 좋아할거다. 안그러면 지는거같다. 어머니께서 가족들이 모인자리에서 "자식이 다 고만고만하면 걱정이 없지만, 하나는 잘살고 하나는 지지리도 궁상이면 걱정거리가 한가득"이라길래 왠지 찔렸다. 그래도 오랜만에 친지들과 어머니 아버지 지인들을 뵈서 좋았다. 좋다고 하자 아니면 지는거같다.
@@ -163,43 +163,81 @@ IE 9, 10, 11 [폴리필](https://github.com/facebook/create-react-app/blob/main/
 ---
 
 ## [8. Updating to New Releases](https://create-react-app.dev/docs/updating-to-new-releases)
+
 ## [9. Setting Up Your Editor](https://create-react-app.dev/docs/setting-up-your-editor)
+
 ## [10. Developing Components in Isolation](https://create-react-app.dev/docs/developing-components-in-isolation)
+
 ## [11. Analyzing the Bundle Size](https://create-react-app.dev/docs/analyzing-the-bundle-size)
+
 ## [12. Using HTTPS in Development](https://create-react-app.dev/docs/using-https-in-development)
+
 ## [13. Adding a Stylesheet](https://create-react-app.dev/docs/adding-a-stylesheet)
+
 ## [14. Adding a CSS Modules Stylesheet](https://create-react-app.dev/docs/adding-a-css-modules-stylesheet)
+
 ## [15. Adding a Sass Stylesheet](https://create-react-app.dev/docs/adding-a-sass-stylesheet)
+
 ## [16. Adding a CSS Reset](https://create-react-app.dev/docs/adding-css-reset)
+
 ## [17. Post-Processing CSS](https://create-react-app.dev/docs/post-processing-css)
+
 ## [18. Adding Images, Fonts, and Files](https://create-react-app.dev/docs/adding-images-fonts-and-files)
+
 ## [19. Loading .graphql Files](https://create-react-app.dev/docs/loading-graphql-files)
+
 ## [20. Using the Public Folder](https://create-react-app.dev/docs/using-the-public-folder)
+
 ## [21. Code Splitting](https://create-react-app.dev/docs/code-splitting)
+
 ## [22. Installing a Dependency](https://create-react-app.dev/docs/installing-a-dependency)
+
 ## [23. Importing a Component](https://create-react-app.dev/docs/importing-a-component)
+
 ## [24. Using Global Variables](https://create-react-app.dev/docs/using-global-variables)
+
 ## [25. Adding Bootstrap](https://create-react-app.dev/docs/adding-bootstrap)
+
 ## [26. Adding Flow](https://create-react-app.dev/docs/adding-flow)
+
 ## [27. Adding TypeScript](https://create-react-app.dev/docs/adding-typescript)
+
 ## [28. Adding Relay](https://create-react-app.dev/docs/adding-relay)
+
 ## [29. Adding a Router](https://create-react-app.dev/docs/adding-a-router)
+
 ## [30. Adding Custom Environment Variables](https://create-react-app.dev/docs/adding-custom-environment-variables)
+
 ## [31. Making a Progressive Web App](https://create-react-app.dev/docs/making-a-progressive-web-app)
+
 ## [32. Measuring Performance](https://create-react-app.dev/docs/measuring-performance)
+
 ## [33. Creating a Production Build](https://create-react-app.dev/docs/production-build)
+
 ## [34. Running Tests](https://create-react-app.dev/docs/running-tests)
+
 ## [35. Debugging Tests](https://create-react-app.dev/docs/debugging-tests)
+
 ## [36. Proxying API Requests in Development](https://create-react-app.dev/docs/proxying-api-requests-in-development)
+
 ## [37. Fetching Data with AJAX Requests](https://create-react-app.dev/docs/fetching-data-with-ajax-requests)
+
 ## [38. Integrating with an API Backend](https://create-react-app.dev/docs/integrating-with-an-api-backend)
+
 ## [39. Title and Meta Tags](https://create-react-app.dev/docs/title-and-meta-tags)
+
 ## [40. Deployment](https://create-react-app.dev/docs/deployment)
+
 ## [41. Custom Templates](https://create-react-app.dev/docs/custom-templates)
+
 ## [42. Can I Use Decorators?](https://create-react-app.dev/docs/can-i-use-decorators)
+
 ## [43. Pre-Rendering into Static HTML Files](https://create-react-app.dev/docs/pre-rendering-into-static-html-files)
+
 ## [44. Advanced Configuration](https://create-react-app.dev/docs/advanced-configuration)
+
 ## [45. Alternatives to Ejecting](https://create-react-app.dev/docs/alternatives-to-ejecting)
+
 ## [46. Troubleshooting](https://create-react-app.dev/docs/troubleshooting)
 
 ---
@@ -214,12 +252,12 @@ react 세팅법이 다 나와있는거 같다.
 
 ## 참조
 
-> [create-react-app: custom-templates](https://create-react-app.dev/docs/custom-templates/)   
-> [npmjs: cra-template](https://www.npmjs.com/search?q=cra-template-*)   
-> [npmjs: accordproject/concerto-ui-core](https://www.npmjs.com/package/@accordproject/concerto-ui-core)   
-> [npmjs: create-cra-template](https://www.npmjs.com/package/create-cra-template)   
-> [create-react-app: running-tests](https://create-react-app.dev/docs/running-tests)   
-> [create-react-app: production-build](https://create-react-app.dev/docs/production-build)   
-> [create-react-app: deployment](https://create-react-app.dev/docs/deployment)   
-> [github: react-create-app/react-app-polifill](https://github.com/facebook/create-react-app/blob/main/packages/react-app-polyfill/README.md)   
+> [create-react-app: custom-templates](https://create-react-app.dev/docs/custom-templates/)  
+> [npmjs: cra-template](https://www.npmjs.com/search?q=cra-template-*)  
+> [npmjs: accordproject/concerto-ui-core](https://www.npmjs.com/package/@accordproject/concerto-ui-core)  
+> [npmjs: create-cra-template](https://www.npmjs.com/package/create-cra-template)  
+> [create-react-app: running-tests](https://create-react-app.dev/docs/running-tests)  
+> [create-react-app: production-build](https://create-react-app.dev/docs/production-build)  
+> [create-react-app: deployment](https://create-react-app.dev/docs/deployment)  
+> [github: react-create-app/react-app-polifill](https://github.com/facebook/create-react-app/blob/main/packages/react-app-polyfill/README.md)  
 > 본문 참조(너무많아요)

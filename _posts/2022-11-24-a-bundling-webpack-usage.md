@@ -212,7 +212,7 @@ module.exports = _; // 다른 파일에서 사용할 수 있게 export
 ```javascript
 // .webpack.config.js
 const path = require("path");
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.js",
@@ -229,9 +229,11 @@ module.exports = {
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: path.resolve(__dirname, "src", "index.html")
-  })]
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "src", "index.html"),
+    }),
+  ],
 };
 ```
 
@@ -424,5 +426,5 @@ webpack도 사용하다보면 편리한 툴일 수 밖에 없을거란 생각이
 
 ## 참조
 
-> [webpack.kr: main](https://webpack.kr/)   
+> [webpack.kr: main](https://webpack.kr/)  
 > [webpack.org: main](https://webpack.js.org/)

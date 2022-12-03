@@ -3,15 +3,15 @@ layout: post
 title: "JavaScript Variable & Boolean"
 date: 2022-09-05
 categories:
-- JavaScript
+  - JavaScript
 tags:
-- JavaScript
-- Variable
-- let
-- const
-- Syntax
-- var
-- Boolean
+  - JavaScript
+  - Variable
+  - let
+  - const
+  - Syntax
+  - var
+  - Boolean
 ---
 
 JavaScript 역시 정해진 문법이 있는 언어이고, 약속과 규칙이 있다. 정해진 문법을 사용해야 원하는 결과를 얻을 수 있다. 그 문법의 기초가 되는 변수를 알아보자
@@ -34,7 +34,7 @@ let isTrue; // 낙타법 camelCase 권장, snake_case비권장
 //let 1element // 숫자가 맨앞 안됨
 let _arg; // 밑줄가능하지만 권장하지 않음
 //변수의 이름은 한눈에 알아볼 수 있도록 직관적으로 써야됨.
-let isLuckyDay = true;//바로 알아볼 수 있어야 한다.
+let isLuckyDay = true; //바로 알아볼 수 있어야 한다.
 ```
 
 ## 3. Variable Update
@@ -47,14 +47,14 @@ nubmer += 1; //12(상기와 동일)
 // -= *= /= 가능
 
 number -= 1; //11
-number-- //11 업데이트 전의 현재 값을 보여줌(##콘솔에서)
-number //10
+number--; //11 업데이트 전의 현재 값을 보여줌(##콘솔에서)
+number; //10
 
 //JavaScript는 Type이 고정되어 있지 않다.(##주의)
 //다른 언어에서 변수 선언 시 type을 지정하여 사용하는 것과 달리
 //JavaScript는 변수의 type이 변경될 수 있다.
 //이런점이 단점이 될 경우도 있어, addon인 TypeScript가 있다.
-number = 'ty'; // type 'string'
+number = "ty"; // type 'string'
 number = false; // type 'boolean'
 number = 123; // type 'number'
 ```
@@ -95,23 +95,23 @@ true와 false값을 가진다.
 
 ```javascript
 let x = new Boolean(false);
-if(x){
-    //x true로 들어옴
+if (x) {
+  //x true로 들어옴
 }
 
 let y = false;
-if(y){
-    //primitive type false는 안들어옴
+if (y) {
+  //primitive type false는 안들어옴
 }
 
 //Boolean이 아닌값을 변환할때 Boolean 객체를 사용하면 안된다. Boolean 함수를 사용해야 한다.
-let a = Boolean(expression);    //추천
-let b = new Boolean(expression);    //비추천
+let a = Boolean(expression); //추천
+let b = new Boolean(expression); //비추천
 
 //값이 false인 Boolean 객체를 포함한 어떤 객체를 Boolean객체의 초기값으로 넘겨주더라도 새로운 Boolean 객체는 true를 가진다.(말이 좀 어려우니 코드 참조)
-let booleanObj = new Boolean(false);    //초기값 거짓
-let c = Boolean(booleanObj);    //초기값 참
-let stringObj = new String('Anything'); //문자열 객체
+let booleanObj = new Boolean(false); //초기값 거짓
+let c = Boolean(booleanObj); //초기값 참
+let stringObj = new String("Anything"); //문자열 객체
 let d = Boolean(stringObj); //초기값 참
 
 //Boolean primitive value에 Boolean object를 이용하면 안된다.
@@ -133,23 +133,23 @@ Boolean(): Boolean 객체를 생성한다.
 let bNoParam = new Boolean();
 let bZero = new Boolean(0);
 let bNull = new Boolean(null);
-let bEmptyString = new Boolean('');
+let bEmptyString = new Boolean("");
 let bfalse = new Boolean(false);
 
 //true값으로 초기화한 Boolean 객체 만들기
 let btrue = new Boolean(true);
-let btrueString = new Boolean('true');
-let bfalseString = new Boolean('false');
-let bSuLin = new Boolean('Su Lin');
+let btrueString = new Boolean("true");
+let bfalseString = new Boolean("false");
+let bSuLin = new Boolean("Su Lin");
 let bArrayProto = new Boolean([]);
 let bObjProto = new Boolean({});
 ```
 
 ## 참조
 
-> [MDN:JavaScript/Grammar&Types/Declarations](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)   
-> [MDN:let](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/let)   
-> [MDN:const](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/const)   
-> [MDN:var](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/var)   
-> [MDN:Identifier](https://developer.mozilla.org/ko/docs/Glossary/Identifier)   
+> [MDN:JavaScript/Grammar&Types/Declarations](https://developer.mozilla.org/ko/docs/Web/JavaScript/Guide/Grammar_and_types#declarations)  
+> [MDN:let](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/let)  
+> [MDN:const](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/const)  
+> [MDN:var](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Statements/var)  
+> [MDN:Identifier](https://developer.mozilla.org/ko/docs/Glossary/Identifier)  
 > [MDN:Boolean](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Boolean)

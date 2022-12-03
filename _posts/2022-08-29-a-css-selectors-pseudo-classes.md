@@ -3,24 +3,24 @@ layout: post
 title: "CSS Selectors와 Specificity"
 date: 2022-08-29
 categories:
-- CSS
+  - CSS
 tags:
-- CSS
-- Selector
-- Universal-Selector
-- Type-Selector
-- Selector-list
-- ID-Selector
-- Class-Selector
-- Descendant-Selector
-- Adjacent-Selector
-- Direct-child
-- Attribute-Selector
-- Pseudo-classes
-- Pseudo-Elements
-- The-Cascade
-- Specificity
-- Inheritance
+  - CSS
+  - Selector
+  - Universal-Selector
+  - Type-Selector
+  - Selector-list
+  - ID-Selector
+  - Class-Selector
+  - Descendant-Selector
+  - Adjacent-Selector
+  - Direct-child
+  - Attribute-Selector
+  - Pseudo-classes
+  - Pseudo-Elements
+  - The-Cascade
+  - Specificity
+  - Inheritance
 ---
 
 예습을 하고싶었건만 시간은 야속하게 흐르고, ~~내 집중력은 산으로 가고있고~~ :clap:
@@ -34,7 +34,7 @@ tags:
 
 ```css
 * {
-    property: value;
+  property: value;
 }
 ```
 
@@ -44,7 +44,7 @@ tags:
 
 ```css
 type {
-    property: value;
+  property: value;
 }
 ```
 
@@ -53,8 +53,9 @@ type {
 복수 지정 선택자
 
 ```css
-type1, type2 ...{
-    property: value;
+type1,
+type2 ... {
+  property: value;
 }
 ```
 
@@ -64,7 +65,7 @@ id 선택자, #id명, id는 페이지내 한번만, id는 최소한사용
 
 ```css
 #id {
-    property: value;
+  property: value;
 }
 ```
 
@@ -73,8 +74,8 @@ id 선택자, #id명, id는 페이지내 한번만, id는 최소한사용
 class 선택자, .class명, 비슷한 스타일끼리 묶어서 구조화할 수 있다.
 
 ```css
-.class{
-    property: value;
+.class {
+  property: value;
 }
 ```
 
@@ -83,16 +84,16 @@ class 선택자, .class명, 비슷한 스타일끼리 묶어서 구조화할 수
 자손 선택자, parent-tag child-tag(anchor tag), 부모태그 내 자식태그를 선택, class 사용가능
 
 ```css
-parenttype childtype{
-    property: value;
+parenttype childtype {
+  property: value;
 }
 
-.class childtype{
-    property: value;
+.class childtype {
+  property: value;
 }
 
 parenttype #id {
-    property: value;
+  property: value;
 }
 ```
 
@@ -102,7 +103,7 @@ parenttype #id {
 
 ```css
 type1 + type2 {
-    property: value;
+  property: value;
 }
 ```
 
@@ -112,7 +113,7 @@ type1 + type2 {
 
 ```css
 type1 > type2 {
-    property: value;
+  property: value;
 }
 ```
 
@@ -122,16 +123,16 @@ type1 > type2 {
 
 ```css
 type[attribute="value"] {
-    property: value;
+  property: value;
 }
 
 type.class {
-    property: value;
+  property: value;
 }
 
 /* include가 포함된 모든 a태그 */
 a[href*="include"] {
-    property: value;
+  property: value;
 }
 ```
 
@@ -150,17 +151,17 @@ a[href*="include"] {
 
 ```css
 type:hover {
-    property: value;
+  property: value;
 }
 
 /* 4번째 태그만 선택 */
-type:nth-of-type(4){
-    property: value;
+type:nth-of-type(4) {
+  property: value;
 }
 
 /* 2번째 태그마다 선택 */
-type:nth-of-type(2n){
-    property: value;
+type:nth-of-type(2n) {
+  property: value;
 }
 ```
 
@@ -174,12 +175,12 @@ type:nth-of-type(2n){
 
 ```css
 type::first-letter {
-    property: value;
+  property: value;
 }
 
 /* 문자 긁을시 */
-type::selection{
-    property: value;
+type::selection {
+  property: value;
 }
 ```
 
@@ -191,10 +192,10 @@ type::selection{
 
 ```css
 type-a {
-    property-a: value-a;
+  property-a: value-a;
 }
 type-a {
-    property-a: value-A;
+  property-a: value-A;
 }
 /* 적용 시 type-a 태그는 하단의 value-A가 적용된다. */
 ```
@@ -203,14 +204,16 @@ type-a {
 
 ```html
 <head>
-    <meta charset="UTF-8">
-    ...
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  ...
+  <title>Document</title>
 
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="general-styles.css">
-    // 위 링크를 적용한 후 다음 링크로 넘어가 겹치는 부분이 있을 시 아래 general-styles.css의 명세가 적용된다.
-<head>
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="general-styles.css" />
+  // 위 링크를 적용한 후 다음 링크로 넘어가 겹치는 부분이 있을 시 아래
+  general-styles.css의 명세가 적용된다.
+  <head></head>
+</head>
 ```
 
 ## 5. SPECIFICITY
@@ -220,11 +223,11 @@ type-a {
 
 ```css
 /* 예시 */
-.class type:pseudo element{
-    property: value;
+.class type:pseudo element {
+  property: value;
 }
-type:pseudo element{
-    property: value-a;
+type:pseudo element {
+  property: value-a;
 }
 /*
  chrome의 경우 .class type:pseudo element의 스타일을 우선한다.
@@ -236,16 +239,16 @@ type:pseudo element{
 
 ### 5.1. 구체적 기준의 우선도
 
-|ID|CLASS|ELEMENT|
-|---|---|---|
-|ID Selectors|Class, Attribute, Pseudo-Class Selectors|Element, Pseudo-Element Selectors|
+| ID           | CLASS                                    | ELEMENT                           |
+| ------------ | ---------------------------------------- | --------------------------------- |
+| ID Selectors | Class, Attribute, Pseudo-Class Selectors | Element, Pseudo-Element Selectors |
 
 > 좌측으로 갈수록 우선도가 높고, 우측으로 갈수록 우선도는 떨어진다.
 > 태그 내 inline 선택자의 경우 ID선택자보다 더 명시적이므로 우선한다.
 
 ### 5.2. `!important`
 
->개별스타일 지정에 사용할 수 있는 선택자
+> 개별스타일 지정에 사용할 수 있는 선택자
 
 ```html
 <div class="ty" style="color: green;">What color am I?</div>
@@ -253,15 +256,15 @@ type:pseudo element{
 
 ```css
 .ty[style*="color: green"] {
-    color: magenta !important;
+  color: magenta !important;
 }
 ```
 
->가장 우선순위로 사용됨.
+> 가장 우선순위로 사용됨.
 
 ## 참조
 
-> [MDN:CSS/Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)   
-> [MDN:CSS/Cascade&Inheritance](https://developer.mozilla.org/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#%EA%B3%84%EB%8B%A8%EC%8B%9D_cascade)   
-> [CoolColorSelect](https://coolors.co)   
+> [MDN:CSS/Selectors](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors)  
+> [MDN:CSS/Cascade&Inheritance](https://developer.mozilla.org/ko/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#%EA%B3%84%EB%8B%A8%EC%8B%9D_cascade)  
+> [CoolColorSelect](https://coolors.co)  
 > [Specificity:keegan](https://specificity.keegan.st)

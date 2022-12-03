@@ -3,11 +3,11 @@ layout: post
 title: "Codestates Agora Toy Project"
 date: 2022-09-15
 categories:
-- Codestates
+  - Codestates
 tags:
-- Web
-- Project
-- Codestates
+  - Web
+  - Project
+  - Codestates
 ---
 
 사실 문서화를 할 생각이 없었지만 문서화가 필요한 내용들이 꽤나 있어서 문서를 만들면서 진행하기로 했다.
@@ -81,6 +81,5 @@ HTML Structure의 구조를 시각화 해주는 고마운 [사이트](https://so
 
 ## 참조
 
-> [Github:KimTank/깃연습저장소](https://github.com/KimTank/git-practice-fuzzy-potato)   
-> [Github:KimTank/내아고라스테이츠만들기 포크떠왔어요](https://github.com/KimTank/fe-sprint-my-agora-states)
-> [SW.Hixie:JS/Live DOM Viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/)
+> [Github:KimTank/깃연습저장소](https://github.com/KimTank/git-practice-fuzzy-potato)  
+> [Github:KimTank/내아고라스테이츠만들기 포크떠왔어요](https://github.com/KimTank/fe-sprint-my-agora-states) > [SW.Hixie:JS/Live DOM Viewer](https://software.hixie.ch/utilities/js/live-dom-viewer/)

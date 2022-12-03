@@ -3,26 +3,26 @@ layout: post
 title: "JavaScript React SPA & Router"
 date: 2022-09-29
 categories:
-- React
+  - React
 tags:
-- JavaScript
-- React
-- SPA
-- React Router
-- Single Page Application
-- Wireframe
-- Mockup
+  - JavaScript
+  - React
+  - SPA
+  - React Router
+  - Single Page Application
+  - Wireframe
+  - Mockup
 ---
 
 근래에 경기가 힘든만큼 사람들이 집에서 숨쉬는, 내게는 필요하지만 본인에게는 필요없는 물건들을 막 던지기 시작했다.
 
 중고거래는 중학교때부터 왕왕해왔다. 당시에는 중고나라나 다나와를 통해 내능력으로는 사지못하는 물건을 싸게 구입해서 쓸만큼 쓰고, 비싸게 판매한다던지 그런 식으로 해왔다. 그게 나중에는 자동차나 자전거, 핸드폰 등 고가물건의 경우는 대부분 그런식으로 A/S(어차피 잘 안받기에)지난 물건들을 들고와 잘쓰고 다시 되파는 방식으로 해왔다.
- 
+
 중고거래라는건 전제조건이 깔린다. 1. 필요하다. 2. 시간이 많다. 3. 돈이 있다. 필요하지 않은건 없다. 다 필요하니까 사놓는거다. 하지만 잘 안쓸뿐, 돈은 없다. 하지만 싼걸사면된다(함정).. 현재의 내게는 2번이 문제였다. 사람들이 이전 중고나라카페와 다나와중고장터를 이용하던 시절에는 정보를 아는사람이나 안전결재에대한 이해가 되지 않으면 대부분 사기를 당했기에 중고에대한 인식이 매우 안좋으나, 당근마켓이라던가 헬로마켓, 번개장터, 중나(모바일) 등 중고시장이 매우 커짐에 따라, 학습하기 시작했다. 리셀이라던가 어차피 비싸게 올려도 살사람은 산다라던가? 무튼 그래서 중고시장가격이 전체적으로 올랐기에 접었던 줍줍질을 바쁘기도했고, 바쁘니 별쓸일도없어 거의 접었다가 최근. 필요하다와 시간이있다(출퇴근시간이 안들어서 2시간을 벌었다 :D)라는 핑계로 펑펑쓰기 시작했다.
 
-발단은 내물건을 팔려고 올려놓고 뭐가요새는 있나 구경하면서부터 시작일것이다. 그로서 나는 시간을 어떻게보면 비효율적으로 사용했고, 심심하면 앉아서 잠들어버리는 최악의 실수를 반복하게 된다. 오늘도 벙커침대 3개 주으러간다. 아마 이거 이후로는 티비와 필요하다면 홈시어터, 4k급 모니터 등 대부분은 새걸로 살만한 것들만 남기에 온전히 집중할 수 있는 여건을 만들겠지만. 
+발단은 내물건을 팔려고 올려놓고 뭐가요새는 있나 구경하면서부터 시작일것이다. 그로서 나는 시간을 어떻게보면 비효율적으로 사용했고, 심심하면 앉아서 잠들어버리는 최악의 실수를 반복하게 된다. 오늘도 벙커침대 3개 주으러간다. 아마 이거 이후로는 티비와 필요하다면 홈시어터, 4k급 모니터 등 대부분은 새걸로 살만한 것들만 남기에 온전히 집중할 수 있는 여건을 만들겠지만.
 
-정말 바쁘다고 거절해도 생일이라고 핑계대고 넘어오는 친구(~~화내서 삐졌다 ^^ 오지마 진짜 줘패버린다~~)들부터 생일챙겨줬다고 고맙다고 또 놀려고 핑계대는 내모습(~~할땐하자 제발 미친자야~~)까지 이젠 그것도모자라 필요함을 핑계삼아 중고거래(직거래위주)로 시간을 엄한데 쓰는 나는 혼나야한다. 
+정말 바쁘다고 거절해도 생일이라고 핑계대고 넘어오는 친구(~~화내서 삐졌다 ^^ 오지마 진짜 줘패버린다~~)들부터 생일챙겨줬다고 고맙다고 또 놀려고 핑계대는 내모습(~~할땐하자 제발 미친자야~~)까지 이젠 그것도모자라 필요함을 핑계삼아 중고거래(직거래위주)로 시간을 엄한데 쓰는 나는 혼나야한다.
 
 적어도 포스팅만은 미루지말자던 그 약속은 요단강을 건너셨나 시작의 나 데리고와라 지금의나 정신차리자. 눈깜짝할새 리액트다. 가자.
 
@@ -59,7 +59,7 @@ SPA(Single-Page Application)
 
 ### 1.3. SPA 단점
 
-1. 화면을 처음 불러올(로딩) 시 HTML파일을 리딩, `<script>`요소안의 JS파일 다시 받아온다. HTML파일은 가볍고, JS파일은 무거워질 수 밖에 없다(대부분의 기능이 여기있으니), 그러다보니 첫화면을 불러오는 시간(로딩시간)이 길어진다. 
+1. 화면을 처음 불러올(로딩) 시 HTML파일을 리딩, `<script>`요소안의 JS파일 다시 받아온다. HTML파일은 가볍고, JS파일은 무거워질 수 밖에 없다(대부분의 기능이 여기있으니), 그러다보니 첫화면을 불러오는 시간(로딩시간)이 길어진다.
 2. 검색엔진 최적화가 안좋다. 크롤링하기 어렵다는 이야기같다. HTML DOCUMENT이지만 필요기능을 JS로 구현하니 그런거같다. 하지만 천재분들이 그것조차도 긁어오도록 바꿔가는 추세이므로 점점 줄어들고 있다고는 한다.
 
 굉장히 android랑 비슷한데 맥락이 다르다. 처음의 예상과는 틀리구나.
@@ -99,7 +99,7 @@ $npm install react-router-dom@^x.x.x
 
 ```javascript
 //비구조화 할당(destructuring assignment)과 비슷하게 이용할 수 있다.
-import { BrowerRouter, Routes, Route, Link} from "react-router-dom";
+import { BrowerRouter, Routes, Route, Link } from "react-router-dom";
 ```
 
 ### 4.3. usage enviroment setting
@@ -145,10 +145,10 @@ HTML5 [History API](https://developer.mozilla.org/ko/docs/Web/API/History_API)�
 
 ```javascript
 <Routes>
-    <Route path="/" element={<main />} />
-    <Route path="/signin" element={<signin />} />
-    <Route path="/signup" element={<signup />} />
-    <Route path="*" element={<unkownrequest />} />
+  <Route path="/" element={<main />} />
+  <Route path="/signin" element={<signin />} />
+  <Route path="/signup" element={<signup />} />
+  <Route path="*" element={<unkownrequest />} />
 </Routes>
 
 // /*의 경우 지정되지 않은 주소로 접근할 시 보여주는 페이지로 이동한다.
@@ -187,7 +187,7 @@ const App = () => {
 ### 4.7. useNavigate
 
 > IMPORTANT
-> 일반적으로 'redirect'가  loders and hook action에 더 좋음.
+> 일반적으로 'redirect'가 loders and hook action에 더 좋음.
 
 ```javascript
 import { useNavigate } from "react-router-dom";
@@ -210,10 +210,10 @@ function useLogoutTimer() {
 
 ## 참조
 
-> [solwalk:UI, UX기획을 손쉽게, 와이어프레임](https://slowalk.com/2140)   
-> [디지털타임스:목업](http://www.dt.co.kr/contents.html?article_no=2007090302012269718002)   
-> [요즘IT:와이프레이밍, 목업, 프로토타이핑 뭐가 다른건가요?](https://yozm.wishket.com/magazine/detail/1306/)   
-> [위키백과:Routing](https://www.google.com/search?q=routing+%EC%9C%84%ED%82%A4&sxsrf=ALiCzsZmVMU9gSgCeT5BSiHm4mS3xGRJGA%3A1664413535880&ei=X-80Y-agNc-12roPzqysWA&ved=0ahUKEwimzMLM57j6AhXPmlYBHU4WCwsQ4dUDCA4&uact=5&oq=routing+%EC%9C%84%ED%82%A4&gs_lp=Egdnd3Mtd2l6uAED-AEBMgUQIRigATIFECEYoAHCAgoQABhHGNYEGLADwgIEECMYJ8ICBBAAGBPCAgUQABiABMICChAAGIAEGIcCGBSQBgpIkSRQ6wtYzCJwBXgAyAEAkAEAmAHFAaABgQmqAQMxLjniAwQgQRgA4gMEIEYYAIgGAQ&sclient=gws-wiz)   
-> [나무위키:Router](https://namu.wiki/w/%EB%9D%BC%EC%9A%B0%ED%84%B0)   
-> [React Router:main](https://reactrouter.com/en/main)   
+> [solwalk:UI, UX기획을 손쉽게, 와이어프레임](https://slowalk.com/2140)  
+> [디지털타임스:목업](http://www.dt.co.kr/contents.html?article_no=2007090302012269718002)  
+> [요즘IT:와이프레이밍, 목업, 프로토타이핑 뭐가 다른건가요?](https://yozm.wishket.com/magazine/detail/1306/)  
+> [위키백과:Routing](https://www.google.com/search?q=routing+%EC%9C%84%ED%82%A4&sxsrf=ALiCzsZmVMU9gSgCeT5BSiHm4mS3xGRJGA%3A1664413535880&ei=X-80Y-agNc-12roPzqysWA&ved=0ahUKEwimzMLM57j6AhXPmlYBHU4WCwsQ4dUDCA4&uact=5&oq=routing+%EC%9C%84%ED%82%A4&gs_lp=Egdnd3Mtd2l6uAED-AEBMgUQIRigATIFECEYoAHCAgoQABhHGNYEGLADwgIEECMYJ8ICBBAAGBPCAgUQABiABMICChAAGIAEGIcCGBSQBgpIkSRQ6wtYzCJwBXgAyAEAkAEAmAHFAaABgQmqAQMxLjniAwQgQRgA4gMEIEYYAIgGAQ&sclient=gws-wiz)  
+> [나무위키:Router](https://namu.wiki/w/%EB%9D%BC%EC%9A%B0%ED%84%B0)  
+> [React Router:main](https://reactrouter.com/en/main)  
 > [React Router:useNagative](https://reactrouter.com/en/main/hooks/use-navigate)

@@ -3,25 +3,25 @@ layout: post
 title: "HTTP & NETWORK 2"
 date: 2022-10-05
 categories:
-- Network
+  - Network
 tags:
-- HTTP
-- Network
-- HTTP Messages
-- Requests
-- Responses
-- start line
-- HTTP headers
-- General header
-- Request header
-- Representation header
-- empty line
-- body
-- Single-Resource bodies
-- Multiple-Resource bodies
-- Responses head
-- payload
-- Stateless
+  - HTTP
+  - Network
+  - HTTP Messages
+  - Requests
+  - Responses
+  - start line
+  - HTTP headers
+  - General header
+  - Request header
+  - Representation header
+  - empty line
+  - body
+  - Single-Resource bodies
+  - Multiple-Resource bodies
+  - Responses head
+  - payload
+  - Stateless
 ---
 
 양이 방대하지만 평소같았으면 찾아보진않고 넘어갈 좋은 내용들이 많다 가자!!
@@ -85,8 +85,8 @@ HTTP header에 포함되는 start line에는 세가지 정보가 있다.
      - GET http://developer.mozilla.org/en-US/docs/Web/HTTP/Messages HTTP/1.1
    - authority: Domain name & Port number로 이루어진 URL의 일부분이다. HTTP 터널을 구축하는 경우 CONNECT와 함께 사용할 수 있다.
      - CONNECT developer.mozilla.org:80 HTTP/1.1
-   - asterisk: OPTIONS와 함께 *로 서버 전체를 표현한다.
-     - OPTIONS * HTTP/1.1
+   - asterisk: OPTIONS와 함께 \*로 서버 전체를 표현한다.
+     - OPTIONS \* HTTP/1.1
 3. HTTP 버전에 따라 HTTP message의 structure가 달라진다.
 
 ### 6.2. Headers
@@ -178,8 +178,8 @@ Responses의 Content는 HTTP Messages Structure의 마지막에 위치한다. �
 
 ## 참조
 
-> [Wikipedia:payload](https://ko.wikipedia.org/wiki/%ED%8E%98%EC%9D%B4%EB%A1%9C%EB%93%9C_(%EC%BB%B4%ED%93%A8%ED%8C%85))   
-> [99C0RN:HTTP Request/Response Structure](https://hahahoho5915.tistory.com/62)   
-> [MDN:HTML forms](https://developer.mozilla.org/en-US/docs/Learn/Forms)   
-> [MDN:Representation header](https://developer.mozilla.org/en-US/docs/Glossary/Representation_header)   
+> [Wikipedia:payload](<https://ko.wikipedia.org/wiki/%ED%8E%98%EC%9D%B4%EB%A1%9C%EB%93%9C_(%EC%BB%B4%ED%93%A8%ED%8C%85)>)  
+> [99C0RN:HTTP Request/Response Structure](https://hahahoho5915.tistory.com/62)  
+> [MDN:HTML forms](https://developer.mozilla.org/en-US/docs/Learn/Forms)  
+> [MDN:Representation header](https://developer.mozilla.org/en-US/docs/Glossary/Representation_header)  
 > [MDN:HTTP messages](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages)

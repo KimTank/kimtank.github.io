@@ -3,25 +3,25 @@ layout: post
 title: "Ubuntu init"
 date: 2022-11-01
 categories:
-- OS
+  - OS
 tags:
-- Unix
-- Linux
-- Ubuntu
-- Linus Benedict Torvalds
-- Windows11
-- Windosw10
-- wsl
-- wsl2
-- git
-- gh
-- sudo
-- su
-- passwd
-- nvm
-- node version manager
-- nodeJS
-- npm
+  - Unix
+  - Linux
+  - Ubuntu
+  - Linus Benedict Torvalds
+  - Windows11
+  - Windosw10
+  - wsl
+  - wsl2
+  - git
+  - gh
+  - sudo
+  - su
+  - passwd
+  - nvm
+  - node version manager
+  - nodeJS
+  - npm
 ---
 
 Os는 경이롭다. Dos, Win 3.1, Win95, Win98, WinNT, Win2000, WinXP, Win7, Win10, Win11까지 자본주의에 이념에 맞게 계속하여 새로운 시도와 새로운 사용자경험을 할 수 있게 해준다. 중간중간 실패한 버전들도 있었지만, Cpu나 메인보드 인터페이스에 맞는 지원을 위해 아낌없이 R&D에 투자하는 마소는 역시 미워할수없다.
@@ -191,7 +191,6 @@ code .
 ```
 
 ![https://docs.microsoft.com/ko-kr/windows/wsl/media/wsl-open-vs-code.gif](https://docs.microsoft.com/ko-kr/windows/wsl/media/wsl-open-vs-code.gif)
-
 
 - VScode Gui 좌측하단 >< 탭 클릭 후 `새 WSL 창`
 
@@ -365,7 +364,7 @@ sudo apt install gh
 
 ## 참조
 
-> [WSL한국포럼: first-step](https://wslhub.com/wsl-firststep/)   
-> [git:main](https://git-scm.com/)   
-> [nvm:main](https://github.com/nvm-sh/nvm)   
+> [WSL한국포럼: first-step](https://wslhub.com/wsl-firststep/)  
+> [git:main](https://git-scm.com/)  
+> [nvm:main](https://github.com/nvm-sh/nvm)  
 > [git cli:main](https://cli.github.com/)

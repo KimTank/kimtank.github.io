@@ -3,13 +3,13 @@ layout: post
 title: "HTML table"
 date: 2022-08-27T00:00:00-00:00
 categories:
-- HTML
+  - HTML
 tags:
-- HTML
-- table
+  - HTML
+  - table
 ---
 
-주말에도 가즈아아아아앙ㅇㅇ
+주말에도 가즈아아아아앙ㅋㅇㅇ
 
 ## 1. `HTML` `table`???
 

@@ -3,25 +3,25 @@ layout: post
 title: "JavaScript Prototype"
 date: 2022-09-22
 categories:
-- JavaScript
+  - JavaScript
 tags:
-- JavaScript
-- Prototype
-- Object
-- Prototype Object
-- Prototype Chain
-- Object.getPrototypeOf(obj)
-- constructor
-- instanceof
-- ECMAScript 2015
-- Class
-- extends
-- super
-- get
-- set
+  - JavaScript
+  - Prototype
+  - Object
+  - Prototype Object
+  - Prototype Chain
+  - Object.getPrototypeOf(obj)
+  - constructor
+  - instanceof
+  - ECMAScript 2015
+  - Class
+  - extends
+  - super
+  - get
+  - set
 ---
 
-나는 왜 짧게 요약하지 못하는가.. 왜 다 중요하게 느껴지는가   
+나는 왜 짧게 요약하지 못하는가.. 왜 다 중요하게 느껴지는가  
 그것이 문제로다.
 
 ---
@@ -36,14 +36,14 @@ JS는 **Prototype(원형 객체)기반 언어(prototype-based language)**이다.
 
 ### 1.1. Prototype Object 이해
 
-일반적으로 생성한 객체의 dot chain은 Object의 정의된 다른 멤버도 볼 수 있다. 
+일반적으로 생성한 객체의 dot chain은 Object의 정의된 다른 멤버도 볼 수 있다.
 
 - 생성한 어떠한 객체.valueOf() -> Object.prototype.valueOf() 동작 flow
   - window()(브라우저?)는 어떠한 객체가 valueOf() method있는지 확인
   - 없으면 constructor valueOf() method확인
   - 생성자의 prototype object의 Object constructor valueOf() method 확인하여 찾으면 호출함.
 
-> Ref: 객체의 method와 property들이 복사되는것이 아니다. chain을 타고 접근한다.(없으면 생성자 없으면 상위객체 없으면 상위객체 생성자...)   
+> Ref: 객체의 method와 property들이 복사되는것이 아니다. chain을 타고 접근한다.(없으면 생성자 없으면 상위객체 없으면 상위객체 생성자...)  
 > 임의 객체의 prototype object에 바로 접근하는 공식적인 방법은 없다. `[[prototype]]` ECMAScript에서는 링크는 내부속성으로 정의되있지만 대부분의 모던 브라우저들이 `__proto__` property를 통해 임의 객체로 접근하도록 구현하였다. ex) `어떤객체.__proto__.__proto__` -> ECMAScript 2015부터는 Object.getPrototypeOf(obj) method통해 객체의 prototype object에 바로 접근할 수 있다.
 
 ### 1.2. prototype property: inherit members location
@@ -58,17 +58,17 @@ Object의 생성자에서만 사용할수 있는 멤버들 prototype의 property
 
 ### 1.3. Create()
 
-Object.create()사용 시 주어진 객체를 prototype object삼아 새로운 object을 생성한다. 
+Object.create()사용 시 주어진 객체를 prototype object삼아 새로운 object을 생성한다.
 
 ```javascript
 var anyObj = Object.create(someObj);
 
-anyObj.__proto__;   //someObj출력
+anyObj.__proto__; //someObj출력
 ```
 
 ### 1.4. [constructor](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) property
 
-모든 생성자 함수는 constructor property를 지닌 object를 prototype object로 가지고 있다. constructor property는 원본 생성자 함수 자신을 가르킨다. anyObj.prototype property 또는 아무 constructor method의 prototype property는 생성된 객체의 constructor의 모든 instance를 사용할 수 있다. 
+모든 생성자 함수는 constructor property를 지닌 object를 prototype object로 가지고 있다. constructor property는 원본 생성자 함수 자신을 가르킨다. anyObj.prototype property 또는 아무 constructor method의 prototype property는 생성된 객체의 constructor의 모든 instance를 사용할 수 있다.
 
 constructor도 함수의 일종이므로 괄호를 붙이면 사용이 가능하고, new 키워드를 통해 실행하면 함수를 instance를 생성하기 위한 constructor로 사용할 수 있다.
 
@@ -121,7 +121,7 @@ ECMAScript 2015 Class는 최신브라우저에서는 잘 작동하지만 IE에�
 ```javascript
 //Person(first, last, age, gender, interests) 부모를 상속하여 새로운 속성 만드는법
 function Teacher(first, last, age, gender, interests, subject) {
-    //call(this <- Teacher자신, ...실제 함수 실행에 필요한 인자들을 전달) 
+    //call(this <- Teacher자신, ...실제 함수 실행에 필요한 인자들을 전달)
     // java super();랑 비슷(부모의 값을 쓰기위해)
     Person.call(this, first, last, age, gender, interests);
 
@@ -148,7 +148,7 @@ function ChildBrick(){
 }
 
 //최상위 Teacher는 Person의 생성자의 프로토타입 속성이 없다.
-//확인법 
+//확인법
 //Object.getOwnPropertyNames(Teacher.prototype);
 //Object.getOwnPropertyNames(Person.prototype);
 //Teacher는 Person의 메서드를 상속받지 못하였음. -> Property Object의 create()를 사용
@@ -280,5 +280,5 @@ myCar._price; //100;
 
 ## 참조
 
-> [MDN:Object/Prototype](https://developer.mozilla.org/ko/docs/Learn/JavaScript/Objects/Object_prototypes)   
+> [MDN:Object/Prototype](https://developer.mozilla.org/ko/docs/Learn/JavaScript/Objects/Object_prototypes)  
 > [MDN:JS/Classes](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Classes)

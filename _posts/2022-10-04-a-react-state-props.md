@@ -3,15 +3,15 @@ layout: post
 title: "JavaScript React State & Props"
 date: 2022-10-04
 categories:
-- React
+  - React
 tags:
-- JavaScript
-- React
-- JSX
-- State
-- Props
-- Controlled Component
-- One-way Data Flow
+  - JavaScript
+  - React
+  - JSX
+  - State
+  - Props
+  - Controlled Component
+  - One-way Data Flow
 ---
 
 미루고 미루던 state, prop에 대해 이제사 적는다. 시간은 한정적이다. 잠좀 그만잡시다 T^T
@@ -42,26 +42,26 @@ tags:
 
 ```javascript
 const Parent = () => {
-    const content = '뷰';
-    return (
-        <div className='parent'>
-            <h1>부모뷰</h1>
-            <Child header={"자식"} content={content}>
-                내용
-            </Child>
-        </div>
-    );
+  const content = "뷰";
+  return (
+    <div className="parent">
+      <h1>부모뷰</h1>
+      <Child header={"자식"} content={content}>
+        내용
+      </Child>
+    </div>
+  );
 };
 
 const Child = (props) => {
-    console.log(props);
-    // {header: "자식", content: "뷰"}
-    return (
-        <div className='child'>
-            <h2>{props.header + props.content}</h2>
-            <h3>{props.children}</h3>
-        </div>
-    );
+  console.log(props);
+  // {header: "자식", content: "뷰"}
+  return (
+    <div className="child">
+      <h2>{props.header + props.content}</h2>
+      <h3>{props.children}</h3>
+    </div>
+  );
 };
 ```
 
@@ -72,20 +72,20 @@ const Child = (props) => {
 import { useState } from "react";
 
 const CheckBox = () => {
-    //배열의 0번째 요소는 state변수, 
-    //1번째 이 변수를 갱신할 수 있는 함수
-    //useState인자는 state 초기값
-    const [isChecked, setIsChecked] = useState(false);
+  //배열의 0번째 요소는 state변수,
+  //1번째 이 변수를 갱신할 수 있는 함수
+  //useState인자는 state 초기값
+  const [isChecked, setIsChecked] = useState(false);
 
-    const handleChecked = (event) => {
-        setIsChecked(event.target.checked);
-    };
-    return (
-        <div className="App">
-            <input type="checkbox" checked={isChecked} onChange={handleChecked}/>
-            <span>{isChecked ? "true" : "false"}</span>
-        </div>
-    );
+  const handleChecked = (event) => {
+    setIsChecked(event.target.checked);
+  };
+  return (
+    <div className="App">
+      <input type="checkbox" checked={isChecked} onChange={handleChecked} />
+      <span>{isChecked ? "true" : "false"}</span>
+    </div>
+  );
 };
 
 export default CheckBox;
@@ -104,18 +104,18 @@ input, textarea select와 같은 form element는 유저 입력값을 제어할 �
 
 ```javascript
 const Title = () => {
-    const [title, setTitle] = useState('');
+  const [title, setTitle] = useState("");
 
-    const handleTitleChange = (event) => {
-        setTitle(event.target.value);
-    }
+  const handleTitleChange = (event) => {
+    setTitle(event.target.value);
+  };
 
-    return (
-        <div>
-            <input type="text" value={title} onChange={handleTitleChange} />
-            <h1>{title}</h1>
-        </div>
-    );
+  return (
+    <div>
+      <input type="text" value={title} onChange={handleTitleChange} />
+      <h1>{title}</h1>
+    </div>
+  );
 };
 ```
 
@@ -125,27 +125,23 @@ a tag와 같이 링크 이동과 같은 클릭에 대한 상호작용 시 사용
 
 ```javascript
 const AlertAction = (props) => {
-    // # 방법2. 함수로 만들어 전달
-    const handleAlertAcition = (event) => {
-        alert(props.value)
-    };
+  // # 방법2. 함수로 만들어 전달
+  const handleAlertAcition = (event) => {
+    alert(props.value);
+  };
 
-    return (
-        <div>
-            // 동작안함. -> 컴포넌트가 실행될때 alert가 실행됨.
-            // <button onClick={alert(props.value)}>{props.buttonName}</button>
-
-            // # 방법1. 함수로 만들어야 누를때마다 실행된다.
-            <button onClick={(evnent) => alert(props.value)}>
-                {props.buttonName}
-            </button>
-
-            // # 방법2. 함수를 전달
-            <button onClick={handleAlertAcition}>
-                {props.buttonName}
-            </button>
-        </div>
-    );
+  return (
+    <div>
+      // 동작안함. -> 컴포넌트가 실행될때 alert가 실행됨. //{" "}
+      <button onClick={alert(props.value)}>{props.buttonName}</button>
+      // # 방법1. 함수로 만들어야 누를때마다 실행된다.
+      <button onClick={(evnent) => alert(props.value)}>
+        {props.buttonName}
+      </button>
+      // # 방법2. 함수를 전달
+      <button onClick={handleAlertAcition}>{props.buttonName}</button>
+    </div>
+  );
 };
 ```
 
@@ -156,29 +152,31 @@ import React, { useState } from "react";
 import "./styles.css";
 
 const App = () => {
-    const [showPopup, setShowPopup] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
 
-    const togglePopup = () => {
-        setShowPopup(!showPopup)
-    };
-    
-    return (
-        <div className="App">
-            <h1>Fix me to open Pop Up</h1>
-            {/* 버튼을 클릭했을 때 Pop up 의 open/close 가 작동하도록 button tag를 완성하세요. */}
-            <button className="open" onClick={togglePopup}>Open me</button>
-            {showPopup ? (
-                <div className="popup">
-                    <div className="popup_inner">
-                        <h2>Success!</h2>
-                        <button className="close" onClick={togglePopup}>
-                            Close me
-                        </button>
-                    </div>
-                </div>
-            ) : null}
+  const togglePopup = () => {
+    setShowPopup(!showPopup);
+  };
+
+  return (
+    <div className="App">
+      <h1>Fix me to open Pop Up</h1>
+      {/* 버튼을 클릭했을 때 Pop up 의 open/close 가 작동하도록 button tag를 완성하세요. */}
+      <button className="open" onClick={togglePopup}>
+        Open me
+      </button>
+      {showPopup ? (
+        <div className="popup">
+          <div className="popup_inner">
+            <h2>Success!</h2>
+            <button className="close" onClick={togglePopup}>
+              Close me
+            </button>
+          </div>
         </div>
-    );
+      ) : null}
+    </div>
+  );
 };
 
 export default App;
@@ -198,5 +196,5 @@ Data 전달의 원칙인 One-way Data Flow는 React가 갖는 중요한 원칙�
 
 ## 참조
 
-> [React with Hooks:forms](https://reactwithhooks.netlify.app/docs/forms.html)   
+> [React with Hooks:forms](https://reactwithhooks.netlify.app/docs/forms.html)  
 > [React:Main](https://ko.reactjs.org/)

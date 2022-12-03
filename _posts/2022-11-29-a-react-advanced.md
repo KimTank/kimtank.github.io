@@ -5,17 +5,17 @@ date: 2022-11-29
 categories:
   - React
 tags:
-- Javascript
-- React
-- Virtual DOM
-- Document Object Model
-- Diffing Algorithm
-- key
-- hooks
-- useMemo
-- useCallback
-- custom Hooks
-- useFetch
+  - Javascript
+  - React
+  - Virtual DOM
+  - Document Object Model
+  - Diffing Algorithm
+  - key
+  - hooks
+  - useMemo
+  - useCallback
+  - custom Hooks
+  - useFetch
 ---
 
 그러니까 공부하자 잡념은 꿈에서나 하고..
@@ -147,7 +147,7 @@ class를 작성하지 않고도 state와 다른 React의 기능을 사용할 수
 
 ### 2.2. useMemo
 
-컴포넌트는 상태가 변겨오디거나 부모 컴포넌트가 렌더링 될때마다 리렌더링되는 구조이다. 잦은 리렌더링은 앱성능에 좋지 않다.   
+컴포넌트는 상태가 변겨오디거나 부모 컴포넌트가 렌더링 될때마다 리렌더링되는 구조이다. 잦은 리렌더링은 앱성능에 좋지 않다.  
 <span style="color:red">-> 에러구문: Error:Too many re-renders React limits the number of renders to prevent an infinite loop</span>
 
 #### 2.2.1. useMemo란?
@@ -253,9 +253,9 @@ function FriendStatus(props) {
   });
 
   if (isOnline === null) {
-    return 'Loading...';
+    return "Loading...";
   }
-  return isOnline ? 'Online' : 'Offline';
+  return isOnline ? "Online" : "Offline";
 }
 
 //FriendListItem : 친구가 online일 때 초록색으로 표시하는 컴포넌트
@@ -272,9 +272,7 @@ function FriendListItem(props) {
   });
 
   return (
-    <li style={{ color: isOnline ? 'green' : 'black' }}>
-      {props.friend.name}
-    </li>
+    <li style={{ color: isOnline ? "green" : "black" }}>{props.friend.name}</li>
   );
 }
 ```
@@ -288,18 +286,16 @@ function FriendStatus(props) {
   const isOnline = useFriendStatus(props.friend.id);
 
   if (isOnline === null) {
-    return 'Loading...';
+    return "Loading...";
   }
-  return isOnline ? 'Online' : 'Offline';
+  return isOnline ? "Online" : "Offline";
 }
 
 function FriendListItem(props) {
   const isOnline = useFriendStatus(props.friend.id);
 
   return (
-    <li style={{ color: isOnline ? 'green' : 'black' }}>
-      {props.friend.name}
-    </li>
+    <li style={{ color: isOnline ? "green" : "black" }}>{props.friend.name}</li>
   );
 }
 ```
@@ -313,15 +309,15 @@ function FriendListItem(props) {
 ##### 2.4.1.1. 여러 url을 fetch할 때 사용할 수 있는 useFetch hook
 
 ```javascript
-const useFetch = ( initialUrl:string ) => {
+const useFetch = (initialUrl: string) => {
   const [url, setUrl] = useState(initialUrl);
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState("");
 
-  const fetchData = () => axios.get(url).then(({data}) => setValue(data));
+  const fetchData = () => axios.get(url).then(({ data }) => setValue(data));
 
   useEffect(() => {
     fetchData();
-  },[url]);
+  }, [url]);
 
   return [value];
 };
@@ -332,14 +328,14 @@ export default useFetch;
 ##### 2.4.1.2. 여러 input에 의해서 상태 변경을 할 수 있는 useInputs hooks
 
 ```javascript
-import { useState, useCallback } from 'react';
+import { useState, useCallback } from "react";
 
 function useInputs(initialForm) {
   const [form, setForm] = useState(initialForm);
   // change
-  const onChange = useCallback(e => {
+  const onChange = useCallback((e) => {
     const { name, value } = e.target;
-    setForm(form => ({ ...form, [name]: value }));
+    setForm((form) => ({ ...form, [name]: value }));
   }, []);
   const reset = useCallback(() => setForm(initialForm), [initialForm]);
   return [form, onChange, reset];
@@ -349,17 +345,18 @@ export default useInputs;
 ```
 
 React first function
- code splitting
- react.lazy() & suspense
+code splitting
+react.lazy() & suspense
+
 ---
 
 ---
 
 ## 참조
 
-> [Chulgil Lee: Big-O 쉽게 이해하기](https://blog.chulgil.me/algorithm/)   
-> [reactjs: custom hooks](https://ko.reactjs.org/docs/hooks-custom.html)   
-> []()   
-> []()   
-> []()   
-> []()   
+> [Chulgil Lee: Big-O 쉽게 이해하기](https://blog.chulgil.me/algorithm/)  
+> [reactjs: custom hooks](https://ko.reactjs.org/docs/hooks-custom.html)  
+> []()  
+> []()  
+> []()  
+> []()

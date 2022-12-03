@@ -3,14 +3,14 @@ layout: post
 title: "Tree DFS 순회"
 date: 2022-11-03
 categories:
-- Algorithm
+  - Algorithm
 tags:
-- Javascript
-- Algorithm
-- codestates
-- Tree
-- DFS
-- Depth First Search
+  - Javascript
+  - Algorithm
+  - codestates
+  - Tree
+  - DFS
+  - Depth First Search
 ---
 
 나랑 비슷한 사람과 대화를 했다. 입문하고 처음 내가 했던 생각, 내가 가졌던 사고, 내가 했던 행동, 재훈이처럼 말해줬다. 보고싶다 재훈아..
@@ -50,7 +50,7 @@ console.log(output); // --> [1, 2, 4, 5, 3]
  *        1
  *      2   3
  *    4  5
- * 
+ *
  * 순차적으로 순회하면 될거같음
  */
 
@@ -64,7 +64,7 @@ console.log(output); // --> [1, 2, 4, 6, 5, 3, 7]
  *      2   3
  *    4  5 7
  *   6
- * 
+ *
  * 풀때는 몰랐네 그려보니 이해가 더 쉬움
  */
 ```
@@ -93,15 +93,14 @@ Node.prototype.addChild = function (child) {
 let dfs = function (node, resultArr) {
   //객체내 value 꺼내고, children 빈배열인지 확인 그다음으로
   //처음일때 생성
-  if(resultArr === undefined)
-    resultArr = [];
+  if (resultArr === undefined) resultArr = [];
   //일단 value 넣고
   resultArr.push(node.value);
   //console 찍었더니 undefined는 없고 빈배열은 무조건 있음
   //빈배열이면 다음으로 넘어감
-  for(node of node.children){
+  for (node of node.children) {
     dfs(node, resultArr);
-  };
+  }
   //끝나면 반환
   return resultArr;
 };
@@ -165,28 +164,27 @@ class Node {
   }
 }
 
-  /* Given a binary tree, print its nodes in inorder */
-  function printInorder(node) {
-    if (node == null)
-      return; 
-    /* first recur on left child */
-    printInorder(node.left);
-    /* then print the data of node */
-    document.write(node.key + " ");
-    /* now recur on right child */
-    printInorder(node.right);
-  }
+/* Given a binary tree, print its nodes in inorder */
+function printInorder(node) {
+  if (node == null) return;
+  /* first recur on left child */
+  printInorder(node.left);
+  /* then print the data of node */
+  document.write(node.key + " ");
+  /* now recur on right child */
+  printInorder(node.right);
+}
 
-  // Driver method
+// Driver method
 
-  var root = new Node(1);
-  root.left = new Node(2);
-  root.right = new Node(3);
-  root.left.left = new Node(4);
-  root.left.right = new Node(5);
+var root = new Node(1);
+root.left = new Node(2);
+root.right = new Node(3);
+root.left.left = new Node(4);
+root.left.right = new Node(5);
 
-  document.write("<br/>Inorder traversal of binary tree is <br/>");
-  printInorder(root);
+document.write("<br/>Inorder traversal of binary tree is <br/>");
+printInorder(root);
 
 // This code is contributed by umadevi9616
 ```
@@ -204,38 +202,38 @@ class Node {
 
 ```javascript
 // JavaScript implementation of above approach
- 
+
 // A class that represents an individual node in a
 // Binary Tree
-class Node{
-    constructor(key){
-        this.left = null
-        this.right = null
-        this.val = key
-    }
+class Node {
+  constructor(key) {
+    this.left = null;
+    this.right = null;
+    this.val = key;
+  }
 }
- 
+
 // A function to do preorder tree traversal
-function printPreorder(root){
-    if(root){
-        // First print the data of node
-        document.write(root.val," ")
-        // Then recur on left child
-        printPreorder(root.left)
-        // Finally recur on right child
-        printPreorder(root.right)
-    }
+function printPreorder(root) {
+  if (root) {
+    // First print the data of node
+    document.write(root.val, " ");
+    // Then recur on left child
+    printPreorder(root.left);
+    // Finally recur on right child
+    printPreorder(root.right);
+  }
 }
- 
+
 // Driver code
-let root =  new Node(1)
-root.left =  new Node(2)
-root.right =  new Node(3)
-root.left.left =  new Node(4)
-root.left.right =  new Node(5)
-document.write("Preorder traversal of binary tree is","</br>")
-printPreorder(root)
- 
+let root = new Node(1);
+root.left = new Node(2);
+root.right = new Node(3);
+root.left.left = new Node(4);
+root.left.right = new Node(5);
+document.write("Preorder traversal of binary tree is", "</br>");
+printPreorder(root);
+
 // This code is contributed by shinjanpatra
 ```
 
@@ -252,42 +250,41 @@ printPreorder(root)
 
 ```javascript
 // javascript program for different tree traversals
- 
+
 /* Class containing left and right child of current
    node and key value*/
 class Node {
-    constructor(item) {
-        this.key = item;
-        this.left = this.right = null;
-    }
+  constructor(item) {
+    this.key = item;
+    this.left = this.right = null;
+  }
 }
- 
+
 var root;
- 
-    /*
-     * Given a binary tree, print its nodes according to the "bottom-up" postorder
-     * traversal.
-     */
-    function printPostorder(node) {
-        if (node == null)
-            return;
-        // first recur on left subtree
-        printPostorder(node.left);
-        // then recur on right subtree
-        printPostorder(node.right);
-        // now deal with the node
-        document.write(node.key + " ");
-    }
-     
-    // Driver method
-        root = new Node(1);
-        root.left = new Node(2);
-        root.right = new Node(3);
-        root.left.left = new Node(4);
-        root.left.right = new Node(5);
- 
-        document.write("\nPostorder traversal of binary tree is<br/> ");
-        printPostorder(root);
+
+/*
+ * Given a binary tree, print its nodes according to the "bottom-up" postorder
+ * traversal.
+ */
+function printPostorder(node) {
+  if (node == null) return;
+  // first recur on left subtree
+  printPostorder(node.left);
+  // then recur on right subtree
+  printPostorder(node.right);
+  // now deal with the node
+  document.write(node.key + " ");
+}
+
+// Driver method
+root = new Node(1);
+root.left = new Node(2);
+root.right = new Node(3);
+root.left.left = new Node(4);
+root.left.right = new Node(5);
+
+document.write("\nPostorder traversal of binary tree is<br/> ");
+printPostorder(root);
 // This code contributed by umadevi9616
 ```
 
@@ -298,74 +295,74 @@ var root;
 
 ```javascript
 // JavaScript program to for tree traversals
- 
+
 // A class that represents an individual node in a
 // Binary Tree
-class Node{
-    constructor(key){
-        this.left = null
-        this.right = null
-        this.val = key
-    }
+class Node {
+  constructor(key) {
+    this.left = null;
+    this.right = null;
+    this.val = key;
+  }
 }
- 
+
 // A function to do inorder tree traversal
-function printInorder(root){
-    if(root){
-        // First recur on left child
-        printInorder(root.left)
-        // then print the data of node
-        document.write(root.val," ")
-        // now recur on right child
-        printInorder(root.right)
-    }
+function printInorder(root) {
+  if (root) {
+    // First recur on left child
+    printInorder(root.left);
+    // then print the data of node
+    document.write(root.val, " ");
+    // now recur on right child
+    printInorder(root.right);
+  }
 }
- 
+
 // A function to do postorder tree traversal
-function printPostorder(root){
-    if(root){
-        // First recur on left child
-        printPostorder(root.left)
-        // the recur on right child
-        printPostorder(root.right)
-        // now print the data of node
-        document.write(root.val," ")
-    }
+function printPostorder(root) {
+  if (root) {
+    // First recur on left child
+    printPostorder(root.left);
+    // the recur on right child
+    printPostorder(root.right);
+    // now print the data of node
+    document.write(root.val, " ");
+  }
 }
- 
+
 // A function to do preorder tree traversal
-function printPreorder(root){
-    if(root){
-        // First print the data of node
-        document.write(root.val," ")
-        // Then recur on left child
-        printPreorder(root.left)
-        // Finally recur on right child
-        printPreorder(root.right)
-    }
+function printPreorder(root) {
+  if (root) {
+    // First print the data of node
+    document.write(root.val, " ");
+    // Then recur on left child
+    printPreorder(root.left);
+    // Finally recur on right child
+    printPreorder(root.right);
+  }
 }
- 
+
 // Driver code
-let root = new Node(1)
-root.left     = new Node(2)
-root.right     = new Node(3)
-root.left.left = new Node(4)
-root.left.right = new Node(5)
-document.write("Preorder traversal of binary tree is","</br>")
-printPreorder(root)
- 
-document.write("</br>","Inorder traversal of binary tree is","</br>")
-printInorder(root)
- 
-document.write("</br>","Postorder traversal of binary tree is","</br>")
-printPostorder(root)
- 
+let root = new Node(1);
+root.left = new Node(2);
+root.right = new Node(3);
+root.left.left = new Node(4);
+root.left.right = new Node(5);
+document.write("Preorder traversal of binary tree is", "</br>");
+printPreorder(root);
+
+document.write("</br>", "Inorder traversal of binary tree is", "</br>");
+printInorder(root);
+
+document.write("</br>", "Postorder traversal of binary tree is", "</br>");
+printPostorder(root);
+
 // This code is contributed by shinjanpatra
 ```
 
 - output:
-  - preorder  1 2 4 5 3
-  - inorder   4 2 5 1 3
+  - preorder 1 2 4 5 3
+  - inorder 4 2 5 1 3
   - postorder 4 5 2 3 1
 - bigO
   - 시간 복잡도: 0(n)
@@ -375,7 +372,7 @@ printPostorder(root)
 
 ## 참조
 
-> [geeksforgeeks: dfs-tree](https://www.geeksforgeeks.org/dfs-traversal-of-a-tree-using-recursion/)   
-> [gfgs: level order tree](https://www.geeksforgeeks.org/level-order-tree-traversal/)   
-> [wiki: polish notation](http://en.wikipedia.org/wiki/Polish_notation)   
+> [geeksforgeeks: dfs-tree](https://www.geeksforgeeks.org/dfs-traversal-of-a-tree-using-recursion/)  
+> [gfgs: level order tree](https://www.geeksforgeeks.org/level-order-tree-traversal/)  
+> [wiki: polish notation](http://en.wikipedia.org/wiki/Polish_notation)  
 > [gfgs: delete tree](https://www.geeksforgeeks.org/write-a-c-program-to-delete-a-tree/)

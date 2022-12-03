@@ -3,49 +3,49 @@ layout: post
 title: "HTTP & NETWORK 1"
 date: 2022-10-05
 categories:
-- Network
+  - Network
 tags:
-- HTTP
-- Network
-- 2-Tier Architecture
-- 3-Tier Architecture
-- 프론트엔드
-- 백엔드
-- Database
-- Client
-- Server
-- API
-- Application Programming Interface
-- Interface
-- Request
-- Response
-- CRUD
-- GET
-- POST
-- PUT
-- PATCH
-- DELETE
-- URL
-- Uniform Resource Locator
-- URI
-- Uniform Resource Identifier
-- scheme
-- hosts
-- uri-path
-- query
-- frament
-- IP
-- Internet Protocol address
-- IPv4
-- IPv6
-- Port
-- Domain
-- DNS
-- Domain Name System
-- DDNS
-- Dynimic Domain Name System
-- Chrome
-- Chrome Brower Error Message
+  - HTTP
+  - Network
+  - 2-Tier Architecture
+  - 3-Tier Architecture
+  - 프론트엔드
+  - 백엔드
+  - Database
+  - Client
+  - Server
+  - API
+  - Application Programming Interface
+  - Interface
+  - Request
+  - Response
+  - CRUD
+  - GET
+  - POST
+  - PUT
+  - PATCH
+  - DELETE
+  - URL
+  - Uniform Resource Locator
+  - URI
+  - Uniform Resource Identifier
+  - scheme
+  - hosts
+  - uri-path
+  - query
+  - frament
+  - IP
+  - Internet Protocol address
+  - IPv4
+  - IPv6
+  - Port
+  - Domain
+  - DNS
+  - Domain Name System
+  - DDNS
+  - Dynimic Domain Name System
+  - Chrome
+  - Chrome Brower Error Message
 ---
 
 가을이되니 체력이 급격하게 떨어지는 것인지, 엉덩이를 고정하니 불안감에 집중을 못하는것인지 어제 처음으로 지각을했다(무려 30분씩이나). 생활패턴이 깨지려한다. 정신차려야한다. 매번 알고싶었지만 접근하기 힘들었던 네트워크~!
@@ -260,9 +260,9 @@ DNS는 호스틩 도메인 이름을 IP address로 변환하거나, 반대의 �
 
 ## 참조
 
-> [KoreanJSON](https://koreanjson.com)   
-> [MDN:HTTP 요청 메서드](https://developer.mozilla.org/ko/docs/Web/HTTP/Methods)   
-> [Wikipedia:IPv6](https://en.wikipedia.org/wiki/IPv6)   
-> [Widipedia:Port Number](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)   
-> [Asus:Support/DDNS](https://www.asus.com/kr/support/FAQ/1011725/)   
+> [KoreanJSON](https://koreanjson.com)  
+> [MDN:HTTP 요청 메서드](https://developer.mozilla.org/ko/docs/Web/HTTP/Methods)  
+> [Wikipedia:IPv6](https://en.wikipedia.org/wiki/IPv6)  
+> [Widipedia:Port Number](https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers)  
+> [Asus:Support/DDNS](https://www.asus.com/kr/support/FAQ/1011725/)  
 > [Chrome Brower:Network Errors](chrome://network-errors/)

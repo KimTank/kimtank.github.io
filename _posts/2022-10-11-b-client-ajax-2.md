@@ -3,17 +3,17 @@ layout: post
 title: "React Client Ajax 2"
 date: 2022-10-11
 categories:
-- React
+  - React
 tags:
-- JavaScript
-- React
-- Effect Hook
-- Side Effect
-- fetch
-- Pure Function
-- useEffect
-- dependency array
-- Loading Indicator
+  - JavaScript
+  - React
+  - Effect Hook
+  - Side Effect
+  - fetch
+  - Pure Function
+  - useEffect
+  - dependency array
+  - Loading Indicator
 ---
 
 React문서를 봐야되는데 엉덩이만 무거웠지 나는 왜이리 집중하지 못하는가
@@ -27,13 +27,13 @@ React문서를 봐야되는데 엉덩이만 무거웠지 나는 왜이리 집중
 React에서는 컴포넌트 내에서 fetch를 사용해 API 정보를 가져오거나, 이벤트를 활용해 DOM을 직접 조작할 떄 Side Effect가 발생했다고 한다.
 
 ```javascript
-let gloval = 'window';
+let gloval = "window";
 
 const setLocal = () => {
-  gloval = 'local';
-} 
+  gloval = "local";
+};
 
-setLocal();//Side Effect를 발생시킴
+setLocal(); //Side Effect를 발생시킴
 ```
 
 ### 1.1. Pure Function
@@ -44,9 +44,9 @@ setLocal();//Side Effect를 발생시킴
 2. 어떤 전달 인자가 주어질 경우 항상 같은 값이 리턴되는걸 보장하는 예측가능한 함수이다.
 
 ```javascript
-const immutablePureFunction = someVal => {
+const immutablePureFunction = (someVal) => {
   return someVal.someKindOfImmutableFunction();
-}
+};
 
 immutablePureFunction(someValue); // immutable한 값을 반환, Math.random은 난수를 생생하기에 예측 불가
 ```
@@ -58,13 +58,13 @@ immutablePureFunction(someValue); // immutable한 값을 반환, Math.random은 
 ```javascript
 //input은 props, output은 JSX Element
 //Side Effect 없고, 순수함수로 작동
-const LinkElement = ({props}) =>{
+const LinkElement = ({ props }) => {
   return (
     <li id={props.id}>
       <a herf={props.linkPath}>{props.linkName}</a>
     </li>
-  )
-}
+  );
+};
 ```
 
 상위의 코드와 달리, `fetch API`를 사용한 AJAX 요청이나, `LocalStorage` 또는 `setTimeout`와 같은 React와 관련없는 API를 사용하는 경우에 Side Effect가 발생하고, Side Effect를 위한 Effect Hook을 React에서는 제공한다.
@@ -136,11 +136,11 @@ useEffect(() => {
 ```javascript
 useEffect(() => {
   fetch(`http://server-path/endpoint?query=${value}`)
-    .then(resp => resp.json())
-    .then(result => {
+    .then((resp) => resp.json())
+    .then((result) => {
       setValue(result);
     });
-}, [value])
+}, [value]);
 ```
 
 ### 4.2. Loading Indicator

@@ -3,13 +3,13 @@ layout: post
 title: "Node Same Origin Policy"
 date: 2022-10-13
 categories:
-- NodeJS
+  - NodeJS
 tags:
-- Node
-- JavaScript
-- Same Origin Policy
-- SOP
-- origin
+  - Node
+  - JavaScript
+  - Same Origin Policy
+  - SOP
+  - origin
 ---
 
 잠들었다 쇼파에서, 전화왔다 중요한, 낭비했다 3달동안, 흠. 무엇보다 중요한건 그게 아니다. 왜 배운걸 모른다는거다. 주륵. 봐봅시다.

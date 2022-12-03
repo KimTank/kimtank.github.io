@@ -3,12 +3,12 @@ layout: post
 title: "CSS Layout Reset"
 date: 2022-09-15
 categories:
-- CSS
+  - CSS
 tags:
-- CSS
-- Layout Reset
-- box-sizing
-- border-box
+  - CSS
+  - Layout Reset
+  - box-sizing
+  - border-box
 ---
 
 역시 사람은 같은 실수를 여러번 반복한다. 그래서 메모가 중요하다.

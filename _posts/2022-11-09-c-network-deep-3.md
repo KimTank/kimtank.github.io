@@ -3,18 +3,18 @@ layout: post
 title: "Network deep vol.3"
 date: 2022-11-09
 categories:
-- Network
+  - Network
 tags:
-- Network
-- https
-- 대칭키 암호화
-- 비대칭티 암호화
-- SSL
-- TLS
-- Certificate Authority
-- CA
-- mkcert
-- ngrok
+  - Network
+  - https
+  - 대칭키 암호화
+  - 비대칭티 암호화
+  - SSL
+  - TLS
+  - Certificate Authority
+  - CA
+  - mkcert
+  - ngrok
 ---
 
 눈을 감으니 천국의 중심에 누워 꽃내음을 맡으며 단잠을 청하였다.
@@ -128,17 +128,17 @@ $vim https.js
 ```
 
 ```javascript
-const https = require('https');
-const fs = require('fs');
+const https = require("https");
+const fs = require("fs");
 
 https
   .createServer(
     {
-      key: fs.readFileSync(__dirname + '/key.pem', 'utf-8'),
-      cert: fs.readFileSync(__dirname + '/cert.pem', 'utf-8'),
+      key: fs.readFileSync(__dirname + "/key.pem", "utf-8"),
+      cert: fs.readFileSync(__dirname + "/cert.pem", "utf-8"),
     },
     function (req, res) {
-      res.write('Congrats! You made https server now :)');
+      res.write("Congrats! You made https server now :)");
       res.end();
     }
   )
@@ -161,20 +161,20 @@ $vim express.js
 ```
 
 ```javascript
-const https = require('https');
-const fs = require('fs');
-const express = require('express');
+const https = require("https");
+const fs = require("fs");
+const express = require("express");
 
 const app = express();
 
 https
   .createServer(
     {
-      key: fs.readFileSync(__dirname + '/key.pem', 'utf-8'),
-      cert: fs.readFileSync(__dirname + '/cert.pem', 'utf-8'),
+      key: fs.readFileSync(__dirname + "/key.pem", "utf-8"),
+      cert: fs.readFileSync(__dirname + "/cert.pem", "utf-8"),
     },
-    app.use('/', (req, res) => {
-      res.send('Congrats! You made https server now :)');
+    app.use("/", (req, res) => {
+      res.send("Congrats! You made https server now :)");
     })
   )
   .listen(3001);
@@ -199,7 +199,7 @@ https로 접속하도록 터널링해주는 프로그램으로 보인다.
 
 ## 참조
 
-> [CA키 유출로 파산](https://slate.com/technology/2016/12/how-the-2011-hack-of-diginotar-changed-the-internets-infrastructure.html)   
-> [ngrok: main](https://ngrok.com/)   
-> [Software Architect: lesstif blog/ngrok](https://www.lesstif.com/software-architect/ngrok-39126236.html)   
+> [CA키 유출로 파산](https://slate.com/technology/2016/12/how-the-2011-hack-of-diginotar-changed-the-internets-infrastructure.html)  
+> [ngrok: main](https://ngrok.com/)  
+> [Software Architect: lesstif blog/ngrok](https://www.lesstif.com/software-architect/ngrok-39126236.html)  
 > [Alissa Yoon: velog blog/ngrok](https://velog.io/@dwa_all/ngrok-%EB%A1%9C%EC%BB%AC-%EA%B0%9C%EB%B0%9C%ED%99%98%EA%B2%BD-%EC%99%B8%EB%B6%80%EC%97%90-%EA%B3%B5%EC%9C%A0%ED%95%98%EA%B8%B0)

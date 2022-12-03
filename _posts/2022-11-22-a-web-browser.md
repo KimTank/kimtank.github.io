@@ -3,20 +3,20 @@ layout: post
 title: Web Browser
 date: 2022-11-22
 categories:
-- Web
+  - Web
 tags:
-- Web
-- Browser
-- Browser Engine
-- Rendering Engine
-- Networking
-- JavaScript Interpreter
-- V9 Engine
-- Heap Memory
-- Call Stack
-- Web Storage
-- Local Storage
-- Session Storage
+  - Web
+  - Browser
+  - Browser Engine
+  - Rendering Engine
+  - Networking
+  - JavaScript Interpreter
+  - V9 Engine
+  - Heap Memory
+  - Call Stack
+  - Web Storage
+  - Local Storage
+  - Session Storage
 ---
 
 오랜만에 주말 북악을 다녀왔더니 주말에 노곤노곤해져 푸우우우욱쉬었다. 껄껄
@@ -58,7 +58,7 @@ user가 선택한 resource를 server에 request, server response를 browser rend
             User Interface →→↓
                         ↓    ↓
             Browser Engine →--→resource repository
-                        ↓    ↓============ㄱ  
+                        ↓    ↓============ㄱ
             Rendering Engine              ㅣ
       ↓=============↓===================↓  ↓
 networking | JavaScript Interpreter | UI back-end
@@ -66,16 +66,17 @@ networking | JavaScript Interpreter | UI back-end
 
 - UI: user interface, gui부분 통칭
 - Browser Engine: UI, Rendering Engine 사이 동작 제어
+
   - HTML문서와 기타 자원의 웹페이지를 사용자 장치에 시각표현으로 변환, DOM자료구조를 구현한다.
   - Layout Engine이라고도 한다. Rendering Engine과 묶어 Browser Engine이라고도 한다.
 
-    |이름|설명|
-    |---|---|
-    |Gecko|made by 모질라, firefox 탑재, 유명|
-    |Webkit|KHTML 파생, safari 탑재, 가장 유명|
-    |Blink|Webkit 파생, chorme, opera 탑재, 유명|
-    |Trident|MS 엔진, IE, OE, MS OL탑재, 힘내라 마소|
-    |EdgeHTML|Trident 파생, 엣지스파르탄(~2019) -> Blink로 교체|
+    | 이름     | 설명                                              |
+    | -------- | ------------------------------------------------- |
+    | Gecko    | made by 모질라, firefox 탑재, 유명                |
+    | Webkit   | KHTML 파생, safari 탑재, 가장 유명                |
+    | Blink    | Webkit 파생, chorme, opera 탑재, 유명             |
+    | Trident  | MS 엔진, IE, OE, MS OL탑재, 힘내라 마소           |
+    | EdgeHTML | Trident 파생, 엣지스파르탄(~2019) -> Blink로 교체 |
 
     > 외에도 많다.
 
@@ -83,13 +84,13 @@ networking | JavaScript Interpreter | UI back-end
 - Networking: 통신, HTTP 요청과 같은 네트워크 호출에 사용된다. 보통 플랫폼의 독립적인 인터페이스이고, 각 플랫폼의 하부에서 실행됩니다.
 - JavaScript Interpreter: 한줄씩 읽어 내려가는 방식으로 parsing하는 Interpreted Language이다. JavaScript코드를 해석하고 실행하는 JavaScript Interpreter가 필요에 의해 만들어지고, JavaScript Engine이라고 부르는 JavaScript Interpreter는 여러 목적으로 사용이 되지만 대체적으로 Web Browser에서 이용이 되고, Browser마다 전용 Engine이 탑재되어 있다.
 
-|이름|설명|
-|---|---|
-|Rhino|모질라 재단이 운영하는 오픈소스 엔진, Java로 개발되었다는 특징이 있다.|
-|SpiderMonkey|최초의 JavaScript Engine 넷스케이프 내비게이터를 지원하였으며, 현재는 파이어폭스를 지원하고 있다.|
-|V8|구글이 개발한 오픈 소스 엔진으로 구글 크롬의 JavaScript Engine이다.|
-|JavaScriptCore|애플에서 개발하였으며 처음에 WebKit 프레임워크를 위해 개발되었지만 현재는 사파리와 React Native App를 지원하고 있다.|
-|Chakra|마이크로소프트가 개발한 엔진이고, Edge 브라우저를 지원하고 있다.|
+| 이름           | 설명                                                                                                                 |
+| -------------- | -------------------------------------------------------------------------------------------------------------------- |
+| Rhino          | 모질라 재단이 운영하는 오픈소스 엔진, Java로 개발되었다는 특징이 있다.                                               |
+| SpiderMonkey   | 최초의 JavaScript Engine 넷스케이프 내비게이터를 지원하였으며, 현재는 파이어폭스를 지원하고 있다.                    |
+| V8             | 구글이 개발한 오픈 소스 엔진으로 구글 크롬의 JavaScript Engine이다.                                                  |
+| JavaScriptCore | 애플에서 개발하였으며 처음에 WebKit 프레임워크를 위해 개발되었지만 현재는 사파리와 React Native App를 지원하고 있다. |
+| Chakra         | 마이크로소프트가 개발한 엔진이고, Edge 브라우저를 지원하고 있다.                                                     |
 
 #### 1.2.1 V8 Engine
 
@@ -103,16 +104,16 @@ JavaScript는 Single Thread 기반 language이다. call stack은 하나이고, �
 
 ```javascript
 function eat(head, food) {
-    return `${head}이(가) ${food}를 먹는다.`;
+  return `${head}이(가) ${food}를 먹는다.`;
 }
 
-function when(name, food){
+function when(name, food) {
   let head = `${new Date(new Date().getTime())} ${name}`;
   return eat(head, food);
 }
 
-function printAteHistory(name, food){
-  let ouput = when(name, food)
+function printAteHistory(name, food) {
+  let ouput = when(name, food);
   console.log(output);
 }
 
@@ -151,7 +152,7 @@ WS는 web browser가 직접 데이터를 저장할 수 있게한다. 사용자 �
   - 브라우징: 브라우저 프로그램을 실행해서 인터넷에 들어가 필요한 정보를 찾는 행위이다.
   - 브라우징 컨텍스트: 브라우저가 문서를 표시하는 환경이다. 각 브라우징 컨텍스트는 특정 출처 및 활성화되고 있는 문서의 출처, 표시한 모든 문서의 방문기록을 가지고 있다.
 
-> 저장과 조회는 Windows 전역 객체의 sessionStorage라는 컬렉션을  통해 이루어지고, 도메인별로 별도로 생성된다. 브라우저 컨텍스트가 다르면 서로 다른 영역이 된다. 브라우저 두개를 실행해 같은 페이지를 열었을 때, 브라우저의 컨텍스트가 달라 sessionStorage는 각 별개의 영역으로 인지되어 서로의 데이터 공유가 불가능해진다.
+> 저장과 조회는 Windows 전역 객체의 sessionStorage라는 컬렉션을 통해 이루어지고, 도메인별로 별도로 생성된다. 브라우저 컨텍스트가 다르면 서로 다른 영역이 된다. 브라우저 두개를 실행해 같은 페이지를 열었을 때, 브라우저의 컨텍스트가 달라 sessionStorage는 각 별개의 영역으로 인지되어 서로의 데이터 공유가 불가능해진다.
 > [버전이 다르면 웹 스토리지를 사용할 수 없기 때문에 반드시 확인해야 한다.](https://developer.mozilla.org/ko/docs/Web/API/Web_Storage_API)
 
 ##### 1.2.3.3 usage

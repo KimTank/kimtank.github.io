@@ -3,24 +3,24 @@ layout: post
 title: "Web Cookie"
 date: 2022-11-10
 categories:
-- Web
+  - Web
 tags:
-- Web
-- Authority
-- Security
-- Cookie
-- Cookie Option
-- Domain
-- Path
-- MaxAge
-- Expires
-- Session Cookie
-- Persistent Cookie
-- HTTPOnly
-- Secure
-- SameSite
-- XSS
-- CSRF
+  - Web
+  - Authority
+  - Security
+  - Cookie
+  - Cookie Option
+  - Domain
+  - Path
+  - MaxAge
+  - Expires
+  - Session Cookie
+  - Persistent Cookie
+  - HTTPOnly
+  - Secure
+  - SameSite
+  - XSS
+  - CSRF
 ---
 
 점점 시간은 다가오고있다. 한달정도는 늘어져있었던거같은데 개발바닥에서 내가 우려하던 이야기를 그대로 했던거때문일지도 모르겠다만.. 무슨상관인가. 현실이 어떻든 필요한 상품이 되면 그만인것을. 정신차리자
@@ -82,6 +82,6 @@ cookie를 통해 Stateless -> Stateful: Serv -> Ct 인증정보 쿠키 전송 ->
 
 ## 참조
 
-> [나무위키: XSS](https://namu.wiki/w/XSS)   
-> [나무위키: CSRF](https://namu.wiki/w/CSRF)   
+> [나무위키: XSS](https://namu.wiki/w/XSS)  
+> [나무위키: CSRF](https://namu.wiki/w/CSRF)  
 > [mdn: http/headers/set cookie](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie)

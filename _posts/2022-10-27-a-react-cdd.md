@@ -3,18 +3,18 @@ layout: post
 title: "React Component Driven Development"
 date: 2022-10-27
 categories:
-- React
+  - React
 tags:
-- CDD
-- Component Driven Development
-- CSS Preprocessor
-- SCSS
-- BEM
-- Block
-- Element
-- Modifier
-- CSS-in-JS
-- Styled-Component
+  - CDD
+  - Component Driven Development
+  - CSS Preprocessor
+  - SCSS
+  - BEM
+  - Block
+  - Element
+  - Modifier
+  - CSS-in-JS
+  - Styled-Component
 ---
 
 폰노이만이 처음 인체와 같은 생물의 구조로 컴퓨터의 구조를 설계하고, 완성하지 못하고 무지개다리를 건너신 후 컴퓨터는 폰노이만의 설계대로 완성되었고, 그가 연구하다 죽음으로 멈춘 메모리계층구조 역시 현대에서는 쓰이고 있다.
@@ -61,7 +61,7 @@ Block, Element, Modifier로 구분하여 클래스명을 작성하는 방법이�
 - Block: 전체를 감싸고 있는 블럭 요소
 - Element: 블럭이 포함하고 이있는 한 조각
 - Modifier: 블럭 또는 요소의 속성
-- 구분점: --, __
+- 구분점: --, \_\_
 
 일관성있는 네이밍으로 구조화를 시키지만 클래스 선택자가 장황해지고, 길어진 클래스명 때문에 마크업이 불필해지게 커지고, 재사용할때마다 모든 UI컴포넌트를 명시적으로 확장해야되는 문제가 발생한다.
 
@@ -117,7 +117,7 @@ $yarn add styled-components
 - some-of-jsfile.js
 
 ```javascript
-import styled from "styled-components"
+import styled from "styled-components";
 ```
 
 ### 2-3. Styled Components Syntax
@@ -176,7 +176,7 @@ const CheckBox = styled.input`
 
 //형태
 <CheckBox isCheck.../> -> 체크
-<CheckBox/> -> 안체크 
+<CheckBox/> -> 안체크
 ```
 
 2. Props값으로 렌더링하기
@@ -189,12 +189,12 @@ const CheckBox = styled.input`
 //형태
 <CheckBox isCheck=true/> -> 'true'
 <CheckBox isCheck="oK"/> -> 'oK'
-<CheckBox isCheck="1"/> -> '1' 
+<CheckBox isCheck="1"/> -> '1'
 
 ---
 
 const CheckBox = styled.input`
-    value=${(props)=>props.isCheck||"안체크"}    
+    value=${(props)=>props.isCheck||"안체크"}
 `;  //이런문법도 가능
 ```
 
@@ -215,20 +215,17 @@ const GlobalStyle = createGlobalStyle`
         ...
     }
 `;
-
 ```
 
 ```javascript
 const App = () => {
-    return(
-        <section>
-            <GlobalStyle/>
-            <div>
-                ...
-            </div>
-        </section>
-    );
-}
+  return (
+    <section>
+      <GlobalStyle />
+      <div>...</div>
+    </section>
+  );
+};
 ```
 
 ### 2-3-5 Styled-Components 리팩토링
@@ -247,7 +244,7 @@ cosnt Button = styled.button`
 
 ## 참조
 
-> [styled-component: document](https://styled-components.com/docs)   
-> [진우형픽 검색엔진: hello](https://beta.sayhello.so/)   
-> [진우형픽 검색엔진2: brave](https://search.brave.com/)   
+> [styled-component: document](https://styled-components.com/docs)  
+> [진우형픽 검색엔진: hello](https://beta.sayhello.so/)  
+> [진우형픽 검색엔진2: brave](https://search.brave.com/)  
 > [storybook](https://storybook.js.org/)

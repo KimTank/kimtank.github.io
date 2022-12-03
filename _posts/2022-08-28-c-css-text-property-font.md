@@ -3,16 +3,16 @@ layout: post
 title: "CSS text property와 font"
 date: 2022-08-28T00:00:00-00:00
 categories:
-- CSS
+  - CSS
 tags:
-- CSS
-- text-align
-- font-weight
-- text-decoration
-- line-height
-- letter-spacing
-- font-size
-- font-family
+  - CSS
+  - text-align
+  - font-weight
+  - text-decoration
+  - line-height
+  - letter-spacing
+  - font-size
+  - font-family
 ---
 
 주말간 CSS를 반응형까지 보려고했었건만 잠드는바람에 늦어졌다. 내일까지 얼마남지않았지만 ~~오늘의 내가 게을러지면 내일의 나는 또 밀릴거니까~~ 얼른하자!!
@@ -26,7 +26,7 @@ tags:
 ```css
 h1 {
   text-align: center;
-  width: 50%
+  width: 50%;
 }
 /* 적용하더라도 <h1>전체가 align으로 움직이지 않는다. */
 ```
@@ -39,7 +39,7 @@ h1 {
 
 ```css
 tag {
-  text-decoration:underline;
+  text-decoration: underline;
   /* 
   - 선종류: underline, line-through, overline
   - text-decoration-style: solid, double, dotted, dashed, wavy
@@ -91,16 +91,16 @@ unset
 */
 ```
 
-| Relative | Absolute | 
-|---|---|
-| EM | PX |
-| REM | PT |
-| VH | CM |
-| VW | IN |
-| % | MM |
-| AND MORE! |---|
+| Relative  | Absolute |
+| --------- | -------- |
+| EM        | PX       |
+| REM       | PT       |
+| VH        | CM       |
+| VW        | IN       |
+| %         | MM       |
+| AND MORE! | ---      |
 
-> 일반적으로 EM, REM, %로 제어하며, 나머지는 잘 안쓰인다.   
+> 일반적으로 EM, REM, %로 제어하며, 나머지는 잘 안쓰인다.  
 > 반응형웹의 경우 절대값을 안쓴다.
 
 ## 3. Font-Family
@@ -133,13 +133,13 @@ font-family: initial;
 font-family: unset;
 ```
 
-> font-family stack은 앞에서부터 기기에 있는 font-family를 찾아 순차적으로 명시   
+> font-family stack은 앞에서부터 기기에 있는 font-family를 찾아 순차적으로 명시  
 > font-family: a, b, c, d, e, f, g;
 
 ## 참조
 
 > [MDN:CSS/Reference](https://developer.mozilla.org/ko/docs/Web/CSS/Reference)  
-> [MDN:CSS/Font-size](https://developer.mozilla.org/ko/docs/Web/CSS/font-size)   
-> [MDN:CSS/Font-family](https://developer.mozilla.org/ko/docs/Web/CSS/font-family)   
-> [HTMLcolorCodes/color-names](https://htmlcolorcodes.com/color-names/)   
+> [MDN:CSS/Font-size](https://developer.mozilla.org/ko/docs/Web/CSS/font-size)  
+> [MDN:CSS/Font-family](https://developer.mozilla.org/ko/docs/Web/CSS/font-family)  
+> [HTMLcolorCodes/color-names](https://htmlcolorcodes.com/color-names/)  
 > [CSSfontStack](https://cssfontstack.com)

@@ -3,12 +3,12 @@ layout: post
 title: "인터페이스와 람다식"
 date: 2019-02-04T00:00:00-00:00
 categories:
- - legacy
+  - legacy
 tags:
- - interface
- - ramda
- - corejava
- - 카이 호스트만
+  - interface
+  - ramda
+  - corejava
+  - 카이 호스트만
 ---
 
 1. 인터페이스는 구현 클래스에서 반드시 구현해야 하는 메서드를 명시함.
@@ -80,15 +80,11 @@ public static double average(IntSequence seq, int n) {
 }
 ```
 
-
-
 ### 3.1.2 인터페이스 구현
 
 `IntSequence`를 구현(`implement`[^dic0])하여 `average`메서드에 사용할 수 있는 클래스를 살펴보자고함.
 
-[^dic0]: **동 - 1.**시행하다to **implement changes/decisions/policies/reforms**변화/결정/정책/개혁을 시행하다**명사****1.**(흔히 옥외 활동에 쓰이는 간단한) 도구agricultural **implements**농기구
-
-
+[^dic0]: **동 - 1.**시행하다to **implement changes/decisions/policies/reforms**변화/결정/정책/개혁을 시행하다**명사\*\***1.**(흔히 옥외 활동에 쓰이는 간단한) 도구agricultural **implements\*\*농기구
 
 ```java
 public class SquareSequence implements IntSequence {
@@ -118,25 +114,25 @@ public class DigitSequence implements IntSequence {
     //인트 시퀀스를 implements한 DigitSequence
     //전역에 number선언
     private int number;
-    
+
     //생성자를 만들며 nubmer를 초기화
     public DigitSequence(int n){
         number = n;
     }
-    
+
     //nubmer값이 0이 아니면 true반환
     public boolean hasNext(){
         return number !=0;
     }
-    
+
     //next 메서드 설명
     public int next(){
         //전역에 있는 nuber를 10으로 나눈 나머지연산
         int result = number % 10;
-        
+
         //number를 10을 나누어 목을 전역에 대입
         number /= 10;
-        
+
        	//나머지 연산을 반환
         return result;
     }
@@ -153,8 +149,6 @@ public class DigitSequence implements IntSequence {
 
 > Note = `SquareSequence`와 `DigitSequence`클래스는 인터페이스의 모든 메서드를 구현해야됨. 클래스가 인터페이스의 메서드 중 일부만 구현한다면 해당 클래스는 반드시 `abstract`제어자로 선언해야함.
 
-
-
 ### 3.1.3 인터페이스 타입으로 변환
 
 ```java
@@ -170,7 +164,7 @@ double avg = average(digits, 100);
 
 > Note = 인터페이스 타입으로 변수를 선언할 수 있지만, 타입이 인터페이스 자체인 객체는 만들 수 없음. 모든 객체는 클래스의 인스턴스임.
 
-### 3.1.4 캐스트와 `instanceof`  연산자
+### 3.1.4 캐스트와 `instanceof` 연산자
 
 `부모 변수A = new 자식생성자();`
 
@@ -206,8 +200,6 @@ DigitSequence digits = (DigitSequence)sequence;
 
   > Note = `instanceof`연산자는 `null`에 안전함(`obj`가 `null`이면 `obj instanceof Type` 표현식은 `false`임.). 결국 `null`은 어떤 타입의 객체도 참조할 수 없음.
 
-
-
 ### 3.1.5 인터페이스 확장
 
 인터페이스는 또 다른 인터페이스를 확장(`extand`)해서 원래 있던 메서드 외의 추가 메서드를 요구하거나 제공할 수 있음
@@ -224,8 +216,6 @@ public interface Channel extends Closeable {
 //채널 인터페이스를 구현하는 클래스(자식)은 도 메서드를 모두 구현해야됨. -> 두 인터페이스 타입 중 어느 것으로든 해당 클래스의 객체를 변환할 수 있음.
 ```
 
-
-
 ### 3.1.6 여러 인터페이스 구현
 
 클래스는 인터페이스를 몇 개든 구현할 수 있음. -> 다중상속의 개념
@@ -237,15 +227,11 @@ public Class AAA implement AA0, AA1, AA2 {
 //AAA클래스는 AA0, AA1, AA2를 슈퍼타입으로 둔다.
 ```
 
-
-
 ### 3.1.7 상수
 
 인터페이스에 정의한 변수는 자동으로 public static final이 됨. 이 상수들은 전체이름으로 참조할 수 있고, 클래스가 인터페이스를 구현하면 한정어(`qualifier`)를 생략하고 쓸 수 있음. 일반적 표현 아니고 열거(`enumeration`)를 사용하는 것이 더 좋음.
 
 > Note = 인터페이스 안에는 인스턴스 변수를 둘 수 없음. 인터페이스는 객체의 상태가 아니라 동작(behavior)을 명시함.
-
-
 
 ## 3.2 인터페이스의 정적 메서드, 기본 메서드, 비공개 메서드
 
@@ -301,8 +287,6 @@ public interface IntSequence{
   - 클래스를 다시 컴파일 하지 않고 `Bag`클래스가 포함된 기존 `JAR`파일을 그대로 사용한다고 하면, 빠진 메서드가 있는데도 여전히 클래스를 제대로 로드함. 프로그램에서 여전히 `Bag`인스턴스를 생성할 수 있고, 문제도 없음(인터페이스에 메서드를 추가하는 것은 바이너리 수준에 호환(`binary-compatible`)). 하지만 프로그램에서 `Bag`인스턴스로 메서드 호출 시 `AbstractmethodError`발생함.
   - 메서드 `default`선언시 이 문제 해결가능. `Bag`클래스 제대로 컴파일됨. `Bag`클래스를 다시 컴파일하지 않고 로드한 후 `Bag`인스턴스로 `stream`메서드를 호출하면 `Collection.stream`메서드가 호출됨.
 
-
-
 ### 3.2.3 기본 메서드의 충돌 해결
 
 클래스가 인터페이스를 두 개 구현한다 가정. 한 인터페이스에는 기본 메서드있고, 다른 인터페이스에는 이 메서드와 이름, 매개변수 타입이 같은 메서드(기본이든 아니든)가 있다면 반드시 충돌을 해결해야함.
@@ -348,11 +332,11 @@ interface Identified{
 }
 ```
 
-`Employee`클래스가 `Person`인터페이스의 기본 메서드를 상속받을수있는가? -> 설명이 어려워 그대로 적습니다. -> 언뜻보면 가능할거같기도함. 하지만 `Identified.getId`가 수행할 동작을 `Person.getId`메서드가 실제로 하는지 컴파일러가 어떻게 아는가? ex) `Person.getId`는 사람의 `ID`번호가 아니느 프로이트의 이드(`Freudian id`)레벨을 반환할 수 있음.[^dic2]     <===???????????????????
+`Employee`클래스가 `Person`인터페이스의 기본 메서드를 상속받을수있는가? -> 설명이 어려워 그대로 적습니다. -> 언뜻보면 가능할거같기도함. 하지만 `Identified.getId`가 수행할 동작을 `Person.getId`메서드가 실제로 하는지 컴파일러가 어떻게 아는가? ex) `Person.getId`는 사람의 `ID`번호가 아니느 프로이트의 이드(`Freudian id`)레벨을 반환할 수 있음.[^dic2] <===???????????????????
 
 [^dic2]: 이드(`id`)는 프로이트 자아, 초자아와 더불어 정신을 구성하는 이론적 요소로 정신분석학 용어. -> 태어나면서부터 존재하는 본능적 충동의 원천을 의미함. 하... 설명이 참 어렵네요 결국 본문에서 필자는 어느 인터페이스의 `getId`인지 알지 못한다는 임다.
 
-====> 해결책 : 자바 설계자들 안전성과 일관성 따르기로함. 두 인터페이스가 어떻게 충돌하는지는 중요하지 않음. 적어도 한 인터페이스에서 구현을 제공하면 컴파일러는 오류를 보고함. 모호성을 해결하는 일은 프로그래머의 책임임  <-- 응 그렇게 쓰지말라고 명시적으로 말해주는거같습니다.
+====> 해결책 : 자바 설계자들 안전성과 일관성 따르기로함. 두 인터페이스가 어떻게 충돌하는지는 중요하지 않음. 적어도 한 인터페이스에서 구현을 제공하면 컴파일러는 오류를 보고함. 모호성을 해결하는 일은 프로그래머의 책임임 <-- 응 그렇게 쓰지말라고 명시적으로 말해주는거같습니다.
 
 > Note = 두 인터페이스 모두 공유 메서드의 기본 구현을 제공하지 않으면 충돌이 일어나지 않는다. 이 경우 구현 클래스에 메서드를 구현하거나 메서드를 구현하지 않고 클래스를 `abstract` 로 선언하면됨.
 
@@ -374,17 +358,15 @@ private static IntSequence makeFiniteSequence(int... values){
 }
 ```
 
-
-
 ## 3.3 인터페이스의 예
 
 인터페이스는 클래스가 구현하기로 약속한 메서드의 집합. 예로는 자바 API중 자주 사용하는 4가지 보자.
 
 ### 3.3.1 Comparable 인터페이스
 
- 객체의 배열을 정렬한다고 봤을 때, 정렬 알고리즘은 요소를 비교해서 순서가 어긋나 있으면 재배치하는 일을 반복함. 비교하는 규칙은 클래스마다 다르고, 정렬 알고리즘은 클래스가 제공하는 메서드를 호출할 수 있어야 함. 모든 클래스가 호출될 메서드를 무엇으로 할지 합의하면 정렬 알고리즘은 정렬을 수행할 수 있음.
+객체의 배열을 정렬한다고 봤을 때, 정렬 알고리즘은 요소를 비교해서 순서가 어긋나 있으면 재배치하는 일을 반복함. 비교하는 규칙은 클래스마다 다르고, 정렬 알고리즘은 클래스가 제공하는 메서드를 호출할 수 있어야 함. 모든 클래스가 호출될 메서드를 무엇으로 할지 합의하면 정렬 알고리즘은 정렬을 수행할 수 있음.
 
- 어떤 클래스의 객체를 정렬하려면 해당 클래스가 `Comparable`인터페이스를 구현해야함. 이 인터페이스의 기술적 중한 점 -> 정렬을 수행할 때 문자열 대 문자열, 직원 대 직원 식으로 비교함. `Comparable`인터페이스는 타입 매개변수를 받는다.
+어떤 클래스의 객체를 정렬하려면 해당 클래스가 `Comparable`인터페이스를 구현해야함. 이 인터페이스의 기술적 중한 점 -> 정렬을 수행할 때 문자열 대 문자열, 직원 대 직원 식으로 비교함. `Comparable`인터페이스는 타입 매개변수를 받는다.
 
 ```java
 public interface Comparable<T> {
@@ -439,13 +421,11 @@ Arrays.sort(friends);
 
 > Note = `Array.sort`메서드는 컴파일 시간에 인수가 `Comparable`객체의 배열인지 검사하지 않음. 대신 `Comparable`인터페이스를 구현하지 않은 클래스 요소를 만나면 예외를 던짐.
 
-
-
 ### 3.3.2 Comparator 인터페이스
 
-문자열을 사전 순서가 아니라 길이가 증가하는 순서로 비교한다고 하면, `String`클래스는 `compareTo`메서드를 두  가지 방법으로 구현하지 못함. -> `String`클래스는 우리가 소유한 클래스가 아니므로 수정불가.
+문자열을 사전 순서가 아니라 길이가 증가하는 순서로 비교한다고 하면, `String`클래스는 `compareTo`메서드를 두 가지 방법으로 구현하지 못함. -> `String`클래스는 우리가 소유한 클래스가 아니므로 수정불가.
 
- 위 상황에 맞는 `Arrays.sort`메서드의 두 번째 버전 -> 이 버전은 배열과 비교자(`comparator)`를 매개변수로 받음(비교자는 `Comparator` 인터페이스를 구현하는 클래스의 인스턴스임.)
+위 상황에 맞는 `Arrays.sort`메서드의 두 번째 버전 -> 이 버전은 배열과 비교자(`comparator)`를 매개변수로 받음(비교자는 `Comparator` 인터페이스를 구현하는 클래스의 인스턴스임.)
 
 ```java
 public interface Comparator<T>{
@@ -476,11 +456,9 @@ String[] friends = {"p", "pp", "m"};
 Arrays.sort(friends, new LengthComparator());
 ```
 
-
-
 ### 3.3.3 Runnable 인터페이스
 
- 모든 프로세서가 멀티코어 장착하고 있다면, 모든 코어를 작업 중인 상태로 유지하고 싶을 것임. 아마 특정 작업을 별도의 스레드에서 수행하거나 실행용 스레드 풀에 넣으려고 할 것임. 작업을 정의하려면 `Runnable`인터페이스를 구현해야함. `Runnable`인터페이스에는 메서드가 한개만 있음.
+모든 프로세서가 멀티코어 장착하고 있다면, 모든 코어를 작업 중인 상태로 유지하고 싶을 것임. 아마 특정 작업을 별도의 스레드에서 수행하거나 실행용 스레드 풀에 넣으려고 할 것임. 작업을 정의하려면 `Runnable`인터페이스를 구현해야함. `Runnable`인터페이스에는 메서드가 한개만 있음.
 
 ```java
 class HelloTask implements Runnable{
@@ -528,7 +506,7 @@ cancelButton.setOnAction(new CancelAction());
 >
 > 간단하게 생각하여 안드로이드의 `listener`의 경우 1가지 동작만 가능하게 한 `callback`으로 볼수있음.
 
-### 
+###
 
 ## 3.4 람다 표현식
 
@@ -604,8 +582,6 @@ EventHandler<ActionEvent> listener = event ->
 
 이 표현식은 기대하는 결과가 `int`타입(또는 `Integer`, `long`, `double`같은 호환 타입)인 문맥에 사용할 수 있음.
 
-
-
 ### 3.4.2 함수형 인터페이스
 
 람다식은 액션을 표현하는(ex `Runnable`, `Comparator`) 인터페이스와 호환됨.
@@ -641,11 +617,7 @@ public interface Predicate<T>{
 list.removeIf(e -> e == null);
 ```
 
-
-
 to be continue..
-
-
 
 ## 3.5 메스드 참조와 생성자 참조
 

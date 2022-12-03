@@ -3,25 +3,25 @@ layout: post
 title: "포트폴리오용 웹서버, HTTP서버 만들기 vol.1"
 date: 2022-10-18
 categories:
-- Personal
+  - Personal
 tags:
-- 포트폴리오
-- HTTP서버
-- Server
-- React
-- local
-- Android
-- OS
-- Linux
-- unix
-- Web
-- Linux in dex
-- Ubuntu touch
-- UBport
-- Termux
-- F-droid
-- m205n
-- Github pages
+  - 포트폴리오
+  - HTTP서버
+  - Server
+  - React
+  - local
+  - Android
+  - OS
+  - Linux
+  - unix
+  - Web
+  - Linux in dex
+  - Ubuntu touch
+  - UBport
+  - Termux
+  - F-droid
+  - m205n
+  - Github pages
 ---
 
 updateAt 22-10-23
@@ -60,12 +60,12 @@ createAt 22-10-18
 
 ## 2. 검색
 
-   1. [linux in dex(close 2019)](https://namu.wiki/w/Linux%20on%20DeX): `삼성`이 이런걸 기획했다는 걸 처음 알았다. 풍문에는 `abc`에서 중단요청한걸로 들었다.
-   2. [ubuntu touch(close 2015)](https://ko.wikipedia.org/wiki/%EC%9A%B0%EB%B6%84%ED%88%AC_%ED%84%B0%EC%B9%98): [공홈](https://ubuntu-touch.io/)은 아직존재한다. 상당히 깔아보고 싶었던 것 중 하나이다.
-   3. [ubports(close 2017)](https://en.wikipedia.org/?title=UBports&redirect=no): [공홈](https://ubports.com/), `ubuntu touch`의 뒤를 이어 `ubports` 커뮤니티에서 개발되어있고, 개발중이다. 국내 제조사인 `삼성`, `LG`의 경우에는 역시나 구현이 많이 되어있지 않고, 그렇다고하니, 해외 제조사인 `Google`, `Xiaomi`, `Sony`등 도 그렇게 최신기기는 지원하지 않고있다. 하지만 파일하나와 간단한 세팅으로도 설치가 가능하다고하니, 관심있다면 [지원기기목록](https://devices.ubuntu-touch.io/)에서 해당되는 남는게 있으면 시도해봄직하다. 종료 선언은 했지만, 우리의 덕후형님들은 열심히 자기가쓸걸 만들어서 '야 이거 써봐 만들었는데 어때'를 해주고 계신다.([앱마켓](https://open-store.io/)도 존재해서 우분투폰이 생기는거다.)
-   4. [Termux(ing)](https://namu.wiki/w/Termux): 처음 찾은 방법이자, 결국 설치에 근간이 된 ~~유사~~`애뮬레이터`. [공홈](https://termux.dev/en/), [Github](https://github.com/termux/termux-app), 해당 `애뮬레이터`로 `git`, `nodejs` 설치, `npm` 설치,  진입은 가능하지만, 서버실행 시 추후에 언급될 글에서 나오겠지만, android 자체 문제로 인해 우회하는 방법으로 매번 실행(`vpn`으로 `http://127.0.0.2/home/username/`)해줘야한다. 해당 어플은 `Google play store`에서는 `deprecate`되어(`abc`가 막았대요, 그래서 소송중) `f-droid`에 들어가서 받아야한다.
-   5. [f-droid](https://ko.wikipedia.org/wiki/F-Droid): [공홈](https://f-droid.org/), 소문으로만 듣던, `Android`를 벗어나 자유롭게 `안드로이드 운영체제`를 사용하자는 진영(아닐지도 모름)의 `Free Android`, `FOSS`(`Free Open Source Software`) [저장소](https://gitlab.com/fdroid/)이다. 여담으로 `Github`, `Microsoft`의 그늘을 벗어나기위한 [GitLab](https://namu.wiki/w/GitLab)이 있다.(사람마다 말이 다틀려요, 누구는 그래서이다. 누구는 경쟁사거라서 견제한다. 재미로봐주세요.)
-   6. [Andronix](https://docs.andronix.app/): [공홈](https://andronix.app/), `android`에서 `windows`까지 편하게 올리게 만들어놓은 무언가(나는 안편했어요 유료에다 환경세팅하는 법을 내가 해야됬거든요)
+1.  [linux in dex(close 2019)](https://namu.wiki/w/Linux%20on%20DeX): `삼성`이 이런걸 기획했다는 걸 처음 알았다. 풍문에는 `abc`에서 중단요청한걸로 들었다.
+2.  [ubuntu touch(close 2015)](https://ko.wikipedia.org/wiki/%EC%9A%B0%EB%B6%84%ED%88%AC_%ED%84%B0%EC%B9%98): [공홈](https://ubuntu-touch.io/)은 아직존재한다. 상당히 깔아보고 싶었던 것 중 하나이다.
+3.  [ubports(close 2017)](https://en.wikipedia.org/?title=UBports&redirect=no): [공홈](https://ubports.com/), `ubuntu touch`의 뒤를 이어 `ubports` 커뮤니티에서 개발되어있고, 개발중이다. 국내 제조사인 `삼성`, `LG`의 경우에는 역시나 구현이 많이 되어있지 않고, 그렇다고하니, 해외 제조사인 `Google`, `Xiaomi`, `Sony`등 도 그렇게 최신기기는 지원하지 않고있다. 하지만 파일하나와 간단한 세팅으로도 설치가 가능하다고하니, 관심있다면 [지원기기목록](https://devices.ubuntu-touch.io/)에서 해당되는 남는게 있으면 시도해봄직하다. 종료 선언은 했지만, 우리의 덕후형님들은 열심히 자기가쓸걸 만들어서 '야 이거 써봐 만들었는데 어때'를 해주고 계신다.([앱마켓](https://open-store.io/)도 존재해서 우분투폰이 생기는거다.)
+4.  [Termux(ing)](https://namu.wiki/w/Termux): 처음 찾은 방법이자, 결국 설치에 근간이 된 ~~유사~~`애뮬레이터`. [공홈](https://termux.dev/en/), [Github](https://github.com/termux/termux-app), 해당 `애뮬레이터`로 `git`, `nodejs` 설치, `npm` 설치, 진입은 가능하지만, 서버실행 시 추후에 언급될 글에서 나오겠지만, android 자체 문제로 인해 우회하는 방법으로 매번 실행(`vpn`으로 `http://127.0.0.2/home/username/`)해줘야한다. 해당 어플은 `Google play store`에서는 `deprecate`되어(`abc`가 막았대요, 그래서 소송중) `f-droid`에 들어가서 받아야한다.
+5.  [f-droid](https://ko.wikipedia.org/wiki/F-Droid): [공홈](https://f-droid.org/), 소문으로만 듣던, `Android`를 벗어나 자유롭게 `안드로이드 운영체제`를 사용하자는 진영(아닐지도 모름)의 `Free Android`, `FOSS`(`Free Open Source Software`) [저장소](https://gitlab.com/fdroid/)이다. 여담으로 `Github`, `Microsoft`의 그늘을 벗어나기위한 [GitLab](https://namu.wiki/w/GitLab)이 있다.(사람마다 말이 다틀려요, 누구는 그래서이다. 누구는 경쟁사거라서 견제한다. 재미로봐주세요.)
+6.  [Andronix](https://docs.andronix.app/): [공홈](https://andronix.app/), `android`에서 `windows`까지 편하게 올리게 만들어놓은 무언가(나는 안편했어요 유료에다 환경세팅하는 법을 내가 해야됬거든요)
 
 ## 3. 기기환경
 

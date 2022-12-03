@@ -3,21 +3,21 @@ layout: post
 title: "Network deep vol.1"
 date: 2022-11-09
 categories:
-- Network
+  - Network
 tags:
-- Network
-- ARPANE
-- Internet Protocol
-- IP
-- Packet
-- Transmission Control Protocol
-- TCP
-- User Datagram Protocol
-- UDP
-- International Organization for Standardization
-- ISO
-- Open Systems Interconnection Reference Model
-- OSI
+  - Network
+  - ARPANE
+  - Internet Protocol
+  - IP
+  - Packet
+  - Transmission Control Protocol
+  - TCP
+  - User Datagram Protocol
+  - UDP
+  - International Organization for Standardization
+  - ISO
+  - Open Systems Interconnection Reference Model
+  - OSI
 ---
 
 블로그 정리의 시기가 다가왔다. ruby도 알아야하는 상황 미루면 크게 오는구나
@@ -60,24 +60,26 @@ IP Protocol보다 더 높은 계층에 TCP Protocol이 존재하며, IP Protocol
 Http msg create -> Socket(TCP(msg)) Transport -> TCP info create(include msg data) -> IP(Packet create(TCP info(msg data))) -> Ethernet Frame(IP(TCP(msg)))
 
 1. Transmission Control Protocol(TCP): 전송제어프로토콜 세그먼트는 IP패킷의 출발지 IP와 목적지IP정보를 보완할 수있는 출발지PORT, 목적지PORT, 전송제어, 순서, 검증 정보등을 포함하여
+
    - 연결지향: TCP 3way handshake(가상 연결)
 
-      |---|---|---|---|
-      |클라이언트|방향|서버|비고|
-      |from|->SYN->|to|접속 요청 SYN packet 전송|
-      |to|<-SYN+ACK<-|from|SYN요청 받아 요청수락 ACK+SYN 설정 packet 전송 후 litsen ACK응답|
-      |from|->ACK->|to|ACK 전송(현재 최적화로 이단계에서 ACK+DATA|
-      |to|<-ESTABLISHED<-|from| 이후 연결 성립 후 데이터 전송|
+     |---|---|---|---|
+     |클라이언트|방향|서버|비고|
+     |from|->SYN->|to|접속 요청 SYN packet 전송|
+     |to|<-SYN+ACK<-|from|SYN요청 받아 요청수락 ACK+SYN 설정 packet 전송 후 litsen ACK응답|
+     |from|->ACK->|to|ACK 전송(현재 최적화로 이단계에서 ACK+DATA|
+     |to|<-ESTABLISHED<-|from| 이후 연결 성립 후 데이터 전송|
 
-      > SYN: Synchroizie   
-      > ACK: Acknowledgment
+     > SYN: Synchroizie  
+     > ACK: Acknowledgment
 
    - 데이터 전달 보증
-      -> f(clinet) request for data transport -> t(server)f response for data transport -> t(client)
-      비연결성을 보완한다.
+     -> f(clinet) request for data transport -> t(server)f response for data transport -> t(client)
+     비연결성을 보완한다.
    - 순서 보장 & 신뢰할 수 있는 프로토콜
-      -> c 1,2,3 -> s 1,3,2 -> s 2,3 -> c 2,3 -> s 1,2,3
+     -> c 1,2,3 -> s 1,3,2 -> s 2,3 -> c 2,3 -> s 1,2,3
      - 패킷이 순서대로 도착하지 않아도 TCP 세그먼트에 있는 정보로 다시 패킷 전송 요청
+
 2. User Datagram Protocol(UPD): 사용자 데이터그램 프로토콜은 IP프로토콜에 PORT, Checksum field정보만 추가된 단순한 프로토콜이다.
    > checksum: 중복 검사, 오류 정정을 통해 공간이나 시간속에서 송신된 자료의 무결성을 보호하는 단순한 방법
    - 하얀 도화지(기능 거의 없음)
@@ -151,8 +153,8 @@ OSI 모델을 기반으로 현실에 맞게 단순화된 모델이다.
 
 ## 참조
 
-> [effortDev: tistory](https://shlee0882.tistory.com/110)   
-> [wiki: osi model](https://ko.wikipedia.org/wiki/OSI_%EB%AA%A8%ED%98%95)   
-> [wiki: internet protocol suite](https://ko.wikipedia.org/wiki/%EC%9D%B8%ED%84%B0%EB%84%B7_%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C_%EC%8A%A4%EC%9C%84%ED%8A%B8)   
-> [wiki: tcp](https://ko.wikipedia.org/wiki/%EC%A0%84%EC%86%A1_%EC%A0%9C%EC%96%B4_%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C)   
+> [effortDev: tistory](https://shlee0882.tistory.com/110)  
+> [wiki: osi model](https://ko.wikipedia.org/wiki/OSI_%EB%AA%A8%ED%98%95)  
+> [wiki: internet protocol suite](https://ko.wikipedia.org/wiki/%EC%9D%B8%ED%84%B0%EB%84%B7_%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C_%EC%8A%A4%EC%9C%84%ED%8A%B8)  
+> [wiki: tcp](https://ko.wikipedia.org/wiki/%EC%A0%84%EC%86%A1_%EC%A0%9C%EC%96%B4_%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C)  
 > [wiki: udp](https://ko.wikipedia.org/wiki/%EC%82%AC%EC%9A%A9%EC%9E%90_%EB%8D%B0%EC%9D%B4%ED%84%B0%EA%B7%B8%EB%9E%A8_%ED%94%84%EB%A1%9C%ED%86%A0%EC%BD%9C)

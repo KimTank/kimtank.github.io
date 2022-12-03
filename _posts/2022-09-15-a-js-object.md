@@ -3,15 +3,15 @@ layout: post
 title: "JavaScript Object"
 date: 2022-09-15
 categories:
-- JavaScript
+  - JavaScript
 tags:
-- JavaScript
-- Object
-- Literal
-- Initializer
-- Prototype
-- Inheritance
-- prototype-chain
+  - JavaScript
+  - Object
+  - Literal
+  - Initializer
+  - Prototype
+  - Inheritance
+  - prototype-chain
 ---
 
 코드스테이츠의 실질적 강의세션 1학년은 끝이났다. 처음에 방만하게 조금 아는내용이라고 다른거랑 병행했던 처음부터, 추후 코드스테이츠의 커리큘럼만 따라오던 나중까지. 내실력과 위치를 더 잘 파악할 수있었다. 늦었다고 수박겉햝기식으로 진도만 주구장창 나가고 쓸줄은 알지만 정확하게 쓸줄은 모르는게 늦었기때문에 어쩔 수 없어 라고 생각했던. 코드스테이츠의 강의를 듣기 전에는 몰랐다. 사실 어떤 교육(평생을 살면서 배우는)이든 떠먹여주는건 없다. 쪽찝게과외라도 결국 내가 이해하거나 외워야한다. 다행이도 프로그램개발에서의 몽키코더는 누구나 될수있다(밥은 안굶을 수 있다.). 하지만 누구나 꿈꾸고 뉴스에 나오는 네카??뭐는 참 어렵다. ㅁㅁ위키만 보더라도 1프로의 개발자와 99프로의 코더가 개발시장에 있다고한다. 나는 어디인지 깨달을때까지 공부한다. 미뤄왔던 객체 가자.
@@ -145,7 +145,7 @@ const clxObj = {
     redETap: 20_000_000,
     ultegraDi2: 14_000_000,
     forceETap: 16_000_000,
-    ...  
+    ...
   }
   warranty: 1
   ...
@@ -184,12 +184,12 @@ JavaScript에는 명확한 하위 클래스 객체가 없다. 프로토타입은
 var Person = function (name) {
   this.name = name;
   this.canTalk = true;
-}
+};
 
 //객체의 프로토타입 환영해 말할 수 있으면 콘솔 안녕 나는 이름이야
 Person.prototype.greet = function () {
   if (this.canTalk) {
-    console.log('Hi, I am ' + this.name);
+    console.log("Hi, I am " + this.name);
   }
 };
 
@@ -201,7 +201,7 @@ var Employee = function (name, title) {
 
 //고용인의 프로토타입에 Object.create()함수로 사람프로토타입=========================================
 Employee.prototype = Object.create(Person.prototype);
-Employee.prototype.constructor = Employee; 
+Employee.prototype.constructor = Employee;
 // Object.prototype.constructor를 Employee로 설정하지 않으면
 // Person (parent)의 prototype.constructor를 사용합니다.
 // 이를 피하기 위해 prototype.constructor를 Employee (child)로 설정합니다.
@@ -209,7 +209,7 @@ Employee.prototype.constructor = Employee;
 //고용인 환영해 말할수있으면 콘솔 안녕 이름이야, 직업
 Employee.prototype.greet = function () {
   if (this.canTalk) {
-    console.log('Hi, I am ' + this.name + ', the ' + this.title);
+    console.log("Hi, I am " + this.name + ", the " + this.title);
   }
 };
 
@@ -238,19 +238,19 @@ Mime.prototype.constructor = Mime;
 // 이를 피하기 위해 prototype.constructor를 Mime (child)로 설정합니다.
 
 //밥은 고용인이고 직업은 빌더야
-var bob = new Employee('Bob', 'Builder');
+var bob = new Employee("Bob", "Builder");
 
 //조는 손님이야
-var joe = new Customer('Joe');
+var joe = new Customer("Joe");
 
 //알지는 난해한색이고 직업은 핸디맨?이야
-var rg = new Employee('Red Green', 'Handyman');
+var rg = new Employee("Red Green", "Handyman");
 
 //마이크는 고객이야
-var mike = new Customer('Mike');
+var mike = new Customer("Mike");
 
 //마임은 말못해
-var mime = new Mime('Mime');
+var mime = new Mime("Mime");
 
 //밥환영해
 bob.greet();
@@ -268,15 +268,14 @@ rg.greet();
 mike.greet();
 // Hi, I am Mike
 
-
 //마임 말못해
 mime.greet();
 ```
 
 ## 참조
 
-> [MDN:JS/Operator/Object_initializer](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer)   
-> [MDN:JS/Functions/arguments](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/arguments)   
-> [MDN:Prototype](https://developer.mozilla.org/en-US/docs/Glossary/Prototype)   
-> [MDN:JS/Inheritance & the prototype chain](https://developer.mozilla.org/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)   
-> [MDN:JS/Global_Object/Object](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object)   
+> [MDN:JS/Operator/Object_initializer](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Operators/Object_initializer)  
+> [MDN:JS/Functions/arguments](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Functions/arguments)  
+> [MDN:Prototype](https://developer.mozilla.org/en-US/docs/Glossary/Prototype)  
+> [MDN:JS/Inheritance & the prototype chain](https://developer.mozilla.org/ko/docs/Web/JavaScript/Inheritance_and_the_prototype_chain)  
+> [MDN:JS/Global_Object/Object](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Object)

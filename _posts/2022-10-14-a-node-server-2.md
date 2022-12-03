@@ -3,15 +3,15 @@ layout: post
 title: "Node Express"
 date: 2022-10-14
 categories:
-- NodeJS
+  - NodeJS
 tags:
-- Node
-- JavaScript
-- Express
-- Framework
-- Mddleware
-- Router
-- npm
+  - Node
+  - JavaScript
+  - Express
+  - Framework
+  - Mddleware
+  - Router
+  - npm
 ---
 
 서버 안보여서 더 어렵게 느껴지는것.
@@ -31,17 +31,17 @@ $npm install express
 ## 2. Simple started
 
 ```javascript
-const express = require('express');
+const express = require("express");
 const app = express();
 const port = 8080;
-const ip = '192.168.0.1';
+const ip = "192.168.0.1";
 
-app.get('/', (req, res) => {
-    res.send('server open');
+app.get("/", (req, res) => {
+  res.send("server open");
 });
 
 app.listen(port, ip, () => {
-    console.log(`terminal log: ${ip}/:${port}`);
+  console.log(`terminal log: ${ip}/:${port}`);
 });
 ```
 
@@ -54,13 +54,13 @@ Routing은 Client의 Request에 맞는 Endpoint에 따라 Server Response 방법
 ```javascript
 //Node.js 방식
 const requestHandler = (req, res) => {
-  if(req.url === '/endpoint') {
-    if (req.method === 'GET') {
-      res.end(data)
-    } else if (req.method === 'POST') {
-      req.on('data', (req, res) => {
+  if (req.url === "/endpoint") {
+    if (req.method === "GET") {
+      res.end(data);
+    } else if (req.method === "POST") {
+      req.on("data", (req, res) => {
         // do something ...
-      })
+      });
     }
   }
 };
@@ -68,12 +68,12 @@ const requestHandler = (req, res) => {
 //Express framework 내에서 Router 제공
 const router = express.Router();
 
-router.get('/endpoint', (req, res) => {
-    res.send(data);
+router.get("/endpoint", (req, res) => {
+  res.send(data);
 });
 
-router.post('/endpoint', (req, res) => {
-    // do something...
+router.post("/endpoint", (req, res) => {
+  // do something...
 });
 ```
 
@@ -93,13 +93,13 @@ Middleware는 중간에 문제가 있는 요청을 검증하거나 기능을 추
 ## 3. frequency usage middleware
 
 1. POST request 등 포함된 body(payload)를 구조화(쉽게 얻고 싶음)
-2. * request/response에 CORS header 추가 시
-3. * request -> url이나 method를 확인 시
+2. - request/response에 CORS header 추가 시
+3. - request -> url이나 method를 확인 시
 4. requst에 사용자 인증 정보(certification)가 있는지 확인
 
 ### 3.1. POST request 등에 포함된 body(payload)를 구조화할 때
 
-```javascript
+````javascript
 // # 1. nodeJS, chunk: 조각
 let body = [];
 request.on('data', (chunk) => {
@@ -133,9 +133,9 @@ const jsonParser = express.json(/* TODO 확인 -> {strict: false} */);
 app.post('/resource/endpoint', jsonParser, (req, res) => {
     //action
 });
-```
+````
 
-### 3.2. * Req/Res CORS header added
+### 3.2. \* Req/Res CORS header added
 
 ```javascript
 // # 1. NodeJS
@@ -173,7 +173,7 @@ app.get('endpoint/:parameter', cors(), (req, res, next) => {
 });
 ```
 
-### 3.3. * req about url or method verify
+### 3.3. \* req about url or method verify
 
 ```javascript
 /**
@@ -210,25 +210,27 @@ app.listen(8080);
 
 ```javascript
 app.use((req, res, next) => {
-    if(req.header.token){
-        req.isLoggedIn = true;
-        next();
-    } else {
-        res.status(/* responseCode user certification Denied */).send('no authority');
-    }
-})
+  if (req.header.token) {
+    req.isLoggedIn = true;
+    next();
+  } else {
+    res
+      .status(/* responseCode user certification Denied */)
+      .send("no authority");
+  }
+});
 ```
 
 ---
 
 ## 참조
 
-> [velog:soshin0112/Node.js CORS, SOP](https://velog.io/@soshin0112/Node.js-CORS-SOP-%EA%B0%9C%EB%85%90)   
-> [Express.js:Routing](https://expressjs.com/ko/guide/routing.html)   
-> [Express.js:main](https://expressjs.com/ko/)   
-> [Express.js:getting started](https://expressjs.com/ko/starter/installing.html)   
-> [Express.js:Hello, World!](https://expressjs.com/ko/starter/hello-world.html)   
-> [Express.js:Basic routing](https://expressjs.com/ko/starter/basic-routing.html)   
-> [Express.js:middleware/body-parser](http://expressjs.com/en/resources/middleware/body-parser.html)   
-> [Express.js:express.json](https://expressjs.com/ko/4x/api.html#express.json)   
-> [Express.js:cors](http://expressjs.com/en/resources/middleware/cors.html)   
+> [velog:soshin0112/Node.js CORS, SOP](https://velog.io/@soshin0112/Node.js-CORS-SOP-%EA%B0%9C%EB%85%90)  
+> [Express.js:Routing](https://expressjs.com/ko/guide/routing.html)  
+> [Express.js:main](https://expressjs.com/ko/)  
+> [Express.js:getting started](https://expressjs.com/ko/starter/installing.html)  
+> [Express.js:Hello, World!](https://expressjs.com/ko/starter/hello-world.html)  
+> [Express.js:Basic routing](https://expressjs.com/ko/starter/basic-routing.html)  
+> [Express.js:middleware/body-parser](http://expressjs.com/en/resources/middleware/body-parser.html)  
+> [Express.js:express.json](https://expressjs.com/ko/4x/api.html#express.json)  
+> [Express.js:cors](http://expressjs.com/en/resources/middleware/cors.html)

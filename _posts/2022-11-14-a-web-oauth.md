@@ -3,20 +3,20 @@ layout: post
 title: "Web oauth2.0"
 date: 2022-11-14
 categories:
-- Web
+  - Web
 tags:
-- Javascript
-- Web
-- OAuth
-- Resource Owner
-- Client
-- Local Server
-- Resource Server
-- Authorization Server
-- Authorization Grant
-- Authorization Code
-- Access Token
-- Refresh Token
+  - Javascript
+  - Web
+  - OAuth
+  - Resource Owner
+  - Client
+  - Local Server
+  - Resource Server
+  - Authorization Server
+  - Authorization Grant
+  - Authorization Code
+  - Access Token
+  - Refresh Token
 ---
 
 처음으로 늦잠을 잔날로 기억한다. 오늘은 221116, 덕분에 효병님에게 본의아닌 폐를 끼치게되었다.
@@ -76,9 +76,9 @@ LS -> RT로 AT요청 -> AS -> 새 AT 전달
 
 ## 참조
 
-> [oauth: oauth2(php base)](https://www.oauth.com/oauth2-servers/getting-ready/)   
-> [kakao api: kakao login](https://developers.kakao.com/product/kakaoLogin)   
-> [naver api: login](https://developers.naver.com/products/login/api/api.md)   
-> [google cloud: authentication](https://cloud.google.com/docs/authentication?_ga=2.174955938.-121637756.1665038631)   
-> [facebook doc: login](https://developers.facebook.com/docs/facebook-login/)   
+> [oauth: oauth2(php base)](https://www.oauth.com/oauth2-servers/getting-ready/)  
+> [kakao api: kakao login](https://developers.kakao.com/product/kakaoLogin)  
+> [naver api: login](https://developers.naver.com/products/login/api/api.md)  
+> [google cloud: authentication](https://cloud.google.com/docs/authentication?_ga=2.174955938.-121637756.1665038631)  
+> [facebook doc: login](https://developers.facebook.com/docs/facebook-login/)  
 > [twitter doc: authentication](https://developer.twitter.com/en/docs/authentication/overview)

@@ -3,25 +3,23 @@ layout: post
 title: "소프트웨어 공학과 소프트웨어"
 date: 2020-07-23T00:00:00-00:00
 categories:
- - legacy
+  - legacy
 tags:
- - 소프트웨어 공학
- - 소프트웨어 공학 이해
- - 소프트웨어 특징과 분류
- - 소프트웨어 라이프사이클
- - 김희영
+  - 소프트웨어 공학
+  - 소프트웨어 공학 이해
+  - 소프트웨어 특징과 분류
+  - 소프트웨어 라이프사이클
+  - 김희영
 ---
 
 ## 1-1. 소프트웨어 공학이란?
 
 > 프리드리히 바우어, 1968년 10월, 기계에서 효율적으로 작동되는 신뢰성 있는 소프트웨어를 경제적으로 획득하기 위해 적절한 공학적 원리를 수립하여 활용하는 것이다.
 >
-> "Establishment[^Establishment] and use of sound engineering principles[^principles] to economically obtain software that is reliable and works on real machines efficienty"
+> "Establishment[^establishment] and use of sound engineering principles[^principles] to economically obtain software that is reliable and works on real machines efficienty"
 >
-> [^Establishment]: Establishment : 1. 기관, 시설 2. (사회) 기득권층, 지배층 3. 설립, 수립, 확립
+> [^establishment]: Establishment : 1. 기관, 시설 2. (사회) 기득권층, 지배층 3. 설립, 수립, 확립
 > [^principles]: principles : 1. (개인의 도덕·신념과 관련된) 원칙, 2. (법·규정·이론 등의 기본이 되는) 원칙, 3. 주의, 신조
-
-
 
 ## 1-2. 소프트웨어에 대한 이해
 
@@ -30,8 +28,6 @@ tags:
 > 프레스만(Pressman), 소프트웨어는 실행되면서 원하는 기능이나 함수, 성능을 제공해 주는 명령어들(Computer Program), 프로그램이나 데이터를 적절하게 처리할 수 있게 해 주는 자료구조, 프로그램의 사용이나 운영을 나타내는 하드카피나 가상 현태인 문서.
 
 - 단순하게 프로그램뿐만 아니라 데이터, 자료구조, 방대한 프로그램 관련 산출물도 소프트라고 한다.
-
-
 
 ## 1-3. 소프트웨어의 특징과 분류
 
@@ -55,15 +51,15 @@ tags:
 
 - 분류
 
-  | 분류                             | 내용                                                         |
-  | :------------------------------- | :----------------------------------------------------------- |
-  | System Software                  | 다른 프로그램의 수행을 지원하는 소프트웨어 ex) 컴파일러, 에디터, 파일관리 유틸 등 |
+  | 분류                             | 내용                                                                                                                                                                                         |
+  | :------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+  | System Software                  | 다른 프로그램의 수행을 지원하는 소프트웨어 ex) 컴파일러, 에디터, 파일관리 유틸 등                                                                                                            |
   | Appication Software              | 특수한 업무상 요구해결하며, 비즈니스 처리 또는 관리/기술 측면에서 의사결정 돕는 사업상 또는 기술적 데이터처리하는 소프트웨어 ex) 컴파일러, 운영체제 컴포넌트, 원거리 통신 처리 소프트웨어 등 |
-  | Engineering/Science Software     | "수 처리"알고리즘, 공학 및 과학적 연구를 위해 실시간 처리가 가능한 소프트웨어 ex) 자동차 제조분야, 우주왕복선 궤도역학, 분자생물학 등 |
-  | Embedded Software                | 생산품이나 시스템에 내장되어 있으면서 사용자나 시스템 자체를 위한 특징이나 기능을 구현함. ex) 전자레인지 키패드 제어, 엘레베이터 제어, 브레이크 시스템 등 |
-  | **Web Appication**               | 인터넷을 위해 개발된 하이퍼텍스트이거나, 웹으로 가동되는 응용프로그램 ex) 온라인 회원관리, 인터넷 뱅킹 등 |
-  | Artificial intelligence Software | 계산이나 일반적인 알고리즘으로 분석할 수 없는 복잡한 문제를 해결하는 비수치적 알고리즘을 사용한 소프트웨어 ex) 로보틱스, 패턴인식, 인공신경망, 바둑게임 등 |
-  | **Product-line Software**        | 제조공정과정에 필요한 소프트웨어 ex) 재고관리시스템, 재무응용분야 등 |
+  | Engineering/Science Software     | "수 처리"알고리즘, 공학 및 과학적 연구를 위해 실시간 처리가 가능한 소프트웨어 ex) 자동차 제조분야, 우주왕복선 궤도역학, 분자생물학 등                                                        |
+  | Embedded Software                | 생산품이나 시스템에 내장되어 있으면서 사용자나 시스템 자체를 위한 특징이나 기능을 구현함. ex) 전자레인지 키패드 제어, 엘레베이터 제어, 브레이크 시스템 등                                    |
+  | **Web Appication**               | 인터넷을 위해 개발된 하이퍼텍스트이거나, 웹으로 가동되는 응용프로그램 ex) 온라인 회원관리, 인터넷 뱅킹 등                                                                                    |
+  | Artificial intelligence Software | 계산이나 일반적인 알고리즘으로 분석할 수 없는 복잡한 문제를 해결하는 비수치적 알고리즘을 사용한 소프트웨어 ex) 로보틱스, 패턴인식, 인공신경망, 바둑게임 등                                   |
+  | **Product-line Software**        | 제조공정과정에 필요한 소프트웨어 ex) 재고관리시스템, 재무응용분야 등                                                                                                                         |
 
   - 위 분류표 말고도 많은 분류가 있음.
 
@@ -84,27 +80,27 @@ tags:
 
 ### 1.4.1 프로젝트 관리
 
-​	PMI(Project Management Institude) 착수, 계획, 실행, 종료
+​ PMI(Project Management Institude) 착수, 계획, 실행, 종료
 
 ### 1.4.2 소프트웨어 개발
 
-​	개발단계 일반적으로 분석, 설계, 구현, Test. SDLC(SWDevelopment Life Cycle)
+​ 개발단계 일반적으로 분석, 설계, 구현, Test. SDLC(SWDevelopment Life Cycle)
 
 ### 1.4.3 유지보수
 
- 1. 완전 유지보수(perfective maintenance) - 상
+1.  완전 유지보수(perfective maintenance) - 상
 
     새로운 요구사항 추가, 시슽메 구조와 성능을 개선 (고도화같음)
 
-	2. 수정 유지보수(corrective maintenance) - 중
+    2.  수정 유지보수(corrective maintenance) - 중
 
     요구사항 오류나 설계 및 구현 상 오류 개선
 
-	3. 적응 유지보수(adaptive maintenance) - 하
+    3.  적응 유지보수(adaptive maintenance) - 하
 
     시스템의 플랫폼 변경과 같은 새로운 환경으로의 적응
 
-	4. 예방 유지보수(preventive maintenance) - 하
+    4.  예방 유지보수(preventive maintenance) - 하
 
     시스템의 잠재적 결함 사전방지
 

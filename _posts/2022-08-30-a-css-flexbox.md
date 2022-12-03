@@ -3,23 +3,23 @@ layout: post
 title: "CSS Flexbox"
 date: 2022-08-30
 categories:
-- CSS
+  - CSS
 tags:
-- CSS
-- flexbox
-- flex-model
-- main-axis
-- cross-axis
-- flex-direction
-- justify-content
-- flex-wrap
-- align-items
-- align-content
-- align-self
-- flex-sizing
-- flex-basis
-- flex-grow
-- flex-shrink
+  - CSS
+  - flexbox
+  - flex-model
+  - main-axis
+  - cross-axis
+  - flex-direction
+  - justify-content
+  - flex-wrap
+  - align-items
+  - align-content
+  - align-self
+  - flex-sizing
+  - flex-basis
+  - flex-grow
+  - flex-shrink
 ---
 
 시간배분을 잘못하고, 나중에 봐도 괜찮았을 애니메이션부분을 한번 보느랴(다 이해하지도, 정리하지도 못했다.) 입안이 부르텄다. 체력적인 한계는 무한인데 내입안은 무한이 아닌가보다. 잘먹고 잘자고 잘놀고의 법칙 중 세가지 다 못지키고 있다. 시간이 날 때 다른 방안을 연구해봐야겠다. 일단은 지금은 현재 할 수 있는일에 집중하기 위해 달리자.
@@ -86,7 +86,7 @@ flex-wrap을 적용하지 않은 채 행이나 열이 단 하나라면 적용되
 
 ## 8. Align Self
 
-Align Content와 비슷하지만 flex 컨테이너에서 두개의 요소에 개별로 사용한다. flex 컨테이너 자체가 아닌 개별 요소에 적용할 때 사용한다.   
+Align Content와 비슷하지만 flex 컨테이너에서 두개의 요소에 개별로 사용한다. flex 컨테이너 자체가 아닌 개별 요소에 적용할 때 사용한다.  
 **교차축**을 기준으로 배열된 단일 요소의 위치를 바꿀 수 있다.
 
 ## 9. Flex Sizing Properties
@@ -155,8 +155,8 @@ flex: unset;
 
 ## 참조
 
-> [MDN:CSS/Flexbox](https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Flexbox)   
-> [MDN:CSS/Value & Unit](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Values_and_Units)   
-> [MDN:CSS/FlexibleBox](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)   
-> [MDN:CSS/FlexibleBox Layout & Other Layout Methods](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)   
+> [MDN:CSS/Flexbox](https://developer.mozilla.org/ko/docs/Learn/CSS/CSS_layout/Flexbox)  
+> [MDN:CSS/Value & Unit](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Values_and_Units)  
+> [MDN:CSS/FlexibleBox](https://developer.mozilla.org/ko/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)  
+> [MDN:CSS/FlexibleBox Layout & Other Layout Methods](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Relationship_of_Flexbox_to_Other_Layout_Methods)  
 > [MDN:CSS/grid](https://developer.mozilla.org/ko/docs/Web/CSS/grid)
