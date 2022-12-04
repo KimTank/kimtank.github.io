@@ -14,8 +14,12 @@ tags:
   - hooks
   - useMemo
   - useCallback
-  - custom Hooks
+  - Custom Hooks
   - useFetch
+  - static import
+  - dynamic import
+  - react.lazy
+  - react.suspense
 ---
 
 그러니까 공부하자 잡념은 꿈에서나 하고..
@@ -148,7 +152,7 @@ class를 작성하지 않고도 state와 다른 React의 기능을 사용할 수
 ### 2.2. useMemo
 
 컴포넌트는 상태가 변겨오디거나 부모 컴포넌트가 렌더링 될때마다 리렌더링되는 구조이다. 잦은 리렌더링은 앱성능에 좋지 않다.  
-<span style="color:red">-> 에러구문: Error:Too many re-renders React limits the number of renders to prevent an infinite loop</span>
+<span style="color:red"> -> 에러구문: Error:Too many re-renders React limits the number of renders to prevent an infinite loop</span>
 
 #### 2.2.1. useMemo란?
 
@@ -344,19 +348,140 @@ function useInputs(initialForm) {
 export default useInputs;
 ```
 
-React first function
-code splitting
-react.lazy() & suspense
+## 3. React first function
+
+리액트 버전 18로 올라오면서 콘솔경고창에 경고가 보이는것이 추가되었다. 리액트는 메타에의해 지속적으로 업데이트 및 관리되고 있는 라이브러리이다. 하여 현 시점에서 legacy한 코드보다는 최신 기술스택을 알아야 사용할 수 있다(우리가 죽을때까지 공부하는 이유).
+
+### 3.1. Code spliting
+
+리액트앱은 webpack, rollup과 같은 툴을 사용해 bundling한다. 번들링을 하면 html 웹페이지에 js를 쉽게 추가할 수 있다. 번들링 된 앱은 js파일을 한곳에 있고, 과거에는 이런방식이 편리하였다. 하지만 모던 웹으로 넘어오며 코드가 방대해지고, 유지관리의 비용이 늘어남에 따라 성능이슈가 발생되었고, dom을 다루는 정도가 정교해지고 무거워져, 코드를 디코딩하고 컴파일하는 정도가 느려진지 파악해 번들을 나누어 당장 필요한 코드만 불러오고 나중에 필요한 코드는 필요할 시 만 불러오는 방식을 고안하게 된다.
+
+물리적으로 번들을 나누어 런타임시 여러 번들을 동적으로 만들고 불러오는 것으로, 현재 webpack과 rollup과 같은 번들러가 지원하는 기능이다. 이걸 통해 원래 고안의 아이디어를 따라가 성능이슈를 개선하였다.
+
+#### 3.1.1. 분할, 줄이는 방법
+
+```javascript
+// 모든걸 가져옴
+import example from 'example';
+
+...
+
+example.show();
+```
+
+npm을 통한 써드파티 라이브러리도 번들링 시 포함이 된다. 번들링 시 모든 기능을 불러오면 잉여자원이 늘어나 앱의 크기가 커지게 된다.
+
+```javascript
+// 필요한걸 가져옴
+import show from 'example/show';
+
+find();
+```
+
+#### 3.1.2. React code spliting
+
+single page application인 react는 한번에 불러오기 때문에 첫 화면이 렌더링 될때까지 시간이 걸린다. 하여 성능을 위해 코드 분할을 적용했다.
+
+static import: dynamic import를 통해 사용하는 것으로 코드 파일의 가장 최상위에서 import 지시자를 사용해 사용하고자하는 라이브러리 및 파일을 불러오는 방법을 사용했다.
+
+##### 3.1.2.1. Static Import
+
+```javascript
+//최상위
+import example from "example";
+
+//코드 진행
+...
+
+example.show().now();
+
+//코드 진행
+...
+
+//코드 끝
+```
+
+##### 3.1.2.2. Dynamic Import
+
+```javascript
+//코드 진행
+...
+
+import(example.show)
+  .now();
+//dynamic import hello world 출력
+
+...
+
+//코드 끝
+...
+```
+
+dynamic import를 사용해 필요한것만 불러온다. 가져온 코드에대한 모든 호출은 해당 함수 내부에 있어야한다. 번들링 시 분할된 코드(chunk)를 지연 로딩시키거나 요청 시 로딩할 수 있다.
+
+React.lazy와 함께 사용한다.
+
+##### 3.1.2.3. React.lazy()
+
+dynamic import를 사용해 컴포넌트를 렌더링할 수 있다. single page application이므로 한번에 사용하지 않는 컴포넌트까지 불러오는 단점을 동적으로 import할 수 있어 초기 렌더링 지연시간을 어느정도 줄일 수 있다.
+
+해당 함수로 씌워진 컴포넌트는 단독으로는 못쓰고, React.suspense컴포넌트의 하위에 렌더링해야된다.
+
+```javascript
+import Component from './Component';
+
+const Component = React.lazy(()=>import('./Component));
+```
+
+##### 3.1.2.4. React.Suspense
+
+Router 분기가 나누어진 컴포넌트를 lazy를 통해 import할 시 해당 path로 이동할때 컴포넌트를 불러오는데 이 과정에서 로딩하는 시간이 생긴다. Suspense는 아직 렌더링이 준비되지 않은 컴포넌트가 있을 시 로딩화면을 보여주고, 로딩이 완료 시 렌더링이 준비된 컴포넌트를 보여주는 기능이다.
+
+Router를 Suspense적용하는것이 간단하다. 라우터가 분기되는 컴포넌트에서 각 컴포넌트에 React.lazy를 사용해 import한다. Route 컴포넌트들을 Suspense로 감싼 후 로딩 화면으로 사용할 컴포넌트를 fallback속성으로 설정하면 된다. 서비스에따라 모든 곳에서 로딩이 불러와져야하는지 설계에서부터 결정해야된다.
+
+```javascript
+import {Suspense} from 'react';
+
+const AComponent = React.lazy(()=> import('./AComponent'));
+const BComponent = React.lazy(()=> import('./BComponent'));
+
+const SomeComponent = () => {
+  return(
+    <div>
+      <Suspense fallback={<div>불러오는중</div>}>
+        <AComponent/>
+        <BComponent/>
+      </Suspense>
+    </div>
+  )
+}
+
+//with Router
+import { Suspense, lazy } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+const Main = lazy(() => import('./routes/Main'));
+const Post = lazy(() => import('./routes/Post'));
+
+const App = () => {
+  <Router>
+    <Suspense fallback={<div>불러오는중</div>}>
+      <Routes>
+        <Route path="/" element={<Main/>}>
+        <Route path="/post" element={<Post/>}>
+      </Routes>
+    </Suspense>
+  </Router>
+}
+```
 
 ---
+
+상당히 미루고미루다 결국한다. 지은님 고마워요
 
 ---
 
 ## 참조
 
 > [Chulgil Lee: Big-O 쉽게 이해하기](https://blog.chulgil.me/algorithm/)  
-> [reactjs: custom hooks](https://ko.reactjs.org/docs/hooks-custom.html)  
-> []()  
-> []()  
-> []()  
-> []()
+> [reactjs: custom hooks](https://ko.reactjs.org/docs/hooks-custom.html)
