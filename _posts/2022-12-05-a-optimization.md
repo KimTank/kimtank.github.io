@@ -352,4 +352,5 @@ $lighthouse --help
 > [httparchive.org: state of javascript/bytesjs](https://httparchive.org/reports/state-of-javascript#bytesJs)  
 > [github: speedline](https://github.com/paulirish/speedline)  
 > [httparchive.org: report/loading-speed/ttci](https://httparchive.org/reports/loading-speed#ttci)  
-> [CLS 지표 작동원리](https://www.youtube.com/watch?v=zIJuY-JCjqw)
+> [CLS 지표 작동원리](https://www.youtube.com/watch?v=zIJuY-JCjqw)  
+> [javascript.info: script async defer](https://ko.javascript.info/script-async-defer)
