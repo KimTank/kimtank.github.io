@@ -191,6 +191,7 @@ async & defer는 다운로드 시 페이지 렌더링을 막지않는다는 공�
 
 ## 5. 동작 시각화
 
+![https://ko.javascript.info/script-async-defer](/assets/img/221205-defer-1.png)
 ![https://ko.javascript.info/script-async-defer](/assets/img/221205-defer.png)
 
 ---
