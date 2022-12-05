@@ -8,7 +8,16 @@ tags:
   - Web
   - Javascript
   - Optimization
-  -
+  - CDN
+  - Content Delivery Network
+  - Cache
+  - Last-Modified
+  - ETag
+  - If-Modified-Since
+  - If-None-Match
+  - Tree shaking
+  - Babelrc
+  - Lighthouse
 ---
 
 거의 막바지에 이르른거같다. 최적화의 개념이 나오는걸보니, 늘어지면 안되는데 늘어진다.
