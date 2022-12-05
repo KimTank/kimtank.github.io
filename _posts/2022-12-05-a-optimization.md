@@ -326,6 +326,19 @@ $lighthouse --help
 5. Total Blocking Time: 유저와 상호작용하기까지 막혀있는 시간을 측정한다. FCP와 TTI사이에 긴시간이 걸리는 작업들을 모두 기록하여 TBT를 측정한다.
 6. Cumlative Layout Shift: 사용자에게 컨텐츠가 화면에 얼마나 많이 움직였는가(불안정한가)를 수치화한 지표이다.
 
+### 5.3. Performance Opportunities
+
+교육기관의 트리하우스를 돌려보자 낄낄
+
+![urclass treehouse](/assets/img/221205-performance-opportunities.png)
+![urclass treehouse1](/assets/img/221205-performance-opportunities-1.png)
+![urclass treehouse2](/assets/img/221205-performance-opportunities-2.png)
+![urclass treehouse3](/assets/img/221205-performance-opportunities-3.png)
+
+오우 상당히 자세하게 알려주면서 개선점까지 보여준다.
+
+갓글
+
 ## 참조
 
 > [한국정보통신기술협회: main](https://www.tta.or.kr/)  
