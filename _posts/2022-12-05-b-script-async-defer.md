@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "defer, async script 리소스 로딩 시점"
-date: 2022-12-02
+date: 2022-12-05
 categories:
   - HTML
 tags:
