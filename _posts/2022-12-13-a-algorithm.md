@@ -8,7 +8,6 @@ tags:
   - Algorithm
   - CodeStates
   - Math
-  -
 ---
 
 가장 어려운 수학적 사고능력
