@@ -1,20 +1,19 @@
 ---
 layout: post
-title: "단짠단짠인줄알았는데 뭐야 그냥 바다네???"
-date: 2022-11-16
+title: "무상무념"
+date: 2022-12-15
 categories:
   - Codestates
 tags:
   - Codestates
 ---
 
-분명 섹션시작 전 단맛 짠맛 강중약약중중강이라고 아샘이 그랬는데, 뭐야 이거 하나도 모르겠자나 어렸을때 앓은 중이염때문에 튜브없으면 수영못하는데 겁도없이 바다에 들어갔다가 빠져죽을뻔한 22년전이 왜 떠오르지??? 아니 이거 바다는 살면서 어쩌다보면 좋은거지 매일보면 빨래에 짠내내서 별론데 아아아악 애미야 짜다짜
+최대한 피해왔던 알고리즘과 각종 넘쳐나는 무조건 알아야되는 써드파티들의 향연
 
 ---
 
 [section1 회고](https://kimtank.github.io/codestates/2022/09/19/a-cs-section1.html)  
 [section2 회고](https://kimtank.github.io/codestates/2022/10/19/section2-fin.html)
-[section2 회고](https://kimtank.github.io/codestates/2022/11/16/section3-fin.html)
 
 ## 목표
 
