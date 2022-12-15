@@ -48,9 +48,9 @@ tags:
 
 ## 우선순위 정하자
 
-|---|---|---|---|
-|중요|중간|낮음|
-|자아성찰|자가정비|시간, 무발전|
+| 중요     | 중간     | 낮음         |
+| -------- | -------- | ------------ |
+| 자아성찰 | 자가정비 | 시간, 무발전 |
 
 ## 결론
 
@@ -92,5 +92,4 @@ tags:
 > ## 참조
 >
 > [section1 회고](https://kimtank.github.io/codestates/2022/09/19/a-cs-section1.html)  
-> [section2 회고](https://kimtank.github.io/codestates/2022/10/19/section2-fin.html)
-> [section3 회고](https://kimtank.github.io/codestates/2022/11/16/section3-fin.html)
+> [section2 회고](https://kimtank.github.io/codestates/2022/10/19/section2-fin.html) > [section3 회고](https://kimtank.github.io/codestates/2022/11/16/section3-fin.html)
